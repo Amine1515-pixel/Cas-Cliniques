@@ -1,0 +1,1835 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>10 Cas Cliniques · Coarctation Aorte · ACC 2025 · CSC Algeria</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06101E;--bg2:#0B1928;--bg3:#0F2035;--card:#0E1D33;
+  --sky:#38BDF8;--mint:#34D399;--gold:#F0A030;--red:#E03050;
+  --pur:#A78BFA;--orange:#FB923C;--teal:#00C4AE;--cyan:#22D3EE;--rose:#FB7185;
+  --w1:#EEF5FF;--w2:rgba(238,245,255,.65);--w3:rgba(238,245,255,.32);--w4:rgba(238,245,255,.14);
+  --brd:rgba(255,255,255,.08);--brd2:rgba(255,255,255,.16);
+  --accent:var(--cyan);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM Sans",sans-serif;font-size:14px;overflow-x:hidden}
+
+#topbar{background:rgba(6,16,30,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--brd2);padding:10px 14px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:200}
+.tb-logo{width:38px;height:38px;border-radius:9px;background:#fff;padding:2px;flex-shrink:0;overflow:hidden}
+.tb-logo img{width:100%;height:100%;object-fit:contain}
+.tb-info{flex:1;min-width:0}
+.tb-title{font-family:"Syne",sans-serif;font-size:14px;font-weight:700;color:var(--accent);line-height:1.2}
+.tb-sub{font-size:9px;color:var(--w3);margin-top:1px}
+.tb-cas-badge{background:rgba(34,211,238,.2);border:1px solid rgba(34,211,238,.4);border-radius:7px;padding:4px 9px;font-size:10px;font-weight:700;color:var(--cyan);flex-shrink:0;font-family:"JetBrains Mono",monospace}
+
+#cas-nav{background:rgba(6,16,30,.95);border-bottom:1px solid var(--brd);padding:9px 12px;display:flex;gap:6px;overflow-x:auto;position:sticky;top:60px;z-index:190}
+#cas-nav::-webkit-scrollbar{display:none}
+.cn{padding:7px 14px;border-radius:18px;font-family:"Syne",sans-serif;font-size:10px;font-weight:700;cursor:pointer;border:1.5px solid var(--brd2);background:transparent;color:var(--w3);white-space:nowrap;flex-shrink:0;transition:all .15s}
+.cn.on{background:var(--cas-color,var(--cyan));color:#06101E;border-color:var(--cas-color,var(--cyan))}
+.cn:active{transform:scale(.95)}
+
+#slides-nav{background:rgba(6,16,30,.95);border-bottom:1px solid var(--brd);padding:8px 12px;display:flex;gap:5px;overflow-x:auto;position:sticky;top:107px;z-index:185}
+#slides-nav::-webkit-scrollbar{display:none}
+.sn{padding:5px 10px;border-radius:14px;font-family:"DM Sans",sans-serif;font-size:10px;font-weight:600;cursor:pointer;border:1.5px solid var(--brd2);background:transparent;color:var(--w3);white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:5px}
+.sn .sn-num{font-family:"JetBrains Mono",monospace;font-size:9px;font-weight:700;background:rgba(255,255,255,.06);padding:1px 5px;border-radius:3px}
+.sn.on{background:var(--cas-color,var(--cyan));color:#06101E;border-color:var(--cas-color,var(--cyan))}
+.sn.on .sn-num{background:rgba(0,0,0,.2);color:#06101E}
+
+#content{padding:14px 13px 100px;max-width:520px;margin:0 auto}
+.cas{display:none}
+.cas.on{display:block}
+.slide{display:none;animation:fadeIn 0.3s}
+.slide.on{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+.card{background:var(--card);border-radius:13px;border:1px solid var(--brd);padding:14px;margin-bottom:11px}
+.card-title{font-family:"Syne",sans-serif;font-size:12px;font-weight:700;color:var(--cas-color,var(--accent));margin-bottom:11px;display:flex;align-items:center;gap:7px;padding-bottom:8px;border-bottom:1px solid var(--brd)}
+
+.slide-head{background:linear-gradient(135deg,var(--cas-color,var(--cyan)),var(--cas-color2,var(--mint)));padding:14px 16px;border-radius:14px;margin-bottom:13px;color:#fff;position:relative;overflow:hidden}
+.slide-head::after{content:'';position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:rgba(255,255,255,.1);border-radius:50%}
+.slide-head-num{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;opacity:.85;letter-spacing:1px;margin-bottom:3px}
+.slide-head-title{font-family:"Syne",sans-serif;font-size:17px;font-weight:800;line-height:1.2}
+.slide-head-sub{font-size:11px;opacity:.85;margin-top:3px}
+
+.cas-intro{background:linear-gradient(135deg,rgba(34,211,238,.15),rgba(52,211,153,.1));border:1px solid var(--cas-color,var(--cyan));border-radius:12px;padding:13px 14px;margin-bottom:12px}
+.cas-intro-title{font-family:"Syne",sans-serif;font-size:14px;font-weight:800;color:var(--cas-color,var(--cyan));margin-bottom:5px}
+.cas-intro-sub{font-size:11px;color:var(--w2);line-height:1.5}
+
+.dr{display:flex;padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.06);font-size:12.5px;align-items:flex-start;gap:10px}
+.dr:last-child{border-bottom:none}
+.dr-lbl{flex:0 0 110px;color:var(--w3);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.3px;padding-top:1px}
+.dr-val{flex:1;color:var(--w1);font-weight:500;line-height:1.5}
+.dr-val strong{color:var(--cas-color,var(--accent))}
+
+.chip{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:5px;font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;margin:2px 3px 2px 0}
+.chip-mint{background:rgba(52,211,153,.18);color:var(--mint)}
+.chip-sky{background:rgba(56,189,248,.18);color:var(--sky)}
+.chip-gold{background:rgba(240,160,48,.18);color:var(--gold)}
+.chip-red{background:rgba(224,48,80,.18);color:var(--red)}
+.chip-pur{background:rgba(167,139,250,.18);color:var(--pur)}
+.chip-cyan{background:rgba(34,211,238,.18);color:var(--cyan)}
+.chip-orange{background:rgba(251,146,60,.18);color:var(--orange)}
+.chip-rose{background:rgba(251,113,133,.18);color:var(--rose)}
+
+.ib{border-radius:10px;padding:11px 13px;font-size:12px;line-height:1.65;border-left:3px solid;margin-bottom:10px}
+.ib strong{color:var(--w1)}
+.ib-sky{background:rgba(56,189,248,.08);border-color:var(--sky);color:var(--w2)}
+.ib-mint{background:rgba(52,211,153,.08);border-color:var(--mint);color:var(--w2)}
+.ib-gold{background:rgba(240,160,48,.08);border-color:var(--gold);color:var(--w2)}
+.ib-red{background:rgba(224,48,80,.1);border-color:var(--red);color:var(--w2)}
+.ib-pur{background:rgba(167,139,250,.08);border-color:var(--pur);color:var(--w2)}
+.ib-orange{background:rgba(251,146,60,.08);border-color:var(--orange);color:var(--w2)}
+.ib-cyan{background:rgba(34,211,238,.08);border-color:var(--cyan);color:var(--w2)}
+.ib-rose{background:rgba(251,113,133,.08);border-color:var(--rose);color:var(--w2)}
+.ib-title{font-family:"Syne",sans-serif;font-size:11.5px;font-weight:700;color:var(--w1);display:block;margin-bottom:5px}
+.ib ul{margin:5px 0 0 17px;padding:0}
+.ib li{margin-bottom:4px;line-height:1.55}
+
+.app-use{background:linear-gradient(135deg,rgba(34,211,238,.12),rgba(167,139,250,.06));border:1.5px solid rgba(34,211,238,.3);border-radius:12px;padding:13px 14px;margin-bottom:11px;position:relative}
+.app-use::before{content:'📱';position:absolute;top:-12px;left:13px;background:var(--bg);padding:2px 9px;border-radius:14px;font-size:14px;border:1.5px solid rgba(34,211,238,.3)}
+.app-use-title{font-family:"Syne",sans-serif;font-size:11px;font-weight:800;color:var(--cyan);text-transform:uppercase;letter-spacing:.5px;margin-top:3px;margin-bottom:7px}
+.app-use-body{font-size:12px;color:var(--w2);line-height:1.65}
+.app-use-body strong{color:var(--w1)}
+
+.cor{display:inline-flex;align-items:center;padding:2px 7px;border-radius:5px;font-family:"JetBrains Mono",monospace;font-size:9px;font-weight:700;margin-right:5px}
+.c1{background:rgba(52,211,153,.2);color:var(--mint)}
+.c2a{background:rgba(56,189,248,.2);color:var(--sky)}
+.c2b{background:rgba(240,160,48,.2);color:var(--gold)}
+.c3{background:rgba(224,48,80,.18);color:var(--red);border:1px solid rgba(224,48,80,.4)}
+
+.dec{border-radius:12px;border:2px solid;padding:13px;margin-bottom:10px}
+.dec-t{font-family:"Syne",sans-serif;font-size:13px;font-weight:800;margin-bottom:7px;line-height:1.3}
+.dec-b{font-size:12px;color:var(--w2);line-height:1.65}
+.dec-action{margin-top:8px;padding:8px 11px;background:rgba(255,255,255,.04);border-radius:7px;font-size:11.5px;color:var(--w2);font-style:italic;line-height:1.55}
+
+.canva-embed-wrap{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:14px;overflow:hidden;margin-bottom:8px;box-shadow:0 4px 20px rgba(0,0,0,.4);border:1px solid var(--brd2)}
+.canva-embed-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block}
+.canva-caption{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,rgba(125,60,224,.15),rgba(58,163,243,.1));border:1px solid rgba(125,60,224,.3);border-radius:10px;padding:9px 12px;font-size:11px;color:var(--w2);margin-bottom:11px}
+.canva-caption-id{font-family:"JetBrains Mono",monospace;font-size:9px;color:var(--w3);letter-spacing:.5px}
+.canva-caption-link{color:#fff;background:linear-gradient(135deg,#7d3ce0,#3aa3f3);padding:5px 10px;border-radius:6px;text-decoration:none;font-size:10px;font-weight:600;white-space:nowrap}
+
+.tbl{width:100%;border-collapse:collapse;font-size:11.5px;margin:9px 0;border-radius:8px;overflow:hidden}
+.tbl th{background:rgba(34,211,238,.18);color:var(--cyan);text-align:left;padding:7px 10px;font-family:"Syne",sans-serif;font-weight:700;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;border:1px solid var(--brd)}
+.tbl td{padding:7px 10px;border:1px solid var(--brd);color:var(--w2);line-height:1.5}
+.tbl tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+
+.slide-progress{display:flex;gap:4px;justify-content:center;margin-bottom:14px}
+.sp-dot{width:24px;height:3px;background:var(--brd2);border-radius:2px;transition:all .25s}
+.sp-dot.on{background:var(--cas-color,var(--cyan));width:32px}
+.sp-dot.done{background:var(--mint)}
+
+#botnav{position:fixed;bottom:0;left:0;right:0;background:rgba(6,16,30,.97);backdrop-filter:blur(14px);border-top:1px solid var(--brd2);padding:10px 13px;z-index:300}
+.bn-wrap{max-width:520px;margin:0 auto;display:flex;gap:8px}
+.bn-btn{flex:1;padding:11px;border-radius:11px;border:none;font-family:"Syne",sans-serif;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
+.bn-prev{background:transparent;border:1.5px solid var(--brd2);color:var(--w2)}
+.bn-next{background:var(--cas-color,var(--cyan));color:#06101E}
+.bn-btn:disabled{opacity:.3;cursor:not-allowed}
+.bn-btn:active{transform:scale(.97)}
+
+.qcm{background:rgba(34,211,238,.08);border:1.5px solid rgba(34,211,238,.3);border-radius:11px;padding:13px;margin-bottom:11px}
+.qcm-q{font-family:"Syne",sans-serif;font-size:13px;font-weight:700;color:var(--cyan);margin-bottom:9px;line-height:1.4}
+.qcm-opt{display:flex;align-items:flex-start;gap:8px;padding:9px 11px;background:var(--bg3);border-radius:8px;border:1.5px solid var(--brd);margin-bottom:5px;font-size:12px;color:var(--w2);line-height:1.5;cursor:pointer}
+.qcm-opt.correct{border-color:var(--mint);background:rgba(52,211,153,.1);color:var(--w1)}
+.qcm-letter{font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:700;color:var(--cyan);flex-shrink:0;width:18px;height:18px;border-radius:4px;background:rgba(34,211,238,.15);display:flex;align-items:center;justify-content:center}
+.qcm-opt.correct .qcm-letter{background:var(--mint);color:#06101E}
+.qcm-explain{margin-top:9px;padding:8px 11px;background:rgba(52,211,153,.07);border-left:3px solid var(--mint);border-radius:6px;font-size:11px;color:var(--w2);line-height:1.5;font-style:italic}
+</style>
+</head>
+<body>
+<div id="topbar">
+  <div class="tb-logo"><img id="top-logo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/wAARCAH4AfgDACIAAREBAhEB/9sAQwAIBgYHBgUIBwcHCQkICgwUDQwLCwwZEhMPFB0aHx4dGhwcICQuJyAiLCMcHCg3KSwwMTQ0NB8nOT04MjwuMzQy/9sAQwEJCQkMCwwYDQ0YMiEcITIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMAAAERAhEAPwD5/ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA9//Zl/5mn/ALdP/a1fQFfP/wCzL/zNP/bp/wC1q+gKAPgCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKK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" alt="CSC"></div>
+  <div class="tb-info">
+    <div class="tb-title">10 Cas Cliniques · Coarctation Aorte</div>
+    <div class="tb-sub">CSC Algeria · ACHD CORE-Team · ACC/AHA 2025 (Section 4.2.6)</div>
+  </div>
+  <div class="tb-cas-badge" id="cas-badge">CAS 1/10</div>
+</div>
+<div id="cas-nav">
+  <button class="cn on" data-cas="1">📘 Cas 1</button>
+  <button class="cn" data-cas="2">📗 Cas 2</button>
+  <button class="cn" data-cas="3">📕 Cas 3</button>
+  <button class="cn" data-cas="4">📙 Cas 4</button>
+  <button class="cn" data-cas="5">📔 Cas 5</button>
+  <button class="cn" data-cas="6">📓 Cas 6</button>
+  <button class="cn" data-cas="7">📒 Cas 7</button>
+  <button class="cn" data-cas="8">📚 Cas 8</button>
+  <button class="cn" data-cas="9">📖 Cas 9</button>
+  <button class="cn" data-cas="10">🎯 Cas 10</button>
+</div>
+<div id="slides-nav">
+  <button class="sn on" data-slide="0"><span class="sn-num">01</span>Présentation</button>
+  <button class="sn" data-slide="1"><span class="sn-num">02</span>Iconographie</button>
+  <button class="sn" data-slide="2"><span class="sn-num">03</span>Stade</button>
+  <button class="sn" data-slide="3"><span class="sn-num">04</span>Bilan</button>
+  <button class="sn" data-slide="4"><span class="sn-num">05</span>Décision</button>
+  <button class="sn" data-slide="5"><span class="sn-num">06</span>Take-home</button>
+</div>
+<div id="content">
+
+<div class="cas on" data-cas="1" style="--cas-color:#E03050;--cas-color2:#FB7185">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 01 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mr R.S., 28 ans</div>
+      <div class="slide-head-sub">Découverte tardive — HTA réfractaire jeune adulte</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#E03050">📘 Présentation clinique</div>
+      <div class="cas-intro-sub">Patient jeune adressé pour HTA réfractaire à plusieurs antihypertenseurs. La COA peut être méconnue dans l'enfance et révélée à l'âge adulte par une HTA résistante.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr R.S., 28 ans</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">78 kg · 178 cm · BSA 1.96 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre administratif</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">HTA réfractaire 6 mois sous bithérapie</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">HTA découverte à 27 ans · sans cause identifiée · céphalées matinales</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II</span> Céphalées + dyspnée modérée</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">460 m · SpO₂ 98 %</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val"><strong>TA bras 158/95</strong> · TA jambe 120/70 · différentielle 38 mmHg · souffle dorsal interscapulaire</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 01 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Imagerie</div>
+      <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHILfOwhgg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#E03050">🎨 Présentation Canva · Cas 01</div>
+        <div class="canva-caption-id">DAHILfOwhgg · Cas 01 · HTA Réfractaire</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILfOwhgg/view" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/Imagerie principales</div>
+      <div class="dr"><div class="dr-lbl">Diagnostic</div><div class="dr-val"><strong>COA native isthme aortique</strong></div></div><div class="dr"><div class="dr-lbl">Gradient Doppler moyen</div><div class="dr-val"><strong>28 mmHg</strong> (significatif)</div></div><div class="dr"><div class="dr-lbl">Flux abdominal</div><div class="dr-val">Queue diastolique aorte descendante</div></div><div class="dr"><div class="dr-lbl">Isthme angio TDM</div><div class="dr-val">Ratio 0.4 (rétréci)</div></div><div class="dr"><div class="dr-lbl">Collatérales</div><div class="dr-val">Développées (intercostales)</div></div><div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">SIV 13 mm · FEVG 60% · HVG modérée</div></div><div class="dr"><div class="dr-lbl">Aorte ascendante</div><div class="dr-val">32 mm normale</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 01 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 ACC 2025 · Tableau 24 (COA)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Coarctation Aorte (Section 4.2.6)</strong> · Critères Stade selon Tableau 4 + Tableau 25 (significativité COA).</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade C retenu :</span>
+        <ul><li>✓ HTA réfractaire (symptôme attribuable)</li><li>✓ HVG modérée</li><li>✓ Différentielle TA <strong>38 mmHg</strong> (≥ 20 mmHg significatif)</li><li>✓ Gradient Doppler moyen 28 mmHg (≥ 20 mmHg)</li><li>✓ Isthme ratio 0.4 (< 0.5-0.7)</li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #E03050">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#E03050;line-height:1">C</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — HTA non contrôlée + HVG</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-C</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>Cardiologue ACHD : <strong>6-12 mois</strong></li><li>Imagerie cross-sectionnelle initiale (Rec. 1)</li><li>Intervention indiquée</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 01 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Biologie · Imagerie</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 ECG & Biologie</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 72/min</div></div><div class="dr"><div class="dr-lbl">HVG</div><div class="dr-val"><strong>Sokolow-Lyon 38 mm</strong> (modérée)</div></div><div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val">100 ms</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>280 pg/mL</strong> (modérément élevé)</div></div><div class="dr"><div class="dr-lbl">Kaliémie</div><div class="dr-val">Normale</div></div><div class="dr"><div class="dr-lbl">Fonction rénale</div><div class="dr-val">Normale</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 01 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.2.6</div>
+    </div>
+    
+    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#34D399">
+        <span class="cor c1">COR 1</span>Rec. 1 COR 1 — Imagerie cross-sectionnelle
+      </div>
+      <div class="dec-b"><strong>Rec. 1 COR 1 B-NR</strong> : Adultes avec COA native → imagerie cross-sectionnelle (CMR/CT-angio) recommandée pour déterminer sévérité COA et anatomie aortique thoracique.</div>
+      <div class="dec-action">➜ Angio-TDM ou IRM aortique : déterminer la sévérité COA, l'anatomie de l'arche, les dimensions de l'aorte ascendante, et exclure lésions intracardiaques associées (BAV, etc.).</div>
+    </div>
+    <div class="dec" style="border-color:#E03050;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#E03050">
+        <span class="cor c1">COR 1</span>Rec. 8 COR 1 — Intervention RECOMMANDÉE
+      </div>
+      <div class="dec-b"><strong>Rec. 8 COR 1 B-NR</strong> : Adultes avec COA native ou réparée + COA anatomiquement et hémodynamiquement significative → chirurgie ou stent endovasculaire pour prévenir dysfonction VG irréversible.<br><br><strong>Tableau 25 critères de significativité (tous présents) :</strong><br>• Différentielle TA bras/jambe ≥ 20 mmHg<br>• Gradient Doppler moyen ≥ 20 mmHg<br>• Ratio isthme < 0.5-0.7</div>
+      <div class="dec-action">➜ <strong>Stent endovasculaire ou chirurgie</strong> selon anatomie et expertise du centre. Discussion multidisciplinaire ACHD.</div>
+    </div>
+    <div class="dec" style="border-color:#22D3EE;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#22D3EE">
+        <span class="cor c1">COR 1</span>Rec. 9 COR 1 — GDMT antihypertensif
+      </div>
+      <div class="dec-b"><strong>Rec. 9 COR 1 B-NR</strong> : Même après réparation, si HTA persiste → GDMT pour maintenir TA contrôlée. Objectif TA syst <strong>< 130 mmHg</strong>.</div>
+      <div class="dec-action">➜ HTA peut persister après intervention. Maintien IEC/ARA2 long terme. Surveillance ABPM.</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 01 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — Jeune adulte avec HTA réfractaire et différentielle TA bras/jambe 38 mmHg. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Test d'effort de routine</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Imagerie cross-sectionnelle (CMR/CT-angio) — Rec. 1 COR 1</div><div class="qcm-opt"><span class="qcm-letter">C</span>ECG seul</div><div class="qcm-opt"><span class="qcm-letter">D</span>Holter 24h</div>
+      <div class="qcm-explain">✓ Rec. 1 COR 1 B-NR : devant toute suspicion de COA (HTA + différentielle TA), l'imagerie cross-sectionnelle est l'examen de référence. La COA peut être méconnue dans l'enfance et révélée à l'âge adulte par une HTA résistante (Egbe 2020).</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 01</span>
+      <ul><li>COA peut être méconnue dans l'enfance</li><li>Mesurer TA aux 4 membres systématiquement</li><li>Différentielle TA ≥ 20 mmHg = significativité hémodynamique</li><li>Imagerie cross-sectionnelle indispensable au diagnostic</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="2" style="--cas-color:#F0A030;--cas-color2:#FB923C">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+      <div class="slide-head-num">CAS 02 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mme L.B., 24 ans</div>
+      <div class="slide-head-sub">COA native asymptomatique — Gradient significatif</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#F0A030">📗 Présentation clinique</div>
+      <div class="cas-intro-sub">Patiente jeune asymptomatique avec souffle dorsal découvert lors d'une visite médicale. Bilan révèle une COA native avec critères hémodynamiques significatifs.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme L.B., 24 ans</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">60 kg · 165 cm · BSA 1.66 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Étudiante</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Souffle dorsal lors visite médicale</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">Aucun · pas de syndrome connu · pas d'ATCD familial</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-mint">I</span> Asymptomatique</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">540 m · SpO₂ 99 %</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val"><strong>TA bras 145/88</strong> · TA jambe 110/70 · différentielle <strong>35 mmHg</strong> · souffle interscapulaire</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+      <div class="slide-head-num">CAS 02 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Imagerie</div>
+      <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHILa6d_6c/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#F0A030">🎨 Présentation Canva · Cas 02</div>
+        <div class="canva-caption-id">DAHILa6d_6c · Cas 02 · COA Asympto</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILa6d_6c/view" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/Imagerie principales</div>
+      <div class="dr"><div class="dr-lbl">Diagnostic</div><div class="dr-val"><strong>COA native isthme</strong></div></div><div class="dr"><div class="dr-lbl">Gradient Doppler moyen</div><div class="dr-val"><strong>24 mmHg</strong></div></div><div class="dr"><div class="dr-lbl">Vmax isthme</div><div class="dr-val">3.0 m/s</div></div><div class="dr"><div class="dr-lbl">Flux abdominal</div><div class="dr-val">Queue diastolique présente</div></div><div class="dr"><div class="dr-lbl">Isthme angio TDM</div><div class="dr-val">Ratio 0.6</div></div><div class="dr"><div class="dr-lbl">Collatérales</div><div class="dr-val">Modestes</div></div><div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">SIV 11 mm · FEVG 65% · HVG légère débutante</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+      <div class="slide-head-num">CAS 02 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 ACC 2025 · Tableau 24 (COA)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Coarctation Aorte (Section 4.2.6)</strong> · Critères Stade selon Tableau 4 + Tableau 25 (significativité COA).</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade B retenu :</span>
+        <ul><li>✓ Asymptomatique mais TA limite</li><li>✓ HVG légère débutante</li><li>✓ Différentielle TA 35 mmHg significative</li><li>✓ Gradient Doppler 24 mmHg ≥ 20 mmHg</li><li>✓ Isthme ratio 0.6</li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #F0A030">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#F0A030;line-height:1">B</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade B — COA significative asympto</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-B</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>Intervention indiquée avant dysfonction VG</li><li>Discussion multidisciplinaire ACHD</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+      <div class="slide-head-num">CAS 02 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Biologie · Imagerie</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 ECG & Biologie</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 76/min</div></div><div class="dr"><div class="dr-lbl">HVG</div><div class="dr-val">Légère débutante</div></div><div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val">96 ms</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">120 pg/mL (normal-haut)</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+      <div class="slide-head-num">CAS 02 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.2.6</div>
+    </div>
+    
+    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#34D399">
+        <span class="cor c1">COR 1</span>Rec. 8 COR 1 — Intervention RECOMMANDÉE
+      </div>
+      <div class="dec-b"><strong>Rec. 8 COR 1 B-NR</strong> : COA hémodynamiquement significative → chirurgie ou stent endovasculaire pour prévenir dysfonction VG irréversible.<br><br>Patient asymptomatique mais critères hémodynamiques tous présents.</div>
+      <div class="dec-action">➜ Discussion <strong>stent endovasculaire vs chirurgie</strong>. Centre ACHD expert. Voir Cas 03 pour décision détaillée.</div>
+    </div>
+    <div class="dec" style="border-color:#22D3EE;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#22D3EE">
+        <span class="cor c1">COR 1</span>Rec. 9 COR 1 — GDMT post-intervention
+      </div>
+      <div class="dec-b">Même asymptomatique, l'HTA peut apparaître ou persister post-intervention. Objectif TA syst < 130 mmHg.</div>
+      <div class="dec-action">➜ Surveillance ABPM régulière. IEC/ARA2 si HTA.</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+      <div class="slide-head-num">CAS 02 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — Patiente asymptomatique, COA native, gradient Doppler moyen 24 mmHg + différentielle TA 35 mmHg. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Surveillance simple</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Intervention (Rec. 8 COR 1) pour prévenir dysfonction VG</div><div class="qcm-opt"><span class="qcm-letter">C</span>Antihypertenseur seul</div><div class="qcm-opt"><span class="qcm-letter">D</span>Test d'effort uniquement</div>
+      <div class="qcm-explain">✓ Rec. 8 COR 1 B-NR : la COA hémodynamiquement significative impose une intervention même chez l'asymptomatique pour prévenir la dysfonction VG par surcharge de pression chronique. Tous les critères de significativité (Tableau 25) sont remplis.</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 02</span>
+      <ul><li>Critères de significativité (Tableau 25) : différentielle TA, gradient Doppler, ratio isthme</li><li>Intervention même chez asymptomatique si critères présents</li><li>Prévention de la dysfonction VG irréversible</li><li>Pas d'attente de symptômes</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="3" style="--cas-color:#A78BFA;--cas-color2:#22D3EE">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
+      <div class="slide-head-num">CAS 03 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mr K.D., 35 ans</div>
+      <div class="slide-head-sub">Choix stratégique — Stent vs Chirurgie</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#A78BFA">📕 Présentation clinique</div>
+      <div class="cas-intro-sub">Patient avec COA native + bicuspidie aortique + dilatation aorte ascendante débutante. La double pathologie influence le choix entre stent endovasculaire et chirurgie ouverte.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr K.D., 35 ans</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">82 kg · 180 cm · BSA 2.02 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre actif</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">HTA résistante bithérapie</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">HTA depuis 33 ans · Bicuspidie aortique connue · perdu de vue 4 ans</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II</span> Dyspnée d'effort modérée</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">440 m · SpO₂ 98 %</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val"><strong>TA bras 168/95</strong> · TA jambe 122/75 · différentielle <strong>46 mmHg</strong></div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
+      <div class="slide-head-num">CAS 03 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Imagerie</div>
+      <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHILbWlSPE/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#A78BFA">🎨 Présentation Canva · Cas 03</div>
+        <div class="canva-caption-id">DAHILbWlSPE · Cas 03 · Choix</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILbWlSPE/view" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/Imagerie principales</div>
+      <div class="dr"><div class="dr-lbl">Bicuspidie aortique</div><div class="dr-val">Fusion droite-gauche · IAo légère</div></div><div class="dr"><div class="dr-lbl">Diagnostic COA</div><div class="dr-val"><strong>COA native sévère</strong></div></div><div class="dr"><div class="dr-lbl">Gradient Doppler moyen</div><div class="dr-val"><strong>32 mmHg</strong></div></div><div class="dr"><div class="dr-lbl">Isthme</div><div class="dr-val">7 mm · ratio 0.4</div></div><div class="dr"><div class="dr-lbl">Aorte ascendante</div><div class="dr-val"><strong>42 mm</strong> (dilatation légère)</div></div><div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">SIV 14 mm · FEVG 58% · HVG modérée</div></div><div class="dr"><div class="dr-lbl">Collatérales</div><div class="dr-val">Bien développées</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
+      <div class="slide-head-num">CAS 03 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 ACC 2025 · Tableau 24 (COA)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Coarctation Aorte (Section 4.2.6)</strong> · Critères Stade selon Tableau 4 + Tableau 25 (significativité COA).</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade B-C retenu :</span>
+        <ul><li>✓ HTA résistante + dyspnée</li><li>✓ HVG modérée</li><li>✓ COA hémodynamiquement très significative</li><li>✓ Bicuspidie + dilatation aortique associées</li><li>✓ BNP modérément élevé</li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #A78BFA">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#A78BFA;line-height:1">B-C</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — COA + lésions associées</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-C</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>Discussion multidisciplinaire ACHD experte</li><li>Imagerie complète aorte thoracique</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
+      <div class="slide-head-num">CAS 03 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Biologie · Imagerie</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 ECG & Biologie</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 78/min</div></div><div class="dr"><div class="dr-lbl">HVG</div><div class="dr-val">Sokolow-Lyon 38 mm (modérée)</div></div><div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val">100 ms</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>380 pg/mL</strong></div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
+      <div class="slide-head-num">CAS 03 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.2.6</div>
+    </div>
+    
+    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#34D399">
+        <span class="cor c1">COR 1</span>Rec. 8 COR 1 — Choix individualisé
+      </div>
+      <div class="dec-b"><strong>Données ACC 2025 :</strong><br>• Stent et chirurgie offrent <strong>résultats hémodynamiques immédiats similaires</strong><br>• Stent : <strong>récupération rapide</strong>, moins invasif<br>• Stent : <strong>réintervention plus fréquente</strong> (fracture, restenose, anévrysme)<br>• Stent : <strong>moins de remodelage VG complet</strong> que la chirurgie<br>• Choix selon anatomie thoracique aortique, risque procédural, expertise du centre</div>
+      <div class="dec-action">➜ <strong>Notre patient : chirurgie préférable</strong>. Justifications :<br>• Aorte ascendante dilatée 42 mm + bicuspidie → geste combiné chirurgical possible<br>• Patient jeune actif → meilleur remodelage VG long terme avec chirurgie<br>• Données 2025 : long terme favorable à la chirurgie</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
+      <div class="slide-head-num">CAS 03 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — COA chez l'adulte — Stent vs chirurgie ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Stent toujours supérieur</div><div class="qcm-opt"><span class="qcm-letter">B</span>Chirurgie toujours supérieure</div><div class="qcm-opt correct"><span class="qcm-letter">C</span>Résultats hémodynamiques similaires immédiatement, choix selon anatomie/expertise</div><div class="qcm-opt"><span class="qcm-letter">D</span>Aucune des deux ne fonctionne</div>
+      <div class="qcm-explain">✓ ACC 2025 indique des résultats hémodynamiques similaires immédiatement, mais la chirurgie offre un meilleur remodelage VG long terme et moins de réinterventions. Le choix s'individualise selon l'anatomie aortique, l'âge, les pathologies associées, et l'expertise du centre.</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 03</span>
+      <ul><li>Stent et chirurgie : résultats immédiats similaires</li><li>Stent : récupération rapide mais réintervention plus fréquente</li><li>Chirurgie : meilleur remodelage VG long terme</li><li>Si dilatation aortique associée → chirurgie privilégiée</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="4" style="--cas-color:#22D3EE;--cas-color2:#38BDF8">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+      <div class="slide-head-num">CAS 04 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mme N.A., 42 ans · G2P2</div>
+      <div class="slide-head-sub">COA réparée + HTA résiduelle — GDMT</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#22D3EE">📙 Présentation clinique</div>
+      <div class="cas-intro-sub">Patiente avec COA réparée dans l'enfance qui développe une HTA tardive sans re-coarctation imagerique. Plus de la moitié des adultes avec COA réparée présentent une HTA, même sans re-coarctation.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme N.A., 42 ans · G2P2</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">65 kg · 165 cm · BSA 1.71 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Mère de famille</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">HTA découverte récemment</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>COA réparée à 5 ans</strong> (chirurgie directe) · suivi perdu 8 ans · 2 grossesses normales</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-mint">I</span> Asymptomatique</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">480 m · SpO₂ 98 %</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val"><strong>TA bras 138/88</strong> · TA jambe 130/80 · différentielle 8 mmHg (non significative)</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+      <div class="slide-head-num">CAS 04 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Imagerie</div>
+      <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHILQr1TrQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#22D3EE">🎨 Présentation Canva · Cas 04</div>
+        <div class="canva-caption-id">DAHILQr1TrQ · Cas 04 · GDMT</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILQr1TrQ/view" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/Imagerie principales</div>
+      <div class="dr"><div class="dr-lbl">Isthme post-op</div><div class="dr-val">Cicatriciel · gradient Doppler 12 mmHg minime</div></div><div class="dr"><div class="dr-lbl">Pas de re-coarctation</div><div class="dr-val">Différentielle TA < 20 mmHg + gradient < 20 mmHg</div></div><div class="dr"><div class="dr-lbl">Flux abdominal</div><div class="dr-val">Pas de queue diastolique</div></div><div class="dr"><div class="dr-lbl">Angio TDM</div><div class="dr-val">Aorte normale, pas d'anévrysme</div></div><div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">SIV 12 mm · FEVG 62% · HVG légère persistante</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+      <div class="slide-head-num">CAS 04 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 ACC 2025 · Tableau 24 (COA)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Coarctation Aorte (Section 4.2.6)</strong> · Critères Stade selon Tableau 4 + Tableau 25 (significativité COA).</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade B retenu :</span>
+        <ul><li>✓ HTA seule sans re-coarctation</li><li>✓ HVG légère persistante</li><li>✓ Pas de signe hémodynamique de COA résiduelle</li><li>✓ Fonction VG conservée</li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #22D3EE">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#22D3EE;line-height:1">B</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade B — HTA post-COA</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-B</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>Cardiologue ACHD : 12-24 mois</li><li>Suivi GDMT antihypertensif</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+      <div class="slide-head-num">CAS 04 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Biologie · Imagerie</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 ECG & Biologie</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 74/min</div></div><div class="dr"><div class="dr-lbl">HVG</div><div class="dr-val">Légère persistante</div></div><div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val">92 ms</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">180 pg/mL (modéré)</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+      <div class="slide-head-num">CAS 04 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.2.6</div>
+    </div>
+    
+    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#34D399">
+        <span class="cor c1">COR 1</span>Rec. 9 COR 1 — GDMT antihypertensif
+      </div>
+      <div class="dec-b"><strong>Rec. 9 COR 1 B-NR</strong> : Adultes avec COA native ou réparée + HTA <strong>sans</strong> COA hémodynamiquement significative → GDMT antihypertensif pour TA contrôlée.<br><br><strong>Données :</strong> > 50% des COA réparées présentent une HTA même sans re-coarctation (Egbe 2021). Mécanismes : dysfonction endothéliale, hyperréactivité musculaire lisse, hyperactivité sympathique.<br><br><strong>Objectif TA syst < 130 mmHg</strong> (cible recommandée par ACC 2025).</div>
+      <div class="dec-action">➜ <strong>IEC (Ramipril) ou ARA2 (Losartan)</strong> en première ligne. Mesure TA aux 4 membres routinière. ABPM 24h pour confirmer.</div>
+    </div>
+    <div class="dec" style="border-color:#38BDF8;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#38BDF8">
+        <span class="cor c2a">COR 2a</span>Rec. 4 COR 2a — ABPM raisonnable
+      </div>
+      <div class="dec-b"><strong>Rec. 4 COR 2a B-NR</strong> : Mesure ambulatoire TA raisonnable pour diagnostic et monitoring. La TA office sous-estime souvent la TA réelle dans la COA.</div>
+      <div class="dec-action">➜ ABPM 24h diagnostic et de suivi sous traitement.</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+      <div class="slide-head-num">CAS 04 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — COA réparée avec HTA mais sans re-coarctation imagerique. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Re-intervention COA</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>GDMT antihypertensif (Rec. 9 COR 1)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Surveillance simple</div><div class="qcm-opt"><span class="qcm-letter">D</span>Suppression activité physique</div>
+      <div class="qcm-explain">✓ Rec. 9 COR 1 B-NR : > 50% des adultes COA réparée ont une HTA sans re-coarctation (vasculopathie diffuse). Le GDMT antihypertensif avec objectif < 130 mmHg est indispensable pour prévenir le remodelage cardiovasculaire et la mortalité.</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 04</span>
+      <ul><li>HTA fréquente même post-COA réparée (> 50%)</li><li>Mécanismes : vasculopathie diffuse + hyperactivité sympathique</li><li>Objectif TA syst < 130 mmHg</li><li>ABPM préférable à TA office (sous-estimation)</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="5" style="--cas-color:#FB923C;--cas-color2:#F0A030">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+      <div class="slide-head-num">CAS 05 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mr A.M., 30 ans</div>
+      <div class="slide-head-sub">HTA d'effort post-COA — Test d'effort</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#FB923C">📔 Présentation clinique</div>
+      <div class="cas-intro-sub">Athlète avec COA réparée et TA repos limite mais symptômes effort. Le test d'effort démasque une HTA d'effort, fréquente après réparation de COA.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr A.M., 30 ans</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">78 kg · 180 cm · BSA 1.97 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Athlète amateur</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Palpitations + céphalées post-effort</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">COA réparée à 6 ans (anastomose directe) · suivi régulier</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">I-II</span> Effort : palpitations + céphalées</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">580 m · SpO₂ 99 %</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA repos 128/78 (limite) · TA jambe 124/76 · différentielle minime</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+      <div class="slide-head-num">CAS 05 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Imagerie</div>
+      <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHILcCQuyQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#FB923C">🎨 Présentation Canva · Cas 05</div>
+        <div class="canva-caption-id">DAHILcCQuyQ · Cas 05 · HTA Effort</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILcCQuyQ/view" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/Imagerie principales</div>
+      <div class="dr"><div class="dr-lbl">Isthme post-op</div><div class="dr-val">Cicatriciel sans re-COA</div></div><div class="dr"><div class="dr-lbl">Gradient Doppler</div><div class="dr-val">12 mmHg (minime)</div></div><div class="dr"><div class="dr-lbl">Angio TDM</div><div class="dr-val">Normale</div></div><div class="dr"><div class="dr-lbl">Fonction VG</div><div class="dr-val">FEVG 65% normale</div></div><div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">SIV 11 mm · pas d'HVG significative</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+      <div class="slide-head-num">CAS 05 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 ACC 2025 · Tableau 24 (COA)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Coarctation Aorte (Section 4.2.6)</strong> · Critères Stade selon Tableau 4 + Tableau 25 (significativité COA).</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade B retenu :</span>
+        <ul><li>✓ Asymptomatique au repos</li><li>✓ TA repos limite (128/78)</li><li>✓ <strong>HTA d'effort</strong> démasquée par test</li><li>✓ Test effort Bruce 14 min, TA pic 198/96</li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #FB923C">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#FB923C;line-height:1">B</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade B — HTA effort isolée</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-B</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>Test effort démasquant</li><li>Initiation traitement</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+      <div class="slide-head-num">CAS 05 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Biologie · Imagerie</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 ECG & Biologie</div>
+      <div class="dr"><div class="dr-lbl">Rythme repos</div><div class="dr-val">Sinusal 64/min</div></div><div class="dr"><div class="dr-lbl">HVG</div><div class="dr-val">Absente au repos</div></div><div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val">88 ms</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">80 pg/mL (normal)</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+      <div class="slide-head-num">CAS 05 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.2.6</div>
+    </div>
+    
+    <div class="dec" style="border-color:#38BDF8;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#38BDF8">
+        <span class="cor c2a">COR 2a</span>Rec. 5 COR 2a — Test d'effort raisonnable
+      </div>
+      <div class="dec-b"><strong>Rec. 5 COR 2a B-NR</strong> : Adultes avec COA → test d'effort raisonnable pour dépister HTA d'effort.<br><br>L'HTA d'effort est fréquente après réparation de COA et est associée au remodelage VG et à la mortalité (Egbe Hypertension 2022).</div>
+      <div class="dec-action">➜ Test effort Bruce. TA pic > 200 mmHg ou augmentation > 80 mmHg = anormal.</div>
+    </div>
+    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#34D399">
+        <span class="cor c1">COR 1</span>Rec. 9 COR 1 — Initier GDMT
+      </div>
+      <div class="dec-b">Même TA repos limite, l'HTA d'effort justifie un traitement antihypertenseur car elle est associée à des événements cardiovasculaires majorés.</div>
+      <div class="dec-action">➜ <strong>IEC (Ramipril) ou ARA2 (Losartan)</strong>. Bétabloquant si athlète. Test effort de contrôle sous traitement.</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+      <div class="slide-head-num">CAS 05 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — TA repos normale mais HTA d'effort démasquée chez COA réparée. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Pas de traitement si TA repos normale</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Initier antihypertenseur (Rec. 9 COR 1)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Surveillance simple sans modification</div><div class="qcm-opt"><span class="qcm-letter">D</span>Suppression activité physique</div>
+      <div class="qcm-explain">✓ L'HTA d'effort est un facteur de risque cardiovasculaire indépendant chez les patients COA, associé au remodelage VG et à la mortalité. Elle justifie un traitement antihypertenseur même si la TA de repos est normale (Egbe Hypertension 2022).</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 05</span>
+      <ul><li>HTA d'effort fréquente post-COA réparée</li><li>TA office sous-estime la TA réelle</li><li>Test effort = Rec. 5 COR 2a pour dépister HTA effort</li><li>Traitement même si TA repos normale</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="6" style="--cas-color:#34D399;--cas-color2:#22D3EE">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+      <div class="slide-head-num">CAS 06 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mme F.K., 38 ans</div>
+      <div class="slide-head-sub">ABPM — Monitoring ambulatoire 24h</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#34D399">📓 Présentation clinique</div>
+      <div class="cas-intro-sub">Patiente sous traitement antihypertenseur avec TA office limite mais fatigue chronique. L'ABPM révèle un sous-contrôle tensionnel important nécessitant l'optimisation du GDMT.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme F.K., 38 ans</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">62 kg · 165 cm · BSA 1.69 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Secrétaire</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Suivi · fatigue chronique vague</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">COA réparée à 4 ans (patch) · 1 dose IEC actuelle (Ramipril 5 mg)</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">I-II</span> Fatigue chronique vague</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">480 m · SpO₂ 98 %</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA office <strong>132/82</strong> (limite)</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+      <div class="slide-head-num">CAS 06 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Imagerie</div>
+      <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHILanaIWA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#34D399">🎨 Présentation Canva · Cas 06</div>
+        <div class="canva-caption-id">DAHILanaIWA · Cas 06 · ABPM</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILanaIWA/view" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/Imagerie principales</div>
+      <div class="dr"><div class="dr-lbl">Isthme post-op</div><div class="dr-val">Cicatriciel</div></div><div class="dr"><div class="dr-lbl">Gradient Doppler</div><div class="dr-val">14 mmHg minime</div></div><div class="dr"><div class="dr-lbl">Angio TDM</div><div class="dr-val">Aorte normale</div></div><div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">SIV 12 mm · HVG légère persistante · FEVG 60%</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+      <div class="slide-head-num">CAS 06 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 ACC 2025 · Tableau 24 (COA)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Coarctation Aorte (Section 4.2.6)</strong> · Critères Stade selon Tableau 4 + Tableau 25 (significativité COA).</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade B retenu :</span>
+        <ul><li>✓ TA office limite (132/82)</li><li>✓ <strong>ABPM moyenne 24h : 142/88</strong></li><li>✓ Moyenne diurne 145/90 · nocturne 138/84</li><li>✓ <strong>Pas de dipping nocturne suffisant</strong></li><li>✓ HVG persistante</li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #34D399">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#34D399;line-height:1">B</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade B — TA mal contrôlée à l'ABPM</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-B</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>Optimisation GDMT urgente</li><li>Nouvelle ABPM 3 mois</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+      <div class="slide-head-num">CAS 06 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Biologie · Imagerie</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 ECG & Biologie</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 72/min</div></div><div class="dr"><div class="dr-lbl">HVG</div><div class="dr-val">Légère persistante</div></div><div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val">92 ms</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>220 pg/mL</strong> (modéré)</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+      <div class="slide-head-num">CAS 06 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.2.6</div>
+    </div>
+    
+    <div class="dec" style="border-color:#38BDF8;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#38BDF8">
+        <span class="cor c2a">COR 2a</span>Rec. 4 COR 2a — ABPM essentielle
+      </div>
+      <div class="dec-b"><strong>Rec. 4 COR 2a B-NR</strong> : ABPM raisonnable pour diagnostic HTA et monitoring traitement antihypertenseur.<br><br>La TA office sous-estime fréquemment la TA réelle chez les patients COA → sous-traitement et progression du remodelage cardiovasculaire (Egbe 2020). La TA on-treatment corrèle directement avec HVG, dysfonction VG et événements CV (Egbe 2022, 2023).</div>
+      <div class="dec-action">➜ <strong>ABPM 24h essentielle</strong> dans le suivi des COA, particulièrement quand TA office est limite.</div>
+    </div>
+    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#34D399">
+        <span class="cor c1">COR 1</span>Rec. 9 COR 1 — Optimisation GDMT
+      </div>
+      <div class="dec-b">ABPM révèle TA mal contrôlée → optimiser le traitement.<br>Cible : <strong>TA syst ABPM diurne < 130 mmHg</strong>.</div>
+      <div class="dec-action">➜ Augmenter Ramipril ou ajouter ARA2 ou diurétique. Nouvelle ABPM 3 mois post-ajustement.</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+      <div class="slide-head-num">CAS 06 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — TA office limite (132/82) mais ABPM 142/88. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Maintenir traitement actuel</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Optimiser GDMT selon ABPM</div><div class="qcm-opt"><span class="qcm-letter">C</span>Surveillance simple</div><div class="qcm-opt"><span class="qcm-letter">D</span>Re-intervention COA</div>
+      <div class="qcm-explain">✓ La TA office sous-estime fréquemment la TA réelle dans la COA. L'ABPM révèle souvent un sous-traitement avec impact direct sur le remodelage VG et la mortalité (Egbe). Optimisation thérapeutique guidée par ABPM essentielle.</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 06</span>
+      <ul><li>ABPM crucial dans le suivi des COA</li><li>TA office sous-estime la TA réelle</li><li>Cible : ABPM diurne < 130 mmHg</li><li>Sous-traitement → remodelage et événements CV</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="7" style="--cas-color:#A78BFA;--cas-color2:#FB7185">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+      <div class="slide-head-num">CAS 07 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mr S.B., 32 ans</div>
+      <div class="slide-head-sub">COA + BAV + dilatation aortique</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#A78BFA">📒 Présentation clinique</div>
+      <div class="cas-intro-sub">Patient avec COA réparée et bicuspidie aortique (association > 60% selon ACC 2025) qui développe une dilatation aortique progressive nécessitant une surveillance multidimensionnelle.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr S.B., 32 ans</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">75 kg · 178 cm · BSA 1.92 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Suivi annuel · dilatation aorte progressive</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">COA réparée à 8 ans · BAV connue · IAo légère · TA contrôlée IEC</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-mint">I</span> Asymptomatique sous traitement</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">480 m · SpO₂ 98 %</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 122/76 (contrôlée) · différentielle minime</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+      <div class="slide-head-num">CAS 07 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Imagerie</div>
+      <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHILRLVp-c/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#A78BFA">🎨 Présentation Canva · Cas 07</div>
+        <div class="canva-caption-id">DAHILRLVp-c · Cas 07 · BAV</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILRLVp-c/view" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/Imagerie principales</div>
+      <div class="dr"><div class="dr-lbl">BAV</div><div class="dr-val"><strong>Fusion droite-gauche</strong></div></div><div class="dr"><div class="dr-lbl">IAo</div><div class="dr-val">Légère jet central</div></div><div class="dr"><div class="dr-lbl">Racine aortique</div><div class="dr-val">38 mm normale</div></div><div class="dr"><div class="dr-lbl">Aorte ascendante</div><div class="dr-val"><strong>43 mm</strong> (dilatation légère)</div></div><div class="dr"><div class="dr-lbl">Progression</div><div class="dr-val">+1 mm tous les 2 ans</div></div><div class="dr"><div class="dr-lbl">Crosse aortique</div><div class="dr-val">Normale</div></div><div class="dr"><div class="dr-lbl">Isthme post-op</div><div class="dr-val">Gradient 8 mmHg</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+      <div class="slide-head-num">CAS 07 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 ACC 2025 · Tableau 24 (COA)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Coarctation Aorte (Section 4.2.6)</strong> · Critères Stade selon Tableau 4 + Tableau 25 (significativité COA).</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade B retenu :</span>
+        <ul><li>✓ Asymptomatique sous traitement</li><li>✓ IAo légère associée</li><li>✓ Dilatation aorte ascendante 43 mm</li><li>✓ Progression lente +1 mm/2 ans</li><li>✓ Fonction VG conservée</li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #A78BFA">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#A78BFA;line-height:1">B</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade B — COA + BAV + dilatation</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-B</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>IRM aortique annuelle</li><li>ETT semestrielle</li><li>Seuil chirurgical 5 cm BAV</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+      <div class="slide-head-num">CAS 07 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Biologie · Imagerie</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 ECG & Biologie</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 70/min</div></div><div class="dr"><div class="dr-lbl">HVG</div><div class="dr-val">Légère</div></div><div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val">92 ms</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">180 pg/mL</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+      <div class="slide-head-num">CAS 07 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.2.6</div>
+    </div>
+    
+    <div class="dec" style="border-color:#A78BFA;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#A78BFA">
+        <span class="cor c1">COR 1</span>Surveillance multidimensionnelle (Sections 4.2.4 + 4.2.6)
+      </div>
+      <div class="dec-b"><strong>BAV + COA association &gt; 60%</strong> selon ACC 2025.<br><br><strong>Section 4.2.4 BAV (Rec. 1 COR 1 NEW 2025) :</strong> Adultes BAV + diamètre aortique &gt; 4 cm sinus ou ascendante, ou facteurs risque dissection → surveillance à vie de progression.<br><br><strong>Section 4.2.6 COA (Rec. 2 COR 1) :</strong> Adultes COA réparée → imagerie cross-sectionnelle périodique pour dépister re-COA, anévrysme aortique, complications stent.</div>
+      <div class="dec-action">➜ <strong>IRM aortique annuelle</strong> (préférée pour irradiation). ETT semestrielle. Seuil chirurgical 5 cm BAV (recommandation valvulaire). Si IAo s'aggrave → réévaluation.</div>
+    </div>
+    <div class="dec" style="border-color:#22D3EE;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#22D3EE">
+        <span class="cor c1">COR 1</span>Maintien GDMT antihypertensif
+      </div>
+      <div class="dec-b">Continuer Ramipril. ABPM régulière.</div>
+      <div class="dec-action">➜ Pas de changement actuel.</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+      <div class="slide-head-num">CAS 07 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — COA réparée + BAV — Surveillance ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Pas de surveillance nécessaire</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Surveillance aorte ascendante BAV (> 60% association)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Re-intervention COA systématique</div><div class="qcm-opt"><span class="qcm-letter">D</span>Anticoagulation préventive</div>
+      <div class="qcm-explain">✓ ACC 2025 indique que > 60% des patients COA ont une BAV. La BAV est associée à une dilatation aortique progressive nécessitant une surveillance imagerique régulière. Seuils chirurgicaux selon recommandations BAV/valvulaires.</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 07</span>
+      <ul><li>BAV + COA = association > 60%</li><li>Surveillance imagerique aorte ascendante essentielle</li><li>IRM préférée (sans irradiation)</li><li>Seuils chirurgicaux selon BAV (5 cm typiquement)</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="8" style="--cas-color:#FB7185;--cas-color2:#E03050">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
+      <div class="slide-head-num">CAS 08 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mr H.R., 36 ans</div>
+      <div class="slide-head-sub">Re-coarctation post-stent — Fracture</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#FB7185">📚 Présentation clinique</div>
+      <div class="cas-intro-sub">Patient stenté à l'âge adulte qui présente une récidive d'HTA et un souffle dorsal réapparu. L'angio-TDM révèle une fracture du stent avec re-coarctation in-stent.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr H.R., 36 ans</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">80 kg · 175 cm · BSA 1.97 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">HTA réapparue + souffle dorsal</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>COA stentée à 22 ans</strong> · suivi régulier puis perdu 4 ans</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II</span> HTA résistante + dyspnée</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">460 m · SpO₂ 97 %</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val"><strong>TA bras 158/95</strong> · TA jambe 122/75 · différentielle <strong>36 mmHg</strong></div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
+      <div class="slide-head-num">CAS 08 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Imagerie</div>
+      <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHILZxGi5Y/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#FB7185">🎨 Présentation Canva · Cas 08</div>
+        <div class="canva-caption-id">DAHILZxGi5Y · Cas 08 · Re-COA</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILZxGi5Y/view" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/Imagerie principales</div>
+      <div class="dr"><div class="dr-lbl">Isthme post-stent</div><div class="dr-val">Gradient résiduel évolutif</div></div><div class="dr"><div class="dr-lbl">Gradient Doppler moyen</div><div class="dr-val"><strong>26 mmHg</strong> (réapparu)</div></div><div class="dr"><div class="dr-lbl">Flux abdominal</div><div class="dr-val">Queue diastolique réapparue</div></div><div class="dr"><div class="dr-lbl">Angio TDM stent</div><div class="dr-val"><strong>Fracture stent partielle</strong></div></div><div class="dr"><div class="dr-lbl">Re-COA</div><div class="dr-val">In-stent 8 mm</div></div><div class="dr"><div class="dr-lbl">Anévrysme</div><div class="dr-val">Absent (à surveiller)</div></div><div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">FEVG 60% · HVG modérée réapparue</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
+      <div class="slide-head-num">CAS 08 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 ACC 2025 · Tableau 24 (COA)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Coarctation Aorte (Section 4.2.6)</strong> · Critères Stade selon Tableau 4 + Tableau 25 (significativité COA).</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade C retenu :</span>
+        <ul><li>✓ HTA résiduelle</li><li>✓ HVG modérée réapparue</li><li>✓ Re-COA hémodynamique confirmée</li><li>✓ <strong>Fracture stent</strong></li><li>✓ Différentielle TA significative</li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #FB7185">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#FB7185;line-height:1">C</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — Re-COA + fracture stent</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-C</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>Reprise programmée</li><li>Centre ACHD expert</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
+      <div class="slide-head-num">CAS 08 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Biologie · Imagerie</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 ECG & Biologie</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 78/min</div></div><div class="dr"><div class="dr-lbl">HVG</div><div class="dr-val">Modérée réapparue</div></div><div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val">100 ms</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>320 pg/mL</strong></div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
+      <div class="slide-head-num">CAS 08 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.2.6</div>
+    </div>
+    
+    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#34D399">
+        <span class="cor c1">COR 1</span>Rec. 2 COR 1 — Imagerie périodique post-réparation
+      </div>
+      <div class="dec-b"><strong>Rec. 2 COR 1 B-NR</strong> : Adultes COA réparée → imagerie cross-sectionnelle périodique pour dépister re-COA, anévrysmes, complications de réparation (fracture stent, dissection, pseudoanévrysmes).<br><br><strong>CT-angiographie préférée si stent</strong> (artefacts sur IRM).</div>
+      <div class="dec-action">➜ Surveillance imagerique régulière indispensable post-stent.</div>
+    </div>
+    <div class="dec" style="border-color:#FB7185;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#FB7185">
+        <span class="cor c1">COR 1</span>Rec. 8 COR 1 — Réintervention
+      </div>
+      <div class="dec-b"><strong>Rec. 8 COR 1</strong> : Re-COA hémodynamiquement significative → nouvelle intervention.<br><br>Discussion :<br>• Stent en stent (si fracture limitée et anatomie favorable)<br>• Chirurgie ouverte avec dépose stent (si fracture étendue ou anévrysme)</div>
+      <div class="dec-action">➜ <strong>Discussion centre ACHD expert</strong>. Choix individualisé selon imagerie complète. Maintien GDMT antihypertensif. Suivi rapproché long terme.</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
+      <div class="slide-head-num">CAS 08 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — Re-coarctation post-stent avec fracture. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Surveillance simple</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Réintervention (Rec. 8 COR 1)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Antihypertenseur seul</div><div class="qcm-opt"><span class="qcm-letter">D</span>Stent périphérique inférieur</div>
+      <div class="qcm-explain">✓ Rec. 8 COR 1 B-NR s'applique à toute COA hémodynamiquement significative (native ou récidivée). La fracture de stent est une complication connue (Alvarez-Fuente JACC 2021) nécessitant une reprise. Surveillance imagerique régulière essentielle (Rec. 2 COR 1).</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 08</span>
+      <ul><li>Fracture stent = complication connue à long terme</li><li>CT-angiographie préférée si stent (artefacts IRM)</li><li>Surveillance imagerique régulière indispensable</li><li>Réintervention (stent en stent ou chirurgie) selon anatomie</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="9" style="--cas-color:#E03050;--cas-color2:#FB923C">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB923C)">
+      <div class="slide-head-num">CAS 09 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mr M.B., 52 ans · tabagique</div>
+      <div class="slide-head-sub">COA + douleur effort — Coronaropathie prématurée</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#E03050">📖 Présentation clinique</div>
+      <div class="cas-intro-sub">Patient avec COA réparée et facteurs de risque cardiovasculaires multiples qui développe une douleur thoracique d'effort. La coronaropathie prématurée est associée à la COA selon plusieurs études.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr M.B., 52 ans · tabagique</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">82 kg · 175 cm · BSA 1.99 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Douleur thoracique d'effort + dyspnée</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">COA réparée à 12 ans · HTA · dyslipidémie · tabac actif</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II-III</span> Angor d'effort + dyspnée</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">380 m · SpO₂ 97 %</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 128/78 (contrôlée IEC) · pas de différentielle</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB923C)">
+      <div class="slide-head-num">CAS 09 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Imagerie</div>
+      <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHILQls838/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#E03050">🎨 Présentation Canva · Cas 09</div>
+        <div class="canva-caption-id">DAHILQls838 · Cas 09 · CAD</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILQls838/view" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/Imagerie principales</div>
+      <div class="dr"><div class="dr-lbl">Isthme post-op</div><div class="dr-val">Pas de re-COA · gradient 14 mmHg minime</div></div><div class="dr"><div class="dr-lbl">Aorte</div><div class="dr-val">Pas d'anévrysme</div></div><div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">SIV 12 mm · FEVG 58% · HVG légère</div></div><div class="dr"><div class="dr-lbl">Cinétique segmentaire</div><div class="dr-val">Pas d'anomalie au repos</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB923C)">
+      <div class="slide-head-num">CAS 09 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 ACC 2025 · Tableau 24 (COA)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Coarctation Aorte (Section 4.2.6)</strong> · Critères Stade selon Tableau 4 + Tableau 25 (significativité COA).</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade C retenu :</span>
+        <ul><li>✓ Symptômes d'effort attribuables CAD</li><li>✓ HVG légère + LV diastolic dysfunction</li><li>✓ FRCV multiples</li><li>✓ <strong>CAD significative documentée</strong></li><li>✓ COA non hémodynamiquement significative</li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #E03050">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#E03050;line-height:1">C</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — CAD prématurée + COA réparée</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-C</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>Prise en charge multidisciplinaire</li><li>Optimisation FRCV agressive</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB923C)">
+      <div class="slide-head-num">CAS 09 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Biologie · Imagerie</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 ECG & Biologie</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 76/min</div></div><div class="dr"><div class="dr-lbl">HVG</div><div class="dr-val">Légère</div></div><div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val">96 ms</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>280 pg/mL</strong></div></div><div class="dr"><div class="dr-lbl">LDL</div><div class="dr-val"><strong>145 mg/dL</strong> (sous-optimal)</div></div><div class="dr"><div class="dr-lbl">HbA1c</div><div class="dr-val">Normale</div></div><div class="dr"><div class="dr-lbl">Coronarographie</div><div class="dr-val"><strong>IVA proximale 70%</strong> · CD 50%</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB923C)">
+      <div class="slide-head-num">CAS 09 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.2.6</div>
+    </div>
+    
+    <div class="dec" style="border-color:#38BDF8;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#38BDF8">
+        <span class="cor c2a">COR 2a</span>Rec. 6 COR 2a — Évaluation coronaire (NEW 2025)
+      </div>
+      <div class="dec-b"><strong>Rec. 6 COR 2a B-NR (NEW 2025)</strong> : Adultes COA présentant symptômes d'effort → évaluation coronarienne raisonnable pour guider la prise en charge.<br><br><strong>Données :</strong> CAD prématurée associée à COA (Pickard 2018, Roifman 2012). Mécanismes : dysfonction endothéliale, vasculopathie, FRCV cumulés.</div>
+      <div class="dec-action">➜ Coronarographie indispensable face à symptômes d'effort post-COA.</div>
+    </div>
+    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#34D399">
+        <span class="cor c1">COR 1</span>Prise en charge multidisciplinaire
+      </div>
+      <div class="dec-b"><strong>IVA significative 70%</strong> → angioplastie programmée. Optimisation FRCV agressive.</div>
+      <div class="dec-action">➜ <strong>Angioplastie IVA programmée</strong>. <strong>Statines haute intensité</strong> (Atorvastatine 80 mg, cible LDL < 70 mg/dL). <strong>Arrêt tabac impératif</strong> (substituts nicotiniques). Maintien Ramipril. Réadaptation cardiaque post-angioplastie.</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB923C)">
+      <div class="slide-head-num">CAS 09 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — COA réparée + douleur thoracique d'effort. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Test d'effort suffit</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Évaluation coronaire (Rec. 6 COR 2a)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Optimisation antihypertenseur seul</div><div class="qcm-opt"><span class="qcm-letter">D</span>Pas d'exploration</div>
+      <div class="qcm-explain">✓ Rec. 6 COR 2a B-NR (NEW 2025) : la CAD prématurée est associée à la COA (Pickard 2018). Devant symptômes d'effort, l'évaluation coronaire est indispensable. Mécanismes : dysfonction endothéliale + vasculopathie diffuse + FRCV cumulés.</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 09</span>
+      <ul><li>CAD prématurée fréquente chez COA</li><li>Rec. 6 COR 2a NEW 2025</li><li>FRCV à optimiser agressivement</li><li>Cible LDL < 70 mg/dL chez COA + CAD</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="10" style="--cas-color:#22D3EE;--cas-color2:#34D399">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#34D399)">
+      <div class="slide-head-num">CAS 10 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mme R.K., 27 ans · G0P0</div>
+      <div class="slide-head-sub">COA et grossesse — IEC contre-indiqués</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#22D3EE">🎯 Présentation clinique</div>
+      <div class="cas-intro-sub">Jeune femme avec COA réparée stable adressée pour évaluation préconceptionnelle. Les IEC/ARA2 sont tératogènes et doivent être basculés vers des antihypertenseurs sécuritaires en grossesse.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme R.K., 27 ans · G0P0</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">62 kg · 168 cm · BSA 1.71 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Enseignante</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Évaluation préconceptionnelle (mariage récent)</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">COA réparée à 7 ans · TA contrôlée Ramipril 5 mg</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-mint">I</span> Asymptomatique</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">510 m · SpO₂ 99 %</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 122/76 (contrôlée) · pas de différentielle</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#34D399)">
+      <div class="slide-head-num">CAS 10 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Imagerie</div>
+      <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHILS6V6HA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#22D3EE">🎨 Présentation Canva · Cas 10</div>
+        <div class="canva-caption-id">DAHILS6V6HA · Cas 10 · Grossesse</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILS6V6HA/view" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/Imagerie principales</div>
+      <div class="dr"><div class="dr-lbl">Isthme post-op</div><div class="dr-val">Cicatriciel · gradient 10 mmHg</div></div><div class="dr"><div class="dr-lbl">Pas de re-coarctation</div><div class="dr-val">Confirmée imagerie</div></div><div class="dr"><div class="dr-lbl">FEVG</div><div class="dr-val">65% normale</div></div><div class="dr"><div class="dr-lbl">Valve aortique</div><div class="dr-val">Tricuspide normale (pas de BAV)</div></div><div class="dr"><div class="dr-lbl">Aorte ascendante</div><div class="dr-val">32 mm normale</div></div><div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">SIV 11 mm · pas d'HVG significative</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#34D399)">
+      <div class="slide-head-num">CAS 10 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 ACC 2025 · Tableau 24 (COA)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Coarctation Aorte (Section 4.2.6)</strong> · Critères Stade selon Tableau 4 + Tableau 25 (significativité COA).</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade B retenu :</span>
+        <ul><li>✓ Asymptomatique</li><li>✓ Pas de re-coarctation</li><li>✓ Pas de BAV ni dilatation aortique</li><li>✓ TA bien contrôlée (ABPM 124/78)</li><li>✓ Fonction VG normale</li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #22D3EE">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#22D3EE;line-height:1">B</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade B — Risque grossesse FAIBLE</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-B</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>Counseling préconceptionnel</li><li>Switch antihypertenseur</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#34D399)">
+      <div class="slide-head-num">CAS 10 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Biologie · Imagerie</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 ECG & Biologie</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 78/min</div></div><div class="dr"><div class="dr-lbl">HVG</div><div class="dr-val">Absente</div></div><div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val">88 ms</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">60 pg/mL (normal)</div></div><div class="dr"><div class="dr-lbl">β-HCG</div><div class="dr-val">Négatif initial</div></div><div class="dr"><div class="dr-lbl">ABPM 24h</div><div class="dr-val"><strong>Moyenne 124/78</strong> (bien contrôlée)</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#34D399)">
+      <div class="slide-head-num">CAS 10 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.2.6</div>
+    </div>
+    
+    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#34D399">
+        <span class="cor c1">COR 1</span>Évaluation risque — CARPREG II + WHO
+      </div>
+      <div class="dec-b"><strong>CARPREG II :</strong><br>• Cardiopathie native corrigée : 0 pt<br>• NYHA I : 0 pt<br>• Pas autres facteurs<br>• <strong>Score = 0 pt</strong> (risque ≈ 5%)<br><br><strong>WHO modifiée :</strong> Classe II<br>• COA réparée simple sans complication<br>• Si BAV ou aorte dilatée → II-III</div>
+      <div class="dec-action">➜ <strong>Maternité autorisée</strong>. Risque modéré gérable.</div>
+    </div>
+    <div class="dec" style="border-color:#E03050;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#E03050">
+        <span class="cor c1">COR 1</span>⚠️ IEC/ARA2 CONTRE-INDIQUÉS en grossesse
+      </div>
+      <div class="dec-b"><strong>Les IEC et ARA2 sont tératogènes</strong> (insuffisance rénale fœtale, oligo-amnios, mort fœtale).<br><br>Switch vers antihypertenseurs sécuritaires :<br>• <strong>Labétalol</strong> (1ère ligne)<br>• <strong>Méthyldopa</strong> (alternative)<br>• Nifédipine si HTA résistante</div>
+      <div class="dec-action">➜ <strong>Switch préconceptionnel</strong> (avant arrêt contraception). Counseling cardio-obstétrique.</div>
+    </div>
+    <div class="dec" style="border-color:#22D3EE;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#22D3EE">
+        <span class="cor c1">COR 1</span>Plan de soins individualisé
+      </div>
+      <div class="dec-b"><strong>Section 3.8 ACC 2025 :</strong><br>• Rec. 2 COR 1 : counseling préconceptionnel<br>• Rec. 4 COR 1 : plan de soins individualisé<br>• Rec. 5 COR 2a : équipe cardio-obstétricale</div>
+      <div class="dec-action">➜ ETT chaque trimestre. ABPM trimestriel. IRM aortique avant grossesse. Accouchement voie basse possible. Péridurale recommandée. Surveillance post-partum 6 semaines.</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#34D399)">
+      <div class="slide-head-num">CAS 10 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — Patiente COA réparée sous IEC, désir de grossesse. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Grossesse contre-indiquée</div><div class="qcm-opt"><span class="qcm-letter">B</span>Maintenir IEC pendant la grossesse</div><div class="qcm-opt correct"><span class="qcm-letter">C</span>Switch antihypertenseur préconceptionnel (labétalol/méthyldopa)</div><div class="qcm-opt"><span class="qcm-letter">D</span>Césarienne systématique programmée</div>
+      <div class="qcm-explain">✓ Les IEC/ARA2 sont tératogènes (toxicité rénale fœtale, oligoamnios). Switch préconceptionnel obligatoire vers labétalol (1ère ligne) ou méthyldopa. La COA réparée simple sans complication = WHO II, grossesse possible avec équipe cardio-obstétricale.</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 10</span>
+      <ul><li>IEC/ARA2 = CONTRE-INDIQUÉS en grossesse (tératogènes)</li><li>Switch préconceptionnel : Labétalol > Méthyldopa</li><li>COA réparée simple = WHO II (maternité possible)</li><li>Équipe cardio-obstétricale + ABPM trimestriel</li></ul>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div id="botnav">
+  <div class="bn-wrap">
+    <button class="bn-btn bn-prev" id="btn-prev" onclick="navSlide(-1)">← Précédent</button>
+    <button class="bn-btn bn-next" id="btn-next" onclick="navSlide(1)">Suivant →</button>
+  </div>
+</div>
+
+<script>
+var STATE = { curCas: 1, curSlide: 0 };
+var CAS_COLORS = {
+  1: { color: '#E03050', color2: '#FB7185' },
+  2: { color: '#F0A030', color2: '#FB923C' },
+  3: { color: '#A78BFA', color2: '#22D3EE' },
+  4: { color: '#22D3EE', color2: '#38BDF8' },
+  5: { color: '#FB923C', color2: '#F0A030' },
+  6: { color: '#34D399', color2: '#22D3EE' },
+  7: { color: '#A78BFA', color2: '#FB7185' },
+  8: { color: '#FB7185', color2: '#E03050' },
+  9: { color: '#E03050', color2: '#FB923C' },
+  10:{ color: '#22D3EE', color2: '#34D399' }
+};
+
+function showCas(n) {
+  STATE.curCas = n;
+  STATE.curSlide = 0;
+  document.querySelectorAll('.cas').forEach(function(c){c.classList.remove('on')});
+  document.querySelectorAll('.cn').forEach(function(b){b.classList.remove('on')});
+  var cas = document.querySelector('.cas[data-cas="'+n+'"]');
+  if (cas) cas.classList.add('on');
+  var btn = document.querySelector('.cn[data-cas="'+n+'"]');
+  if (btn) btn.classList.add('on');
+  var col = CAS_COLORS[n];
+  if (col) {
+    document.documentElement.style.setProperty('--cas-color', col.color);
+    document.documentElement.style.setProperty('--cas-color2', col.color2);
+  }
+  document.getElementById('cas-badge').textContent = 'CAS '+n+'/10';
+  showSlide(0);
+}
+
+function showSlide(s) {
+  STATE.curSlide = s;
+  var cas = document.querySelector('.cas[data-cas="'+STATE.curCas+'"]');
+  if (!cas) return;
+  cas.querySelectorAll('.slide').forEach(function(sl){sl.classList.remove('on')});
+  var sl = cas.querySelector('.slide[data-slide="'+s+'"]');
+  if (sl) sl.classList.add('on');
+  document.querySelectorAll('.sn').forEach(function(b){b.classList.remove('on')});
+  var snBtn = document.querySelector('.sn[data-slide="'+s+'"]');
+  if (snBtn) snBtn.classList.add('on');
+  document.getElementById('btn-prev').disabled = (STATE.curCas===1 && s===0);
+  document.getElementById('btn-next').disabled = (STATE.curCas===10 && s===5);
+  document.getElementById('btn-next').textContent = (s===5 && STATE.curCas<10 ? 'Cas suivant →' : 'Suivant →');
+  if (STATE.curCas===10 && s===5) document.getElementById('btn-next').textContent = 'Fin ✓';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function navSlide(dir) {
+  var newSlide = STATE.curSlide + dir;
+  if (newSlide < 0) {
+    if (STATE.curCas > 1) {
+      showCas(STATE.curCas - 1);
+      showSlide(5);
+    }
+    return;
+  }
+  if (newSlide > 5) {
+    if (STATE.curCas < 10) {
+      showCas(STATE.curCas + 1);
+      return;
+    }
+    return;
+  }
+  showSlide(newSlide);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.cn').forEach(function(b){
+    b.addEventListener('click', function(){
+      var n = parseInt(b.getAttribute('data-cas'));
+      showCas(n);
+    });
+  });
+  document.querySelectorAll('.sn').forEach(function(b){
+    b.addEventListener('click', function(){
+      var s = parseInt(b.getAttribute('data-slide'));
+      showSlide(s);
+    });
+  });
+  document.documentElement.style.setProperty('--cas-color', CAS_COLORS[1].color);
+  document.documentElement.style.setProperty('--cas-color2', CAS_COLORS[1].color2);
+});
+</script>
+</body>
+</html>
