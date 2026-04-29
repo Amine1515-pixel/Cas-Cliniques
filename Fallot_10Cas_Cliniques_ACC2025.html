@@ -16,7 +16,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM Sans",sans-serif;font-size:14px;overflow-x:hidden}
-
+ 
 #topbar{background:rgba(6,16,30,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--brd2);padding:10px 14px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:200}
 .tb-logo{width:38px;height:38px;border-radius:9px;background:#fff;padding:2px;flex-shrink:0;overflow:hidden}
 .tb-logo img{width:100%;height:100%;object-fit:contain}
@@ -24,46 +24,46 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .tb-title{font-family:"Syne",sans-serif;font-size:14px;font-weight:700;color:var(--accent);line-height:1.2}
 .tb-sub{font-size:9px;color:var(--w3);margin-top:1px}
 .tb-cas-badge{background:rgba(34,211,238,.2);border:1px solid rgba(34,211,238,.4);border-radius:7px;padding:4px 9px;font-size:10px;font-weight:700;color:var(--cyan);flex-shrink:0;font-family:"JetBrains Mono",monospace}
-
+ 
 #cas-nav{background:rgba(6,16,30,.95);border-bottom:1px solid var(--brd);padding:9px 12px;display:flex;gap:6px;overflow-x:auto;position:sticky;top:60px;z-index:190}
 #cas-nav::-webkit-scrollbar{display:none}
 .cn{padding:7px 14px;border-radius:18px;font-family:"Syne",sans-serif;font-size:10px;font-weight:700;cursor:pointer;border:1.5px solid var(--brd2);background:transparent;color:var(--w3);white-space:nowrap;flex-shrink:0;transition:all .15s}
 .cn.on{background:var(--cas-color,var(--cyan));color:#06101E;border-color:var(--cas-color,var(--cyan))}
 .cn:active{transform:scale(.95)}
-
+ 
 #slides-nav{background:rgba(6,16,30,.95);border-bottom:1px solid var(--brd);padding:8px 12px;display:flex;gap:5px;overflow-x:auto;position:sticky;top:107px;z-index:185}
 #slides-nav::-webkit-scrollbar{display:none}
 .sn{padding:5px 10px;border-radius:14px;font-family:"DM Sans",sans-serif;font-size:10px;font-weight:600;cursor:pointer;border:1.5px solid var(--brd2);background:transparent;color:var(--w3);white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:5px}
 .sn .sn-num{font-family:"JetBrains Mono",monospace;font-size:9px;font-weight:700;background:rgba(255,255,255,.06);padding:1px 5px;border-radius:3px}
 .sn.on{background:var(--cas-color,var(--cyan));color:#06101E;border-color:var(--cas-color,var(--cyan))}
 .sn.on .sn-num{background:rgba(0,0,0,.2);color:#06101E}
-
+ 
 #content{padding:14px 13px 100px;max-width:520px;margin:0 auto}
 .cas{display:none}
 .cas.on{display:block}
 .slide{display:none;animation:fadeIn 0.3s}
 .slide.on{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-
+ 
 .card{background:var(--card);border-radius:13px;border:1px solid var(--brd);padding:14px;margin-bottom:11px}
 .card-title{font-family:"Syne",sans-serif;font-size:12px;font-weight:700;color:var(--cas-color,var(--accent));margin-bottom:11px;display:flex;align-items:center;gap:7px;padding-bottom:8px;border-bottom:1px solid var(--brd)}
-
+ 
 .slide-head{background:linear-gradient(135deg,var(--cas-color,var(--cyan)),var(--cas-color2,var(--mint)));padding:14px 16px;border-radius:14px;margin-bottom:13px;color:#fff;position:relative;overflow:hidden}
 .slide-head::after{content:'';position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:rgba(255,255,255,.1);border-radius:50%}
 .slide-head-num{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;opacity:.85;letter-spacing:1px;margin-bottom:3px}
 .slide-head-title{font-family:"Syne",sans-serif;font-size:17px;font-weight:800;line-height:1.2}
 .slide-head-sub{font-size:11px;opacity:.85;margin-top:3px}
-
+ 
 .cas-intro{background:linear-gradient(135deg,rgba(34,211,238,.15),rgba(52,211,153,.1));border:1px solid var(--cas-color,var(--cyan));border-radius:12px;padding:13px 14px;margin-bottom:12px}
 .cas-intro-title{font-family:"Syne",sans-serif;font-size:14px;font-weight:800;color:var(--cas-color,var(--cyan));margin-bottom:5px}
 .cas-intro-sub{font-size:11px;color:var(--w2);line-height:1.5}
-
+ 
 .dr{display:flex;padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.06);font-size:12.5px;align-items:flex-start;gap:10px}
 .dr:last-child{border-bottom:none}
 .dr-lbl{flex:0 0 110px;color:var(--w3);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.3px;padding-top:1px}
 .dr-val{flex:1;color:var(--w1);font-weight:500;line-height:1.5}
 .dr-val strong{color:var(--cas-color,var(--accent))}
-
+ 
 .chip{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:5px;font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;margin:2px 3px 2px 0}
 .chip-mint{background:rgba(52,211,153,.18);color:var(--mint)}
 .chip-sky{background:rgba(56,189,248,.18);color:var(--sky)}
@@ -73,7 +73,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .chip-cyan{background:rgba(34,211,238,.18);color:var(--cyan)}
 .chip-orange{background:rgba(251,146,60,.18);color:var(--orange)}
 .chip-rose{background:rgba(251,113,133,.18);color:var(--rose)}
-
+ 
 .ib{border-radius:10px;padding:11px 13px;font-size:12px;line-height:1.65;border-left:3px solid;margin-bottom:10px}
 .ib strong{color:var(--w1)}
 .ib-sky{background:rgba(56,189,248,.08);border-color:var(--sky);color:var(--w2)}
@@ -87,40 +87,40 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .ib-title{font-family:"Syne",sans-serif;font-size:11.5px;font-weight:700;color:var(--w1);display:block;margin-bottom:5px}
 .ib ul{margin:5px 0 0 17px;padding:0}
 .ib li{margin-bottom:4px;line-height:1.55}
-
+ 
 .app-use{background:linear-gradient(135deg,rgba(34,211,238,.12),rgba(167,139,250,.06));border:1.5px solid rgba(34,211,238,.3);border-radius:12px;padding:13px 14px;margin-bottom:11px;position:relative}
 .app-use::before{content:'📱';position:absolute;top:-12px;left:13px;background:var(--bg);padding:2px 9px;border-radius:14px;font-size:14px;border:1.5px solid rgba(34,211,238,.3)}
 .app-use-title{font-family:"Syne",sans-serif;font-size:11px;font-weight:800;color:var(--cyan);text-transform:uppercase;letter-spacing:.5px;margin-top:3px;margin-bottom:7px}
 .app-use-body{font-size:12px;color:var(--w2);line-height:1.65}
 .app-use-body strong{color:var(--w1)}
-
+ 
 .cor{display:inline-flex;align-items:center;padding:2px 7px;border-radius:5px;font-family:"JetBrains Mono",monospace;font-size:9px;font-weight:700;margin-right:5px}
 .c1{background:rgba(52,211,153,.2);color:var(--mint)}
 .c2a{background:rgba(56,189,248,.2);color:var(--sky)}
 .c2b{background:rgba(240,160,48,.2);color:var(--gold)}
 .c3{background:rgba(224,48,80,.18);color:var(--red);border:1px solid rgba(224,48,80,.4)}
-
+ 
 .dec{border-radius:12px;border:2px solid;padding:13px;margin-bottom:10px}
 .dec-t{font-family:"Syne",sans-serif;font-size:13px;font-weight:800;margin-bottom:7px;line-height:1.3}
 .dec-b{font-size:12px;color:var(--w2);line-height:1.65}
 .dec-action{margin-top:8px;padding:8px 11px;background:rgba(255,255,255,.04);border-radius:7px;font-size:11.5px;color:var(--w2);font-style:italic;line-height:1.55}
-
+ 
 .canva-embed-wrap{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:14px;overflow:hidden;margin-bottom:8px;box-shadow:0 4px 20px rgba(0,0,0,.4);border:1px solid var(--brd2)}
 .canva-embed-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block}
 .canva-caption{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,rgba(125,60,224,.15),rgba(58,163,243,.1));border:1px solid rgba(125,60,224,.3);border-radius:10px;padding:9px 12px;font-size:11px;color:var(--w2);margin-bottom:11px}
 .canva-caption-id{font-family:"JetBrains Mono",monospace;font-size:9px;color:var(--w3);letter-spacing:.5px}
 .canva-caption-link{color:#fff;background:linear-gradient(135deg,#7d3ce0,#3aa3f3);padding:5px 10px;border-radius:6px;text-decoration:none;font-size:10px;font-weight:600;white-space:nowrap}
-
+ 
 .tbl{width:100%;border-collapse:collapse;font-size:11.5px;margin:9px 0;border-radius:8px;overflow:hidden}
 .tbl th{background:rgba(34,211,238,.18);color:var(--cyan);text-align:left;padding:7px 10px;font-family:"Syne",sans-serif;font-weight:700;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;border:1px solid var(--brd)}
 .tbl td{padding:7px 10px;border:1px solid var(--brd);color:var(--w2);line-height:1.5}
 .tbl tr:nth-child(even) td{background:rgba(255,255,255,.02)}
-
+ 
 .slide-progress{display:flex;gap:4px;justify-content:center;margin-bottom:14px}
 .sp-dot{width:24px;height:3px;background:var(--brd2);border-radius:2px;transition:all .25s}
 .sp-dot.on{background:var(--cas-color,var(--cyan));width:32px}
 .sp-dot.done{background:var(--mint)}
-
+ 
 #botnav{position:fixed;bottom:0;left:0;right:0;background:rgba(6,16,30,.97);backdrop-filter:blur(14px);border-top:1px solid var(--brd2);padding:10px 13px;z-index:300}
 .bn-wrap{max-width:520px;margin:0 auto;display:flex;gap:8px}
 .bn-btn{flex:1;padding:11px;border-radius:11px;border:none;font-family:"Syne",sans-serif;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
@@ -128,7 +128,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .bn-next{background:var(--cas-color,var(--cyan));color:#06101E}
 .bn-btn:disabled{opacity:.3;cursor:not-allowed}
 .bn-btn:active{transform:scale(.97)}
-
+ 
 .qcm{background:rgba(34,211,238,.08);border:1.5px solid rgba(34,211,238,.3);border-radius:11px;padding:13px;margin-bottom:11px}
 .qcm-q{font-family:"Syne",sans-serif;font-size:13px;font-weight:700;color:var(--cyan);margin-bottom:9px;line-height:1.4}
 .qcm-opt{display:flex;align-items:flex-start;gap:8px;padding:9px 11px;background:var(--bg3);border-radius:8px;border:1.5px solid var(--brd);margin-bottom:5px;font-size:12px;color:var(--w2);line-height:1.5;cursor:pointer}
@@ -168,39 +168,39 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
   <button class="sn" data-slide="5"><span class="sn-num">06</span>Take-home</button>
 </div>
 <div id="content">
-
-<div class="cas on" data-cas="1" style="--cas-color:#34D399;--cas-color2:#22D3EE">
-
+ 
+<div class="cas on" data-cas="1" style="--cas-color:#FB923C;--cas-color2:#F0A030">
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
       <div class="slide-head-num">CAS 01 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mr A.B., 28 ans</div>
-      <div class="slide-head-sub">Fallot natif adulte — Diagnostic tardif</div>
+      <div class="slide-head-title">Mr A.B., 31 ans (Homme)</div>
+      <div class="slide-head-sub">Anévrysme Infundibulaire — Chirurgie (TPVR contre-indiquée)</div>
     </div>
     <div class="cas-intro">
-      <div class="cas-intro-title" style="color:#34D399">📘 Présentation clinique</div>
-      <div class="cas-intro-sub">Adulte avec tétralogie de Fallot non opérée arrivant tardivement en consultation. La présentation native chez l'adulte est rare en occident mais persiste dans certains contextes — physiologie cyanogène stable.</div>
+      <div class="cas-intro-title" style="color:#FB923C">🫀 Présentation clinique</div>
+      <div class="cas-intro-sub">Patient TF réparé à 4 ans avec IP sévère libre sans coaptation et anévrysme du CCVD large découvert lors d'un bilan systématique. La présence de l'anévrysme > 40 mm contre-indique la TPVR percutanée — chirurgie indispensable.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr A.B., 28 ans</strong></div></div>
-      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">65 kg · 174 cm · BSA 1.78 m²</div></div>
-      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre adapté</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Bilan ACHD · cyanose + souffle découverte tardive</div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr A.B., 31 ans (Homme)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">75 kg · 178 cm · BSA 1.92 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">—</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Bilan de suivi annuel systématique · découverte fortuite</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">Pas de chirurgie · cyanose progressive · hippocratisme · accroupissement à l'effort</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>TOF réparée à 4 ans</strong> · IP sévère libre sans coaptation · Anévrysme CCVD large</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II</span> Cyanose progressive · capacité limitée</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">320 m · <strong>SpO₂ 84%</strong></div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 118/72 · Souffle systolique éjectionnel 4/6 · B2 unique · cyanose centrale + hippocratisme</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II–III</span> Dyspnée + lipothymies effort + ESV perçues fréquentes + lipothymie ×3</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">SaO₂ repos 98% · effort 94%</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">Bêtabloquant faible dose · pas de syncope franche</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -208,7 +208,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
       <div class="slide-head-num">CAS 01 · SLIDE 2/6</div>
       <div class="slide-head-title">📊 Iconographie & Échographie</div>
       <div class="slide-head-sub">Présentation Canva unifiée · ancre #1</div>
@@ -218,14 +218,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="canva-caption">
       <div>
-        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#34D399">🎨 Cas 01</div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#FB923C">🎨 Cas 01</div>
         <div class="canva-caption-id">DAHIQNC5igU · ancre #1</div>
       </div>
       <a class="canva-caption-link" href="https://www.canva.com/design/DAHIQNC5igU/view#1" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/IRM principales</div>
-      <div class="dr"><div class="dr-lbl">Anatomie</div><div class="dr-val"><strong>TF native</strong> : CIV malalignée + obstruction VOIES VD + dextroposition aorte + HVD</div></div><div class="dr"><div class="dr-lbl">CIV</div><div class="dr-val">Périmembraneuse 18 mm large</div></div><div class="dr"><div class="dr-lbl">Obstruction VOIES VD</div><div class="dr-val"><strong>Gradient infundibulaire 80 mmHg</strong> + sténose valvulaire</div></div><div class="dr"><div class="dr-lbl">Anneau pulmonaire</div><div class="dr-val">Hypoplasique (Z-score -3.2)</div></div><div class="dr"><div class="dr-lbl">Branches AP</div><div class="dr-val">Confluentes · gauche 12 mm · droite 14 mm</div></div><div class="dr"><div class="dr-lbl">Aorte ascendante</div><div class="dr-val"><strong>40 mm dilatée</strong></div></div><div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">FEVG 60% · sans surcharge</div></div><div class="dr"><div class="dr-lbl">Cathétérisme</div><div class="dr-val">PVR 1.6 WU · pas d'HTAP</div></div>
+      <div class="dr"><div class="dr-lbl">IP — sévérité</div><div class="dr-val"><strong>Sévère · Libre</strong> sans coaptation</div></div><div class="dr"><div class="dr-lbl">Temps demi-pression IP (PHT)</div><div class="dr-val">< 100 ms</div></div><div class="dr"><div class="dr-lbl">Strain VD longitudinal (GLS)</div><div class="dr-val"><strong>–10%</strong> (norme < –20%)</div></div><div class="dr"><div class="dr-lbl">TAPSE</div><div class="dr-val"><strong>14 mm</strong> ↓</div></div><div class="dr"><div class="dr-lbl">S' VD (Doppler tissue)</div><div class="dr-val">9 cm/s</div></div><div class="dr"><div class="dr-lbl">PAP syst. estimée</div><div class="dr-val">28 mmHg</div></div><div class="dr"><div class="dr-lbl">FEVG</div><div class="dr-val">58% conservée</div></div><div class="dr"><div class="dr-lbl">Anévrysme CCVD</div><div class="dr-val"><strong>Large · akinésie 68 mm</strong></div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -233,33 +233,33 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
       <div class="slide-head-num">CAS 01 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF)</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF) + Tableau 35 (RVP)</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong> · Critères Stade selon Tableau 4 + Tableau 35 (PVR).</div>
+      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong>. Critères RVP : VTSI-VD > 80 mL/m² (NEW 2025), FEVD ≤ 46%, FR IP ≥ 25%, QRS ≥ 180 ms, PREVENTION-ACHD.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
         <span class="ib-title">Stade C retenu :</span>
-        <ul><li>✓ Cyanose centrale SpO₂ 84%</li><li>✓ Polyglobulie compensatrice (Ht 56%)</li><li>✓ HVD sévère + obstruction VOIES VD majeure</li><li>✓ Aorte dilatée 40 mm</li><li>✓ NYHA II-III</li></ul>
+        <ul><li>✓ NYHA II-III + lipothymies + ESV/TVNS</li><li>✓ <strong>Triple critère RVP COR 1</strong> : IP sévère + VTSI-VD 118 mL/m² (>80) + FEVD 38% (≤46%)</li><li>✓ VTDI-VD 206 mL/m² · FEVG 55% conservée</li><li>✓ <strong>Anévrysme CCVD 42 mm + akinésie 68 mm</strong></li><li>✓ LGE infundibulum + PREVENTION-ACHD 4/7</li></ul>
       </div>
     </div>
     <div class="card" style="border-left:4px solid #F0A030">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
         <div style="font-family:Syne;font-size:48px;font-weight:800;color:#F0A030;line-height:1">C</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — TF native cyanogène</div>
-        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>III-C</strong></div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — RVP COR 1 + EEP COR 2a</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-C</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>Centre ACHD expert</li><li>Réparation chirurgicale différée discutée</li></ul>
+      <ul><li>Centre ACHD expert + EP</li><li>Chirurgie obligatoire (TPVR contre-indiquée)</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -267,14 +267,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
       <div class="slide-head-num">CAS 01 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Holter · IRM</div>
+      <div class="slide-head-sub">ECG · Holter · IRM · CPET · Cathétérisme · CT</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 86/min</div></div><div class="dr"><div class="dr-lbl">HVD</div><div class="dr-val">Sévère · Sokolow-RV 18 mm</div></div><div class="dr"><div class="dr-lbl">Axe</div><div class="dr-val">Droit majeur</div></div><div class="dr"><div class="dr-lbl">BBD</div><div class="dr-val">Incomplet</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>340 pg/mL</strong></div></div><div class="dr"><div class="dr-lbl">Hématocrite</div><div class="dr-val"><strong>56%</strong> (polyglobulie compensatrice)</div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val"><strong>176 ms</strong> · RSR' + fragmentation</div></div><div class="dr"><div class="dr-lbl">QTc / Dispersion QT</div><div class="dr-val">440 ms / 65 ms</div></div><div class="dr"><div class="dr-lbl">Axe QRS</div><div class="dr-val">+110° · Droit</div></div><div class="dr"><div class="dr-lbl">Holter 48h</div><div class="dr-val">ESV 1 240/24h · TVNS 3 épisodes (3-5 cx) · pas de TV soutenue</div></div><div class="dr"><div class="dr-lbl">BNP</div><div class="dr-val"><strong>186 ng/L</strong> ↑</div></div><div class="dr"><div class="dr-lbl">PREVENTION-ACHD</div><div class="dr-val"><strong>4/7</strong> — Risque élevé</div></div><div class="dr"><div class="dr-lbl">CPET — VO₂ peak</div><div class="dr-val"><strong>62% prédit</strong> (16.8 mL/kg/min · pente VE/VCO₂ 1.18)</div></div><div class="dr"><div class="dr-lbl">Cathétérisme — RVP</div><div class="dr-val">1.8 WU normal · PAP moy 22 · PCWP 12 · PTDVD 14 ↑</div></div><div class="dr"><div class="dr-lbl">CT cardiaque</div><div class="dr-val"><strong>Anévrysme CCVD 42×38 mm</strong> · coronaire G distance 8 mm</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -282,7 +282,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
       <div class="slide-head-num">CAS 01 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
       <div class="slide-head-sub">ACC 2025 · Section 4.4.1</div>
@@ -290,10 +290,10 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     
     <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
       <div class="dec-t" style="color:#34D399">
-        <span class="cor c1">COR 1</span>Réparation chirurgicale RECOMMANDÉE
+        <span class="cor c1">COR 1</span>RVP COR 1 + Chirurgie + résection anévrysme
       </div>
-      <div class="dec-b"><strong>Section 4.4.1 ACC 2025</strong> : adultes avec TF native non réparée + symptômes ou cyanose significative → réparation chirurgicale recommandée pour améliorer survie et qualité de vie.<br><br>Particularités adulte : aorte ascendante souvent dilatée (40 mm ici), branches AP parfois hypoplasiques, polyglobulie à corriger en péri-op, anesthésie complexe.</div>
-      <div class="dec-action">➜ <strong>Réparation complète :</strong> fermeture CIV + élargissement VOIES VD + commissurotomie pulmonaire ± patch transannulaire. Bilan préop : IRM aortique + cathétérisme + saignées si Ht > 65%. Centre ACHD expert.</div>
+      <div class="dec-b"><strong>Triple critère RVP COR 1 (ACC 2025) :</strong><br>• IP sévère + symptômes NYHA II-III ✓<br>• <strong>VTSI-VD > 80 mL/m²</strong> (ici 118) — nouveau seuil 2025 (abandonne VTDI ≥ 160)<br>• <strong>FEVD ≤ 46%</strong> (ici 38%)<br><br><strong>CT cardiaque COR 1 (NEW 2025) :</strong> <strong>anévrysme CCVD 42×38 mm</strong> → <strong>TPVR percutanée CONTRE-INDIQUÉE</strong> (anévrysme > 40 mm = risque rupture/migration stent). Chirurgie indispensable.<br><br><strong>EEP pré-opératoire COR 2a</strong> (PREVENTION-ACHD 4/7 + TVNS) : recherche substrat arythmique avant chirurgie.</div>
+      <div class="dec-action">➜ <strong>Chirurgie programmée :</strong> RVP (homogreffe ou bioprothèse) + <strong>résection anévrysme CCVD + plastie ventriculaire</strong>. EEP pré-op pour cartographie isthmes. Discussion DAI selon résultat EEP. Centre ACHD chirurgical expert.</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -301,55 +301,55 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
       <div class="slide-head-num">CAS 01 · SLIDE 6/6</div>
       <div class="slide-head-title">🎓 QCM & Take-home</div>
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — Adulte 28 ans avec TF native cyanogène SpO₂ 84%. Conduite ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Surveillance — physiologie stable</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Réparation chirurgicale en centre ACHD expert</div><div class="qcm-opt"><span class="qcm-letter">C</span>PAH therapy + maintien physiologie cyanogène</div><div class="qcm-opt"><span class="qcm-letter">D</span>Transplantation cœur-poumons</div>
-      <div class="qcm-explain">✓ TF native cyanogène = indication chirurgicale. Survie sans chirurgie limitée (40% à 30 ans). La réparation tardive donne d'excellents résultats si VG préservé et branches AP suffisantes. Bilan préopératoire complet indispensable.</div>
+      <div class="qcm-q">QCM — TF + IP sévère + VTSI-VD 118 + FEVD 38% + <strong>anévrysme CCVD 42 mm</strong> + PREVENTION 4/7. Stratégie ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>TPVR percutanée (Melody/Sapien)</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Chirurgie : RVP + résection anévrysme + EEP pré-op</div><div class="qcm-opt"><span class="qcm-letter">C</span>Surveillance — patient asymptomatique</div><div class="qcm-opt"><span class="qcm-letter">D</span>DAI primaire seul</div>
+      <div class="qcm-explain">✓ <strong>Anévrysme CCVD > 40 mm = TPVR contre-indiquée</strong> (CT cardiaque COR 1 NEW 2025). Triple critère RVP COR 1 rempli (IP sévère + VTSI-VD 118 > 80 + FEVD 38% ≤ 46%). Chirurgie + résection anévrysme + EEP pré-op pour stratification arythmique.</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 01</span>
-      <ul><li>TF native adulte = chirurgie recommandée</li><li>Aorte ascendante souvent dilatée chez l'adulte TF</li><li>Polyglobulie : saignées si Ht > 65% + symptômes</li><li>Survie sans chirurgie limitée (40% à 30 ans)</li></ul>
+      <ul><li><strong>VTSI-VD > 80 mL/m² = nouveau seuil RVP ACC 2025</strong> (remplace VTDI ≥ 160)</li><li>CT cardiaque obligatoire avant TPVR sur CCVD natif (COR 1 NEW)</li><li>Anévrysme CCVD > 40 mm = TPVR contre-indiquée</li><li>Anévrysme CCVD = substrat arythmique indépendant</li><li>Strain VD –10% détecte la dysfonction avant la chute FEVD</li></ul>
     </div>
   </div>
 </div>
-
-<div class="cas" data-cas="2" style="--cas-color:#22D3EE;--cas-color2:#38BDF8">
-
+ 
+<div class="cas" data-cas="2" style="--cas-color:#E03050;--cas-color2:#FB7185">
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 02 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mr K.A., 32 ans</div>
-      <div class="slide-head-sub">TF réparé asympto — Surveillance simple</div>
+      <div class="slide-head-title">Mme F.B., 28 ans (Femme)</div>
+      <div class="slide-head-sub">Dysfonction VD Sévère NYHA III — Patch transannulaire</div>
     </div>
     <div class="cas-intro">
-      <div class="cas-intro-title" style="color:#22D3EE">📗 Présentation clinique</div>
-      <div class="cas-intro-sub">Patient TF réparé avec excellent résultat fonctionnel à long terme. La majorité des TF réparés ont une bonne qualité de vie mais nécessitent un suivi spécialisé à vie.</div>
+      <div class="cas-intro-title" style="color:#E03050">🔴 Présentation clinique</div>
+      <div class="cas-intro-sub">Femme 28 ans avec TOF réparée à 3 mois (patch transannulaire), suivi irrégulier, adressée pour dyspnée invalidante progressive. Évaluation multimodale révèle dysfonction VD sévère (FEVD 32% · Strain –8%) avec PREVENTION-ACHD 6/7.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr K.A., 32 ans</strong></div></div>
-      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">78 kg · 178 cm · BSA 1.96 m²</div></div>
-      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre actif</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Suivi annuel TF réparé</div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme F.B., 28 ans (Femme)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">62 kg · 165 cm · BSA 1.69 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Adapté</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Dyspnée invalidante progressive 14 mois</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>TF réparé à 3 ans</strong> · pas de patch transannulaire (réparation préservant la valve pulmonaire)</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>TOF réparée à 3 mois · patch transannulaire</strong> · suivi irrégulier (4 ans depuis dernier ACHD, 6 ans depuis IRM)</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-mint">I</span> Asymptomatique · activité normale</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">560 m · SpO₂ 99 %</div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 124/76 · Souffle systolique éjectionnel modeste 2/6 · B2 dédoublé</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">III</span> Dyspnée invalidante NYHA II→III · arrêt sport (handball) 8 mois · palpitations 6 mois</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">SpO₂ repos 95% · effort 89%</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">Hépatomégalie 2 cm + souffle holo-diastolique 3/6 foyer pulmonaire</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -357,7 +357,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 02 · SLIDE 2/6</div>
       <div class="slide-head-title">📊 Iconographie & Échographie</div>
       <div class="slide-head-sub">Présentation Canva unifiée · ancre #49</div>
@@ -367,14 +367,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="canva-caption">
       <div>
-        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#22D3EE">🎨 Cas 02</div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#E03050">🎨 Cas 02</div>
         <div class="canva-caption-id">DAHIQNC5igU · ancre #49</div>
       </div>
       <a class="canva-caption-link" href="https://www.canva.com/design/DAHIQNC5igU/view#49" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/IRM principales</div>
-      <div class="dr"><div class="dr-lbl">Anatomie post-op</div><div class="dr-val">TF réparé · valve pulmonaire préservée</div></div><div class="dr"><div class="dr-lbl">Voies VD</div><div class="dr-val">Pas de gradient résiduel</div></div><div class="dr"><div class="dr-lbl">CIV</div><div class="dr-val">Patch étanche</div></div><div class="dr"><div class="dr-lbl">IP</div><div class="dr-val"><strong>Légère</strong> (PHT > 200 ms)</div></div><div class="dr"><div class="dr-lbl">VD</div><div class="dr-val">Taille normale · TAPSE 22 mm · FEVD 56%</div></div><div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">FEVG 62% normale</div></div><div class="dr"><div class="dr-lbl">PAPS</div><div class="dr-val">26 mmHg</div></div>
+      <div class="dr"><div class="dr-lbl">IP</div><div class="dr-val"><strong>Massive · libre</strong> sans coaptation</div></div><div class="dr"><div class="dr-lbl">Strain VD (GLS)</div><div class="dr-val"><strong>–8%</strong> (très sévère)</div></div><div class="dr"><div class="dr-lbl">Taille VD</div><div class="dr-val"><strong>Massive · anévrismale</strong></div></div><div class="dr"><div class="dr-lbl">Fonction VG</div><div class="dr-val">Visuellement préservée</div></div><div class="dr"><div class="dr-lbl">VTSI-VD attendu</div><div class="dr-val">≫ 80 mL/m² (probablement > 120-150)</div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -382,33 +382,33 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 02 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF)</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF) + Tableau 35 (RVP)</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong> · Critères Stade selon Tableau 4 + Tableau 35 (PVR).</div>
+      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong>. Critères RVP : VTSI-VD > 80 mL/m² (NEW 2025), FEVD ≤ 46%, FR IP ≥ 25%, QRS ≥ 180 ms, PREVENTION-ACHD.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
-        <span class="ib-title">Stade A retenu :</span>
-        <ul><li>✓ Asymptomatique NYHA I</li><li>✓ <strong>IP légère</strong> (préservation valve)</li><li>✓ VD taille normale RVEDV 95</li><li>✓ FEVD 56% conservée</li><li>✓ Pas d'arythmies</li></ul>
+        <span class="ib-title">Stade D retenu :</span>
+        <ul><li>✓ NYHA III dyspnée invalidante</li><li>✓ <strong>Strain –8% + FEVD 32%</strong> dysfonction VD sévère</li><li>✓ <strong>VTSI-VD 148 mL/m²</strong> (≫ 80)</li><li>✓ FR IP 48% massive · VTD-VD/VTD-VG ×3.1</li><li>✓ <strong>QRS 188 ms ≥ 180 + LGE étendu</strong></li><li>✓ PREVENTION-ACHD 6/7 très élevé</li></ul>
       </div>
     </div>
-    <div class="card" style="border-left:4px solid #34D399">
+    <div class="card" style="border-left:4px solid #E03050">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
-        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#34D399;line-height:1">A</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade A — TF réparé optimal</div>
-        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>I-A</strong></div>
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#E03050;line-height:1">D</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade D — Dysfonction VD sévère + risque MSC</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>III-D</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>Cardiologue ACHD : 24-36 mois</li><li>ETT + IRM + Holter périodiques</li></ul>
+      <ul><li>Approche multimodale combinée urgente</li><li>RVP + DAI + EEP</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -416,14 +416,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 02 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Holter · IRM</div>
+      <div class="slide-head-sub">ECG · Holter · IRM · CPET · Cathétérisme · CT</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 72/min</div></div><div class="dr"><div class="dr-lbl">BBD</div><div class="dr-val"><strong>QRS 130 ms</strong> (typique post-TF)</div></div><div class="dr"><div class="dr-lbl">Holter 24h</div><div class="dr-val">Pas d'arythmies</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">85 pg/mL (normal)</div></div><div class="dr"><div class="dr-lbl">IRM cardiaque</div><div class="dr-val">RVEDV 95 mL/m² · normale</div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val"><strong>188 ms</strong> · fragmenté · RSR' + encoches</div></div><div class="dr"><div class="dr-lbl">Dispersion QT</div><div class="dr-val"><strong>82 ms</strong> ≥ 70 ms ✓</div></div><div class="dr"><div class="dr-lbl">Axe QRS</div><div class="dr-val">Droit +120°</div></div><div class="dr"><div class="dr-lbl">Holter 48h</div><div class="dr-val">ESV rares · TVNS non documentée</div></div><div class="dr"><div class="dr-lbl">IRM — FR pulm. (IP)</div><div class="dr-val"><strong>48%</strong> (sévère, seuil 25%)</div></div><div class="dr"><div class="dr-lbl">IRM — FEVD</div><div class="dr-val"><strong>32%</strong> sévèrement réduite</div></div><div class="dr"><div class="dr-lbl">IRM — VTSI-VD</div><div class="dr-val"><strong>148 mL/m²</strong> (seuil RVP > 80)</div></div><div class="dr"><div class="dr-lbl">IRM — FEVG</div><div class="dr-val"><strong>51%</strong> légèrement altérée</div></div><div class="dr"><div class="dr-lbl">LGE</div><div class="dr-val"><strong>VD étendu</strong> + akinésie CCVD 72 mm + LGE VG léger</div></div><div class="dr"><div class="dr-lbl">BNP</div><div class="dr-val"><strong>312 ng/L</strong></div></div><div class="dr"><div class="dr-lbl">PREVENTION-ACHD</div><div class="dr-val"><strong>6/7</strong> très élevé</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -431,18 +431,18 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 02 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
       <div class="slide-head-sub">ACC 2025 · Section 4.4.1</div>
     </div>
     
-    <div class="dec" style="border-color:#22D3EE;background:rgba(255,255,255,.03)">
-      <div class="dec-t" style="color:#22D3EE">
-        <span class="cor c3">COR 3 Harm/No Benefit</span>Pas d'intervention — Surveillance simple
+    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#34D399">
+        <span class="cor c1">COR 1</span>RVP + DAI prévention primaire + EEP/Ablation
       </div>
-      <div class="dec-b">Patient TF réparé avec excellent résultat anatomique et fonctionnel : valve pulmonaire préservée, IP légère, VD normal, pas d'arythmies. La <strong>réparation préservant la valve pulmonaire</strong> est privilégiée quand l'anneau le permet (sans patch transannulaire) → meilleur pronostic long terme.</div>
-      <div class="dec-action">➜ <strong>Surveillance ACHD spécialisée à vie :</strong><br>• ETT + ECG : 24-36 mois<br>• IRM cardiaque : 3-5 ans (volumétrie VD)<br>• Holter 24h : si symptômes ou QRS > 180 ms<br>• Test effort : à discuter selon symptômes<br>• Counseling activité physique sans restriction</div>
+      <div class="dec-b"><strong>Triple critère RVP COR 1 :</strong> IP massive + VTSI-VD 148 + FEVD 32%. Indication formelle.<br><br><strong>DAI prévention primaire (Section 4.4.1) :</strong> facteurs de risque MSC convergents :<br>• <strong>QRS ≥ 180 ms</strong> ✓ (Gatzoulis Lancet 2000)<br>• <strong>Fragmentation QRS</strong> ✓ (Bokma Heart 2017 — fibrose)<br>• <strong>Dispersion QT ≥ 70 ms</strong> ✓<br>• <strong>FEVD ≤ 35%</strong> (FEVD 32%)<br>• <strong>LGE étendu + akinésie CCVD 72 mm</strong></div>
+      <div class="dec-action">➜ <strong>Approche combinée urgente :</strong><br>• <strong>EEP pré-op</strong> avec cartographie : si TV inductible → ablation isthme RVOT/CCVD<br>• <strong>RVP chirurgicale</strong> (homogreffe ou bioprothèse) + plastie VD<br>• <strong>DAI prévention primaire</strong> (PREVENTION 6/7)<br>• <strong>GDMT IC</strong> : IEC/ARNI + bétabloquant + spironolactone + SGLT2i<br>• Centre ACHD + EP + chirurgie expert</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -450,55 +450,55 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 02 · SLIDE 6/6</div>
       <div class="slide-head-title">🎓 QCM & Take-home</div>
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — TF réparé asympto, IP légère, VD normal, FEVD 56%. Conduite ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>PVR préventive immédiate</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Surveillance ACHD à 24-36 mois</div><div class="qcm-opt"><span class="qcm-letter">C</span>DAI primaire</div><div class="qcm-opt"><span class="qcm-letter">D</span>Restriction d'activité physique</div>
-      <div class="qcm-explain">✓ La majorité des TF réparés sans patch transannulaire ont une IP légère et une fonction VD préservée à long terme. Surveillance spécialisée à vie indispensable mais sans intervention. Activité physique sans restriction.</div>
+      <div class="qcm-q">QCM — TF + IP massive + FEVD 32% + Strain –8% + QRS 188 fragmenté + LGE étendu + PREVENTION 6/7. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>RVP seule sans DAI</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>RVP + DAI primaire + EEP/ablation + GDMT IC</div><div class="qcm-opt"><span class="qcm-letter">C</span>Surveillance + GDMT IC seuls</div><div class="qcm-opt"><span class="qcm-letter">D</span>Transplantation immédiate</div>
+      <div class="qcm-explain">✓ Indication multifactorielle convergente : RVP COR 1 (triple critère) + DAI primaire (PREVENTION 6/7 + QRS 188 fragmenté + LGE étendu) + EEP pré-op (TVNS · risque TV inductible). Approche combinée urgente.</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 02</span>
-      <ul><li>Réparation préservant la valve pulmonaire = pronostic optimal</li><li>Surveillance ACHD à vie obligatoire</li><li>IRM cardiaque tous les 3-5 ans pour volumétrie VD</li><li>QRS 130 ms post-TF est normal (BBD post-incision VD)</li></ul>
+      <ul><li>Suivi irrégulier = dégradation insidieuse (corollaire ACC 2025 : suivi ACHD à vie)</li><li>QRS ≥ 180 ms + fragmentation + LGE étendu = haut risque MSC</li><li>PREVENTION-ACHD 6/7 = DAI primaire indiqué</li><li>Strain –8% : stade dysfonction VD très avancé</li><li>Akinésie CCVD ≥ 55 mm = +9 pts Brompton (substrat arythmique)</li></ul>
     </div>
   </div>
 </div>
-
-<div class="cas" data-cas="3" style="--cas-color:#A78BFA;--cas-color2:#22D3EE">
-
+ 
+<div class="cas" data-cas="3" style="--cas-color:#F0A030;--cas-color2:#FB923C">
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
       <div class="slide-head-num">CAS 03 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mr L.M., 30 ans</div>
-      <div class="slide-head-sub">TF + IP modérée + dilatation VD progressive</div>
+      <div class="slide-head-title">Mr K.D., 38 ans (Homme)</div>
+      <div class="slide-head-sub">Zone grise COR 2a — Asymptomatique avec progression</div>
     </div>
     <div class="cas-intro">
-      <div class="cas-intro-title" style="color:#A78BFA">📕 Présentation clinique</div>
-      <div class="cas-intro-sub">Patient TF réparé avec patch transannulaire qui développe une IP progressive avec dilatation VD. La fenêtre d'intervention pour PVR doit être identifiée avant la dysfonction VD irréversible.</div>
+      <div class="cas-intro-title" style="color:#F0A030">🤔 Présentation clinique</div>
+      <div class="cas-intro-sub">Homme 38 ans cadre supérieur sportif, totalement asymptomatique, suivi régulier ACHD. IRM sérielle montre progression silencieuse des volumes VD. Décision RVP en zone grise COR 2a — VTSI-VD 88, FEVD 47% limite.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr L.M., 30 ans</strong></div></div>
-      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">75 kg · 176 cm · BSA 1.91 m²</div></div>
-      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Suivi · dilatation VD progressive sur IRM</div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr K.D., 38 ans (Homme)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">76 kg · 180 cm · BSA 1.94 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre supérieur · sportif (tennis 3×/sem)</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Suivi annuel programmé · IRM sérielle progressive</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>TF réparé à 2 ans avec patch transannulaire</strong> · suivi régulier</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>TOF réparée à 3 ans</strong> · fermeture CIV infracristale + valvulotomie pulmonaire + infundibulotomie · <strong>pas de patch transannulaire</strong> · suivi annuel depuis 18 ans · IRM tous les 2 ans</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-mint">I</span> Asymptomatique mais surveillance</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">520 m · SpO₂ 98 %</div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 122/74 · Souffle diastolique decrescendo de fuite pulmonaire · B2 unique</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-mint">I</span> Asymptomatique total · activité sportive normale</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">SpO₂ repos 98% · effort 95%</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 118/72 · FC 68 · Souffle systolique modeste</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -506,7 +506,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
       <div class="slide-head-num">CAS 03 · SLIDE 2/6</div>
       <div class="slide-head-title">📊 Iconographie & Échographie</div>
       <div class="slide-head-sub">Présentation Canva unifiée · ancre #100</div>
@@ -516,14 +516,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="canva-caption">
       <div>
-        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#A78BFA">🎨 Cas 03</div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#F0A030">🎨 Cas 03</div>
         <div class="canva-caption-id">DAHIQNC5igU · ancre #100</div>
       </div>
       <a class="canva-caption-link" href="https://www.canva.com/design/DAHIQNC5igU/view#100" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/IRM principales</div>
-      <div class="dr"><div class="dr-lbl">Voies VD</div><div class="dr-val">Pas de gradient résiduel</div></div><div class="dr"><div class="dr-lbl">Patch transannulaire</div><div class="dr-val">Étanche</div></div><div class="dr"><div class="dr-lbl">IP</div><div class="dr-val"><strong>Modérée à sévère</strong> (PHT 90 ms · jet large)</div></div><div class="dr"><div class="dr-lbl">VD</div><div class="dr-val"><strong>Dilaté</strong> · TAPSE 18 mm</div></div><div class="dr"><div class="dr-lbl">FEVD</div><div class="dr-val"><strong>48%</strong> (limite)</div></div><div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">FEVG 58% conservée</div></div><div class="dr"><div class="dr-lbl">PAPS</div><div class="dr-val">28 mmHg</div></div><div class="dr"><div class="dr-lbl">IRM cardiaque</div><div class="dr-val"><strong>RVEDV 158 mL/m² · RVESV 82 mL/m²</strong></div></div>
+      <div class="dr"><div class="dr-lbl">Fuite pulmonaire</div><div class="dr-val"><strong>Modérée-sévère</strong> · coaptation incomplète</div></div><div class="dr"><div class="dr-lbl">Strain VD (GLS)</div><div class="dr-val"><strong>–16%</strong> (zone intermédiaire)</div></div><div class="dr"><div class="dr-lbl">Taille VD</div><div class="dr-val">Modérément dilaté · non anévrismale</div></div><div class="dr"><div class="dr-lbl">Fonction VG</div><div class="dr-val">Préservée · FEVG normale visuellement</div></div><div class="dr"><div class="dr-lbl">VTSI-VD estimé écho</div><div class="dr-val">80-100 mL/m²</div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -531,33 +531,33 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
       <div class="slide-head-num">CAS 03 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF)</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF) + Tableau 35 (RVP)</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong> · Critères Stade selon Tableau 4 + Tableau 35 (PVR).</div>
+      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong>. Critères RVP : VTSI-VD > 80 mL/m² (NEW 2025), FEVD ≤ 46%, FR IP ≥ 25%, QRS ≥ 180 ms, PREVENTION-ACHD.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
-        <span class="ib-title">Stade B-C retenu :</span>
-        <ul><li>✓ Asymptomatique mais critères d'imagerie</li><li>✓ <strong>IP modérée à sévère</strong></li><li>✓ <strong>RVEDV 158 mL/m² (≥ 160 seuil)</strong></li><li>✓ FEVD 48% (limite < 50%)</li><li>✓ QRS 168 ms (proche seuil 180)</li></ul>
+        <span class="ib-title">Stade B retenu :</span>
+        <ul><li>✓ Asymptomatique total NYHA I</li><li>✓ <strong>VTSI-VD 88 mL/m² > 80</strong> (critère COR 2a)</li><li>✓ <strong>FEVD 47% limite</strong> (proche seuil 46%)</li><li>✓ FR 32% modérée-sévère</li><li>✓ Strain –16% intermédiaire</li><li>✓ <strong>Progression silencieuse</strong> sur 4 ans</li></ul>
       </div>
     </div>
-    <div class="card" style="border-left:4px solid #A78BFA">
+    <div class="card" style="border-left:4px solid #F0A030">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
-        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#A78BFA;line-height:1">B-C</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade B-C — Fenêtre PVR ouverte</div>
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#F0A030;line-height:1">B</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade B — Zone grise décisionnelle COR 2a</div>
         <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-B</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>Discussion PVR maintenant</li><li>Centre ACHD expert</li></ul>
+      <ul><li>Discussion équipe ACHD</li><li>Décision préventive ou surveillance rapprochée</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -565,14 +565,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
       <div class="slide-head-num">CAS 03 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Holter · IRM</div>
+      <div class="slide-head-sub">ECG · Holter · IRM · CPET · Cathétérisme · CT</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 76/min</div></div><div class="dr"><div class="dr-lbl">BBD</div><div class="dr-val"><strong>QRS 168 ms</strong> (élargi)</div></div><div class="dr"><div class="dr-lbl">Holter 24h</div><div class="dr-val">ESV monomorphes occasionnelles</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>320 pg/mL</strong></div></div><div class="dr"><div class="dr-lbl">Test effort</div><div class="dr-val">VO2max 78% prédit (limite)</div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val"><strong>152 ms</strong> · pas de fragmentation</div></div><div class="dr"><div class="dr-lbl">Dispersion QT</div><div class="dr-val">48 ms · normale</div></div><div class="dr"><div class="dr-lbl">Holter 48h</div><div class="dr-val">Pas de TV/TVNS · ESV rares < 100/24h</div></div><div class="dr"><div class="dr-lbl">PREVENTION-ACHD</div><div class="dr-val"><strong>1/7</strong> faible risque</div></div><div class="dr"><div class="dr-lbl">IRM — FR pulm. (IP)</div><div class="dr-val"><strong>32%</strong> (modérée-sévère, seuil 25%)</div></div><div class="dr"><div class="dr-lbl">IRM — VTSI-VD</div><div class="dr-val"><strong>88 mL/m²</strong> (>80 critère COR 2a)</div></div><div class="dr"><div class="dr-lbl">IRM — FEVD</div><div class="dr-val"><strong>47%</strong> (limite, seuil 46%)</div></div><div class="dr"><div class="dr-lbl">IRM — Progression</div><div class="dr-val">Volumes VD en progression sur 4 ans</div></div><div class="dr"><div class="dr-lbl">BNP</div><div class="dr-val">Normale</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -580,18 +580,18 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
       <div class="slide-head-num">CAS 03 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
       <div class="slide-head-sub">ACC 2025 · Section 4.4.1</div>
     </div>
     
-    <div class="dec" style="border-color:#A78BFA;background:rgba(255,255,255,.03)">
-      <div class="dec-t" style="color:#A78BFA">
-        <span class="cor c2a">COR 2a</span>Rec. 2 COR 2a — PVR raisonnable
+    <div class="dec" style="border-color:#F0A030;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#F0A030">
+        <span class="cor c2a">COR 2a</span>RVP COR 2a — Décision préventive raisonnable
       </div>
-      <div class="dec-b"><strong>Section 4.4.1 ACC 2025 — Critères PVR (Tableau 35) :</strong><br>• IP modérée à sévère<br>• ≥ 2 critères :<br> – RVEDV ≥ 160 mL/m² ou RVESV ≥ 80 mL/m² ✓<br> – FEVD ≤ 47% (FEVD 48% limite)<br> – QRS ≥ 180 ms (168 ms proche)<br> – Symptômes (absent ici)<br> – Arythmies (ESV occasionnelles)<br><br>Notre patient : <strong>fenêtre PVR ouverte</strong> avec critères convergents.</div>
-      <div class="dec-action">➜ <strong>PVR (chirurgicale ou percutanée selon anatomie)</strong>. Bioprothèse ou homogreffe pulmonaire pour chirurgie. Melody/Sapien si anatomie favorable au percutané. Centre ACHD expert.</div>
+      <div class="dec-b"><strong>Section 4.4.1 ACC 2025 — Critères COR 2a (asymptomatique) :</strong><br>• IP modérée-sévère (FR ≥ 25%) ✓<br>• VTSI-VD > 80 mL/m² ✓ (88)<br>• FEVD ≤ 46% (47% limite)<br>• Progression documentée sur IRM sérielle ✓<br><br><strong>Argument PRO RVP :</strong> agir AVANT l'irréversibilité. Le patient asymptomatique a une fenêtre optimale pour récupération volumétrique post-RVP. Attendre les symptômes = souvent trop tard.<br><br><strong>Argument CONTRE :</strong> intervention chez asymptomatique avec ses risques propres. Surveillance rapprochée acceptable.</div>
+      <div class="dec-action">➜ <strong>Décision en équipe multidisciplinaire :</strong> RVP COR 2a raisonnable maintenant OU surveillance rapprochée tous les 12 mois (ETT + IRM annuelle, test effort, Holter). Préférence percutanée si anatomie favorable. Discussion partagée avec le patient (sportif actif). Centre ACHD expert.</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -599,55 +599,55 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
       <div class="slide-head-num">CAS 03 · SLIDE 6/6</div>
       <div class="slide-head-title">🎓 QCM & Take-home</div>
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — TF réparé, IP modérée-sévère, RVEDV 158 mL/m², FEVD 48%, QRS 168 ms, asympto. Conduite ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Attendre symptômes francs</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>PVR (Rec. 2 COR 2a — fenêtre ouverte)</div><div class="qcm-opt"><span class="qcm-letter">C</span>DAI primaire</div><div class="qcm-opt"><span class="qcm-letter">D</span>PAH therapy</div>
-      <div class="qcm-explain">✓ Section 4.4.1 ACC 2025 : la PVR doit être proposée AVANT que la dysfonction VD ne devienne irréversible. Critères convergents (RVEDV proche 160, FEVD 48%, QRS 168) → fenêtre encore ouverte. Attendre les symptômes signifie souvent intervenir trop tard.</div>
+      <div class="qcm-q">QCM — TF asympto + VTSI-VD 88 + FEVD 47% limite + progression IRM 4 ans. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Attendre symptômes francs</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>RVP COR 2a OU surveillance rapprochée (décision en équipe)</div><div class="qcm-opt"><span class="qcm-letter">C</span>DAI primaire</div><div class="qcm-opt"><span class="qcm-letter">D</span>Restriction sportive immédiate</div>
+      <div class="qcm-explain">✓ Zone grise typique : critères COR 2a remplis (VTSI-VD > 80 + progression IRM) chez patient asymptomatique. Décision en équipe ACHD avec patient. Argument PRO : récupération VD optimale si intervention précoce. Surveillance rapprochée acceptable si refus.</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 03</span>
-      <ul><li>Critères PVR : IP modérée-sévère + ≥ 2 critères imagerie/clinique</li><li>RVEDV ≥ 160 mL/m² OU RVESV ≥ 80 mL/m²</li><li>FEVD ≤ 47% = critère de dysfonction</li><li>QRS ≥ 180 ms = critère arythmogène</li><li>Intervention AVANT dysfonction irréversible</li></ul>
+      <ul><li>Asymptomatique ≠ absence de progression (IRM sérielle indispensable)</li><li>Critères COR 2a : VTSI-VD > 80 + ≥ 1 critère parmi FR ≥ 25%, FEVD ≤ 46%, QRS ≥ 180, ESV/TVNS</li><li>Fenêtre de récupération optimale = avant FEVD < 40%</li><li>Discussion partagée avec le patient en zone grise</li><li>PREVENTION-ACHD 1/7 = pas de DAI préventif</li></ul>
     </div>
   </div>
 </div>
-
-<div class="cas" data-cas="4" style="--cas-color:#22D3EE;--cas-color2:#A78BFA">
-
+ 
+<div class="cas" data-cas="4" style="--cas-color:#22D3EE;--cas-color2:#38BDF8">
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
       <div class="slide-head-num">CAS 04 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mme F.B., 26 ans</div>
-      <div class="slide-head-sub">TF + Sténose pulmonaire résiduelle</div>
+      <div class="slide-head-title">Mme N.A., 44 ans (Femme)</div>
+      <div class="slide-head-sub">Conduit VD-AP Calcifié — TPVR Percutanée</div>
     </div>
     <div class="cas-intro">
-      <div class="cas-intro-title" style="color:#22D3EE">📙 Présentation clinique</div>
-      <div class="cas-intro-sub">Patient TF réparé avec sténose résiduelle des branches pulmonaires. Cette pathologie peut nécessiter une dilatation percutanée ou une chirurgie pour soulager la postcharge VD.</div>
+      <div class="cas-intro-title" style="color:#22D3EE">🔧 Présentation clinique</div>
+      <div class="cas-intro-sub">Femme 44 ans avec TOF + Atrésie Pulmonaire opérée à 8 ans (Conduit Hancock 22 mm), 36 ans de fonctionnement, double dysfonction (sténose 68 mmHg + IP sévère). Candidate idéale à TPVR percutanée pour éviter une 3ème sternotomie.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme F.B., 26 ans</strong></div></div>
-      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">60 kg · 165 cm · BSA 1.66 m²</div></div>
-      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Enseignante</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Dyspnée d'effort progressive 12 mois</div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme N.A., 44 ans (Femme)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">65 kg · 168 cm · BSA 1.74 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">—</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Dyspnée effort modéré · 18 mois progressif</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">TF réparé à 3 ans · sténose AP gauche connue · PVR à l'âge de 18 ans</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>TOF + AP opérés à 8 ans · Conduit Hancock 22mm (1988)</strong> · Ré-intervention 1 (22 ans) : dilatation percutanée conduit · suivi ACHD annuel centre expert</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II</span> Dyspnée d'effort + fatigue</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">440 m · SpO₂ 97 %</div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 118/72 · Souffle systolique 3/6 dorsal gauche · B2 dédoublé fixe</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II</span> Dyspnée effort modéré progressif 18 mois</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">SpO₂ repos 96% · effort 90%</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">Souffle systolique 4/6 · irradié aux aisselles</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -655,7 +655,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
       <div class="slide-head-num">CAS 04 · SLIDE 2/6</div>
       <div class="slide-head-title">📊 Iconographie & Échographie</div>
       <div class="slide-head-sub">Présentation Canva unifiée · ancre #150</div>
@@ -672,7 +672,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/IRM principales</div>
-      <div class="dr"><div class="dr-lbl">Voies VD</div><div class="dr-val">Pas de gradient infundibulaire</div></div><div class="dr"><div class="dr-lbl">Bioprothèse pulmonaire</div><div class="dr-val">Fonctionnelle (PVR à 18 ans)</div></div><div class="dr"><div class="dr-lbl">AP gauche</div><div class="dr-val"><strong>Sténose 50% · gradient 42 mmHg</strong></div></div><div class="dr"><div class="dr-lbl">AP droite</div><div class="dr-val">Normale</div></div><div class="dr"><div class="dr-lbl">VD</div><div class="dr-val">Dilaté modérément · TAPSE 19 mm</div></div><div class="dr"><div class="dr-lbl">FEVD</div><div class="dr-val">52% (limite)</div></div><div class="dr"><div class="dr-lbl">Test perfusion</div><div class="dr-val"><strong>Asymétrie 35/65</strong> (poumon G hypoperfusé)</div></div><div class="dr"><div class="dr-lbl">PAPS</div><div class="dr-val">42 mmHg</div></div>
+      <div class="dr"><div class="dr-lbl">Gradient max conduit</div><div class="dr-val"><strong>68 mmHg</strong> (sténose sévère, seuil > 40)</div></div><div class="dr"><div class="dr-lbl">IP conduit</div><div class="dr-val"><strong>Sévère</strong> · coaptation absente</div></div><div class="dr"><div class="dr-lbl">FEVD (écho)</div><div class="dr-val"><strong>42%</strong> altérée</div></div><div class="dr"><div class="dr-lbl">Calcifications conduit</div><div class="dr-val"><strong>Visibles · parois hyperéchogènes</strong></div></div><div class="dr"><div class="dr-lbl">Surcharge VD</div><div class="dr-val">Mixte (volume + pression)</div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -680,33 +680,33 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
       <div class="slide-head-num">CAS 04 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF)</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF) + Tableau 35 (RVP)</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong> · Critères Stade selon Tableau 4 + Tableau 35 (PVR).</div>
+      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong>. Critères RVP : VTSI-VD > 80 mL/m² (NEW 2025), FEVD ≤ 46%, FR IP ≥ 25%, QRS ≥ 180 ms, PREVENTION-ACHD.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
         <span class="ib-title">Stade C retenu :</span>
-        <ul><li>✓ NYHA II symptomatique</li><li>✓ Sténose AP gauche significative (gradient 42)</li><li>✓ Asymétrie perfusion 35/65</li><li>✓ HVD à l'ECG</li><li>✓ Bioprothèse pulmonaire fonctionnelle</li></ul>
+        <ul><li>✓ NYHA II + dégradation 18 mois</li><li>✓ <strong>Double dysfonction conduit</strong> : sténose 68 mmHg + IP sévère</li><li>✓ VTSI-VD 104 (>80) · FEVD 42% (≤46%)</li><li>✓ <strong>3ème sternotomie à risque élevé</strong> (adhérences, coronaires)</li><li>✓ Anatomie favorable TPVR (CT)</li></ul>
       </div>
     </div>
     <div class="card" style="border-left:4px solid #22D3EE">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
         <div style="font-family:Syne;font-size:48px;font-weight:800;color:#22D3EE;line-height:1">C</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — Sténose AP unilatérale</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — Conduit dégénéré · TPVR candidate</div>
         <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-C</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>Angioplastie ± stent percutané</li></ul>
+      <ul><li>Centre ACHD interventionnel expert</li><li>TPVR percutanée privilégiée</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -714,14 +714,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
       <div class="slide-head-num">CAS 04 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Holter · IRM</div>
+      <div class="slide-head-sub">ECG · Holter · IRM · CPET · Cathétérisme · CT</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 78/min</div></div><div class="dr"><div class="dr-lbl">BBD</div><div class="dr-val">QRS 142 ms</div></div><div class="dr"><div class="dr-lbl">HVD</div><div class="dr-val">Présente</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">260 pg/mL</div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val"><strong>168 ms</strong> · pas de fragmentation</div></div><div class="dr"><div class="dr-lbl">Dispersion QT</div><div class="dr-val">52 ms normale</div></div><div class="dr"><div class="dr-lbl">Holter 48h</div><div class="dr-val">Pas de TV · ESV rares < 200/24h</div></div><div class="dr"><div class="dr-lbl">PREVENTION-ACHD</div><div class="dr-val"><strong>2/7</strong> faible risque</div></div><div class="dr"><div class="dr-lbl">BNP</div><div class="dr-val"><strong>186 ng/L</strong> ↑</div></div><div class="dr"><div class="dr-lbl">Créatinine / Hb</div><div class="dr-val">78 µmol/L / 13.4 g/dL</div></div><div class="dr"><div class="dr-lbl">IRM — FR conduit</div><div class="dr-val"><strong>36%</strong></div></div><div class="dr"><div class="dr-lbl">IRM — VTSI-VD</div><div class="dr-val"><strong>104 mL/m²</strong> (>80)</div></div><div class="dr"><div class="dr-lbl">IRM — FEVD</div><div class="dr-val">42%</div></div><div class="dr"><div class="dr-lbl">CT cardiaque (COR 1)</div><div class="dr-val"><strong>Score Agatston 340</strong> · faisabilité TPVR confirmée</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -729,7 +729,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
       <div class="slide-head-num">CAS 04 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
       <div class="slide-head-sub">ACC 2025 · Section 4.4.1</div>
@@ -737,10 +737,10 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     
     <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
       <div class="dec-t" style="color:#34D399">
-        <span class="cor c1">COR 1</span>Angioplastie + stent AP gauche
+        <span class="cor c1">COR 1</span>TPVR Percutanée (Melody/Sapien) — Évite 3ème sternotomie
       </div>
-      <div class="dec-b">Sténose AP unilatérale significative (gradient 42 mmHg, asymétrie perfusion 35/65) → indication d'<strong>angioplastie percutanée avec stent</strong>.<br><br>Mécanisme : la sténose AP unilatérale crée :<br>• Postcharge VD persistante<br>• Asymétrie perfusion → hyperflux poumon controlatéral<br>• Risque HTAP unilatérale long terme</div>
-      <div class="dec-action">➜ <strong>Cathétérisme thérapeutique :</strong> angioplastie AP gauche avec stent dédié pulmonaire. Bonne expertise technique requise. Bioprothèse pulmonaire à respecter. Suivi imagerique post-procédure (perfusion + IRM).</div>
+      <div class="dec-b"><strong>Indication RVP COR 1 :</strong> double dysfonction conduit (sténose sévère 68 mmHg + IP sévère) + VTSI-VD > 80 + FEVD ≤ 46% + symptômes NYHA II.<br><br><strong>CT cardiaque COR 1 ACC 2025 (NEW) :</strong> Score Agatston 340 quantifié + anatomie validée + coronaires écartées + faisabilité TPVR confirmée.<br><br><strong>Argument TPVR percutanée :</strong> 3ème sternotomie chez cette patiente comporte un risque chirurgical élevé (adhérences médiastinales, proximité coronaires). La TPVR évite la chirurgie à cœur ouvert. Pré-stenting recommandé si calcifications avancées.</div>
+      <div class="dec-action">➜ <strong>TPVR percutanée Melody ou Sapien S3 :</strong><br>• <strong>Pré-stenting</strong> avec stent CP (Cheatham-Platinum) en raison des calcifications<br>• Implantation valve dans le stent (technique 'valve-in-stent')<br>• Surveillance immédiate gradient post-procédure<br>• Anticoagulation puis antiplaquettaire prolongé<br>• Surveillance endocardite (risque > prothèse chirurgicale)</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -748,55 +748,55 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
       <div class="slide-head-num">CAS 04 · SLIDE 6/6</div>
       <div class="slide-head-title">🎓 QCM & Take-home</div>
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — TF réparé + sténose AP gauche 50% + asymétrie perfusion 35/65 + symptômes. Conduite ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Surveillance simple</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Angioplastie + stent AP gauche</div><div class="qcm-opt"><span class="qcm-letter">C</span>Pneumonectomie gauche</div><div class="qcm-opt"><span class="qcm-letter">D</span>Bétabloquant seul</div>
-      <div class="qcm-explain">✓ La sténose AP unilatérale significative est efficacement traitée par angioplastie percutanée + stent. Mécanisme : restauration de la perfusion symétrique + réduction postcharge VD. Bonne option chez patient déjà PVR.</div>
+      <div class="qcm-q">QCM — Conduit Hancock 36 ans + sténose 68 mmHg + IP sévère + Agatston 340 + 3 sternotomies déjà. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>3ème sternotomie + remplacement chirurgical</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>TPVR percutanée avec pré-stenting</div><div class="qcm-opt"><span class="qcm-letter">C</span>Surveillance</div><div class="qcm-opt"><span class="qcm-letter">D</span>Dilatation simple sans valve</div>
+      <div class="qcm-explain">✓ TPVR percutanée = approche de choix pour conduit dégénéré chez patient à risque chirurgical élevé. CT cardiaque COR 1 ACC 2025 obligatoire (Agatston, coronaires, faisabilité). Pré-stenting indispensable en cas de calcifications.</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 04</span>
-      <ul><li>Sténose AP unilatérale = postcharge VD persistante</li><li>Test perfusion = critère de significativité (< 35% côté affecté)</li><li>Angioplastie + stent = traitement de référence</li><li>Suivi imagerique post-procédure indispensable</li></ul>
+      <ul><li>Conduits VD-AP : durée moyenne 10-15 ans (Hancock 36 ans = exception)</li><li>Score Agatston > 200 = pré-stenting fortement conseillé</li><li>TPVR évite la 3ème sternotomie chez le multi-opéré</li><li>CT cardiaque COR 1 NEW 2025 avant toute TPVR</li><li>Risque endocardite TPVR > prothèse chirurgicale</li></ul>
     </div>
   </div>
 </div>
-
-<div class="cas" data-cas="5" style="--cas-color:#FB923C;--cas-color2:#F0A030">
-
+ 
+<div class="cas" data-cas="5" style="--cas-color:#A78BFA;--cas-color2:#22D3EE">
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
       <div class="slide-head-num">CAS 05 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mr T.B., 42 ans</div>
-      <div class="slide-head-sub">TF + Arythmies ventriculaires</div>
+      <div class="slide-head-title">Mr A.M., 36 ans (Homme)</div>
+      <div class="slide-head-sub">Tube Valvé VD/AP Homograft — Fuite Sévère + Sténose résiduelle</div>
     </div>
     <div class="cas-intro">
-      <div class="cas-intro-title" style="color:#FB923C">📔 Présentation clinique</div>
-      <div class="cas-intro-sub">Patient TF réparé avec apparition de tachycardie ventriculaire monomorphe. Les arythmies sont une complication tardive majeure du TF — évaluation systématique avec exploration électrophysiologique.</div>
+      <div class="cas-intro-title" style="color:#A78BFA">🫀 Présentation clinique</div>
+      <div class="cas-intro-sub">Homme 36 ans avec TOF réparée à 5 ans + Tube valvé VD/AP (Homograft aortique 24 mm) implanté à 14 ans, dilaté percutanément à 28 ans. Maintenant fuite sévère + PVD 50 mmHg (double charge). VD = 1.5× VG, Strain –19% encore compensé.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr T.B., 42 ans</strong></div></div>
-      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">82 kg · 180 cm · BSA 2.02 m²</div></div>
-      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Palpitations + syncope brève · TV documentée</div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr A.M., 36 ans (Homme)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">75 kg · 178 cm · BSA 1.92 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">—</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Dyspnée escaliers · NYHA II</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>TF réparé à 4 ans avec patch transannulaire</strong> · IP sévère connue · suivi irrégulier</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>TOF correction à 5 ans + Tube VD/AP</strong> · <strong>Homograft aortique 24mm implanté à 14 ans (2002)</strong> · dilatation percutanée à 28 ans (sténose → 22 mm) · suivi ACHD annuel</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">II-III</span> Palpitations + syncope · TV monomorphe documentée</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">380 m · SpO₂ 96 %</div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 122/76 · Souffle diastolique d'IP · B2 unique · galop droit</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II</span> Dyspnée escaliers progressive</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">SpO₂ repos 97% · effort 92%</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">Patch CIV étanche confirmé écho + IRM</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -804,7 +804,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
       <div class="slide-head-num">CAS 05 · SLIDE 2/6</div>
       <div class="slide-head-title">📊 Iconographie & Échographie</div>
       <div class="slide-head-sub">Présentation Canva unifiée · ancre #198</div>
@@ -814,14 +814,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="canva-caption">
       <div>
-        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#FB923C">🎨 Cas 05</div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#A78BFA">🎨 Cas 05</div>
         <div class="canva-caption-id">DAHIQNC5igU · ancre #198</div>
       </div>
       <a class="canva-caption-link" href="https://www.canva.com/design/DAHIQNC5igU/view#198" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/IRM principales</div>
-      <div class="dr"><div class="dr-lbl">IP</div><div class="dr-val"><strong>Sévère</strong> (PHT 60 ms · jet large)</div></div><div class="dr"><div class="dr-lbl">VD</div><div class="dr-val"><strong>Très dilaté</strong> · TAPSE 16 mm</div></div><div class="dr"><div class="dr-lbl">FEVD</div><div class="dr-val"><strong>38%</strong> (altérée)</div></div><div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">FEVG 52% (limite)</div></div><div class="dr"><div class="dr-lbl">IRM cardiaque</div><div class="dr-val">RVEDV <strong>198 mL/m²</strong> · RVESV 124 mL/m²</div></div><div class="dr"><div class="dr-lbl">LGE myocardique</div><div class="dr-val"><strong>Patch transannulaire + RVOT extensif</strong></div></div>
+      <div class="dr"><div class="dr-lbl">IP tube valvé</div><div class="dr-val"><strong>Sévère</strong> · coaptation absente</div></div><div class="dr"><div class="dr-lbl">PVD systolique</div><div class="dr-val"><strong>50 mmHg</strong> ↑ (sténose résiduelle)</div></div><div class="dr"><div class="dr-lbl">Gradient VD-AP</div><div class="dr-val"><strong>30 mmHg</strong> (sténose modérée)</div></div><div class="dr"><div class="dr-lbl">Strain VD (GLS)</div><div class="dr-val"><strong>–19%</strong> (limite, encore compensé)</div></div><div class="dr"><div class="dr-lbl">VD diamètre</div><div class="dr-val"><strong>52 mm · 1,5× VG</strong></div></div><div class="dr"><div class="dr-lbl">Patch CIV</div><div class="dr-val"><strong>Étanche ✅</strong> pas de Qp/Qs</div></div><div class="dr"><div class="dr-lbl">FEVG</div><div class="dr-val">62% conservée</div></div><div class="dr"><div class="dr-lbl">VTSI-VD estimé IRM</div><div class="dr-val">80-120 mL/m² attendu</div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -829,33 +829,33 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
       <div class="slide-head-num">CAS 05 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF)</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF) + Tableau 35 (RVP)</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong> · Critères Stade selon Tableau 4 + Tableau 35 (PVR).</div>
+      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong>. Critères RVP : VTSI-VD > 80 mL/m² (NEW 2025), FEVD ≤ 46%, FR IP ≥ 25%, QRS ≥ 180 ms, PREVENTION-ACHD.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
-        <span class="ib-title">Stade D retenu :</span>
-        <ul><li>✓ NYHA II-III + syncope</li><li>✓ TV monomorphe documentée + inductible</li><li>✓ <strong>QRS 192 ms ≥ 180 ms</strong></li><li>✓ FEVD 38% altérée</li><li>✓ RVEDV 198 mL/m² · LGE étendu</li></ul>
+        <span class="ib-title">Stade C retenu :</span>
+        <ul><li>✓ NYHA II + tube en fin de vie (22 ans)</li><li>✓ <strong>Double dysfonction tube</strong> : fuite sévère + sténose résiduelle (PVD 50)</li><li>✓ VD = 1.5× VG · dilatation significative</li><li>✓ <strong>Strain –19% limite</strong> (compensation à la limite)</li><li>✓ Patch CIV étanche (lésion isolée au tube)</li><li>✓ Indication d'agir avant détérioration VD</li></ul>
       </div>
     </div>
-    <div class="card" style="border-left:4px solid #E03050">
+    <div class="card" style="border-left:4px solid #A78BFA">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
-        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#E03050;line-height:1">D</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade D — TF + arythmies sévères</div>
-        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>III-D</strong></div>
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#A78BFA;line-height:1">C</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — Tube en fin de vie · fenêtre encore optimale</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-C</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>DAI + PVR + ablation VT</li></ul>
+      <ul><li>Centre ACHD interventionnel</li><li>Discussion TPVR vs chirurgie</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -863,14 +863,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
       <div class="slide-head-num">CAS 05 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Holter · IRM</div>
+      <div class="slide-head-sub">ECG · Holter · IRM · CPET · Cathétérisme · CT</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 88/min en clinique</div></div><div class="dr"><div class="dr-lbl">BBD</div><div class="dr-val"><strong>QRS 192 ms</strong> (très élargi)</div></div><div class="dr"><div class="dr-lbl">Holter 48h</div><div class="dr-val"><strong>TV monomorphe non soutenue 6 épisodes</strong></div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>720 pg/mL</strong></div></div><div class="dr"><div class="dr-lbl">Étude EP</div><div class="dr-val"><strong>TV monomorphe inductible</strong> · isthme RVOT</div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val"><strong>164 ms</strong> · pas de fragmentation</div></div><div class="dr"><div class="dr-lbl">Dispersion QT</div><div class="dr-val">55 ms normale</div></div><div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 72/min</div></div><div class="dr"><div class="dr-lbl">Holter</div><div class="dr-val">Pas de TV/TVNS</div></div><div class="dr"><div class="dr-lbl">PREVENTION-ACHD</div><div class="dr-val">Faible risque (à confirmer)</div></div><div class="dr"><div class="dr-lbl">Mécanisme central</div><div class="dr-val"><strong>Double charge</strong> : sténose résiduelle + fuite sévère</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -878,7 +878,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
       <div class="slide-head-num">CAS 05 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
       <div class="slide-head-sub">ACC 2025 · Section 4.4.1</div>
@@ -886,10 +886,10 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     
     <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
       <div class="dec-t" style="color:#34D399">
-        <span class="cor c1">COR 1</span>DAI prévention secondaire + PVR + ablation VT
+        <span class="cor c1">COR 1</span>TPVR percutanée privilégiée — Fenêtre optimale
       </div>
-      <div class="dec-b"><strong>Section 4.4.1 ACC 2025</strong> : facteurs de risque pour mort subite chez TF :<br>• <strong>QRS ≥ 180 ms</strong> ✓<br>• <strong>VT monomorphe documentée</strong> ✓<br>• <strong>FEVD ≤ 35% ou FEVG ≤ 50%</strong> (FEVG 52% limite)<br>• <strong>LGE étendu</strong> ✓<br>• <strong>VT inductible à l'EP</strong> ✓<br><br>Indication multifactorielle convergente.</div>
-      <div class="dec-action">➜ <strong>Approche combinée centre ACHD + EP expert :</strong><br>• <strong>DAI</strong> prévention secondaire (TV documentée + syncope)<br>• <strong>Ablation VT</strong> isthme RVOT à l'étude EP<br>• <strong>PVR</strong> simultanée ou rapprochée (IP sévère + FEVD altérée)<br>• Optimisation GDMT IC<br>• Discussion CRT-D si BBD + FEVG limite + dyssynchronie</div>
+      <div class="dec-b"><strong>Indication RVP COR 1 :</strong> double dysfonction tube (fuite sévère + sténose résiduelle PVD 50) + symptômes NYHA II + retentissement VD (1.5× VG).<br><br><strong>Argument intervention précoce :</strong> Strain VD –19% encore <strong>limite/compensé</strong> — fenêtre optimale pour récupération post-RVP. Attendre = risque d'évoluer vers Cas 06 (Strain –10% irréversible).<br><br><strong>Patch CIV étanche</strong> = simplifie la décision (pas de shunt à traiter).</div>
+      <div class="dec-action">➜ <strong>TPVR percutanée si anatomie favorable :</strong><br>• CT cardiaque COR 1 obligatoire pré-procédure (anatomie + coronaires + Agatston)<br>• Sapien S3 ou Melody selon diamètre tube<br>• Pré-stenting si calcifications<br>• Alternative : remplacement chirurgical si TPVR non faisable<br>• Centre ACHD interventionnel expert</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -897,55 +897,55 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
       <div class="slide-head-num">CAS 05 · SLIDE 6/6</div>
       <div class="slide-head-title">🎓 QCM & Take-home</div>
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — TF + TV monomorphe + QRS 192 ms + LGE étendu + syncope. Conduite ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Bétabloquant seul</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>DAI prévention secondaire + ablation VT + PVR</div><div class="qcm-opt"><span class="qcm-letter">C</span>PVR seule</div><div class="qcm-opt"><span class="qcm-letter">D</span>Surveillance Holter</div>
-      <div class="qcm-explain">✓ Indication multifactorielle convergente : TV documentée + QRS ≥ 180 ms + LGE étendu + syncope. Approche combinée DAI + ablation VT (isthme RVOT) + PVR. Centre ACHD + EP expert.</div>
+      <div class="qcm-q">QCM — Tube valvé VD/AP 22 ans + fuite sévère + PVD 50 mmHg + Strain –19% + NYHA II. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Surveillance</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>TPVR percutanée (fenêtre optimale)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Attendre dégradation supplémentaire</div><div class="qcm-opt"><span class="qcm-letter">D</span>DAI primaire</div>
+      <div class="qcm-explain">✓ Strain VD –19% = compensation à la limite. Intervention maintenant = récupération VD optimale post-RVP. Attendre = évolution vers dysfonction irréversible (cf. Cas 06 –10%). TPVR percutanée privilégiée (anatomie favorable + CIV étanche).</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 05</span>
-      <ul><li>FdR mort subite TF : QRS ≥ 180 + TV + FEVD/FEVG bas + LGE + EP positive</li><li>DAI prévention secondaire après TV documentée</li><li>Ablation VT isthme RVOT efficace</li><li>PVR concomitante si IP sévère + dysfonction VD</li></ul>
+      <ul><li>Strain –19% = fenêtre encore optimale (vs –10% Cas 06 = trop tard)</li><li>Double dysfonction tube (fuite + sténose) = surcharge mixte</li><li>Patch CIV étanche = lésion isolée → décision simplifiée</li><li>TPVR privilégiée si anatomie + Agatston favorables</li><li>Gradient VD-AP > 35 mmHg = sténose significative</li></ul>
     </div>
   </div>
 </div>
-
-<div class="cas" data-cas="6" style="--cas-color:#F0A030;--cas-color2:#FB923C">
-
+ 
+<div class="cas" data-cas="6" style="--cas-color:#E03050;--cas-color2:#FB923C">
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB923C)">
       <div class="slide-head-num">CAS 06 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mr H.M., 36 ans</div>
-      <div class="slide-head-sub">TF + Bioprothèse dégénérée</div>
+      <div class="slide-head-title">Mr H.R., 42 ans (Homme)</div>
+      <div class="slide-head-sub">Tube Dégradé — PVD 70 mmHg + Strain –10% — STADE D</div>
     </div>
     <div class="cas-intro">
-      <div class="cas-intro-title" style="color:#F0A030">📓 Présentation clinique</div>
-      <div class="cas-intro-sub">Patient TF avec bioprothèse pulmonaire posée il y a 12 ans qui présente une dégénérescence sténosante et fuyante. La nouvelle PVR est discutée — option percutanée Melody/Sapien.</div>
+      <div class="cas-intro-title" style="color:#E03050">🚨 Présentation clinique</div>
+      <div class="cas-intro-sub">Homme 42 ans, TOF réparée à 6 ans + Tube valvé VD/AP 22mm (1994) — 30 ans de fonctionnement, suivi irrégulier 6 ans. Tube totalement dysfonctionnel : fuite massive + sténose sévère (PVD 70 mmHg) + Strain –10% sévère + IC droite décompensée. URGENCE relative.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr H.M., 36 ans</strong></div></div>
-      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">72 kg · 175 cm · BSA 1.86 m²</div></div>
-      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Dyspnée d'effort progressive 18 mois</div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr H.R., 42 ans (Homme)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">78 kg · 175 cm · BSA 1.94 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Adapté · activité limitée</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Limitation sévère 2 ans · progression rapide</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">TF réparé à 4 ans · <strong>PVR à 24 ans (bioprothèse Carpentier 25 mm)</strong> · 12 ans après</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>TOF correction à 6 ans + Tube valvé VD/AP 22mm (1994)</strong> · ré-intervention à 18 ans (dilatation percutanée + stenting) · <strong>suivi irrégulier depuis 6 ans</strong></div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II</span> Dyspnée d'effort + fatigue</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">420 m · SpO₂ 98 %</div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 122/76 · Souffle systolique éjectionnel 3/6 + souffle diastolique</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">III</span> Limitation sévère · IC droite décompensée</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">SpO₂ repos 94% · effort 82% ↓↓</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val"><strong>Hépatomégalie 3 cm</strong> + œdèmes membres inférieurs</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -953,7 +953,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB923C)">
       <div class="slide-head-num">CAS 06 · SLIDE 2/6</div>
       <div class="slide-head-title">📊 Iconographie & Échographie</div>
       <div class="slide-head-sub">Présentation Canva unifiée · ancre #262</div>
@@ -963,14 +963,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="canva-caption">
       <div>
-        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#F0A030">🎨 Cas 06</div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#E03050">🎨 Cas 06</div>
         <div class="canva-caption-id">DAHIQNC5igU · ancre #262</div>
       </div>
       <a class="canva-caption-link" href="https://www.canva.com/design/DAHIQNC5igU/view#262" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/IRM principales</div>
-      <div class="dr"><div class="dr-lbl">Bioprothèse pulmonaire</div><div class="dr-val"><strong>Dégénérée</strong> · feuillets épaissis</div></div><div class="dr"><div class="dr-lbl">Sténose</div><div class="dr-val"><strong>Gradient 50 mmHg moyen</strong></div></div><div class="dr"><div class="dr-lbl">Fuite</div><div class="dr-val"><strong>Modérée à sévère</strong></div></div><div class="dr"><div class="dr-lbl">VD</div><div class="dr-val">Dilaté modérément · TAPSE 19 mm</div></div><div class="dr"><div class="dr-lbl">FEVD</div><div class="dr-val">50% (limite)</div></div><div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">FEVG 60%</div></div><div class="dr"><div class="dr-lbl">IRM cardiaque</div><div class="dr-val">RVEDV 142 mL/m²</div></div><div class="dr"><div class="dr-lbl">Anneau bioprothèse</div><div class="dr-val">26 mm (anatomie favorable percutané)</div></div>
+      <div class="dr"><div class="dr-lbl">Fuite tube valvé</div><div class="dr-val"><strong>Massive</strong> · coaptation absente</div></div><div class="dr"><div class="dr-lbl">PVD systolique</div><div class="dr-val"><strong>70 mmHg</strong> (sténose sévère)</div></div><div class="dr"><div class="dr-lbl">Gradient VD-AP</div><div class="dr-val"><strong>50 mmHg</strong> sévère</div></div><div class="dr"><div class="dr-lbl">Strain VD (GLS)</div><div class="dr-val"><strong>–10%</strong> (sévère établi)</div></div><div class="dr"><div class="dr-lbl">VD diamètre</div><div class="dr-val"><strong>64 mm · 2× VG</strong></div></div><div class="dr"><div class="dr-lbl">Compression VG</div><div class="dr-val">Bernheim inverse</div></div><div class="dr"><div class="dr-lbl">Patch CIV</div><div class="dr-val">Étanche ✅</div></div><div class="dr"><div class="dr-lbl">Surcharge</div><div class="dr-val"><strong>Triple</strong> : barométrique + volumique + dysfonction VD</div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -978,33 +978,33 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB923C)">
       <div class="slide-head-num">CAS 06 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF)</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF) + Tableau 35 (RVP)</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong> · Critères Stade selon Tableau 4 + Tableau 35 (PVR).</div>
+      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong>. Critères RVP : VTSI-VD > 80 mL/m² (NEW 2025), FEVD ≤ 46%, FR IP ≥ 25%, QRS ≥ 180 ms, PREVENTION-ACHD.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
-        <span class="ib-title">Stade C retenu :</span>
-        <ul><li>✓ NYHA II symptomatique</li><li>✓ <strong>Bioprothèse dégénérée</strong> (sténose + fuite)</li><li>✓ Gradient moyen 50 mmHg</li><li>✓ Fuite modérée à sévère</li><li>✓ Anatomie favorable au percutané</li></ul>
+        <span class="ib-title">Stade D retenu :</span>
+        <ul><li>✓ NYHA III + IC droite décompensée</li><li>✓ <strong>Triple surcharge VD</strong> : sténose 70 mmHg + fuite massive + strain –10%</li><li>✓ VD = 2× VG (compression VG sévère)</li><li>✓ <strong>QRS 196 fragmenté + QTd 78 ms</strong></li><li>✓ <strong>Tube 30 ans en fin de vie avancée</strong></li><li>✓ Désaturation effort 82%</li></ul>
       </div>
     </div>
-    <div class="card" style="border-left:4px solid #F0A030">
+    <div class="card" style="border-left:4px solid #E03050">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
-        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#F0A030;line-height:1">C</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — Bioprothèse pulmonaire dégénérée</div>
-        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-C</strong></div>
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#E03050;line-height:1">D</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade D — Urgence relative</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>III-D</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>Re-PVR percutanée ou chirurgicale</li></ul>
+      <ul><li>Hospitalisation décongestionnement</li><li>Préparation intervention urgente</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -1012,14 +1012,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB923C)">
       <div class="slide-head-num">CAS 06 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Holter · IRM</div>
+      <div class="slide-head-sub">ECG · Holter · IRM · CPET · Cathétérisme · CT</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 76/min</div></div><div class="dr"><div class="dr-lbl">BBD</div><div class="dr-val">QRS 156 ms</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">440 pg/mL</div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val"><strong>196 ms · fragmenté</strong></div></div><div class="dr"><div class="dr-lbl">Dispersion QT</div><div class="dr-val"><strong>78 ms ≥ 70</strong> ✓ risque arythmique</div></div><div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 88/min</div></div><div class="dr"><div class="dr-lbl">BNP</div><div class="dr-val"><strong>Élevé</strong> ↑↑</div></div><div class="dr"><div class="dr-lbl">Stade décompensation</div><div class="dr-val"><strong>Stade D · IC droite décompensée</strong></div></div><div class="dr"><div class="dr-lbl">VTSI-VD attendu</div><div class="dr-val">> 130 mL/m²</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -1027,18 +1027,18 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB923C)">
       <div class="slide-head-num">CAS 06 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
       <div class="slide-head-sub">ACC 2025 · Section 4.4.1</div>
     </div>
     
-    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
-      <div class="dec-t" style="color:#34D399">
-        <span class="cor c1">COR 1</span>Re-PVR percutanée Valve-in-Valve
+    <div class="dec" style="border-color:#E03050;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#E03050">
+        <span class="cor c1">COR 1</span>Décongestionnement + RVP urgente + Discussion DAI
       </div>
-      <div class="dec-b"><strong>Bioprothèse pulmonaire dégénérée</strong> avec :<br>• Sténose significative (gradient ≥ 30 mmHg)<br>• Fuite associée<br>• Symptômes attribuables<br>• <strong>Anatomie favorable au percutané</strong> (anneau 26 mm)<br><br>L'approche <strong>Valve-in-Valve percutanée</strong> (Melody ou Sapien dans la bioprothèse existante) est privilégiée → moins invasif, hospitalisation plus courte, résultats équivalents à la chirurgie.</div>
-      <div class="dec-action">➜ <strong>Cathétérisme thérapeutique :</strong> Valve-in-Valve avec Melody (anneau ≤ 22 mm) ou Sapien (jusqu'à 29 mm). Centre ACHD interventionnel expert. Suivi imagerique post-procédure.</div>
+      <div class="dec-b"><strong>Stade D décompensé</strong> mais fenêtre RVP encore ouverte (Strain –10% = limite, pas –5% comme Cas 07).<br><br><strong>Phase 1 — Stabilisation (hospitalisation) :</strong><br>• Diurétiques IV (furosémide)<br>• GDMT IC droite optimisée<br>• Surveillance hémodynamique<br><br><strong>Phase 2 — Intervention rapide :</strong><br>• <strong>RVP urgente</strong> (chirurgicale ou TPVR selon CT)<br>• Tube totalement dysfonctionnel = remplacement obligatoire<br>• <strong>Discussion DAI</strong> (QRS 196 + QTd 78 + dysfonction VD sévère)<br>• EEP pré-op si pas DAI</div>
+      <div class="dec-action">➜ <strong>Approche multimodale urgente centre ACHD expert :</strong><br>• Hospitalisation immédiate · décongestionnement<br>• CT cardiaque dès stabilisation<br>• RVP (TPVR si faisable, sinon chirurgicale)<br>• DAI primaire à discuter post-RVP<br>• EEP à intégrer<br>• GDMT IC à vie</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -1046,25 +1046,25 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB923C)">
       <div class="slide-head-num">CAS 06 · SLIDE 6/6</div>
       <div class="slide-head-title">🎓 QCM & Take-home</div>
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — Bioprothèse pulmonaire dégénérée 12 ans après pose. Option de choix ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Surveillance</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Valve-in-Valve percutanée (Melody/Sapien)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Re-chirurgie systématique</div><div class="qcm-opt"><span class="qcm-letter">D</span>Anticoagulation</div>
-      <div class="qcm-explain">✓ La Valve-in-Valve percutanée est l'approche de choix pour les bioprothèses pulmonaires dégénérées avec anatomie favorable. Avantages : moins invasif, récupération plus rapide, résultats hémodynamiques équivalents. Centre interventionnel expert.</div>
+      <div class="qcm-q">QCM — Tube 30 ans + PVD 70 + Strain –10% + IC droite décompensée + QRS 196 fragmenté. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Surveillance et GDMT IC seule</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Hospitalisation + décongestionnement + RVP urgente + discussion DAI</div><div class="qcm-opt"><span class="qcm-letter">C</span>Transplantation immédiate</div><div class="qcm-opt"><span class="qcm-letter">D</span>TPVR percutanée seule</div>
+      <div class="qcm-explain">✓ Stade D décompensé : décongestionnement IV d'abord, puis RVP urgente (fenêtre encore ouverte avec Strain –10%). Discussion DAI vu QRS 196 + fragmentation + QTd élevé. Approche multimodale.</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 06</span>
-      <ul><li>Bioprothèses pulmonaires : durée de vie 10-15 ans</li><li>Valve-in-Valve = approche de choix si anatomie favorable</li><li>Melody : anneau ≤ 22 mm · Sapien : jusqu'à 29 mm</li><li>Approche multidisciplinaire ACHD + interventionnel</li></ul>
+      <ul><li>Suivi irrégulier = catastrophique pour conduits VD-AP</li><li>Strain –10% = sévère mais fenêtre RVP pas encore fermée</li><li>Triple surcharge (sténose + fuite + dysfonction) = situation critique</li><li>Décongestionnement avant intervention</li><li>QRS ≥ 180 ms + fragmentation + QTd ≥ 70 = DAI à discuter</li></ul>
     </div>
   </div>
 </div>
-
+ 
 <div class="cas" data-cas="7" style="--cas-color:#FB7185;--cas-color2:#E03050">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -1072,29 +1072,29 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
       <div class="slide-head-num">CAS 07 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mme N.A., 28 ans · G0P0</div>
-      <div class="slide-head-sub">TF + Grossesse — WHO modifiée</div>
+      <div class="slide-head-title">Mr B.K., 48 ans (Homme)</div>
+      <div class="slide-head-sub">Dysfonction Biventriculaire — FEVG 35% + Strain VD –5%</div>
     </div>
     <div class="cas-intro">
-      <div class="cas-intro-title" style="color:#FB7185">📒 Présentation clinique</div>
-      <div class="cas-intro-sub">Jeune femme avec TF réparé adressée pour évaluation préconceptionnelle. La grossesse est possible chez la majorité des TF réparés bien équilibrés mais nécessite une stratification rigoureuse.</div>
+      <div class="cas-intro-title" style="color:#FB7185">💔 Présentation clinique</div>
+      <div class="cas-intro-sub">Homme 48 ans, TF réparée à 4 ans, IP sévère libre, défaillance BIVENTRICULAIRE — FEVG 35% + Strain VD –5% + PVD paradoxalement basse 24 mmHg (VD épuisé). Choc cardiogénique débutant. Cas le plus complexe de la série.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme N.A., 28 ans · G0P0</strong></div></div>
-      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">60 kg · 165 cm · BSA 1.66 m²</div></div>
-      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Enseignante · mariage récent</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Évaluation préconceptionnelle · désir maternité</div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr B.K., 48 ans (Homme)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">72 kg · 175 cm · BSA 1.86 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Adapté · activité limitée</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Marche < 100 m · NYHA III sévère</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">TF réparé à 3 ans · suivi régulier · état stable</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>TOF réparée à 4 ans</strong> (44 ans depuis chirurgie) · IP sévère libre sans coaptation</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-mint">I</span> Asymptomatique · activité normale</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">540 m · SpO₂ 98 %</div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 118/72 · FC 76 · Souffle systolique éjectionnel modeste · B2 dédoublé</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">III</span> Dyspnée invalidante · IC bi-ventriculaire décompensée</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">SpO₂ repos 92% · effort 78% ↓↓↓</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val"><strong>Crépitants bases pulm. + Hépatomégalie 4 cm + œdèmes +++</strong> · <strong>TA 90/60</strong> · FC 102/min</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -1119,7 +1119,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/IRM principales</div>
-      <div class="dr"><div class="dr-lbl">Voies VD</div><div class="dr-val">Pas de gradient résiduel</div></div><div class="dr"><div class="dr-lbl">CIV</div><div class="dr-val">Patch étanche</div></div><div class="dr"><div class="dr-lbl">IP</div><div class="dr-val"><strong>Modérée</strong> (PHT 100 ms)</div></div><div class="dr"><div class="dr-lbl">VD</div><div class="dr-val">Légère dilatation · TAPSE 21 mm</div></div><div class="dr"><div class="dr-lbl">FEVD</div><div class="dr-val">54% conservée</div></div><div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">FEVG 62%</div></div><div class="dr"><div class="dr-lbl">PAPS</div><div class="dr-val">32 mmHg</div></div><div class="dr"><div class="dr-lbl">IRM</div><div class="dr-val">RVEDV 122 mL/m² · acceptable</div></div>
+      <div class="dr"><div class="dr-lbl">IP</div><div class="dr-val"><strong>Sévère libre</strong> sans coaptation</div></div><div class="dr"><div class="dr-lbl">FEVG</div><div class="dr-val"><strong>35%</strong> dysfonction VG sévère ✗</div></div><div class="dr"><div class="dr-lbl">Strain VD (GLS)</div><div class="dr-val"><strong>–5%</strong> (terminal/irréversible)</div></div><div class="dr"><div class="dr-lbl">PVD systolique</div><div class="dr-val"><strong>24 mmHg</strong> (paradoxalement basse · VD épuisé)</div></div><div class="dr"><div class="dr-lbl">Patch CIV</div><div class="dr-val">Étanche ✅</div></div><div class="dr"><div class="dr-lbl">Mécanisme FEVG ↓</div><div class="dr-val">Bernheim inverse (VD massif comprime VG) OU cardiomyopathie vraie</div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -1130,30 +1130,30 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
       <div class="slide-head-num">CAS 07 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF)</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF) + Tableau 35 (RVP)</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong> · Critères Stade selon Tableau 4 + Tableau 35 (PVR).</div>
+      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong>. Critères RVP : VTSI-VD > 80 mL/m² (NEW 2025), FEVD ≤ 46%, FR IP ≥ 25%, QRS ≥ 180 ms, PREVENTION-ACHD.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
-        <span class="ib-title">Stade B retenu :</span>
-        <ul><li>✓ Asymptomatique</li><li>✓ IP modérée (pas sévère)</li><li>✓ Fonction VD/VG conservée</li><li>✓ Pas d'arythmies</li><li>✓ Capacité d'effort préservée</li></ul>
+        <span class="ib-title">Stade D retenu :</span>
+        <ul><li>✓ Choc cardiogénique débutant (TA 90/60 + FC 102)</li><li>✓ <strong>Dysfonction biventriculaire</strong> : FEVG 35% + Strain VD –5%</li><li>✓ <strong>PVD 24 mmHg paradoxalement basse</strong> (VD terminal)</li><li>✓ Atteinte multi-organe (rénale, hépatique)</li><li>✓ <strong>QRS 208 ms + PREVENTION 5/7</strong></li><li>✓ Hyponatrémie de dilution</li></ul>
       </div>
     </div>
-    <div class="card" style="border-left:4px solid #22D3EE">
+    <div class="card" style="border-left:4px solid #E03050">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
-        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#22D3EE;line-height:1">B</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade B — TF favorable pour grossesse</div>
-        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-B</strong></div>
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#E03050;line-height:1">D</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade D — Choc cardiogénique débutant</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>III-D</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>Counseling préconceptionnel</li><li>Équipe cardio-obstétricale</li></ul>
+      <ul><li>Hospitalisation USIC urgente</li><li>Évaluation transplantation</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -1164,11 +1164,11 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
       <div class="slide-head-num">CAS 07 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Holter · IRM</div>
+      <div class="slide-head-sub">ECG · Holter · IRM · CPET · Cathétérisme · CT</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 76/min</div></div><div class="dr"><div class="dr-lbl">BBD</div><div class="dr-val">QRS 138 ms</div></div><div class="dr"><div class="dr-lbl">Holter</div><div class="dr-val">Pas d'arythmies</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">120 pg/mL</div></div><div class="dr"><div class="dr-lbl">Test effort</div><div class="dr-val">VO2max 88% prédit</div></div><div class="dr"><div class="dr-lbl">Conseil génétique</div><div class="dr-val"><strong>Dépistage 22q11 négatif</strong></div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val"><strong>208 ms · fragmenté</strong> (seuil extrême)</div></div><div class="dr"><div class="dr-lbl">Dispersion QT</div><div class="dr-val"><strong>88 ms</strong> ≥ 70 ✓</div></div><div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal · FC 102/min</div></div><div class="dr"><div class="dr-lbl">PREVENTION-ACHD</div><div class="dr-val"><strong>5/7</strong> très élevé > 10%/an</div></div><div class="dr"><div class="dr-lbl">BNP</div><div class="dr-val"><strong>682 ng/L</strong> ↑↑↑↑</div></div><div class="dr"><div class="dr-lbl">Troponine hs-TnT</div><div class="dr-val"><strong>62 ng/L</strong> ↑ (cytolyse VD)</div></div><div class="dr"><div class="dr-lbl">ASAT/ALAT</div><div class="dr-val"><strong>×3.8 / ×2.6</strong> congestion hépatique</div></div><div class="dr"><div class="dr-lbl">Créatinine</div><div class="dr-val">138 µmol/L ↑ (insuffisance rénale)</div></div><div class="dr"><div class="dr-lbl">Natrémie</div><div class="dr-val"><strong>130 mEq/L hyponatrémie</strong> ✗</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -1182,12 +1182,12 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">ACC 2025 · Section 4.4.1</div>
     </div>
     
-    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
-      <div class="dec-t" style="color:#34D399">
-        <span class="cor c1">COR 1</span>Évaluation risque grossesse — CARPREG II + WHO
+    <div class="dec" style="border-color:#E03050;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#E03050">
+        <span class="cor c1">COR 1</span>Hospitalisation USIC — Discussion transplantation/MCS
       </div>
-      <div class="dec-b"><strong>WHO modifiée :</strong> Classe II (TF réparé bien équilibré · pas d'arythmies · fonction préservée). Si IP sévère ou dysfonction VD → Classe II-III.<br><br><strong>CARPREG II :</strong><br>• ATCD événement CV : 0 pt<br>• NYHA I-II + cyanose : 0 pt<br>• Dysfonction VG ≥ modérée : 0 pt<br>• <strong>Score = 0 pt</strong> (risque ≈ 5%)</div>
-      <div class="dec-action">➜ <strong>Maternité autorisée</strong> classe WHO II :<br>• <strong>Conseil génétique</strong> : dépistage 22q11 fait (négatif). Risque récurrence cardiopathie ≈ 3%<br>• Équipe cardio-obstétricale dès le début<br>• ETT trimestrielle<br>• Adaptation traitements (éviter ARA2/IEC)<br>• Accouchement voie basse possible<br>• Péridurale recommandée<br>• Surveillance post-partum 6 semaines</div>
+      <div class="dec-b"><strong>Cas le plus complexe de la série.</strong> La fenêtre RVP est-elle encore ouverte ?<br>• Strain VD –5% = <strong>dysfonction VD terminale</strong> (récupération très incertaine)<br>• PVD 24 mmHg = VD épuisé, ne peut plus générer pression<br>• FEVG 35% : <strong>diagnostic différentiel critique</strong> :<br> – Bernheim inverse (réversible si RVP) ?<br> – Cardiomyopathie ischémique/fibrotique vraie (irréversible) ?<br><br><strong>L'IRM avec LGE VG, coronarographie et discussion équipe greffe sont décisifs.</strong></div>
+      <div class="dec-action">➜ <strong>Phase 1 — USIC :</strong> stabilisation hémodynamique (diurétiques IV, vasopresseurs si besoin), surveillance shock score, restriction hydrique<br><br><strong>Phase 2 — Diagnostic différentiel FEVG ↓ :</strong><br>• IRM avec LGE VG : si étendu = cardiomyopathie vraie (transplantation)<br>• Coronarographie : exclure ischémique<br>• Évaluation pré-greffe en parallèle<br><br><strong>Phase 3 — Décision multidisciplinaire :</strong><br>• Si Bernheim isolé : RVP + DAI + GDMT (récupération possible)<br>• Si cardiomyopathie vraie : <strong>transplantation cœur ± MCS bridge</strong><br>• <strong>DAI primaire</strong> indiqué dans tous les cas (PREVENTION 5/7)</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -1201,49 +1201,49 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — TF réparé asympto bien équilibrée, désir grossesse. Conduite ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Grossesse contre-indiquée</div><div class="qcm-opt"><span class="qcm-letter">B</span>Césarienne systématique</div><div class="qcm-opt correct"><span class="qcm-letter">C</span>Maternité possible (WHO II) avec équipe cardio-obstétricale</div><div class="qcm-opt"><span class="qcm-letter">D</span>FIV obligatoire</div>
-      <div class="qcm-explain">✓ TF réparé bien équilibré = WHO II, grossesse possible. Conseil génétique préalable (recherche 22q11). Risque transmission cardiopathie ≈ 3%. Équipe multidisciplinaire + suivi rapproché. Voie basse + péridurale.</div>
+      <div class="qcm-q">QCM — TF + IP sévère + FEVG 35% + Strain VD –5% + PVD 24 + choc débutant + QRS 208. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>RVP isolée en urgence</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>USIC + diagnostic différentiel FEVG↓ + discussion transplantation/MCS</div><div class="qcm-opt"><span class="qcm-letter">C</span>GDMT IC seule</div><div class="qcm-opt"><span class="qcm-letter">D</span>DAI primaire seul</div>
+      <div class="qcm-explain">✓ Cas terminal nécessitant approche multidisciplinaire : USIC + diagnostic différentiel critique de la dysfonction VG (Bernheim inverse réversible vs cardiomyopathie vraie) + discussion équipe transplantation. Décision RVP vs greffe selon réversibilité.</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 07</span>
-      <ul><li>TF réparé bien équilibré = WHO II</li><li>Conseil génétique préalable (22q11)</li><li>Risque récurrence cardiopathie ≈ 3%</li><li>Voie basse + péridurale recommandée</li><li>Si IP sévère ou dysfonction VD → upgrade WHO classe</li></ul>
+      <ul><li>Strain –5% = dysfonction VD <strong>terminale</strong> (au-delà fenêtre RVP optimale)</li><li>PVD basse paradoxale = signe de défaillance VD avancée (<strong>pas rassurant</strong>)</li><li>FEVG ↓ en TF : Bernheim inverse vs cardiomyopathie vraie (LGE VG décisif)</li><li>Atteinte multi-organe + hyponatrémie = signes de mauvais pronostic</li><li>Évaluation transplantation systématique si Strain VD ≤ –8% + FEVG < 40%</li></ul>
     </div>
   </div>
 </div>
-
-<div class="cas" data-cas="8" style="--cas-color:#E03050;--cas-color2:#FB7185">
-
+ 
+<div class="cas" data-cas="8" style="--cas-color:#22D3EE;--cas-color2:#A78BFA">
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
       <div class="slide-head-num">CAS 08 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mr K.B., 38 ans</div>
-      <div class="slide-head-sub">TF + Endocardite sur bioprothèse</div>
+      <div class="slide-head-title">Mme L.R., 40 ans (Femme)</div>
+      <div class="slide-head-sub">Le Paradoxe — Valve fonctionnelle mais PVD 42 + Strain –10%</div>
     </div>
     <div class="cas-intro">
-      <div class="cas-intro-title" style="color:#E03050">📚 Présentation clinique</div>
-      <div class="cas-intro-sub">Patient TF avec bioprothèse pulmonaire qui développe une endocardite infectieuse. Cette complication est plus fréquente dans les TF que dans la population générale et nécessite une prise en charge spécialisée.</div>
+      <div class="cas-intro-title" style="color:#22D3EE">🧩 Présentation clinique</div>
+      <div class="cas-intro-sub">Femme 40 ans avec valve biologique pulmonaire (Carpentier-Edwards 25 mm, 2003) sans fuite ni sténose mais PVD 42 mmHg élevée + Strain VD –10% + symptômes NYHA II-III. Le paradoxe : la résistance n'est pas valvulaire — sténose AP périphérique probable.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr K.B., 38 ans</strong></div></div>
-      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">75 kg · 175 cm · BSA 1.91 m²</div></div>
-      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Fièvre + frissons depuis 3 semaines</div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme L.R., 40 ans (Femme)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">62 kg · 165 cm · BSA 1.69 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">—</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Dyspnée effort modéré · 18 mois progressif</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">TF réparé à 3 ans · <strong>PVR percutanée Melody à 30 ans</strong> · 8 ans plus tard</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>TOF réparée à 5 ans · Patch CIV</strong> · <strong>Valve biologique pulmonaire Carpentier-Edwards Magna 25mm implantée à 18 ans (2003)</strong> · suivi annuel 22 ans</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">II-III</span> Fièvre 39° + frissons + sueurs nocturnes + amaigrissement 4 kg</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">320 m · SpO₂ 96 %</div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 110/72 · FC 96 · <strong>T° 38.5°C</strong> · Souffle systolique + diastolique · pas d'OMI</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II-III</span> Dyspnée effort progressive 18 mois NYHA II→III</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">SpO₂ repos 97% · effort 91%</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val"><strong>Pas d'œdème · Pas d'hépatomégalie</strong> (IC droite absente)</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -1251,7 +1251,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
       <div class="slide-head-num">CAS 08 · SLIDE 2/6</div>
       <div class="slide-head-title">📊 Iconographie & Échographie</div>
       <div class="slide-head-sub">Présentation Canva unifiée · ancre #376</div>
@@ -1261,14 +1261,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="canva-caption">
       <div>
-        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#E03050">🎨 Cas 08</div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#22D3EE">🎨 Cas 08</div>
         <div class="canva-caption-id">DAHIQNC5igU · ancre #376</div>
       </div>
       <a class="canva-caption-link" href="https://www.canva.com/design/DAHIQNC5igU/view#376" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/IRM principales</div>
-      <div class="dr"><div class="dr-lbl">Bioprothèse Melody</div><div class="dr-val"><strong>Végétation 12×8 mm</strong></div></div><div class="dr"><div class="dr-lbl">Sténose secondaire</div><div class="dr-val">Gradient 38 mmHg</div></div><div class="dr"><div class="dr-lbl">Fuite secondaire</div><div class="dr-val">Modérée</div></div><div class="dr"><div class="dr-lbl">ETO</div><div class="dr-val"><strong>Confirme végétation + perforation cusp</strong></div></div><div class="dr"><div class="dr-lbl">VD</div><div class="dr-val">Dilaté · TAPSE 18 mm</div></div><div class="dr"><div class="dr-lbl">FEVD</div><div class="dr-val">48% limite</div></div><div class="dr"><div class="dr-lbl">Hémocultures</div><div class="dr-val"><strong>S. aureus 3/3</strong> positives</div></div>
+      <div class="dr"><div class="dr-lbl">Fuite valvulaire</div><div class="dr-val"><strong>Absente ✅</strong> coaptation complète</div></div><div class="dr"><div class="dr-lbl">Gradient valvulaire</div><div class="dr-val"><strong>0 mmHg ✅</strong> pas de sténose</div></div><div class="dr"><div class="dr-lbl">PVD systolique</div><div class="dr-val"><strong>42 mmHg ↑</strong> (normale < 30)</div></div><div class="dr"><div class="dr-lbl">Strain VD (GLS)</div><div class="dr-val"><strong>–10%</strong> (sévère)</div></div><div class="dr"><div class="dr-lbl">Patch CIV</div><div class="dr-val">Étanche ✅</div></div><div class="dr"><div class="dr-lbl">Question centrale</div><div class="dr-val"><strong>Cause de la PVD élevée ?</strong></div></div><div class="dr"><div class="dr-lbl">AP périphériques</div><div class="dr-val">À évaluer</div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -1276,33 +1276,33 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
       <div class="slide-head-num">CAS 08 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF)</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF) + Tableau 35 (RVP)</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong> · Critères Stade selon Tableau 4 + Tableau 35 (PVR).</div>
+      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong>. Critères RVP : VTSI-VD > 80 mL/m² (NEW 2025), FEVD ≤ 46%, FR IP ≥ 25%, QRS ≥ 180 ms, PREVENTION-ACHD.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
-        <span class="ib-title">Stade D retenu :</span>
-        <ul><li>✓ Fièvre persistante 3 semaines</li><li>✓ <strong>Végétation 12×8 mm</strong> ETT/ETO</li><li>✓ Hémocultures S. aureus 3/3</li><li>✓ Critères de Duke modifiés (2 majeurs)</li><li>✓ Insuffisance hémodynamique (BNP 880)</li></ul>
+        <span class="ib-title">Stade C retenu :</span>
+        <ul><li>✓ Symptômes NYHA II-III dépassent ce que la valve explique</li><li>✓ <strong>Valve fonctionnelle (gradient 0 + pas de fuite)</strong></li><li>✓ <strong>PVD 42 mmHg élevée</strong> sans lésion valvulaire</li><li>✓ <strong>Strain VD –10% sévère</strong></li><li>✓ <strong>Résistance EN AVAL</strong> de la valve (AP périphérique) ou précapillaire (HTAP)</li></ul>
       </div>
     </div>
-    <div class="card" style="border-left:4px solid #E03050">
+    <div class="card" style="border-left:4px solid #22D3EE">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
-        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#E03050;line-height:1">D</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade D — Endocardite sur Melody</div>
-        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>III-D</strong></div>
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#22D3EE;line-height:1">C</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — Selon étiologie identifiée</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-C</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>Hospitalisation urgence</li><li>Centre ACHD + infectiologue + chirurgien</li></ul>
+      <ul><li>Démarche diagnostique systématique obligatoire</li><li>5 étiologies à éliminer</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -1310,14 +1310,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
       <div class="slide-head-num">CAS 08 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Holter · IRM</div>
+      <div class="slide-head-sub">ECG · Holter · IRM · CPET · Cathétérisme · CT</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 96/min</div></div><div class="dr"><div class="dr-lbl">BBD</div><div class="dr-val">QRS 158 ms</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>880 pg/mL</strong></div></div><div class="dr"><div class="dr-lbl">CRP</div><div class="dr-val"><strong>148 mg/L</strong> très élevée</div></div><div class="dr"><div class="dr-lbl">Procalcitonine</div><div class="dr-val"><strong>4.2 ng/mL</strong> élevée</div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val"><strong>158 ms</strong> · pas de fragmentation</div></div><div class="dr"><div class="dr-lbl">Dispersion QT</div><div class="dr-val">50 ms normale</div></div><div class="dr"><div class="dr-lbl">Holter</div><div class="dr-val">Pas de TV/TVNS</div></div><div class="dr"><div class="dr-lbl">PREVENTION-ACHD</div><div class="dr-val"><strong>2/7</strong> faible risque MSC</div></div><div class="dr"><div class="dr-lbl">BNP</div><div class="dr-val"><strong>168 ng/L</strong> ↑ modéré</div></div><div class="dr"><div class="dr-lbl">Créatinine / Hb</div><div class="dr-val">76 µmol/L / 13.8 g/dL</div></div><div class="dr"><div class="dr-lbl">Bilan hépatique</div><div class="dr-val">Normal</div></div><div class="dr"><div class="dr-lbl">Diagnostic différentiel</div><div class="dr-val"><strong>5 étiologies à éliminer</strong> (voir décision)</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -1325,7 +1325,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
       <div class="slide-head-num">CAS 08 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
       <div class="slide-head-sub">ACC 2025 · Section 4.4.1</div>
@@ -1333,10 +1333,10 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     
     <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
       <div class="dec-t" style="color:#34D399">
-        <span class="cor c1">COR 1</span>Antibiothérapie + chirurgie urgente
+        <span class="cor c1">COR 1</span>Démarche diagnostique systématique — 5 étiologies
       </div>
-      <div class="dec-b"><strong>Endocardite infectieuse certaine</strong> (Duke modifié) sur Melody avec :<br>• <strong>S. aureus</strong> (germe agressif)<br>• <strong>Végétation > 10 mm</strong><br>• <strong>Perforation cusp</strong> + fuite progressive<br>• Insuffisance cardiaque débutante<br><br>Risques particuliers Melody/Sapien : taux d'endocardite > prothèses chirurgicales.</div>
-      <div class="dec-action">➜ <strong>Approche combinée urgence :</strong><br>• <strong>Antibiothérapie</strong> ciblée S. aureus (Cloxacilline + Gentamicine) 6 semaines<br>• <strong>Chirurgie programmée rapide</strong> : ablation Melody + remplacement chirurgical (homogreffe ou bioprothèse de type Carpentier)<br>• Surveillance complications emboliques (TDM cérébrale)<br>• Recherche porte d'entrée : dentaire, cutanée, cathéter<br>• Prévention secondaire : antibioprophylaxie à vie pour gestes à risque</div>
+      <div class="dec-b"><strong>Le paradoxe :</strong> valve sans fuite/sténose + PVD 42 + Strain –10% = la surcharge VD vient d'<strong>ailleurs</strong>. Démarche systématique :<br><br><strong>1. Sténose AP périphérique</strong> (branches AP post-chirurgie) ← <strong>cause la plus probable</strong><br><strong>2. Hypertension artérielle pulmonaire</strong> (HTAP précapillaire)<br><strong>3. CIV résiduelle</strong> non détectée (improbable, étanche confirmé)<br><strong>4. Dysfonction diastolique VD isolée</strong> (compliance ↓)<br><strong>5. Obstruction sous-valvulaire</strong> résiduelle (muscle infundibulaire)</div>
+      <div class="dec-action">➜ <strong>Bilan diagnostique :</strong><br>• <strong>IRM cardiaque + ARM des branches AP</strong> (recherche sténose périphérique)<br>• <strong>Cathétérisme droit</strong> (RVP, gradients, profil pression)<br>• Test perfusion pulmonaire (asymétrie ?)<br>• Si sténose AP périphérique : <strong>angioplastie percutanée + stent</strong> (Cas similaire à v1 Cas 04)<br>• Si HTAP précapillaire : <strong>PAH therapy</strong> (Bosentan/Tadalafil/Sildénafil disponibles Algérie)<br>• Pas d'intervention valvulaire (valve fonctionnelle ✅)</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -1344,25 +1344,25 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
       <div class="slide-head-num">CAS 08 · SLIDE 6/6</div>
       <div class="slide-head-title">🎓 QCM & Take-home</div>
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — TF + Melody + endocardite S. aureus + végétation 12 mm + IC débutante. Conduite ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Antibiothérapie seule à vie</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Antibiothérapie + chirurgie urgente</div><div class="qcm-opt"><span class="qcm-letter">C</span>Surveillance + bétalactamine 2 semaines</div><div class="qcm-opt"><span class="qcm-letter">D</span>Anticoagulation seule</div>
-      <div class="qcm-explain">✓ Endocardite sur Melody/Sapien avec S. aureus + végétation > 10 mm + insuffisance cardiaque = chirurgie urgente. Antibiothérapie + ablation prothèse + remplacement par homogreffe/bioprothèse chirurgicale. Centre expert ACHD.</div>
+      <div class="qcm-q">QCM — Valve bio fonctionnelle (gradient 0 + pas de fuite) + PVD 42 + Strain –10% + NYHA II-III. Étape diagnostique ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Re-RVP préventive</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>IRM + cathétérisme droit + ARM des branches AP (5 étiologies)</div><div class="qcm-opt"><span class="qcm-letter">C</span>DAI primaire</div><div class="qcm-opt"><span class="qcm-letter">D</span>Surveillance simple</div>
+      <div class="qcm-explain">✓ Le paradoxe : valve fonctionnelle mais surcharge VD réelle = la résistance est ailleurs. Démarche systématique : ARM des branches AP (sténose périphérique = cause #1) + cathétérisme (HTAP précapillaire) + IRM. Pas d'intervention valvulaire si valve normale.</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 08</span>
-      <ul><li>Risque endocardite > sur Melody/Sapien que prothèses chirurgicales</li><li>Critères chirurgie urgente : S. aureus + végétation > 10 mm + IC</li><li>Antibioprophylaxie à vie pour gestes à risque</li><li>Recherche porte d'entrée systématique</li></ul>
+      <ul><li>PVD élevée sans lésion valvulaire = chercher AILLEURS</li><li>5 étiologies systématiques : AP périphérique, HTAP, CIV résiduelle, dysfonction diastolique, sous-valvulaire</li><li>Sténose AP périphérique = cause #1 post-TOF</li><li>ARM des branches AP indispensable</li><li>Pas d'intervention valvulaire si valve fonctionnelle ✅</li></ul>
     </div>
   </div>
 </div>
-
+ 
 <div class="cas" data-cas="9" style="--cas-color:#A78BFA;--cas-color2:#FB7185">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -1370,29 +1370,29 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
       <div class="slide-head-num">CAS 09 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mr M.L., 44 ans</div>
-      <div class="slide-head-sub">TF + Anévrisme Aorte ascendante (NEW)</div>
+      <div class="slide-head-title">Mr M.L., 44 ans (Homme)</div>
+      <div class="slide-head-sub">Anévrisme Aorte Ascendante (NEW)</div>
     </div>
     <div class="cas-intro">
       <div class="cas-intro-title" style="color:#A78BFA">📖 Présentation clinique</div>
-      <div class="cas-intro-sub">Patient TF réparé qui développe un anévrisme de l'aorte ascendante — complication tardive bien documentée. L'aortopathie est inhérente au TF (média altérée). Surveillance et seuils chirurgicaux spécifiques.</div>
+      <div class="cas-intro-sub">Patient TF réparé qui développe un anévrisme de l'aorte ascendante — complication tardive bien documentée (15-25% des TF adultes). L'aortopathie est inhérente au TF (média altérée). ATCD familial de dissection aortique = FdR majeur.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr M.L., 44 ans</strong></div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr M.L., 44 ans (Homme)</strong></div></div>
       <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">80 kg · 178 cm · BSA 1.99 m²</div></div>
       <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre</div></div>
       <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Suivi · dilatation aorte ascendante progressive</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">TF réparé à 5 ans · IP modérée stable · suivi régulier · ATCD familial dissection aortique père</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>TF réparé à 5 ans</strong> · IP modérée stable · suivi régulier · <strong>ATCD familial dissection aortique père</strong></div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
       <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-mint">I-II</span> Asymptomatique · découverte ETT/IRM</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">480 m · SpO₂ 98 %</div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 132/82 · FC 72 · Souffle systolique modeste · pas de souffle diastolique</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">SpO₂ 98 %</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 132/82 · FC 72 · Souffle systolique modeste</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -1428,17 +1428,17 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
       <div class="slide-head-num">CAS 09 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF)</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF) + Tableau 35 (RVP)</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong> · Critères Stade selon Tableau 4 + Tableau 35 (PVR).</div>
+      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong>. Critères RVP : VTSI-VD > 80 mL/m² (NEW 2025), FEVD ≤ 46%, FR IP ≥ 25%, QRS ≥ 180 ms, PREVENTION-ACHD.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
         <span class="ib-title">Stade C retenu :</span>
-        <ul><li>✓ Asymptomatique</li><li>✓ <strong>Aorte ascendante 52 mm</strong></li><li>✓ Progression rapide +2 mm/an</li><li>✓ ATCD familial dissection (FdR)</li><li>✓ TF réparé fonctionnel</li></ul>
+        <ul><li>✓ Asymptomatique</li><li>✓ <strong>Aorte ascendante 52 mm</strong></li><li>✓ Progression rapide +2 mm/an</li><li>✓ <strong>ATCD familial dissection aortique père</strong> (FdR)</li><li>✓ TF réparé fonctionnel</li></ul>
       </div>
     </div>
     <div class="card" style="border-left:4px solid #A78BFA">
@@ -1462,11 +1462,11 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
       <div class="slide-head-num">CAS 09 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Holter · IRM</div>
+      <div class="slide-head-sub">ECG · Holter · IRM · CPET · Cathétérisme · CT</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 72/min</div></div><div class="dr"><div class="dr-lbl">BBD</div><div class="dr-val">QRS 144 ms</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">240 pg/mL</div></div><div class="dr"><div class="dr-lbl">IRM aortique</div><div class="dr-val">Confirme · pas de dissection · race ascendante 52 mm</div></div><div class="dr"><div class="dr-lbl">Conseil génétique</div><div class="dr-val">Marfan exclu · ATCD familial significatif</div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val">144 ms · pas de fragmentation</div></div><div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 72/min</div></div><div class="dr"><div class="dr-lbl">BNP</div><div class="dr-val">240 pg/mL</div></div><div class="dr"><div class="dr-lbl">IRM aortique</div><div class="dr-val">Confirme · pas de dissection · race ascendante 52 mm</div></div><div class="dr"><div class="dr-lbl">Conseil génétique</div><div class="dr-val">Marfan exclu · ATCD familial significatif</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -1484,7 +1484,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dec-t" style="color:#34D399">
         <span class="cor c1">COR 1</span>Section 4.4.1 — Chirurgie aorte ascendante
       </div>
-      <div class="dec-b"><strong>Aortopathie du Fallot</strong> : la dilatation aortique est inhérente au TF (média altérée + flux antégrade aorte intra-utérin). Prévalence : 15-25% des TF adultes.<br><br><strong>Seuils chirurgicaux ACC 2025 (analogues BAV) :</strong><br>• <strong>≥ 55 mm</strong> en l'absence de FdR<br>• <strong>≥ 50 mm</strong> avec FdR : ATCD familial dissection ✓, croissance > 3 mm/an, candidate à grossesse, syndrome de Marfan<br>• Notre patient : aorte 52 mm + ATCD familial dissection + progression 2 mm/an = <strong>indication chirurgicale formelle</strong></div>
+      <div class="dec-b"><strong>Aortopathie du Fallot</strong> : la dilatation aortique est inhérente au TF (média altérée + flux antégrade aorte intra-utérin). Prévalence : <strong>15-25%</strong> des TF adultes.<br><br><strong>Seuils chirurgicaux ACC 2025 (analogues BAV) :</strong><br>• <strong>≥ 55 mm</strong> en l'absence de FdR<br>• <strong>≥ 50 mm</strong> avec FdR : <strong>ATCD familial dissection ✓</strong>, croissance > 3 mm/an, candidate à grossesse, syndrome de Marfan<br><br>Notre patient : aorte 52 mm + ATCD familial dissection + progression 2 mm/an = <strong>indication chirurgicale formelle</strong></div>
       <div class="dec-action">➜ <strong>Chirurgie programmée :</strong> remplacement aorte ascendante (procédure de Bentall si IAo significative, ou tube sus-coronaire si valve aortique préservable). Possibilité de combiner avec PVR si IP sévérisée. Centre ACHD + chirurgie aortique expert.</div>
     </div>
   </div>
@@ -1509,33 +1509,33 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
   </div>
 </div>
-
-<div class="cas" data-cas="10" style="--cas-color:#E03050;--cas-color2:#F0A030">
-
+ 
+<div class="cas" data-cas="10" style="--cas-color:#E03050;--cas-color2:#FB7185">
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 10 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mr A.B., 38 ans</div>
-      <div class="slide-head-sub">TF + Dysfonction biventriculaire sur IP massive</div>
+      <div class="slide-head-title">Mr A.B., 38 ans (Homme)</div>
+      <div class="slide-head-sub">Dysfonction biventriculaire IP massive — Stade D limite</div>
     </div>
     <div class="cas-intro">
       <div class="cas-intro-title" style="color:#E03050">🎯 Présentation clinique</div>
-      <div class="cas-intro-sub">Patient TF réparé avec patch transannulaire ayant développé une dysfonction biventriculaire sévère sur IP massive chronique. Stade D — fenêtre PVR encore ouverte mais limite, avec discussion DAI primaire vu QRS très large.</div>
+      <div class="cas-intro-sub">Patient TF réparé avec patch transannulaire ayant développé une dysfonction biventriculaire sévère sur IP massive chronique. Stade D limite — fenêtre RVP encore ouverte (FEVD 28% > seuil ~25% d'irréversibilité), avec discussion DAI primaire (QRS 192 ms).</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr A.B., 38 ans</strong></div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr A.B., 38 ans (Homme)</strong></div></div>
       <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">76 kg · 178 cm · BSA 1.94 m²</div></div>
       <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre · activité réduite</div></div>
       <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Dyspnée NYHA III + fatigue importante</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>TF réparé à 4 ans avec patch transannulaire</strong> · IP massive connue depuis 15 ans · suivi irrégulier · refus historique PVR</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>TF réparé à 4 ans avec patch transannulaire</strong> · IP massive connue depuis 15 ans · suivi irrégulier · refus historique RVP</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
@@ -1549,7 +1549,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 10 · SLIDE 2/6</div>
       <div class="slide-head-title">📊 Iconographie & Échographie</div>
       <div class="slide-head-sub">Présentation Canva unifiée · ancre #431</div>
@@ -1574,14 +1574,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 10 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF)</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.4.1 (TF) + Tableau 35 (RVP)</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong> · Critères Stade selon Tableau 4 + Tableau 35 (PVR).</div>
+      <div class="app-use-body">Saisir <strong>Tétralogie de Fallot (Section 4.4.1)</strong>. Critères RVP : VTSI-VD > 80 mL/m² (NEW 2025), FEVD ≤ 46%, FR IP ≥ 25%, QRS ≥ 180 ms, PREVENTION-ACHD.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
@@ -1608,14 +1608,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 10 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Holter · IRM</div>
+      <div class="slide-head-sub">ECG · Holter · IRM · CPET · Cathétérisme · CT</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 88/min</div></div><div class="dr"><div class="dr-lbl">BBD</div><div class="dr-val"><strong>QRS 192 ms</strong> (très élargi)</div></div><div class="dr"><div class="dr-lbl">Holter</div><div class="dr-val"><strong>ESV monomorphes nombreuses</strong></div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>1850 pg/mL</strong> (très élevé)</div></div><div class="dr"><div class="dr-lbl">Test effort</div><div class="dr-val">VO2max 58% prédit (sévèrement altéré)</div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val"><strong>192 ms (très élargi)</strong></div></div><div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 88/min</div></div><div class="dr"><div class="dr-lbl">Holter</div><div class="dr-val"><strong>ESV monomorphes nombreuses</strong></div></div><div class="dr"><div class="dr-lbl">BNP</div><div class="dr-val"><strong>1850 pg/mL</strong> très élevé</div></div><div class="dr"><div class="dr-lbl">Test effort</div><div class="dr-val">VO2max 58% prédit (sévèrement altéré)</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -1623,7 +1623,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 10 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
       <div class="slide-head-sub">ACC 2025 · Section 4.4.1</div>
@@ -1631,10 +1631,10 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     
     <div class="dec" style="border-color:#E03050;background:rgba(255,255,255,.03)">
       <div class="dec-t" style="color:#E03050">
-        <span class="cor c1">COR 1</span>PVR + DAI primaire — Approche combinée
+        <span class="cor c1">COR 1</span>RVP + DAI primaire — Approche combinée
       </div>
-      <div class="dec-b"><strong>Section 4.4.1 ACC 2025 — Indications convergentes :</strong><br>• <strong>NYHA III</strong> attribuable à IP massive<br>• <strong>FEVD 28%</strong> + RVEDV majeur (198 mL/m²)<br>• <strong>FEVG 42%</strong> (altération secondaire VD/VG)<br>• <strong>QRS 192 ms</strong> ≥ 180 (FdR mort subite majeur)<br>• Arythmies ventriculaires sur Holter<br><br><strong>Question critique :</strong> la fenêtre PVR est-elle encore ouverte ?<br>• FEVD 28% : altération sévère mais non-irréversible si IP traitée<br>• Évidence : récupération FEVD partielle après PVR même à FEVD basse<br>• Au-delà de FEVD 25% : peu de récupération attendue</div>
-      <div class="dec-action">➜ <strong>Approche combinée urgente :</strong><br>• <strong>PVR</strong> en priorité (chirurgicale ou Valve-in-Valve si bioprothèse antérieure) — fenêtre encore ouverte mais limite<br>• <strong>DAI prévention primaire</strong> : QRS 192 + dysfonction biventriculaire + arythmies + LGE étendu<br>• <strong>Discussion CRT-D</strong> : QRS très large + dysfonction VG + dyssynchronie possible<br>• <strong>GDMT IC</strong> avant et après PVR : IEC/ARNI + bétabloquant + spironolactone + SGLT2i<br>• <strong>Évaluation transplantation</strong> en parallèle si pas de récupération post-PVR</div>
+      <div class="dec-b"><strong>Section 4.4.1 ACC 2025 — Indications convergentes :</strong><br>• <strong>NYHA III</strong> attribuable à IP massive<br>• <strong>FEVD 28%</strong> + RVEDV majeur (198 mL/m²)<br>• <strong>FEVG 42%</strong> (altération secondaire VD/VG)<br>• <strong>QRS 192 ms</strong> ≥ 180 (FdR mort subite majeur)<br>• Arythmies ventriculaires sur Holter<br><br><strong>Question critique :</strong> la fenêtre RVP est-elle encore ouverte ?<br>• FEVD 28% : altération sévère mais non-irréversible si IP traitée<br>• Évidence : récupération FEVD partielle après RVP même à FEVD basse<br>• Au-delà de FEVD 25% : peu de récupération attendue</div>
+      <div class="dec-action">➜ <strong>Approche combinée urgente :</strong><br>• <strong>RVP</strong> en priorité (chirurgicale ou Valve-in-Valve si bioprothèse antérieure) — fenêtre encore ouverte mais limite<br>• <strong>DAI prévention primaire</strong> : QRS 192 + dysfonction biventriculaire + arythmies + LGE étendu<br>• <strong>Discussion CRT-D</strong> : QRS très large + dysfonction VG + dyssynchronie possible<br>• <strong>GDMT IC</strong> avant et après RVP : IEC/ARNI + bétabloquant + spironolactone + SGLT2i<br>• <strong>Évaluation transplantation</strong> en parallèle si pas de récupération post-RVP</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -1642,32 +1642,32 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 10 · SLIDE 6/6</div>
       <div class="slide-head-title">🎓 QCM & Take-home</div>
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
       <div class="qcm-q">QCM — TF + IP massive + FEVD 28% + FEVG 42% + QRS 192 ms + NYHA III. Conduite ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Surveillance — trop tardif pour PVR</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>PVR + DAI primaire + GDMT IC (approche combinée)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Transplantation immédiate sans tentative PVR</div><div class="qcm-opt"><span class="qcm-letter">D</span>Pacing biventriculaire seul</div>
-      <div class="qcm-explain">✓ Stade D mais fenêtre PVR encore ouverte (FEVD 28% > seuil 25% d'irréversibilité). Approche combinée multidisciplinaire : PVR (priorité) + DAI primaire (QRS 192 + dysfonction biventriculaire) + GDMT IC. Évaluation transplantation en parallèle si pas de récupération.</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Surveillance — trop tardif pour RVP</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>RVP + DAI primaire + GDMT IC (approche combinée)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Transplantation immédiate sans tentative RVP</div><div class="qcm-opt"><span class="qcm-letter">D</span>Pacing biventriculaire seul</div>
+      <div class="qcm-explain">✓ Stade D mais fenêtre RVP encore ouverte (FEVD 28% > seuil 25% d'irréversibilité). Approche combinée multidisciplinaire : RVP (priorité) + DAI primaire (QRS 192 + dysfonction biventriculaire) + GDMT IC. Évaluation transplantation en parallèle si pas de récupération.</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 10</span>
-      <ul><li>Stade D ≠ contre-indication absolue PVR</li><li>Seuil d'irréversibilité : FEVD ~ 25%</li><li>QRS ≥ 180 ms = FdR mort subite majeur (DAI primaire)</li><li>Approche multimodale : PVR + DAI + GDMT IC + évaluation greffe</li><li>Inter-dépendance VD/VG : FEVG s'améliore après PVR si fenêtre</li></ul>
+      <ul><li>Stade D ≠ contre-indication absolue RVP</li><li>Seuil d'irréversibilité : FEVD ~ 25%</li><li>QRS ≥ 180 ms = FdR mort subite majeur (DAI primaire)</li><li>Approche multimodale : RVP + DAI + GDMT IC + évaluation greffe</li><li>Inter-dépendance VD/VG : FEVG s'améliore après RVP si fenêtre</li></ul>
     </div>
   </div>
 </div>
-
+ 
 </div>
-
+ 
 <div id="botnav">
   <div class="bn-wrap">
     <button class="bn-btn bn-prev" id="btn-prev" onclick="navSlide(-1)">← Précédent</button>
     <button class="bn-btn bn-next" id="btn-next" onclick="navSlide(1)">Suivant →</button>
   </div>
 </div>
-
+ 
 <script>
 var STATE = { curCas: 1, curSlide: 0 };
 var CAS_COLORS = {
@@ -1682,7 +1682,7 @@ var CAS_COLORS = {
   9: { color: '#A78BFA', color2: '#FB7185' },
   10:{ color: '#E03050', color2: '#F0A030' }
 };
-
+ 
 function showCas(n) {
   STATE.curCas = n;
   STATE.curSlide = 0;
@@ -1700,7 +1700,7 @@ function showCas(n) {
   document.getElementById('cas-badge').textContent = 'CAS '+n+'/10';
   showSlide(0);
 }
-
+ 
 function showSlide(s) {
   STATE.curSlide = s;
   var cas = document.querySelector('.cas[data-cas="'+STATE.curCas+'"]');
@@ -1717,7 +1717,7 @@ function showSlide(s) {
   if (STATE.curCas===10 && s===5) document.getElementById('btn-next').textContent = 'Fin ✓';
   window.scrollTo({top:0, behavior:'smooth'});
 }
-
+ 
 function navSlide(dir) {
   var newSlide = STATE.curSlide + dir;
   if (newSlide < 0) {
@@ -1736,7 +1736,7 @@ function navSlide(dir) {
   }
   showSlide(newSlide);
 }
-
+ 
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.cn').forEach(function(b){
     b.addEventListener('click', function(){
