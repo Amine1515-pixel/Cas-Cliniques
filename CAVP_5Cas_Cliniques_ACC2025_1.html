@@ -16,7 +16,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM Sans",sans-serif;font-size:14px;overflow-x:hidden}
-
+ 
 #topbar{background:rgba(6,16,30,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--brd2);padding:10px 14px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:200}
 .tb-logo{width:38px;height:38px;border-radius:9px;background:#fff;padding:2px;flex-shrink:0;overflow:hidden}
 .tb-logo img{width:100%;height:100%;object-fit:contain}
@@ -24,46 +24,46 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .tb-title{font-family:"Syne",sans-serif;font-size:14px;font-weight:700;color:var(--accent);line-height:1.2}
 .tb-sub{font-size:9px;color:var(--w3);margin-top:1px}
 .tb-cas-badge{background:rgba(167,139,250,.2);border:1px solid rgba(167,139,250,.4);border-radius:7px;padding:4px 9px;font-size:10px;font-weight:700;color:var(--pur);flex-shrink:0;font-family:"JetBrains Mono",monospace}
-
+ 
 #cas-nav{background:rgba(6,16,30,.95);border-bottom:1px solid var(--brd);padding:9px 12px;display:flex;gap:6px;overflow-x:auto;position:sticky;top:60px;z-index:190}
 #cas-nav::-webkit-scrollbar{display:none}
 .cn{padding:7px 14px;border-radius:18px;font-family:"Syne",sans-serif;font-size:10px;font-weight:700;cursor:pointer;border:1.5px solid var(--brd2);background:transparent;color:var(--w3);white-space:nowrap;flex-shrink:0;transition:all .15s}
 .cn.on{background:var(--cas-color,var(--pur));color:#06101E;border-color:var(--cas-color,var(--pur))}
 .cn:active{transform:scale(.95)}
-
+ 
 #slides-nav{background:rgba(6,16,30,.95);border-bottom:1px solid var(--brd);padding:8px 12px;display:flex;gap:5px;overflow-x:auto;position:sticky;top:107px;z-index:185}
 #slides-nav::-webkit-scrollbar{display:none}
 .sn{padding:5px 10px;border-radius:14px;font-family:"DM Sans",sans-serif;font-size:10px;font-weight:600;cursor:pointer;border:1.5px solid var(--brd2);background:transparent;color:var(--w3);white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:5px}
 .sn .sn-num{font-family:"JetBrains Mono",monospace;font-size:9px;font-weight:700;background:rgba(255,255,255,.06);padding:1px 5px;border-radius:3px}
 .sn.on{background:var(--cas-color,var(--pur));color:#06101E;border-color:var(--cas-color,var(--pur))}
 .sn.on .sn-num{background:rgba(0,0,0,.2);color:#06101E}
-
+ 
 #content{padding:14px 13px 100px;max-width:520px;margin:0 auto}
 .cas{display:none}
 .cas.on{display:block}
 .slide{display:none;animation:fadeIn 0.3s}
 .slide.on{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-
+ 
 .card{background:var(--card);border-radius:13px;border:1px solid var(--brd);padding:14px;margin-bottom:11px}
 .card-title{font-family:"Syne",sans-serif;font-size:12px;font-weight:700;color:var(--cas-color,var(--accent));margin-bottom:11px;display:flex;align-items:center;gap:7px;padding-bottom:8px;border-bottom:1px solid var(--brd)}
-
+ 
 .slide-head{background:linear-gradient(135deg,var(--cas-color,var(--pur)),var(--cas-color2,var(--cyan)));padding:14px 16px;border-radius:14px;margin-bottom:13px;color:#fff;position:relative;overflow:hidden}
 .slide-head::after{content:'';position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:rgba(255,255,255,.1);border-radius:50%}
 .slide-head-num{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;opacity:.85;letter-spacing:1px;margin-bottom:3px}
 .slide-head-title{font-family:"Syne",sans-serif;font-size:17px;font-weight:800;line-height:1.2}
 .slide-head-sub{font-size:11px;opacity:.85;margin-top:3px}
-
+ 
 .cas-intro{background:linear-gradient(135deg,rgba(167,139,250,.15),rgba(34,211,238,.1));border:1px solid var(--cas-color,var(--pur));border-radius:12px;padding:13px 14px;margin-bottom:12px}
 .cas-intro-title{font-family:"Syne",sans-serif;font-size:14px;font-weight:800;color:var(--cas-color,var(--pur));margin-bottom:5px}
 .cas-intro-sub{font-size:11px;color:var(--w2);line-height:1.5}
-
+ 
 .dr{display:flex;padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.06);font-size:12.5px;align-items:flex-start;gap:10px}
 .dr:last-child{border-bottom:none}
 .dr-lbl{flex:0 0 110px;color:var(--w3);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.3px;padding-top:1px}
 .dr-val{flex:1;color:var(--w1);font-weight:500;line-height:1.5}
 .dr-val strong{color:var(--cas-color,var(--accent))}
-
+ 
 .chip{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:5px;font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;margin:2px 3px 2px 0}
 .chip-mint{background:rgba(52,211,153,.18);color:var(--mint)}
 .chip-sky{background:rgba(56,189,248,.18);color:var(--sky)}
@@ -73,7 +73,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .chip-cyan{background:rgba(34,211,238,.18);color:var(--cyan)}
 .chip-orange{background:rgba(251,146,60,.18);color:var(--orange)}
 .chip-rose{background:rgba(251,113,133,.18);color:var(--rose)}
-
+ 
 .ib{border-radius:10px;padding:11px 13px;font-size:12px;line-height:1.65;border-left:3px solid;margin-bottom:10px}
 .ib strong{color:var(--w1)}
 .ib-sky{background:rgba(56,189,248,.08);border-color:var(--sky);color:var(--w2)}
@@ -87,24 +87,24 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .ib-title{font-family:"Syne",sans-serif;font-size:11.5px;font-weight:700;color:var(--w1);display:block;margin-bottom:5px}
 .ib ul{margin:5px 0 0 17px;padding:0}
 .ib li{margin-bottom:4px;line-height:1.55}
-
+ 
 .app-use{background:linear-gradient(135deg,rgba(167,139,250,.12),rgba(56,189,248,.06));border:1.5px solid rgba(167,139,250,.3);border-radius:12px;padding:13px 14px;margin-bottom:11px;position:relative}
 .app-use::before{content:'📱';position:absolute;top:-12px;left:13px;background:var(--bg);padding:2px 9px;border-radius:14px;font-size:14px;border:1.5px solid rgba(167,139,250,.3)}
 .app-use-title{font-family:"Syne",sans-serif;font-size:11px;font-weight:800;color:var(--pur);text-transform:uppercase;letter-spacing:.5px;margin-top:3px;margin-bottom:7px}
 .app-use-body{font-size:12px;color:var(--w2);line-height:1.65}
 .app-use-body strong{color:var(--w1)}
-
+ 
 .cor{display:inline-flex;align-items:center;padding:2px 7px;border-radius:5px;font-family:"JetBrains Mono",monospace;font-size:9px;font-weight:700;margin-right:5px}
 .c1{background:rgba(52,211,153,.2);color:var(--mint)}
 .c2a{background:rgba(56,189,248,.2);color:var(--sky)}
 .c2b{background:rgba(240,160,48,.2);color:var(--gold)}
 .c3{background:rgba(224,48,80,.18);color:var(--red);border:1px solid rgba(224,48,80,.4)}
-
+ 
 .dec{border-radius:12px;border:2px solid;padding:13px;margin-bottom:10px}
 .dec-t{font-family:"Syne",sans-serif;font-size:13px;font-weight:800;margin-bottom:7px;line-height:1.3}
 .dec-b{font-size:12px;color:var(--w2);line-height:1.65}
 .dec-action{margin-top:8px;padding:8px 11px;background:rgba(255,255,255,.04);border-radius:7px;font-size:11.5px;color:var(--w2);font-style:italic;line-height:1.55}
-
+ 
 /* CANVA EMBED INLINE — affichage direct */
 .canva-embed-wrap{position:relative;width:100%;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#0a1628;border:1.5px solid rgba(125,60,224,.3);margin-bottom:11px;box-shadow:0 4px 18px rgba(125,60,224,.18)}
 .canva-embed-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
@@ -114,17 +114,17 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .canva-caption-id{font-family:"JetBrains Mono",monospace;font-size:9px;color:var(--pur);opacity:.75;margin-top:2px;letter-spacing:.4px}
 .canva-open-link{font-size:10px;color:var(--pur);text-decoration:none;font-weight:600;border:1px solid rgba(167,139,250,.4);padding:4px 9px;border-radius:6px;flex-shrink:0;display:inline-flex;align-items:center;gap:4px}
 .canva-open-link:hover{background:rgba(167,139,250,.1)}
-
+ 
 .tbl{width:100%;border-collapse:collapse;font-size:11.5px;margin:9px 0;border-radius:8px;overflow:hidden}
 .tbl th{background:rgba(167,139,250,.18);color:var(--pur);text-align:left;padding:7px 10px;font-family:"Syne",sans-serif;font-weight:700;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;border:1px solid var(--brd)}
 .tbl td{padding:7px 10px;border:1px solid var(--brd);color:var(--w2);line-height:1.5}
 .tbl tr:nth-child(even) td{background:rgba(255,255,255,.02)}
-
+ 
 .slide-progress{display:flex;gap:4px;justify-content:center;margin-bottom:14px}
 .sp-dot{width:24px;height:3px;background:var(--brd2);border-radius:2px;transition:all .25s}
 .sp-dot.on{background:var(--cas-color,var(--pur));width:32px}
 .sp-dot.done{background:var(--mint)}
-
+ 
 #botnav{position:fixed;bottom:0;left:0;right:0;background:rgba(6,16,30,.97);backdrop-filter:blur(14px);border-top:1px solid var(--brd2);padding:10px 13px;z-index:300}
 .bn-wrap{max-width:520px;margin:0 auto;display:flex;gap:8px}
 .bn-btn{flex:1;padding:11px;border-radius:11px;border:none;font-family:"Syne",sans-serif;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
@@ -132,7 +132,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .bn-next{background:var(--cas-color,var(--pur));color:#06101E}
 .bn-btn:disabled{opacity:.3;cursor:not-allowed}
 .bn-btn:active{transform:scale(.97)}
-
+ 
 .qcm{background:rgba(167,139,250,.08);border:1.5px solid rgba(167,139,250,.3);border-radius:11px;padding:13px;margin-bottom:11px}
 .qcm-q{font-family:"Syne",sans-serif;font-size:13px;font-weight:700;color:var(--pur);margin-bottom:9px;line-height:1.4}
 .qcm-opt{display:flex;align-items:flex-start;gap:8px;padding:9px 11px;background:var(--bg3);border-radius:8px;border:1.5px solid var(--brd);margin-bottom:5px;font-size:12px;color:var(--w2);line-height:1.5;cursor:pointer;transition:all .14s}
@@ -140,12 +140,12 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .qcm-letter{font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:700;color:var(--pur);flex-shrink:0;width:18px;height:18px;border-radius:4px;background:rgba(167,139,250,.15);display:flex;align-items:center;justify-content:center}
 .qcm-opt.correct .qcm-letter{background:var(--mint);color:#06101E}
 .qcm-explain{margin-top:9px;padding:8px 11px;background:rgba(52,211,153,.07);border-left:3px solid var(--mint);border-radius:6px;font-size:11px;color:var(--w2);line-height:1.5;font-style:italic}
-
+ 
 .bar-row{display:flex;align-items:center;gap:9px;margin-bottom:7px;font-size:11.5px}
 .bar-lbl{flex:0 0 100px;color:var(--w3);font-weight:600;font-size:11px}
 .bar-track{flex:1;height:18px;background:var(--bg3);border-radius:9px;overflow:hidden;position:relative}
 .bar-fill{height:100%;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;color:#06101E}
-
+ 
 /* DRUG BOX — only Bosentan / Tadalafil / Sildenafil */
 .drug-box{background:linear-gradient(135deg,rgba(0,196,174,.1),rgba(56,189,248,.05));border:1.5px solid rgba(0,196,174,.3);border-radius:11px;padding:13px;margin-bottom:11px}
 .drug-box-title{font-family:"Syne",sans-serif;font-size:11.5px;font-weight:700;color:var(--teal);margin-bottom:8px;text-transform:uppercase;letter-spacing:.4px;display:flex;align-items:center;gap:6px}
@@ -158,7 +158,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 </style>
 </head>
 <body>
-
+ 
 <div id="topbar">
   <div class="tb-logo"><img id="top-logo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/wAARCAH4AfgDACIAAREBAhEB/9sAQwAIBgYHBgUIBwcHCQkICgwUDQwLCwwZEhMPFB0aHx4dGhwcICQuJyAiLCMcHCg3KSwwMTQ0NB8nOT04MjwuMzQy/9sAQwEJCQkMCwwYDQ0YMiEcITIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMAAAERAhEAPwD5/ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA9//Zl/5mn/ALdP/a1fQFfP/wCzL/zNP/bp/wC1q+gKAPgCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKK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" alt="CSC"></div>
   <div class="tb-info">
@@ -167,7 +167,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
   </div>
   <div class="tb-cas-badge" id="cas-badge">CAS 1/5</div>
 </div>
-
+ 
 <div id="cas-nav">
   <button class="cn on" data-cas="1">📘 Cas 1</button>
   <button class="cn" data-cas="2">📗 Cas 2</button>
@@ -175,7 +175,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
   <button class="cn" data-cas="4">📙 Cas 4</button>
   <button class="cn" data-cas="5">📔 Cas 5</button>
 </div>
-
+ 
 <div id="slides-nav">
   <button class="sn on" data-slide="0"><span class="sn-num">01</span>Présentation</button>
   <button class="sn" data-slide="1"><span class="sn-num">02</span>Iconographie</button>
@@ -184,14 +184,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
   <button class="sn" data-slide="4"><span class="sn-num">05</span>Décision</button>
   <button class="sn" data-slide="5"><span class="sn-num">06</span>Suivi</button>
 </div>
-
+ 
 <div id="content">
-
+ 
 <!-- ════════════════════════════════════════ -->
 <!-- CAS 1 : Femme jeune, CAVP non opéré, désir de grossesse -->
 <!-- ════════════════════════════════════════ -->
 <div class="cas on" data-cas="1" style="--cas-color:#34D399;--cas-color2:#22D3EE">
-
+ 
   <!-- SLIDE 1 -->
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
@@ -203,12 +203,12 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">Femme 28 ans · Désir de Grossesse</div>
       <div class="slide-head-sub">CAVP non opéré · Adressée pour évaluation préconceptionnelle</div>
     </div>
-
+ 
     <div class="cas-intro">
       <div class="cas-intro-title" style="color:#34D399">📘 Présentation clinique</div>
       <div class="cas-intro-sub">Patiente jeune adressée par sa gynécologue pour avis préconceptionnel. Souffle cardiaque depuis l'enfance, jamais explorée auparavant.</div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">🧑 Identification & Histoire</div>
       <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme L.K., 28 ans</strong></div></div>
@@ -216,7 +216,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Enseignante</div></div>
       <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Souffle cardiaque · Désir de grossesse (mariage récent)</div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📋 Antécédents & Contexte</div>
       <div class="dr"><div class="dr-lbl">ATCD perso</div><div class="dr-val">Souffle découvert à 6 ans · perdue de vue · pas de syndrome connu</div></div>
@@ -224,7 +224,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">ATCD familiaux</div><div class="dr-val">Père : HTA · sœur Trisomie 21</div></div>
       <div class="dr"><div class="dr-lbl">G/P</div><div class="dr-val">G0P0 · Cycles réguliers</div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">🩺 Symptomatologie actuelle</div>
       <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-mint">Classe I</span> Pas de dyspnée à l'effort habituel</div></div>
@@ -232,13 +232,13 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">TM6M</div><div class="dr-val"><strong>520 m</strong> · SpO₂ stable 98%</div></div>
       <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 118/72 · FC 78 · Souffle systolique 3/6 foyer pulmonaire + B2 dédoublé fixe</div></div>
     </div>
-
+ 
     <div class="ib ib-mint">
       <span class="ib-title">🎯 Question clinique</span>
       Cette patiente jeune avec CAVP non réparé peut-elle entreprendre une grossesse en sécurité ? Quel bilan ? Quelle décision concernant la cardiopathie elle-même ?
     </div>
   </div>
-
+ 
   <!-- SLIDE 2 ICONOGRAPHIE — IFRAME CANVA EMBED -->
   <div class="slide" data-slide="1">
     <div class="slide-progress">
@@ -250,20 +250,20 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">📊 Iconographie & Échographie</div>
       <div class="slide-head-sub">Visualisation directe Canva</div>
     </div>
-
+ 
     <div class="canva-caption">
       <div class="canva-caption-icon">🎨</div>
       <div class="canva-caption-text">
         <div>Iconographie CAV partiel · Anatomie & ETT</div>
-        <div class="canva-caption-id">Canva ID : DAHIKuOi0Qo</div>
+        <div class="canva-caption-id">Canva ID : DAHINtd9Gm4 #1</div>
       </div>
-      <a class="canva-open-link" href="https://www.canva.com/design/DAHIKuOi0Qo/tqn_tjMSeWvM_X0wnAwgkQ/view" target="_blank">↗ Plein écran</a>
+      <a class="canva-open-link" href="https://www.canva.com/design/DAHINtd9Gm4/view#1" target="_blank">↗ Plein écran</a>
     </div>
-
+ 
     <div class="canva-embed-wrap">
-      <iframe loading="lazy" src="https://www.canva.com/design/DAHIKuOi0Qo/tqn_tjMSeWvM_X0wnAwgkQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHINtd9Gm4/view?embed#1" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📡 ETT (synthèse)</div>
       <div class="dr"><div class="dr-lbl">Type CAV</div><div class="dr-val"><strong>Partiel — CIA primum + cleft mitral</strong></div></div>
@@ -273,7 +273,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">VG · LVOT</div><div class="dr-val">FEVG 65% · LVOT col de cygne · pas de gradient</div></div>
       <div class="dr"><div class="dr-lbl">PAPS</div><div class="dr-val">38 mmHg</div></div>
     </div>
-
+ 
     <div class="ib ib-pur">
       <span class="ib-title">🔍 Particularités anatomiques CAV</span>
       <ul>
@@ -283,7 +283,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       </ul>
     </div>
   </div>
-
+ 
   <!-- SLIDE 3 STADE -->
   <div class="slide" data-slide="2">
     <div class="slide-progress">
@@ -295,21 +295,21 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">⚡ Classification AP · Stade Physiologique</div>
       <div class="slide-head-sub">Tableau 4 ACC/AHA 2025</div>
     </div>
-
+ 
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global · Chap. 2</div>
       <div class="app-use-body">
         Saisir : Pathologie = <strong>Canal Atrio-Ventriculaire (AVSD)</strong> · Cocher les critères Stade.
       </div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">🫀 Classification Anatomique</div>
       <div class="dr"><div class="dr-lbl">Pathologie</div><div class="dr-val"><strong>CAVP — AVSD partiel</strong></div></div>
       <div class="dr"><div class="dr-lbl">Complexité</div><div class="dr-val"><span class="chip chip-gold">Catégorie II — Modérée</span></div></div>
       <div class="dr"><div class="dr-lbl">Section ACC</div><div class="dr-val">4.1.3</div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📊 Critères Tableau 4 — Cochés</div>
       <div class="ib ib-sky" style="margin:0">
@@ -322,7 +322,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         Pas de critère C/D : NYHA I, pas d'arythmie, BNP normal.
       </div>
     </div>
-
+ 
     <div class="card" style="border-left:4px solid #38BDF8">
       <div class="card-title">🎯 Verdict Stade</div>
       <div style="text-align:center;padding:9px 0">
@@ -331,7 +331,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <div style="font-size:11px;color:var(--w3);margin-top:4px">ACHD AP : <strong>II-B</strong></div>
       </div>
     </div>
-
+ 
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification II-B</span>
       <ul>
@@ -341,7 +341,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       </ul>
     </div>
   </div>
-
+ 
   <!-- SLIDE 4 BILAN + GROSSESSE -->
   <div class="slide" data-slide="3">
     <div class="slide-progress">
@@ -353,14 +353,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">💉 Cathétérisme · Risque Grossesse</div>
       <div class="slide-head-sub">CARPREG II + WHO modifiée</div>
     </div>
-
+ 
     <div class="app-use">
       <div class="app-use-title">→ Module Évaluation + Module Grossesse</div>
       <div class="app-use-body">
         Saisir : PVR, Qp/Qs, mPAP · Puis ouvrir le bouton 🤰 <strong>Évaluation Risque Grossesse</strong>.
       </div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">💉 Cathétérisme cardiaque</div>
       <div class="dr"><div class="dr-lbl">PVR</div><div class="dr-val"><strong>1.8 WU</strong> <span class="chip chip-mint">Pas d'HTAP</span></div></div>
@@ -368,7 +368,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">PCWP</div><div class="dr-val">10 mmHg</div></div>
       <div class="dr"><div class="dr-lbl">Qp/Qs</div><div class="dr-val"><strong>2.1</strong> <span class="chip chip-gold">Shunt G→D significatif</span></div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">🤰 CARPREG II — Score</div>
       <table class="tbl">
@@ -385,7 +385,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <div style="font-size:11px;color:var(--w3)">Risque évènement cardiaque : ~5%</div>
       </div>
     </div>
-
+ 
     <div class="card" style="border-left:4px solid #34D399">
       <div class="card-title">🎯 Synthèse risque grossesse</div>
       <div class="bar-row">
@@ -402,7 +402,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       </div>
     </div>
   </div>
-
+ 
   <!-- SLIDE 5 DÉCISION -->
   <div class="slide" data-slide="4">
     <div class="slide-progress">
@@ -414,7 +414,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">⚕️ Décision Thérapeutique</div>
       <div class="slide-head-sub">ACC 2025 · Section 4.1.3</div>
     </div>
-
+ 
     <div class="dec" style="border-color:#34D399;background:rgba(52,211,153,.06)">
       <div class="dec-t" style="color:#34D399">
         <span class="cor c1">COR 1</span>Fermeture chirurgicale CAVP RECOMMANDÉE avant grossesse
@@ -426,13 +426,13 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         ➜ <strong>Chirurgie cardiaque experte CHD</strong> · Patch CIA primum + plastie cleft mitral (la voie percutanée n'est pas adaptée au CAVP).
       </div>
     </div>
-
+ 
     <div class="ib ib-gold">
       <span class="ib-title">⏸️ Décision conjointe avec la patiente</span>
       <strong>Option A — Réparer puis grossesse (préférée) :</strong> Chirurgie · récupération 3 mois · grossesse possible 6 mois post-op.<br>
       <strong>Option B — Grossesse avant chirurgie :</strong> Risque global FAIBLE actuel mais progression possible.
     </div>
-
+ 
     <div class="card">
       <div class="card-title">🤰 Si grossesse acceptée — Prise en charge</div>
       <div class="ib ib-mint" style="margin:0">
@@ -447,7 +447,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       </div>
     </div>
   </div>
-
+ 
   <!-- SLIDE 6 SUIVI -->
   <div class="slide" data-slide="5">
     <div class="slide-progress">
@@ -459,7 +459,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">📅 Plan de Suivi · QCM</div>
       <div class="slide-head-sub">Tableau 15 ACC 2025</div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📅 Suivi post-fermeture</div>
       <table class="tbl">
@@ -470,7 +470,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <tr><td>Cardio + ETT</td><td>12-24 mois</td><td>Long terme</td></tr>
       </table>
     </div>
-
+ 
     <div class="ib ib-orange">
       <span class="ib-title">⚠️ Surveillance spécifique post-CAVP</span>
       <ul>
@@ -479,7 +479,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <li>Sténose sous-aortique secondaire (LVOT)</li>
       </ul>
     </div>
-
+ 
     <div class="qcm">
       <div class="qcm-q">QCM 1 — CAVP non opéré, Qp/Qs 2.1, PVR 1.8 WU, conduite ?</div>
       <div class="qcm-opt"><span class="qcm-letter">A</span>Fermeture percutanée Amplatzer</div>
@@ -488,7 +488,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="qcm-opt"><span class="qcm-letter">D</span>ARB seulement</div>
       <div class="qcm-explain">✓ La fermeture du CAV est <strong>chirurgicale exclusivement</strong> — l'anatomie spécifique (cleft) ne permet pas la voie percutanée. COR 1 si Qp/Qs ≥ 1.5 + dilatation + PVR ≤ 2 WU.</div>
     </div>
-
+ 
     <div class="qcm">
       <div class="qcm-q">QCM 2 — Quelle classe WHO modifiée pour CAVP non opéré sans HTAP ?</div>
       <div class="qcm-opt"><span class="qcm-letter">A</span>WHO I</div>
@@ -497,7 +497,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="qcm-opt"><span class="qcm-letter">D</span>WHO IV</div>
       <div class="qcm-explain">✓ Le CIA non réparé sans HTAP entre dans la classe <strong>WHO II</strong>.</div>
     </div>
-
+ 
     <div class="ib ib-pur">
       <span class="ib-title">🎓 Take-home — Cas 1</span>
       <ul>
@@ -508,14 +508,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       </ul>
     </div>
   </div>
-
+ 
 </div>
-
+ 
 <!-- ════════════════════════════════════════ -->
 <!-- CAS 2 : Homme adulte, CAVP non réparé, HTAP modérée, Treat-to-Close -->
 <!-- ════════════════════════════════════════ -->
 <div class="cas" data-cas="2" style="--cas-color:#F0A030;--cas-color2:#FB923C">
-
+ 
   <!-- SLIDE 1 -->
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
@@ -527,12 +527,12 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">Homme 42 ans · HTAP Modérée</div>
       <div class="slide-head-sub">CAVP non réparé · Stratégie Treat-to-Close</div>
     </div>
-
+ 
     <div class="cas-intro">
       <div class="cas-intro-title" style="color:#F0A030">📗 Présentation clinique</div>
       <div class="cas-intro-sub">Patient adulte avec CAVP découvert tardivement (vie rurale, pas de suivi pédiatrique). Dyspnée d'effort progressive depuis 2 ans.</div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">🧑 Identification & Histoire</div>
       <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr B.A., 42 ans</strong></div></div>
@@ -540,14 +540,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Agriculteur</div></div>
       <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Dyspnée NYHA II-III progressive · palpitations</div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
       <div class="dr"><div class="dr-lbl">ATCD perso</div><div class="dr-val">Tabac actif (15 PA) · pas d'HTA</div></div>
       <div class="dr"><div class="dr-lbl">ATCD chirurgical</div><div class="dr-val"><strong>Aucun</strong> · jamais exploré</div></div>
       <div class="dr"><div class="dr-lbl">Anamnèse</div><div class="dr-val">Souffle entendu à 12 ans · perdu de vue · dyspnée depuis 2 ans</div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">🩺 Symptomatologie actuelle</div>
       <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">Classe II-III</span></div></div>
@@ -555,13 +555,13 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 125/78 · FC 88 · Souffle systolique 4/6 · P2 augmentée · Discret OMI</div></div>
       <div class="dr"><div class="dr-lbl">Biologie</div><div class="dr-val">NT-proBNP <strong>820 pg/mL</strong></div></div>
     </div>
-
+ 
     <div class="ib ib-gold">
       <span class="ib-title">🎯 Question clinique</span>
       Patient avec CAVP non réparé compliqué d'HTAP modérée. La fermeture est-elle encore possible ? Quelle stratégie ?
     </div>
   </div>
-
+ 
   <!-- SLIDE 2 ICONOGRAPHIE -->
   <div class="slide" data-slide="1">
     <div class="slide-progress">
@@ -573,20 +573,20 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">📊 Iconographie & Hémodynamique</div>
       <div class="slide-head-sub">Visualisation directe Canva</div>
     </div>
-
+ 
     <div class="canva-caption">
       <div class="canva-caption-icon">🎨</div>
       <div class="canva-caption-text">
         <div>CAVP + HTAP — Iconographie</div>
-        <div class="canva-caption-id">Canva ID : DAHIKiXO35E</div>
+        <div class="canva-caption-id">Canva ID : DAHINtd9Gm4 #2</div>
       </div>
-      <a class="canva-open-link" href="https://www.canva.com/design/DAHIKiXO35E/VKfGI6EiMIVsxAlIPpky-g/view" target="_blank">↗ Plein écran</a>
+      <a class="canva-open-link" href="https://www.canva.com/design/DAHINtd9Gm4/view#2" target="_blank">↗ Plein écran</a>
     </div>
-
+ 
     <div class="canva-embed-wrap">
-      <iframe loading="lazy" src="https://www.canva.com/design/DAHIKiXO35E/VKfGI6EiMIVsxAlIPpky-g/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHINtd9Gm4/view?embed#2" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📡 Échocardiographie ETT</div>
       <div class="dr"><div class="dr-lbl">Type CAV</div><div class="dr-val"><strong>Partiel — CIA primum + cleft mitral</strong></div></div>
@@ -595,7 +595,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">VD</div><div class="dr-val">Dilatation <span class="chip chip-red">sévère</span> · TAPSE 16 mm · Strain VD -14%</div></div>
       <div class="dr"><div class="dr-lbl">PAPS</div><div class="dr-val"><strong>68 mmHg</strong> · D-shape septum</div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">💉 Cathétérisme cardiaque</div>
       <div class="dr"><div class="dr-lbl">PVR</div><div class="dr-val"><strong>6.2 WU</strong> <span class="chip chip-gold">HTAP modérée</span></div></div>
@@ -604,13 +604,13 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">Test vasoréactivité</div><div class="dr-val">NO inhalé : ↘ mPAP 52→38 · ↘ PVR 6.2→4.1 <span class="chip chip-mint">Réversibilité partielle</span></div></div>
       <div class="dr"><div class="dr-lbl">Sens shunt</div><div class="dr-val">G→D dominant + composante D→G discrète à l'effort</div></div>
     </div>
-
+ 
     <div class="ib ib-orange">
       <span class="ib-title">📊 Profil hémodynamique critique</span>
       PVR 6.2 WU (zone 5-8) avec réversibilité = <strong>candidat Treat-to-Close</strong>. Si PVR > 10 WU ou shunt D→G dominant → contre-indication.
     </div>
   </div>
-
+ 
   <!-- SLIDE 3 STADE + STRATA -->
   <div class="slide" data-slide="2">
     <div class="slide-progress">
@@ -622,14 +622,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">⚡ Stade C · Stratification HTAP</div>
       <div class="slide-head-sub">Tableau 4 + Module 3-Strata</div>
     </div>
-
+ 
     <div class="app-use">
       <div class="app-use-title">→ Application : Stade + Module HTAP 3-Strata</div>
       <div class="app-use-body">
         Saisir Stade + lancer la <strong>stratification 3-Strata ESC/ERS</strong>.
       </div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-gold" style="margin:0">
@@ -642,7 +642,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         </ul>
       </div>
     </div>
-
+ 
     <div class="card" style="border-left:4px solid #F0A030">
       <div class="card-title">🎯 Verdict Stade</div>
       <div style="text-align:center;padding:9px 0">
@@ -651,7 +651,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <div style="font-size:11px;color:var(--w3);margin-top:4px">ACHD AP : <strong>II-C</strong></div>
       </div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">⚠️ Stratification HTAP 3-Strata (ESC/ERS 2022)</div>
       <table class="tbl">
@@ -668,7 +668,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <div style="font-size:11px;color:var(--w3)">Mortalité à 1 an : 5-20%</div>
       </div>
     </div>
-
+ 
     <div class="drug-box">
       <div class="drug-box-title">💊 Bithérapie HTAP — Risque intermédiaire</div>
       <div class="drug-list">
@@ -695,13 +695,13 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         </div>
       </div>
     </div>
-
+ 
     <div class="ib ib-gold">
       <span class="ib-title">🎯 Conduite à tenir HTAP</span>
       Bithérapie initiale : <strong>Bosentan + Tadalafil</strong> (ou Sildénafil) · Réévaluation 3 mois (cathé + bilan) · Centre HTAP + ACHD obligatoire.
     </div>
   </div>
-
+ 
   <!-- SLIDE 4 BILAN TREAT-TO-CLOSE -->
   <div class="slide" data-slide="3">
     <div class="slide-progress">
@@ -713,7 +713,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">🔬 Stratégie Treat-to-Close</div>
       <div class="slide-head-sub">3 mois de bithérapie puis réévaluation</div>
     </div>
-
+ 
     <div class="ib ib-cyan">
       <span class="ib-title">📚 Concept Treat-to-Close</span>
       <ul>
@@ -723,7 +723,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <li>Si échec → abstention (pas de fermeture fenêtrée pour CAVP)</li>
       </ul>
     </div>
-
+ 
     <div class="drug-box">
       <div class="drug-box-title">💊 Plan thérapeutique HTAP — 3 mois</div>
       <div class="drug-list">
@@ -746,7 +746,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <strong>Mesures associées :</strong> Furosémide 40 mg si OMI · Sevrage tabac (substituts) · Vaccinations (grippe, pneumocoque, COVID) · Activité limitée
       </div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📅 Évolution à 3 mois sous bithérapie</div>
       <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-mint">Classe II</span> (vs II-III)</div></div>
@@ -755,20 +755,20 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">TAPSE</div><div class="dr-val">19 mm</div></div>
       <div class="dr"><div class="dr-lbl">PAPS échographique</div><div class="dr-val">52 mmHg (vs 68)</div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">💉 Cathétérisme de contrôle (3 mois)</div>
       <div class="dr"><div class="dr-lbl">PVR</div><div class="dr-val"><strong>3.8 WU</strong> <span class="chip chip-mint">↓ vs 6.2 — &lt; 5 WU OK</span></div></div>
       <div class="dr"><div class="dr-lbl">mPAP</div><div class="dr-val">36 mmHg</div></div>
       <div class="dr"><div class="dr-lbl">Qp/Qs</div><div class="dr-val">2.2</div></div>
     </div>
-
+ 
     <div class="ib ib-mint">
       <span class="ib-title">✅ Treat-to-Close réussi</span>
       PVR ramenée &lt; 5 WU + amélioration clinique → <strong>fermeture chirurgicale envisageable</strong>.
     </div>
   </div>
-
+ 
   <!-- SLIDE 5 DÉCISION -->
   <div class="slide" data-slide="4">
     <div class="slide-progress">
@@ -780,7 +780,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">⚕️ Décision Thérapeutique</div>
       <div class="slide-head-sub">Section 4.1.3 · Rec. 6 COR 2a</div>
     </div>
-
+ 
     <div class="dec" style="border-color:#F0A030;background:rgba(240,160,48,.06)">
       <div class="dec-t" style="color:#F0A030">
         <span class="cor c2a">COR 2a</span>Fermeture chirurgicale CAVP RAISONNABLE
@@ -793,7 +793,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         ➜ <strong>Chirurgie experte CHD</strong> · Patch CIA primum + plastie cleft mitral · <strong>Maintien Bosentan + Tadalafil</strong> avant et après chirurgie (long terme).
       </div>
     </div>
-
+ 
     <div class="dec" style="border-color:#22D3EE;background:rgba(34,211,238,.05)">
       <div class="dec-t" style="color:#22D3EE">
         <span class="cor c1">COR 1</span>Gestion par expert HTAP + ACHD
@@ -802,7 +802,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <strong>Rec. 2 COR 1 C-LD :</strong> AVSD + HTAP doivent être gérés par cliniciens experts HTAP.
       </div>
     </div>
-
+ 
     <div class="ib ib-red">
       <span class="ib-title">⛔ Si Treat-to-Close avait échoué</span>
       <ul>
@@ -812,7 +812,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       → <strong>COR 3 Harm</strong> (Rec. 8) : PVR > 10 WU ou Eisenmenger → fermeture contre-indiquée. Bascule en prise en charge Eisenmenger.
     </div>
   </div>
-
+ 
   <!-- SLIDE 6 SUIVI -->
   <div class="slide" data-slide="5">
     <div class="slide-progress">
@@ -824,7 +824,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">📅 Suivi · QCM</div>
       <div class="slide-head-sub">Vigilance HTAP résiduelle</div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📅 Suivi post-fermeture (Stade C → B)</div>
       <table class="tbl">
@@ -836,7 +836,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <tr><td>Bilan hépatique</td><td>Mensuel (Bosentan)</td><td>Sécurité</td></tr>
       </table>
     </div>
-
+ 
     <div class="qcm">
       <div class="qcm-q">QCM 1 — CAVP avec PVR initiale 6.2 WU et réversibilité au NO. Stratégie ?</div>
       <div class="qcm-opt"><span class="qcm-letter">A</span>Fermeture chirurgicale immédiate</div>
@@ -845,7 +845,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="qcm-opt"><span class="qcm-letter">D</span>Eisenmenger d'emblée</div>
       <div class="qcm-explain">✓ PVR 5-8 WU + test positif → <strong>Treat-to-Close</strong> (COR 2a) avec bithérapie ERA + iPDE5, objectif PVR &lt; 5 WU, puis fermeture si succès.</div>
     </div>
-
+ 
     <div class="qcm">
       <div class="qcm-q">QCM 2 — Le traitement PAH après fermeture du CAVP doit être :</div>
       <div class="qcm-opt"><span class="qcm-letter">A</span>Arrêté immédiatement</div>
@@ -854,7 +854,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="qcm-opt"><span class="qcm-letter">D</span>Remplacé par anticoagulant</div>
       <div class="qcm-explain">✓ Le traitement PAH-ciblé doit être <strong>maintenu long terme</strong> car la PAH peut réapparaître. Cathé contrôle à 1 an puis selon clinique.</div>
     </div>
-
+ 
     <div class="ib ib-pur">
       <span class="ib-title">🎓 Take-home — Cas 2</span>
       <ul>
@@ -866,14 +866,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       </ul>
     </div>
   </div>
-
+ 
 </div>
-
+ 
 <!-- ════════════════════════════════════════ -->
 <!-- CAS 3 : Trisomie 21, Eisenmenger, contre-indication grossesse -->
 <!-- ════════════════════════════════════════ -->
 <div class="cas" data-cas="3" style="--cas-color:#E03050;--cas-color2:#FB7185">
-
+ 
   <!-- SLIDE 1 -->
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
@@ -885,12 +885,12 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">Femme 32 ans · T21 · Eisenmenger</div>
       <div class="slide-head-sub">CAVC non opéré · Désir de grossesse exprimé</div>
     </div>
-
+ 
     <div class="cas-intro">
       <div class="cas-intro-title" style="color:#E03050">📕 Présentation clinique</div>
       <div class="cas-intro-sub">Patiente trisomique 21 avec CAV complet non réparé en enfance (refus familial), aujourd'hui en physiologie d'Eisenmenger. Famille demande conseil pour projet de grossesse.</div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">🧑 Identification & Histoire</div>
       <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme R.S., 32 ans · T21</strong></div></div>
@@ -898,7 +898,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">Niveau cognitif</div><div class="dr-val">QI 55-60 · communication adaptée · vit avec parents</div></div>
       <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Bilan annuel · question parentale sur projet de grossesse</div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📋 Antécédents & Comorbidités T21</div>
       <div class="dr"><div class="dr-lbl">ATCD perso</div><div class="dr-val">Trisomie 21 · Hypothyroïdie · SAOS appareillé · 2 hospitalisations IC droite</div></div>
@@ -906,7 +906,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">Traitement actuel</div><div class="dr-val"><strong>Bosentan 125 mg ×2 + Sildénafil 20 mg ×3</strong> depuis 4 ans · Furosémide 40 mg · Lévothyrox 75 µg</div></div>
       <div class="dr"><div class="dr-lbl">Cyanose</div><div class="dr-val">Présente depuis adolescence · digitations</div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">🩺 Symptomatologie actuelle</div>
       <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">Classe III</span></div></div>
@@ -915,13 +915,13 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 110/68 · FC 92 · Cyanose franche · B2 unique pulmonaire claqué · OMI bilatéraux</div></div>
       <div class="dr"><div class="dr-lbl">Biologie</div><div class="dr-val">Hb <strong>21.4 g/dL</strong> · Hct <strong>62%</strong> · NT-proBNP 1850 pg/mL · Ferritine 18</div></div>
     </div>
-
+ 
     <div class="ib ib-red">
       <span class="ib-title">🎯 Question clinique</span>
       Patiente avec syndrome d'Eisenmenger sur CAV complet. Quelle prise en charge ? La grossesse est-elle envisageable ?
     </div>
   </div>
-
+ 
   <!-- SLIDE 2 ICONOGRAPHIE -->
   <div class="slide" data-slide="1">
     <div class="slide-progress">
@@ -933,20 +933,20 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">📊 Iconographie Eisenmenger</div>
       <div class="slide-head-sub">CAV + HTAP sévère · Inversion shunt</div>
     </div>
-
+ 
     <div class="canva-caption">
       <div class="canva-caption-icon">🎨</div>
       <div class="canva-caption-text">
         <div>CAVC + Eisenmenger — Iconographie</div>
-        <div class="canva-caption-id">Canva ID : DAHIKjXJl5M</div>
+        <div class="canva-caption-id">Canva ID : DAHINtd9Gm4 #3</div>
       </div>
-      <a class="canva-open-link" href="https://www.canva.com/design/DAHIKjXJl5M/X5G2buyNBh3qvXmv2WALJQ/view" target="_blank">↗ Plein écran</a>
+      <a class="canva-open-link" href="https://www.canva.com/design/DAHINtd9Gm4/view#3" target="_blank">↗ Plein écran</a>
     </div>
-
+ 
     <div class="canva-embed-wrap">
-      <iframe loading="lazy" src="https://www.canva.com/design/DAHIKjXJl5M/X5G2buyNBh3qvXmv2WALJQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHINtd9Gm4/view?embed#3" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📡 Échocardiographie ETT</div>
       <div class="dr"><div class="dr-lbl">Type CAV</div><div class="dr-val"><strong>Complet (CAVC) — Type C de Rastelli</strong></div></div>
@@ -956,20 +956,20 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">PAPS</div><div class="dr-val"><strong>105 mmHg</strong> = systémique</div></div>
       <div class="dr"><div class="dr-lbl">Fonction VD</div><div class="dr-val">TAPSE 13 mm · S' 8 cm/s · Strain VD -10%</div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📈 ECG · Caractéristiques</div>
       <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 92/min</div></div>
       <div class="dr"><div class="dr-lbl">Axe</div><div class="dr-val"><strong>Déviation gauche extrême (-80°)</strong></div></div>
       <div class="dr"><div class="dr-lbl">QRS</div><div class="dr-val">130 ms · BBD complet · HVD massive (R amples V1-V2)</div></div>
     </div>
-
+ 
     <div class="ib ib-orange">
       <span class="ib-title">🩸 Polyglobulie d'adaptation</span>
       Hb 21.4 + Hct 62% = polyglobulie secondaire à l'hypoxie chronique. <strong>Pas de saignée systématique</strong> sauf hyperviscosité symptomatique (Hct >65%).
     </div>
   </div>
-
+ 
   <!-- SLIDE 3 STADE + STRATA -->
   <div class="slide" data-slide="2">
     <div class="slide-progress">
@@ -981,7 +981,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">⚡ Stade D · HTAP Élevée</div>
       <div class="slide-head-sub">Eisenmenger confirmé</div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-red" style="margin:0">
@@ -994,7 +994,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         </ul>
       </div>
     </div>
-
+ 
     <div class="card" style="border-left:4px solid #E03050">
       <div class="card-title">🎯 Verdict Stade</div>
       <div style="text-align:center;padding:9px 0">
@@ -1003,7 +1003,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <div style="font-size:11px;color:var(--w3);margin-top:4px">ACHD AP : <strong>III-D</strong></div>
       </div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">⚠️ Stratification HTAP 3-Strata</div>
       <table class="tbl">
@@ -1020,7 +1020,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <div style="font-size:11px;color:var(--w3)">Mortalité à 1 an : >20%</div>
       </div>
     </div>
-
+ 
     <div class="drug-box">
       <div class="drug-box-title">💊 Bithérapie Eisenmenger maximale (à dose maximale)</div>
       <div class="drug-list">
@@ -1043,7 +1043,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <strong>⚠️ Patiente déjà sous bithérapie maximale.</strong> Optimisation possible : passage à <strong>Tadalafil 40 mg ×1/j</strong> (meilleure observance, action prolongée, équivalence thérapeutique).
       </div>
     </div>
-
+ 
     <div class="ib ib-red">
       <span class="ib-title">🎯 Conduite à tenir HTAP — Risque ÉLEVÉ</span>
       <ul>
@@ -1054,7 +1054,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       </ul>
     </div>
   </div>
-
+ 
   <!-- SLIDE 4 GROSSESSE -->
   <div class="slide" data-slide="3">
     <div class="slide-progress">
@@ -1066,14 +1066,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">🤰 Risque Grossesse Critique</div>
       <div class="slide-head-sub">Eisenmenger = Contre-indication absolue</div>
     </div>
-
+ 
     <div class="app-use">
       <div class="app-use-title">→ Module Grossesse de l'application</div>
       <div class="app-use-body">
         Saisir les facteurs CARPREG II + sélectionner WHO IV (Eisenmenger).
       </div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">🤰 CARPREG II — Score</div>
       <table class="tbl">
@@ -1090,7 +1090,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <div style="font-size:11px;color:var(--w3)">Risque évènement cardiaque : >41%</div>
       </div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">🌐 WHO modifiée — Classe IV</div>
       <div class="ib ib-red" style="margin:0">
@@ -1098,7 +1098,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         Eisenmenger figure explicitement parmi les indications WHO IV. Mortalité maternelle <strong>30-50%</strong>. Mortalité fœtale 30%.
       </div>
     </div>
-
+ 
     <div class="card" style="border-left:4px solid #E03050">
       <div class="card-title">🎯 Synthèse risque grossesse</div>
       <div class="bar-row">
@@ -1114,13 +1114,13 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <div class="bar-track"><div class="bar-fill" style="width:100%;background:#E03050">CRITIQUE</div></div>
       </div>
     </div>
-
+ 
     <div class="ib ib-red">
       <span class="ib-title">⛔ COR 3 Harm B-NR (Section 4.4.6)</span>
       « Adultes avec syndrome d'Eisenmenger doivent être <strong>conseillés contre la grossesse</strong> pour diminuer le risque de morbidité et mortalité maternelles excessives. »
     </div>
   </div>
-
+ 
   <!-- SLIDE 5 DÉCISION -->
   <div class="slide" data-slide="4">
     <div class="slide-progress">
@@ -1132,7 +1132,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">⚕️ Décision · Eisenmenger</div>
       <div class="slide-head-sub">Section 4.4.6 ACC 2025</div>
     </div>
-
+ 
     <div class="dec" style="border-color:#E03050;background:rgba(155,28,28,.12)">
       <div class="dec-t" style="color:#E03050">
         <span class="cor c3">COR 3 Harm</span>Fermeture CAVC CONTRE-INDIQUÉE
@@ -1144,7 +1144,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         ➜ Pas de chirurgie · Prise en charge médicale Eisenmenger uniquement.
       </div>
     </div>
-
+ 
     <div class="dec" style="border-color:#34D399;background:rgba(52,211,153,.05)">
       <div class="dec-t" style="color:#34D399">
         <span class="cor c1">COR 1</span>Optimisation bithérapie PAH
@@ -1156,7 +1156,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         ➜ Bilan hépatique mensuel (Bosentan) · Surveillance fonction VD.
       </div>
     </div>
-
+ 
     <div class="dec" style="border-color:#E03050;background:rgba(224,48,80,.05)">
       <div class="dec-t" style="color:#E03050">
         <span class="cor c3">COR 3 Harm</span>Grossesse contre-indiquée
@@ -1168,7 +1168,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         ➜ Counseling avec patiente + parents · Contraception efficace impérative.
       </div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">💊 Contraception adaptée Eisenmenger</div>
       <div class="ib ib-red" style="margin:0">
@@ -1184,7 +1184,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         </ul>
       </div>
     </div>
-
+ 
     <div class="ib ib-orange">
       <span class="ib-title">🚫 Autres contre-indications Eisenmenger</span>
       <ul>
@@ -1195,7 +1195,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       </ul>
     </div>
   </div>
-
+ 
   <!-- SLIDE 6 SUIVI -->
   <div class="slide" data-slide="5">
     <div class="slide-progress">
@@ -1207,7 +1207,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">📅 Suivi rapproché Eisenmenger</div>
       <div class="slide-head-sub">Stade D · QCM</div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📅 Suivi rapproché (Stade D)</div>
       <table class="tbl">
@@ -1219,7 +1219,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <tr><td>TM6M</td><td>6 mois</td><td>Capacité d'effort</td></tr>
       </table>
     </div>
-
+ 
     <div class="qcm">
       <div class="qcm-q">QCM 1 — Patiente avec CAVC + Eisenmenger demande la grossesse. Conduite ?</div>
       <div class="qcm-opt"><span class="qcm-letter">A</span>Surveillance rapprochée multidisciplinaire</div>
@@ -1228,7 +1228,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="qcm-opt"><span class="qcm-letter">D</span>Greffe cardio-pulmonaire avant grossesse</div>
       <div class="qcm-explain">✓ Eisenmenger = <strong>WHO IV = grossesse CONTRE-INDIQUÉE absolue</strong> (mortalité 30-50%). Counseling adapté + contraception progestative (DIU lévonorgestrel).</div>
     </div>
-
+ 
     <div class="qcm">
       <div class="qcm-q">QCM 2 — Quel iPDE5 a la meilleure observance pour cette patiente sous bithérapie maximale ?</div>
       <div class="qcm-opt"><span class="qcm-letter">A</span>Sildénafil 20 mg ×3/j (3 prises quotidiennes)</div>
@@ -1237,7 +1237,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="qcm-opt"><span class="qcm-letter">D</span>Tadalafil 20 mg à la demande</div>
       <div class="qcm-explain">✓ Le <strong>Tadalafil 40 mg ×1/j</strong> a une demi-vie longue permettant une prise unique quotidienne, vs sildénafil qui nécessite 3 prises/j. Observance améliorée chez patient T21 avec dépendance familiale.</div>
     </div>
-
+ 
     <div class="ib ib-pur">
       <span class="ib-title">🎓 Take-home — Cas 3</span>
       <ul>
@@ -1249,14 +1249,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       </ul>
     </div>
   </div>
-
+ 
 </div>
-
+ 
 <!-- ════════════════════════════════════════ -->
 <!-- CAS 4 : CAVP réparé en enfance, IM cleft progressive -->
 <!-- ════════════════════════════════════════ -->
 <div class="cas" data-cas="4" style="--cas-color:#A78BFA;--cas-color2:#22D3EE">
-
+ 
   <!-- SLIDE 1 -->
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
@@ -1268,12 +1268,12 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">Femme 38 ans · CAVP Réparé · IM Cleft</div>
       <div class="slide-head-sub">Régurgitation AV gauche progressive · Dysfonction VG</div>
     </div>
-
+ 
     <div class="cas-intro">
       <div class="cas-intro-title" style="color:#A78BFA">📙 Présentation clinique</div>
       <div class="cas-intro-sub">Patiente avec antécédent de réparation du CAVP en enfance. Apparition progressive d'IM cleft + dysfonction VG. Question : reprise chirurgicale ?</div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">🧑 Identification & Histoire</div>
       <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme M.K., 38 ans</strong></div></div>
@@ -1281,14 +1281,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">G/P</div><div class="dr-val">G2P2 (2 grossesses simples)</div></div>
       <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Dyspnée d'effort progressive depuis 18 mois · Suivi rompu il y a 5 ans</div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📋 Antécédents chirurgicaux</div>
       <div class="dr"><div class="dr-lbl">Diagnostic</div><div class="dr-val">CAV partiel (CIA primum + cleft mitral) à 5 ans</div></div>
       <div class="dr"><div class="dr-lbl">Chirurgie</div><div class="dr-val"><strong>Réparation à 7 ans (1995)</strong> — Patch CIA primum + plastie cleft mitral</div></div>
       <div class="dr"><div class="dr-lbl">Évolution</div><div class="dr-val">Bonne évolution 25 ans · 2 grossesses sans incident · perdue de vue depuis 5 ans</div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">🩺 Symptomatologie actuelle</div>
       <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">Classe II</span></div></div>
@@ -1297,13 +1297,13 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 122/74 · FC 82 · Souffle systolique apexien 4/6 irradiant en barre</div></div>
       <div class="dr"><div class="dr-lbl">Biologie</div><div class="dr-val">NT-proBNP <strong>620 pg/mL</strong></div></div>
     </div>
-
+ 
     <div class="ib ib-pur">
       <span class="ib-title">🎯 Question clinique</span>
       Patiente CAVP réparé qui développe IM cleft significative + dysfonction VG. Quelles indications de reprise selon ACC 2025 ?
     </div>
   </div>
-
+ 
   <!-- SLIDE 2 ICONOGRAPHIE -->
   <div class="slide" data-slide="1">
     <div class="slide-progress">
@@ -1315,20 +1315,20 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">📊 Iconographie Post-Opératoire</div>
       <div class="slide-head-sub">Récidive IM cleft + dilatation VG</div>
     </div>
-
+ 
     <div class="canva-caption">
       <div class="canva-caption-icon">🎨</div>
       <div class="canva-caption-text">
         <div>CAVP réparé + IM résiduelle</div>
-        <div class="canva-caption-id">Canva ID : DAHIKukgMtc</div>
+        <div class="canva-caption-id">Canva ID : DAHINtd9Gm4 #4</div>
       </div>
-      <a class="canva-open-link" href="https://www.canva.com/design/DAHIKukgMtc/WkHPoF4_4Y95Mmls6li4hQ/view" target="_blank">↗ Plein écran</a>
+      <a class="canva-open-link" href="https://www.canva.com/design/DAHINtd9Gm4/view#4" target="_blank">↗ Plein écran</a>
     </div>
-
+ 
     <div class="canva-embed-wrap">
-      <iframe loading="lazy" src="https://www.canva.com/design/DAHIKukgMtc/WkHPoF4_4Y95Mmls6li4hQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHINtd9Gm4/view?embed#4" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📡 ETT — Évaluation post-opératoire</div>
       <div class="dr"><div class="dr-lbl">Patch CIA primum</div><div class="dr-val">En place · pas de shunt résiduel</div></div>
@@ -1337,21 +1337,21 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">OG</div><div class="dr-val">Dilatée — surface 32 cm²</div></div>
       <div class="dr"><div class="dr-lbl">PAPS</div><div class="dr-val">42 mmHg (HTAP post-capillaire)</div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📡 ETO — Précision lésionnelle</div>
       <div class="dr"><div class="dr-lbl">Mécanisme IM</div><div class="dr-val"><strong>Cleft mitral résiduel</strong> + élongation cordage A2</div></div>
       <div class="dr"><div class="dr-lbl">Anneau mitral</div><div class="dr-val">Dilaté 38 mm</div></div>
       <div class="dr"><div class="dr-lbl">Réparabilité</div><div class="dr-val"><strong>Réparable :</strong> resuture cleft + annuloplastie</div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📡 CMR</div>
       <div class="dr"><div class="dr-lbl">FEVG</div><div class="dr-val">54%</div></div>
       <div class="dr"><div class="dr-lbl">Volumes VG</div><div class="dr-val">DTDVG indexé 145 mL/m²</div></div>
       <div class="dr"><div class="dr-lbl">RF mitrale</div><div class="dr-val">50% (sévère)</div></div>
     </div>
-
+ 
     <div class="ib ib-orange">
       <span class="ib-title">🩺 Critères d'IM sévère atteints</span>
       <ul>
@@ -1363,7 +1363,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       </ul>
     </div>
   </div>
-
+ 
   <!-- SLIDE 3 STADE -->
   <div class="slide" data-slide="2">
     <div class="slide-progress">
@@ -1375,7 +1375,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">⚡ Stade C · Indication Chirurgicale</div>
       <div class="slide-head-sub">Tableau 4 ACC 2025</div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-gold" style="margin:0">
@@ -1387,7 +1387,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         </ul>
       </div>
     </div>
-
+ 
     <div class="card" style="border-left:4px solid #F0A030">
       <div class="card-title">🎯 Verdict Stade</div>
       <div style="text-align:center;padding:9px 0">
@@ -1396,7 +1396,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <div style="font-size:11px;color:var(--w3);margin-top:4px">ACHD AP : <strong>II-C</strong></div>
       </div>
     </div>
-
+ 
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Critères ACC 2025 — Reprise mitrale (Rec. 4 COR 1)</span>
       AVSD réparé + :<br>
@@ -1406,7 +1406,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       • FEVG &lt; 60%<br>
       → <strong>Chirurgie valvulaire RECOMMANDÉE</strong>.
     </div>
-
+ 
     <div class="card">
       <div class="card-title">✅ Critères présents chez la patiente</div>
       <table class="tbl">
@@ -1418,7 +1418,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       </table>
     </div>
   </div>
-
+ 
   <!-- SLIDE 4 BILAN -->
   <div class="slide" data-slide="3">
     <div class="slide-progress">
@@ -1430,7 +1430,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">🔬 Bilan Pré-opératoire</div>
       <div class="slide-head-sub">Évaluation complète + risque</div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📋 Bilan complet</div>
       <table class="tbl">
@@ -1443,7 +1443,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <tr><td>STS</td><td>0.9% mortalité</td></tr>
       </table>
     </div>
-
+ 
     <div class="ib ib-mint">
       <span class="ib-title">🩺 Décision multidisciplinaire (Heart Team CHD)</span>
       <ul>
@@ -1454,7 +1454,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <li>Risque opératoire faible · centre CHD expert</li>
       </ul>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">🔍 Risque LVOT post-op</div>
       <div class="ib ib-pur" style="margin:0">
@@ -1464,13 +1464,13 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         • Si gradient > 50 mmHg → résection sous-aortique associée
       </div>
     </div>
-
+ 
     <div class="ib ib-cyan">
       <span class="ib-title">📚 Mécanisme particulier IM cleft</span>
       Le cleft AVSD est dirigé vers le <strong>septum ventriculaire</strong> (≠ cleft mitral isolé qui pointe vers la valve aortique). La fusion incomplète des coussinets endocardiques en est la cause. Cela impacte la stratégie chirurgicale (chirurgien CHD requis).
     </div>
   </div>
-
+ 
   <!-- SLIDE 5 DÉCISION -->
   <div class="slide" data-slide="4">
     <div class="slide-progress">
@@ -1482,7 +1482,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">⚕️ Décision Thérapeutique</div>
       <div class="slide-head-sub">Reprise chirurgicale mitrale</div>
     </div>
-
+ 
     <div class="dec" style="border-color:#34D399;background:rgba(52,211,153,.06)">
       <div class="dec-t" style="color:#34D399">
         <span class="cor c1">COR 1</span>Chirurgie valvulaire AV gauche RECOMMANDÉE
@@ -1495,7 +1495,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         ➜ <strong>Réparation valvulaire mitrale</strong> (chirurgien CHD expert) · Plastie cleft + annuloplastie · Évaluation peropératoire LVOT.
       </div>
     </div>
-
+ 
     <div class="dec" style="border-color:#22D3EE;background:rgba(34,211,238,.05)">
       <div class="dec-t" style="color:#22D3EE">
         <span class="cor c2b">COR 2b</span>Si LVOT obstruction associée + IAo progressive
@@ -1505,7 +1505,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         Non applicable ici (pas d'IAo) — à garder en mémoire.
       </div>
     </div>
-
+ 
     <div class="ib ib-gold">
       <span class="ib-title">⚠️ Pourquoi privilégier la réparation au remplacement</span>
       <ul>
@@ -1517,7 +1517,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       </ul>
     </div>
   </div>
-
+ 
   <!-- SLIDE 6 SUIVI -->
   <div class="slide" data-slide="5">
     <div class="slide-progress">
@@ -1528,7 +1528,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-num">CAS 04 · SLIDE 6/6</div>
       <div class="slide-head-title">📅 Suivi Post-Reprise · QCM</div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📅 Suivi post-opératoire</div>
       <table class="tbl">
@@ -1539,7 +1539,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <tr><td>Cardio + ETT</td><td>12-24 mois</td><td>Long terme (Stade B)</td></tr>
       </table>
     </div>
-
+ 
     <div class="qcm">
       <div class="qcm-q">QCM 1 — CAVP réparé avec IM cleft sévère asymptomatique, DTSVG 42 mm, FEVG 54%. Indication ?</div>
       <div class="qcm-opt"><span class="qcm-letter">A</span>Surveillance car asymptomatique</div>
@@ -1548,7 +1548,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="qcm-opt"><span class="qcm-letter">D</span>MitraClip percutané</div>
       <div class="qcm-explain">✓ <strong>Rec. 4 COR 1 B-NR</strong> : IM sévère + DTSVG ≥ 40 mm OU FEVG &lt; 60% → chirurgie indiquée. MitraClip non adapté à l'anatomie CAV.</div>
     </div>
-
+ 
     <div class="qcm">
       <div class="qcm-q">QCM 2 — Mécanisme spécifique de l'IM dans le CAV partiel ?</div>
       <div class="qcm-opt"><span class="qcm-letter">A</span>Prolapsus valvulaire idiopathique</div>
@@ -1557,7 +1557,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="qcm-opt"><span class="qcm-letter">D</span>Endocardite passée</div>
       <div class="qcm-explain">✓ Le cleft de l'AVSD est dirigé vers le <strong>septum ventriculaire</strong> (≠ cleft mitral isolé qui pointe vers la valve aortique). Fusion incomplète des coussinets endocardiques.</div>
     </div>
-
+ 
     <div class="ib ib-pur">
       <span class="ib-title">🎓 Take-home — Cas 4</span>
       <ul>
@@ -1570,14 +1570,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       </ul>
     </div>
   </div>
-
+ 
 </div>
-
+ 
 <!-- ════════════════════════════════════════ -->
 <!-- CAS 5 : CAVP réparé + LVOT obstruction sévère + AR -->
 <!-- ════════════════════════════════════════ -->
 <div class="cas" data-cas="5" style="--cas-color:#22D3EE;--cas-color2:#34D399">
-
+ 
   <!-- SLIDE 1 -->
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
@@ -1589,12 +1589,12 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">Homme 47 ans · CAVP Réparé · LVOT Obstruction</div>
       <div class="slide-head-sub">Sténose sous-aortique progressive + IAo modérée</div>
     </div>
-
+ 
     <div class="cas-intro">
       <div class="cas-intro-title" style="color:#22D3EE">📔 Présentation clinique</div>
       <div class="cas-intro-sub">Patient avec CAVP réparé en enfance qui développe progressivement une obstruction du LVOT en col de cygne + insuffisance aortique modérée.</div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">🧑 Identification & Histoire</div>
       <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr S.A., 47 ans</strong></div></div>
@@ -1602,7 +1602,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre administratif</div></div>
       <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Dyspnée d'effort + lipothymie pré-syncopale</div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📋 Antécédents chirurgicaux</div>
       <div class="dr"><div class="dr-lbl">Diagnostic</div><div class="dr-val">CAV partiel à 4 ans</div></div>
@@ -1612,7 +1612,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       </div></div>
       <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">HTA traitée (Bisoprolol 5 mg) · Dyslipidémie (Atorvastatine 20)</div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">🩺 Symptomatologie actuelle</div>
       <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">Classe II-III</span></div></div>
@@ -1621,13 +1621,13 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 138/72 (forte différentielle = IAo) · Souffle systolique éjectionnel rude 4/6 + souffle diastolique aortique</div></div>
       <div class="dr"><div class="dr-lbl">Biologie</div><div class="dr-val">NT-proBNP <strong>950 pg/mL</strong></div></div>
     </div>
-
+ 
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Question clinique</span>
       Patient CAVP avec apparition tardive d'une obstruction LVOT + IAo. Quels sont les seuils d'intervention ? Quelle stratégie chirurgicale ?
     </div>
   </div>
-
+ 
   <!-- SLIDE 2 ICONOGRAPHIE -->
   <div class="slide" data-slide="1">
     <div class="slide-progress">
@@ -1639,20 +1639,20 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">📊 Iconographie LVOT</div>
       <div class="slide-head-sub">Sténose sous-aortique post-CAVP</div>
     </div>
-
+ 
     <div class="canva-caption">
       <div class="canva-caption-icon">🎨</div>
       <div class="canva-caption-text">
         <div>LVOT col de cygne</div>
-        <div class="canva-caption-id">Canva ID : DAHIKpJPz_A</div>
+        <div class="canva-caption-id">Canva ID : DAHINtd9Gm4 #5</div>
       </div>
-      <a class="canva-open-link" href="https://www.canva.com/design/DAHIKpJPz_A/WWAE0crlJ-95dF8MAyCBFQ/view" target="_blank">↗ Plein écran</a>
+      <a class="canva-open-link" href="https://www.canva.com/design/DAHINtd9Gm4/view#5" target="_blank">↗ Plein écran</a>
     </div>
-
+ 
     <div class="canva-embed-wrap">
-      <iframe loading="lazy" src="https://www.canva.com/design/DAHIKpJPz_A/WWAE0crlJ-95dF8MAyCBFQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHINtd9Gm4/view?embed#5" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📡 ETT — Évaluation LVOT</div>
       <div class="dr"><div class="dr-lbl">Patch CIA</div><div class="dr-val">En place · pas de shunt résiduel</div></div>
@@ -1662,13 +1662,13 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="dr"><div class="dr-lbl">Valve aortique</div><div class="dr-val">Tricuspide native épaissie · IAo modérée à sévère (PHT 280 ms)</div></div>
       <div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">HVG concentrique (SIV 13) · DTDVG 56 · DTSVG 38 · <strong>FEVG 56%</strong></div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📡 ETO + CMR</div>
       <div class="dr"><div class="dr-lbl">ETO</div><div class="dr-val">Membrane sous-aortique fibromusculaire · prolapsus feuillet non coronaire</div></div>
       <div class="dr"><div class="dr-lbl">CMR</div><div class="dr-val">FEVG 56% · masse VG 110 g/m² · IAo RF 35% · LGE patchy septum</div></div>
     </div>
-
+ 
     <div class="ib ib-orange">
       <span class="ib-title">📐 LVOT en col de cygne</span>
       Typique du CAV :<br>
@@ -1678,7 +1678,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       • Réopération LVOT : 2ème cause après IM cleft
     </div>
   </div>
-
+ 
   <!-- SLIDE 3 STADE -->
   <div class="slide" data-slide="2">
     <div class="slide-progress">
@@ -1690,7 +1690,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">⚡ Stade C · LVOT Sévère</div>
       <div class="slide-head-sub">Symptômes d'alarme</div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-gold" style="margin:0">
@@ -1702,7 +1702,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         </ul>
       </div>
     </div>
-
+ 
     <div class="card" style="border-left:4px solid #F0A030">
       <div class="card-title">🎯 Verdict Stade</div>
       <div style="text-align:center;padding:9px 0">
@@ -1711,12 +1711,12 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <div style="font-size:11px;color:var(--w3);margin-top:4px">ACHD AP : <strong>II-C</strong></div>
       </div>
     </div>
-
+ 
     <div class="ib ib-red">
       <span class="ib-title">⚠️ Lipothymie pré-syncopale d'effort</span>
       Chez un patient avec sténose sous-aortique sévère, la <strong>syncope d'effort</strong> est un critère de gravité majeur. Mécanisme : LVOT critique + vasodilatation effort → hypotension brutale. <strong>Risque de mort subite</strong> élevé sans intervention.
     </div>
-
+ 
     <div class="card">
       <div class="card-title">🔍 Critères ACC 2025 — LVOT post-CAVP</div>
       <div class="ib ib-cyan" style="margin:0">
@@ -1733,7 +1733,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       </ul>
     </div>
   </div>
-
+ 
   <!-- SLIDE 4 BILAN -->
   <div class="slide" data-slide="3">
     <div class="slide-progress">
@@ -1745,14 +1745,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">🔬 Bilan Pré-opératoire</div>
       <div class="slide-head-sub">Cathétérisme + Heart Team</div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">💉 Cathétérisme cardiaque</div>
       <div class="dr"><div class="dr-lbl">Coronarographie</div><div class="dr-val">Réseau coronaire normal</div></div>
       <div class="dr"><div class="dr-lbl">Gradient LVOT mesuré</div><div class="dr-val"><strong>62 mmHg</strong> repos · 88 mmHg effort isoprénaline</div></div>
       <div class="dr"><div class="dr-lbl">Hémodynamique</div><div class="dr-val">PAPS 38 · PCWP 14 · PVR 1.8 WU</div></div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📋 Bilan complet</div>
       <table class="tbl">
@@ -1765,7 +1765,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <tr><td>EuroSCORE II</td><td>3.4% (modéré, reprise)</td></tr>
       </table>
     </div>
-
+ 
     <div class="ib ib-mint">
       <span class="ib-title">🩺 Décision Heart Team CHD</span>
       <ul>
@@ -1775,7 +1775,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <li>Choix prothèse : bioprothèse (47 ans = limite) à discuter</li>
       </ul>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">⚙️ Options chirurgicales LVOT</div>
       <table class="tbl">
@@ -1788,7 +1788,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       </table>
     </div>
   </div>
-
+ 
   <!-- SLIDE 5 DÉCISION -->
   <div class="slide" data-slide="4">
     <div class="slide-progress">
@@ -1800,7 +1800,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-title">⚕️ Décision Thérapeutique</div>
       <div class="slide-head-sub">Konno modifié + RVA</div>
     </div>
-
+ 
     <div class="dec" style="border-color:#34D399;background:rgba(52,211,153,.06)">
       <div class="dec-t" style="color:#34D399">
         <span class="cor c1">COR 1</span>Réparation chirurgicale LVOT RECOMMANDÉE
@@ -1813,7 +1813,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         ➜ <strong>Konno modifié</strong> (élargissement LVOT par patch) + remplacement valve aortique (bioprothèse) · Chirurgien CHD expert.
       </div>
     </div>
-
+ 
     <div class="dec" style="border-color:#22D3EE;background:rgba(34,211,238,.05)">
       <div class="dec-t" style="color:#22D3EE">
         <span class="cor c2b">COR 2b</span>LVOT obstruction asymptomatique + IAo progressive
@@ -1822,7 +1822,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <strong>Rec. 7 COR 2b C-LD :</strong> Adultes asymptomatiques + LVOT + IAo progressive → réparation peut être raisonnable. Notre patient est symptomatique → COR 1.
       </div>
     </div>
-
+ 
     <div class="ib ib-gold">
       <span class="ib-title">🎯 Choix de la prothèse aortique (47 ans)</span>
       <table class="tbl" style="margin-top:5px">
@@ -1834,7 +1834,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       Décision finale après discussion préférences patient.
     </div>
   </div>
-
+ 
   <!-- SLIDE 6 SUIVI -->
   <div class="slide" data-slide="5">
     <div class="slide-progress">
@@ -1845,7 +1845,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-num">CAS 05 · SLIDE 6/6</div>
       <div class="slide-head-title">📅 Suivi Post-Konno · QCM</div>
     </div>
-
+ 
     <div class="card">
       <div class="card-title">📅 Suivi post-opératoire</div>
       <table class="tbl">
@@ -1856,7 +1856,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <tr><td>CMR</td><td>3-5 ans</td><td>Fonction VG</td></tr>
       </table>
     </div>
-
+ 
     <div class="ib ib-orange">
       <span class="ib-title">⚠️ Risques spécifiques post-Konno</span>
       <ul>
@@ -1867,7 +1867,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <li>Endocardite : prophylaxie ACC 2025</li>
       </ul>
     </div>
-
+ 
     <div class="qcm">
       <div class="qcm-q">QCM 1 — CAVP réparé avec gradient LVOT 62 mmHg + lipothymie d'effort. Conduite ?</div>
       <div class="qcm-opt"><span class="qcm-letter">A</span>Surveillance car FEVG préservée</div>
@@ -1876,7 +1876,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="qcm-opt"><span class="qcm-letter">D</span>Valvuloplastie aortique percutanée</div>
       <div class="qcm-explain">✓ <strong>Rec. 3 COR 1</strong> : LVOT obstruction avec symptômes OU dysfonction VG. Lipothymie d'effort = signe d'alarme. Seuil 50 mmHg max ou 30 mmHg moyen + symptômes confirme.</div>
     </div>
-
+ 
     <div class="qcm">
       <div class="qcm-q">QCM 2 — Cause la plus fréquente de réopération à long terme après réparation CAV ?</div>
       <div class="qcm-opt"><span class="qcm-letter">A</span>Sténose pulmonaire</div>
@@ -1885,7 +1885,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="qcm-opt"><span class="qcm-letter">D</span>Coarctation</div>
       <div class="qcm-explain">✓ La <strong>récidive de régurgitation valvulaire AV gauche</strong> est la 1ère cause de réopération (suivie de l'obstruction LVOT, comme dans notre cas 5). 2-4% de réopération à 30 ans.</div>
     </div>
-
+ 
     <div class="ib ib-pur">
       <span class="ib-title">🎓 Take-home — Cas 5</span>
       <ul>
@@ -1896,7 +1896,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
         <li>Si IAo associée : RVA + Konno modifié</li>
       </ul>
     </div>
-
+ 
     <div class="card" style="margin-top:14px;background:linear-gradient(135deg,rgba(0,196,174,.1),rgba(34,211,238,.06));border-color:rgba(0,196,174,.3)">
       <div class="card-title" style="color:var(--teal)">🎉 Synthèse des 5 cas</div>
       <div style="font-size:12px;color:var(--w2);line-height:1.8">
@@ -1908,19 +1908,19 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       </div>
     </div>
   </div>
-
+ 
 </div>
-
+ 
 </div>
 <!-- /content -->
-
+ 
 <div id="botnav">
   <div class="bn-wrap">
     <button class="bn-btn bn-prev" id="btn-prev" onclick="navSlide(-1)">← Précédent</button>
     <button class="bn-btn bn-next" id="btn-next" onclick="navSlide(1)">Suivant →</button>
   </div>
 </div>
-
+ 
 <script>
 var STATE = { curCas: 1, curSlide: 0 };
 var CAS_COLORS = {
@@ -1930,7 +1930,7 @@ var CAS_COLORS = {
   4: { color: '#A78BFA', color2: '#22D3EE' },
   5: { color: '#22D3EE', color2: '#34D399' }
 };
-
+ 
 function showCas(n) {
   STATE.curCas = n;
   STATE.curSlide = 0;
@@ -1948,7 +1948,7 @@ function showCas(n) {
   document.getElementById('cas-badge').textContent = 'CAS '+n+'/5';
   showSlide(0);
 }
-
+ 
 function showSlide(s) {
   STATE.curSlide = s;
   var cas = document.querySelector('.cas[data-cas="'+STATE.curCas+'"]');
@@ -1970,7 +1970,7 @@ function showSlide(s) {
   }
   window.scrollTo({top:0, behavior:'smooth'});
 }
-
+ 
 function navSlide(dir) {
   var newSlide = STATE.curSlide + dir;
   if (newSlide < 0) {
@@ -1989,7 +1989,7 @@ function navSlide(dir) {
   }
   showSlide(newSlide);
 }
-
+ 
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.cn').forEach(function(b){
     b.addEventListener('click', function(){
