@@ -16,7 +16,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM Sans",sans-serif;font-size:14px;overflow-x:hidden}
-
+ 
 #topbar{background:rgba(6,16,30,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--brd2);padding:10px 14px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:200}
 .tb-logo{width:38px;height:38px;border-radius:9px;background:#fff;padding:2px;flex-shrink:0;overflow:hidden}
 .tb-logo img{width:100%;height:100%;object-fit:contain}
@@ -24,46 +24,46 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .tb-title{font-family:"Syne",sans-serif;font-size:14px;font-weight:700;color:var(--accent);line-height:1.2}
 .tb-sub{font-size:9px;color:var(--w3);margin-top:1px}
 .tb-cas-badge{background:rgba(34,211,238,.2);border:1px solid rgba(34,211,238,.4);border-radius:7px;padding:4px 9px;font-size:10px;font-weight:700;color:var(--cyan);flex-shrink:0;font-family:"JetBrains Mono",monospace}
-
+ 
 #cas-nav{background:rgba(6,16,30,.95);border-bottom:1px solid var(--brd);padding:9px 12px;display:flex;gap:6px;overflow-x:auto;position:sticky;top:60px;z-index:190}
 #cas-nav::-webkit-scrollbar{display:none}
 .cn{padding:7px 14px;border-radius:18px;font-family:"Syne",sans-serif;font-size:10px;font-weight:700;cursor:pointer;border:1.5px solid var(--brd2);background:transparent;color:var(--w3);white-space:nowrap;flex-shrink:0;transition:all .15s}
 .cn.on{background:var(--cas-color,var(--cyan));color:#06101E;border-color:var(--cas-color,var(--cyan))}
 .cn:active{transform:scale(.95)}
-
+ 
 #slides-nav{background:rgba(6,16,30,.95);border-bottom:1px solid var(--brd);padding:8px 12px;display:flex;gap:5px;overflow-x:auto;position:sticky;top:107px;z-index:185}
 #slides-nav::-webkit-scrollbar{display:none}
 .sn{padding:5px 10px;border-radius:14px;font-family:"DM Sans",sans-serif;font-size:10px;font-weight:600;cursor:pointer;border:1.5px solid var(--brd2);background:transparent;color:var(--w3);white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:5px}
 .sn .sn-num{font-family:"JetBrains Mono",monospace;font-size:9px;font-weight:700;background:rgba(255,255,255,.06);padding:1px 5px;border-radius:3px}
 .sn.on{background:var(--cas-color,var(--cyan));color:#06101E;border-color:var(--cas-color,var(--cyan))}
 .sn.on .sn-num{background:rgba(0,0,0,.2);color:#06101E}
-
+ 
 #content{padding:14px 13px 100px;max-width:520px;margin:0 auto}
 .cas{display:none}
 .cas.on{display:block}
 .slide{display:none;animation:fadeIn 0.3s}
 .slide.on{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-
+ 
 .card{background:var(--card);border-radius:13px;border:1px solid var(--brd);padding:14px;margin-bottom:11px}
 .card-title{font-family:"Syne",sans-serif;font-size:12px;font-weight:700;color:var(--cas-color,var(--accent));margin-bottom:11px;display:flex;align-items:center;gap:7px;padding-bottom:8px;border-bottom:1px solid var(--brd)}
-
+ 
 .slide-head{background:linear-gradient(135deg,var(--cas-color,var(--cyan)),var(--cas-color2,var(--mint)));padding:14px 16px;border-radius:14px;margin-bottom:13px;color:#fff;position:relative;overflow:hidden}
 .slide-head::after{content:'';position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:rgba(255,255,255,.1);border-radius:50%}
 .slide-head-num{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;opacity:.85;letter-spacing:1px;margin-bottom:3px}
 .slide-head-title{font-family:"Syne",sans-serif;font-size:17px;font-weight:800;line-height:1.2}
 .slide-head-sub{font-size:11px;opacity:.85;margin-top:3px}
-
+ 
 .cas-intro{background:linear-gradient(135deg,rgba(34,211,238,.15),rgba(52,211,153,.1));border:1px solid var(--cas-color,var(--cyan));border-radius:12px;padding:13px 14px;margin-bottom:12px}
 .cas-intro-title{font-family:"Syne",sans-serif;font-size:14px;font-weight:800;color:var(--cas-color,var(--cyan));margin-bottom:5px}
 .cas-intro-sub{font-size:11px;color:var(--w2);line-height:1.5}
-
+ 
 .dr{display:flex;padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.06);font-size:12.5px;align-items:flex-start;gap:10px}
 .dr:last-child{border-bottom:none}
 .dr-lbl{flex:0 0 110px;color:var(--w3);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.3px;padding-top:1px}
 .dr-val{flex:1;color:var(--w1);font-weight:500;line-height:1.5}
 .dr-val strong{color:var(--cas-color,var(--accent))}
-
+ 
 .chip{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:5px;font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;margin:2px 3px 2px 0}
 .chip-mint{background:rgba(52,211,153,.18);color:var(--mint)}
 .chip-sky{background:rgba(56,189,248,.18);color:var(--sky)}
@@ -73,7 +73,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .chip-cyan{background:rgba(34,211,238,.18);color:var(--cyan)}
 .chip-orange{background:rgba(251,146,60,.18);color:var(--orange)}
 .chip-rose{background:rgba(251,113,133,.18);color:var(--rose)}
-
+ 
 .ib{border-radius:10px;padding:11px 13px;font-size:12px;line-height:1.65;border-left:3px solid;margin-bottom:10px}
 .ib strong{color:var(--w1)}
 .ib-sky{background:rgba(56,189,248,.08);border-color:var(--sky);color:var(--w2)}
@@ -87,40 +87,40 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .ib-title{font-family:"Syne",sans-serif;font-size:11.5px;font-weight:700;color:var(--w1);display:block;margin-bottom:5px}
 .ib ul{margin:5px 0 0 17px;padding:0}
 .ib li{margin-bottom:4px;line-height:1.55}
-
+ 
 .app-use{background:linear-gradient(135deg,rgba(34,211,238,.12),rgba(167,139,250,.06));border:1.5px solid rgba(34,211,238,.3);border-radius:12px;padding:13px 14px;margin-bottom:11px;position:relative}
 .app-use::before{content:'📱';position:absolute;top:-12px;left:13px;background:var(--bg);padding:2px 9px;border-radius:14px;font-size:14px;border:1.5px solid rgba(34,211,238,.3)}
 .app-use-title{font-family:"Syne",sans-serif;font-size:11px;font-weight:800;color:var(--cyan);text-transform:uppercase;letter-spacing:.5px;margin-top:3px;margin-bottom:7px}
 .app-use-body{font-size:12px;color:var(--w2);line-height:1.65}
 .app-use-body strong{color:var(--w1)}
-
+ 
 .cor{display:inline-flex;align-items:center;padding:2px 7px;border-radius:5px;font-family:"JetBrains Mono",monospace;font-size:9px;font-weight:700;margin-right:5px}
 .c1{background:rgba(52,211,153,.2);color:var(--mint)}
 .c2a{background:rgba(56,189,248,.2);color:var(--sky)}
 .c2b{background:rgba(240,160,48,.2);color:var(--gold)}
 .c3{background:rgba(224,48,80,.18);color:var(--red);border:1px solid rgba(224,48,80,.4)}
-
+ 
 .dec{border-radius:12px;border:2px solid;padding:13px;margin-bottom:10px}
 .dec-t{font-family:"Syne",sans-serif;font-size:13px;font-weight:800;margin-bottom:7px;line-height:1.3}
 .dec-b{font-size:12px;color:var(--w2);line-height:1.65}
 .dec-action{margin-top:8px;padding:8px 11px;background:rgba(255,255,255,.04);border-radius:7px;font-size:11.5px;color:var(--w2);font-style:italic;line-height:1.55}
-
+ 
 .canva-embed-wrap{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:14px;overflow:hidden;margin-bottom:8px;box-shadow:0 4px 20px rgba(0,0,0,.4);border:1px solid var(--brd2)}
 .canva-embed-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block}
 .canva-caption{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,rgba(125,60,224,.15),rgba(58,163,243,.1));border:1px solid rgba(125,60,224,.3);border-radius:10px;padding:9px 12px;font-size:11px;color:var(--w2);margin-bottom:11px}
 .canva-caption-id{font-family:"JetBrains Mono",monospace;font-size:9px;color:var(--w3);letter-spacing:.5px}
 .canva-caption-link{color:#fff;background:linear-gradient(135deg,#7d3ce0,#3aa3f3);padding:5px 10px;border-radius:6px;text-decoration:none;font-size:10px;font-weight:600;white-space:nowrap}
-
+ 
 .tbl{width:100%;border-collapse:collapse;font-size:11.5px;margin:9px 0;border-radius:8px;overflow:hidden}
 .tbl th{background:rgba(34,211,238,.18);color:var(--cyan);text-align:left;padding:7px 10px;font-family:"Syne",sans-serif;font-weight:700;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;border:1px solid var(--brd)}
 .tbl td{padding:7px 10px;border:1px solid var(--brd);color:var(--w2);line-height:1.5}
 .tbl tr:nth-child(even) td{background:rgba(255,255,255,.02)}
-
+ 
 .slide-progress{display:flex;gap:4px;justify-content:center;margin-bottom:14px}
 .sp-dot{width:24px;height:3px;background:var(--brd2);border-radius:2px;transition:all .25s}
 .sp-dot.on{background:var(--cas-color,var(--cyan));width:32px}
 .sp-dot.done{background:var(--mint)}
-
+ 
 #botnav{position:fixed;bottom:0;left:0;right:0;background:rgba(6,16,30,.97);backdrop-filter:blur(14px);border-top:1px solid var(--brd2);padding:10px 13px;z-index:300}
 .bn-wrap{max-width:520px;margin:0 auto;display:flex;gap:8px}
 .bn-btn{flex:1;padding:11px;border-radius:11px;border:none;font-family:"Syne",sans-serif;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
@@ -128,7 +128,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .bn-next{background:var(--cas-color,var(--cyan));color:#06101E}
 .bn-btn:disabled{opacity:.3;cursor:not-allowed}
 .bn-btn:active{transform:scale(.97)}
-
+ 
 .qcm{background:rgba(34,211,238,.08);border:1.5px solid rgba(34,211,238,.3);border-radius:11px;padding:13px;margin-bottom:11px}
 .qcm-q{font-family:"Syne",sans-serif;font-size:13px;font-weight:700;color:var(--cyan);margin-bottom:9px;line-height:1.4}
 .qcm-opt{display:flex;align-items:flex-start;gap:8px;padding:9px 11px;background:var(--bg3);border-radius:8px;border:1.5px solid var(--brd);margin-bottom:5px;font-size:12px;color:var(--w2);line-height:1.5;cursor:pointer}
@@ -168,9 +168,9 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
   <button class="sn" data-slide="5"><span class="sn-num">06</span>Take-home</button>
 </div>
 <div id="content">
-
+ 
 <div class="cas on" data-cas="1" style="--cas-color:#34D399;--cas-color2:#22D3EE">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -178,29 +178,29 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
       <div class="slide-head-num">CAS 01 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mme F.B., 42 ans · G2P2</div>
-      <div class="slide-head-sub">CIA Ostium Secundum modeste — Découverte fortuite</div>
+      <div class="slide-head-title">Mme B. Fatima Zohra · 42 ans (G2P2)</div>
+      <div class="slide-head-sub">CIA Ostium Secundum 26 mm — COR I Fermeture Percutanée</div>
     </div>
     <div class="cas-intro">
-      <div class="cas-intro-title" style="color:#34D399">📘 Présentation clinique</div>
-      <div class="cas-intro-sub">Patiente jeune adressée pour bilan d'un souffle systolique modeste découvert fortuitement. La CIA secundum modeste asymptomatique est l'un des cas les plus fréquents en consultation ACHD.</div>
+      <div class="cas-intro-title" style="color:#34D399">🩺 Présentation clinique</div>
+      <div class="cas-intro-sub">Femme 42 ans G2P2, dyspnée NYHA II progressive, découverte tardive d'une CIA OS connue depuis l'enfance jamais explorée. Indication COR I de fermeture percutanée. Piège : PAPM élevée 45 mmHg mais HTAP hypercinétique (PVR 1.6 WU).</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme F.B., 42 ans · G2P2</strong></div></div>
-      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">65 kg · 165 cm · BSA 1.71 m²</div></div>
-      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Comptable</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Souffle découvert visite médicale entreprise</div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme B. Fatima Zohra · 42 ans (G2P2)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">68 kg · 165 cm · IMC 25</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">—</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Bilan souffle cardiaque connu depuis l'enfance, jamais exploré</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">Aucun · 2 grossesses sans complication · pas d'ATCD familial</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">Souffle systolique connu depuis 6 ans · aucun bilan antérieur · pas d'HTA/diabète/dyslipidémie · non fumeuse · 2 grossesses bien tolérées</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-mint">I</span> Asymptomatique</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">520 m · SpO₂ 99 %</div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 122/74 · FC 70 · Souffle systolique 2/6 foyer pulmonaire · B2 dédoublé fixe</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II</span> Dyspnée à l'effort soutenu (2 étages, marche rapide) · pas de palpitations/syncope/AVC</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">SpO₂ 97% · FC 78 · TA 122/76</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">Souffle systolique éjectionnel 3/6 foyer pulmonaire · dédoublement fixe B2 · pas d'IC droite · pas de cyanose</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -225,7 +225,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT principales</div>
-      <div class="dr"><div class="dr-lbl">Type CIA</div><div class="dr-val"><strong>Ostium secundum 8 mm</strong></div></div><div class="dr"><div class="dr-lbl">Doppler couleur</div><div class="dr-val">Shunt G→D</div></div><div class="dr"><div class="dr-lbl">Qp/Qs</div><div class="dr-val"><strong>1.4</strong> (limite, non significatif)</div></div><div class="dr"><div class="dr-lbl">OD/VD</div><div class="dr-val">Légère dilatation OD · VD normal</div></div><div class="dr"><div class="dr-lbl">PAPS</div><div class="dr-val">30 mmHg (normale)</div></div><div class="dr"><div class="dr-lbl">FOP</div><div class="dr-val">Absent</div></div><div class="dr"><div class="dr-lbl">TAPSE</div><div class="dr-val">22 mm normale</div></div>
+      <div class="dr"><div class="dr-lbl">CIA visible ETT</div><div class="dr-val"><strong>Ostium secundum 26 mm</strong> niveau fossette ovale · shunt G→D franc</div></div><div class="dr"><div class="dr-lbl">Qp/Qs ETT</div><div class="dr-val"><strong>2.3</strong> (très significatif)</div></div><div class="dr"><div class="dr-lbl">FEVG (Simpson)</div><div class="dr-val">62% conservée</div></div><div class="dr"><div class="dr-lbl">DTDVG / DTSVG</div><div class="dr-val">52 / 33 mm (légère surcharge volumique)</div></div><div class="dr"><div class="dr-lbl">DTDVD / Surface VD</div><div class="dr-val"><strong>38 mm / 24 cm²</strong> (dilatation modérée)</div></div><div class="dr"><div class="dr-lbl">TAPSE</div><div class="dr-val">24 mm conservée</div></div><div class="dr"><div class="dr-lbl">S' tricuspide TDI</div><div class="dr-val">14 cm/s normal</div></div><div class="dr"><div class="dr-lbl">Strain VD (GLS)</div><div class="dr-val">–21% (légèrement réduit)</div></div><div class="dr"><div class="dr-lbl">Vmax IT</div><div class="dr-val"><strong>3.2 m/s ⚠️</strong> (alerte > 2.9, Table 13)</div></div><div class="dr"><div class="dr-lbl">PAPS estimée</div><div class="dr-val"><strong>52 mmHg</strong> (élevée, hypercinétique)</div></div><div class="dr"><div class="dr-lbl">D-sign IVS</div><div class="dr-val"><strong>ABSENT</strong> (pas de surcharge barométrique)</div></div><div class="dr"><div class="dr-lbl">Acc. RVOT</div><div class="dr-val">118 ms (pas d'HTAP vasculaire)</div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -236,30 +236,30 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
       <div class="slide-head-num">CAS 01 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.1.1</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.1.1 + 3-Strata HTAP</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong> · Critères Stade selon Tableau 4. Algorithme : Qp/Qs + PVR + dilatation VD + fonction VG.</div>
+      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong>. Critères Stade selon Tableau 4. Algorithme : PVR + Qp/Qs + dilatation VD + fonction VG + 3-Strata HTAP.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
         <span class="ib-title">Stade B retenu :</span>
-        <ul><li>✓ Asymptomatique</li><li>✓ Qp/Qs 1.4 < 1.5 limite</li><li>✓ Légère dilatation OD seulement</li><li>✓ Pas d'HTAP (PAPS 30)</li><li>✓ Fonction VD conservée</li></ul>
+        <ul><li>✓ NYHA II + Qp/Qs 2.3 significatif</li><li>✓ Dilatation VD modérée (DTDVD 38, surface 24)</li><li>✓ <strong>PVR 1.6 WU < 2</strong> (COR I)</li><li>✓ NT-proBNP 310 < 2× LSN</li><li>✓ <strong>HTP hypercinétique</strong> par débit (pas vasculaire)</li></ul>
       </div>
     </div>
     <div class="card" style="border-left:4px solid #34D399">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
         <div style="font-family:Syne;font-size:48px;font-weight:800;color:#34D399;line-height:1">B</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade B — CIA secundum modeste</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade B — CIA shunt significatif + VD dilaté</div>
         <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>I-B</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>Cardiologue ACHD : 24-36 mois</li><li>ETT : 24-36 mois</li><li>Pas d'indication actuelle de fermeture</li></ul>
+      <ul><li>Cardiologue ACHD : 24-36 mois</li><li>Indication formelle de fermeture COR I</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -270,11 +270,11 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
       <div class="slide-head-num">CAS 01 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Cathétérisme</div>
+      <div class="slide-head-sub">ECG · Biologie · Cathétérisme · 3-Strata · Tests</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 70/min</div></div><div class="dr"><div class="dr-lbl">Axe</div><div class="dr-val">Normal · QRS 96 ms</div></div><div class="dr"><div class="dr-lbl">Bloc droit</div><div class="dr-val">Absent</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">85 pg/mL (normal)</div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">ECG</div><div class="dr-val">RS 78 bpm · BBD incomplet V1 (rSr') · QRS 105 ms · QTc 420 ms</div></div><div class="dr"><div class="dr-lbl">Rx thorax</div><div class="dr-val">Cardiomégalie modérée ICT 0.54 · AP proéminentes</div></div><div class="dr"><div class="dr-lbl">BNP</div><div class="dr-val"><strong>95 pg/mL</strong> (légèrement élevé)</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>310 pg/mL</strong> (< 2× LSN → Stade B)</div></div><div class="dr"><div class="dr-lbl">Troponine hs</div><div class="dr-val">< 14 ng/L normale · NFS Hb 13.2 · DFG 92</div></div><div class="dr"><div class="dr-lbl">Cathétérisme — PAPM</div><div class="dr-val"><strong>45 mmHg</strong></div></div><div class="dr"><div class="dr-lbl">PCWP</div><div class="dr-val">12 mmHg</div></div><div class="dr"><div class="dr-lbl"><strong>PVR</strong></div><div class="dr-val"><strong>1.6 WU</strong> (faible — HTP hypercinétique)</div></div><div class="dr"><div class="dr-lbl">Test NO</div><div class="dr-val">Réactivité conservée</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -285,15 +285,15 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
       <div class="slide-head-num">CAS 01 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
-      <div class="slide-head-sub">ACC 2025 · Section 4.1.1</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.1.1 + 4.4.6</div>
     </div>
     
-    <div class="dec" style="border-color:#F0A030;background:rgba(255,255,255,.03)">
-      <div class="dec-t" style="color:#F0A030">
-        <span class="cor c3">COR 3 Harm/No Benefit</span>Pas d'indication COR 1 actuellement
+    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#34D399">
+        <span class="cor c1">COR 1</span>Rec. #5 COR I — Fermeture percutanée immédiate
       </div>
-      <div class="dec-b"><strong>Rec. 4 COR 1</strong> (fermeture si Qp/Qs ≥ 1.5 + dilatation VD + PVR < 2) <strong>NON applicable</strong> : Qp/Qs 1.4 limite + pas de dilatation VD significative.<br><br>La CIA secundum modeste avec Qp/Qs limite peut être surveillée. Si progression du shunt avec apparition dilatation VD significative → discuter fermeture percutanée.</div>
-      <div class="dec-action">➜ <strong>Surveillance</strong> ETT à 24-36 mois. Réévaluation si symptômes apparaissent (dyspnée effort, FA, AVC paradoxal).</div>
+      <div class="dec-b"><strong>Recommandation #5 ACC 2025 COR I :</strong> Qp/Qs ≥ 1.5 + dilatation VD + PVR ≤ 2 WU → fermeture indiquée formellement. Tous critères remplis ici (Qp/Qs 2.3 · DTDVD 38 · PVR 1.6).<br><br><strong>Recommandation #6 COR I B-NR :</strong> CIA secundum isolée avec berges ≥ 5 mm et diamètre ≤ 38 mm → fermeture <strong>percutanée préférée</strong> à la chirurgie (mortalité moindre, séjour court).<br><br><strong>Piège pédagogique :</strong> PAPM 45 mmHg ≠ HTAP précapillaire si PVR < 2 WU (ici HTP hypercinétique par Qp/Qs 2.3). La fermeture normalise la PAPM. <strong>Ne pas contre-indiquer sur la seule PAPM !</strong></div>
+      <div class="dec-action">➜ <strong>ETO obligatoire</strong> (COR I B-NR) avant fermeture : taille réelle + berges ≥ 5 mm + 3D + RVPPA + thrombus OG.<br>➜ <strong>Fermeture percutanée Amplatzer ASD Occluder</strong>.<br>➜ Aspirine 100 mg/j × 6 mois + Clopidogrel 75 mg/j × 1 mois + prophylaxie endocardite × 6 mois.<br>➜ Suivi Table 12 : ETT J30 + M6 + annuel × 2 ans · espacement 36-60 mois si Stade A.</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -307,49 +307,49 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — CIA secundum 8mm, Qp/Qs 1.4, OD légèrement dilatée, asymptomatique. Conduite ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Fermeture percutanée immédiate</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Surveillance — Qp/Qs limite + pas de dilatation VD significative</div><div class="qcm-opt"><span class="qcm-letter">C</span>Bétabloquant prophylactique</div><div class="qcm-opt"><span class="qcm-letter">D</span>Antibioprophylaxie endocardite</div>
-      <div class="qcm-explain">✓ Le seuil de fermeture (Rec. 4 COR 1) est : Qp/Qs ≥ 1.5 + dilatation VD/OD significative + PVR < 2 WU. Notre patiente a un Qp/Qs limite (1.4) sans dilatation VD significative. Surveillance active justifiée.</div>
+      <div class="qcm-q">QCM — CIA OS 26 mm + Qp/Qs 2.3 + DTDVD 38 mm + PAPM 45 mmHg + PVR 1.6 WU. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Pas de fermeture (PAPM élevée)</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Fermeture percutanée COR I (HTP hypercinétique, PVR < 2)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Treat-to-Close PAH thérapie</div><div class="qcm-opt"><span class="qcm-letter">D</span>Surveillance simple</div>
+      <div class="qcm-explain">✓ PAPM élevée + PVR < 2 = HTP hypercinétique par débit. La fermeture COR I est formelle (Qp/Qs ≥ 1.5 + dilatation VD + PVR ≤ 2). Fermeture percutanée préférée (COR I B-NR). ETO obligatoire avant.</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 01</span>
-      <ul><li>CIA secundum modeste = surveillance possible</li><li>Critères Rec. 4 : Qp/Qs ≥ 1.5 + dilatation VD + PVR < 2 WU</li><li>Stade B = consultation 24-36 mois</li><li>Réévaluation si symptômes ou progression</li></ul>
+      <ul><li><strong>PAPM élevée ≠ HTAP précapillaire</strong> si PVR < 2 WU</li><li>COR I si Qp/Qs ≥ 1.5 + VD dilaté + PVR ≤ 2 (Rec. #5)</li><li>Fermeture percutanée préférée (Rec. #6 COR I B-NR)</li><li>ETO obligatoire avant (Rec. #1 COR I)</li><li>Risque FA augmenté si fermeture après 40 ans</li></ul>
     </div>
   </div>
 </div>
-
-<div class="cas" data-cas="2" style="--cas-color:#22D3EE;--cas-color2:#38BDF8">
-
+ 
+<div class="cas" data-cas="2" style="--cas-color:#E03050;--cas-color2:#FB7185">
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 02 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mr H.B., 57 ans</div>
-      <div class="slide-head-sub">CIA Secundum Stade D — HTAP sévère découverte tardive</div>
+      <div class="slide-head-title">Mr M. Kamel Rachid · 57 ans</div>
+      <div class="slide-head-sub">CIA OS 28 mm + Dysfonction VD Sévère + FA — Stade D zone grise COR 2a</div>
     </div>
     <div class="cas-intro">
-      <div class="cas-intro-title" style="color:#22D3EE">📗 Présentation clinique</div>
-      <div class="cas-intro-sub">Patient âgé adressé pour dyspnée d'effort progressive avec HTAP sévère découverte. La CIA peut être méconnue jusqu'à un âge avancé et révélée au stade de complications.</div>
+      <div class="cas-intro-title" style="color:#E03050">🚨 Présentation clinique</div>
+      <div class="cas-intro-sub">Homme 57 ans, CIA OS 28 mm découverte tardive lors d'un bilan FA, NYHA III, dysfonction VD sévère (FEVD 25% · Strain –8%) avec PVR 4.1 WU (zone 2-5 = COR 2a). Discussion multidisciplinaire ACHD + HTAP obligatoire — risque de décompensation VD post-fermeture.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr H.B., 57 ans</strong></div></div>
-      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">76 kg · 175 cm · BSA 1.91 m²</div></div>
-      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Retraité</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Dyspnée d'effort progressive 2 ans · NYHA III</div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr M. Kamel Rachid · 57 ans</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">82 kg · 172 cm · IMC 27.7</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">—</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Aggravation dyspnée 6 mois · CIA découverte au bilan FA · hospitalisation</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">HTA · diabète type 2 · pas d'antécédent cardiaque connu jusqu'à présent</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>CIA découverte 3 ans plus tôt lors bilan FA</strong> · suivi irrégulier · FA permanente depuis 3 ans (CV ×2 échec) · CHA₂DS₂-VASc 2 · HTA 8 ans · ex-fumeur · décompensation IC droite il y a 4 mois</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">III</span> Dyspnée + asthénie + œdèmes périphériques</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">320 m · SpO₂ 92 %</div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 138/82 · FC 88 · Souffle systolique 3/6 + B2 fortement dédoublé · TJ + reflux</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">III</span> Dyspnée effort modéré · TM6M arrêt 210 m · OMI · IC droite</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">SpO₂ repos 93% · effort 87%</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">Souffle systolique foyer pulmonaire · B2 accentué · TJE 4 cm · Hépatomégalie 2 cm · OMI</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -357,7 +357,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 02 · SLIDE 2/6</div>
       <div class="slide-head-title">📊 Iconographie & Échographie</div>
       <div class="slide-head-sub">Présentation Canva unifiée · ancre #13</div>
@@ -367,14 +367,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="canva-caption">
       <div>
-        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#22D3EE">🎨 Cas 02</div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#E03050">🎨 Cas 02</div>
         <div class="canva-caption-id">DAHINkfWji8 · ancre #13</div>
       </div>
       <a class="canva-caption-link" href="https://www.canva.com/design/DAHINkfWji8/view#13" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT principales</div>
-      <div class="dr"><div class="dr-lbl">Type CIA</div><div class="dr-val"><strong>Ostium secundum 18 mm</strong></div></div><div class="dr"><div class="dr-lbl">Doppler</div><div class="dr-val">Shunt bidirectionnel</div></div><div class="dr"><div class="dr-lbl">Qp/Qs</div><div class="dr-val">1.6 (déclin avec PVR croissante)</div></div><div class="dr"><div class="dr-lbl">OD/VD</div><div class="dr-val"><strong>Dilatation sévère VD/OD</strong></div></div><div class="dr"><div class="dr-lbl">PAPS estimée</div><div class="dr-val"><strong>78 mmHg</strong></div></div><div class="dr"><div class="dr-lbl">Cathétérisme</div><div class="dr-val"><strong>PVR 6.5 WU</strong> (sévère)</div></div><div class="dr"><div class="dr-lbl">Test NO</div><div class="dr-val">Réactivité partielle</div></div>
+      <div class="dr"><div class="dr-lbl">CIA</div><div class="dr-val"><strong>OS 28 mm</strong> berges belles</div></div><div class="dr"><div class="dr-lbl">Qp/Qs</div><div class="dr-val">Significatif</div></div><div class="dr"><div class="dr-lbl">FEVD</div><div class="dr-val"><strong>25% (sévèrement altérée)</strong></div></div><div class="dr"><div class="dr-lbl">Strain VD (GLS)</div><div class="dr-val"><strong>–8%</strong> dysfonction sévère</div></div><div class="dr"><div class="dr-lbl">TAPSE</div><div class="dr-val"><strong>10 mm</strong> ↓↓</div></div><div class="dr"><div class="dr-lbl">Anneau tricuspide</div><div class="dr-val"><strong>44 mm</strong> dilaté · IT modérée</div></div><div class="dr"><div class="dr-lbl">Épanchement péricardique</div><div class="dr-val">Présent (3-Strata élevé)</div></div><div class="dr"><div class="dr-lbl">OD/VD</div><div class="dr-val">Très dilatés</div></div><div class="dr"><div class="dr-lbl">FA</div><div class="dr-val">Permanente · perte systole atriale = remplissage VD ↓ 20-30%</div></div><div class="dr"><div class="dr-lbl">LGE IRM</div><div class="dr-val">VD aux points d'insertion (fibrose surcharge irréversible)</div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -382,33 +382,33 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 02 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.1.1</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.1.1 + 3-Strata HTAP</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong> · Critères Stade selon Tableau 4. Algorithme : Qp/Qs + PVR + dilatation VD + fonction VG.</div>
+      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong>. Critères Stade selon Tableau 4. Algorithme : PVR + Qp/Qs + dilatation VD + fonction VG + 3-Strata HTAP.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
         <span class="ib-title">Stade D retenu :</span>
-        <ul><li>✓ NYHA III + œdèmes</li><li>✓ HTAP sévère (PVR 6.5 WU)</li><li>✓ Dilatation VD/OD sévère</li><li>✓ FA chronique</li><li>✓ BNP très élevé</li></ul>
+        <ul><li>✓ NYHA III + IC décompensée < 12 mois</li><li>✓ <strong>FEVD 25% + Strain VD –8%</strong> dysfonction sévère</li><li>✓ <strong>FA permanente</strong> (perte systole atriale)</li><li>✓ <strong>3-Strata ÉLEVÉ</strong> (TAPSE + épanchement + BNP)</li><li>✓ PVR 4.1 WU (zone grise COR 2a)</li><li>✓ LGE VD = fibrose irréversible</li></ul>
       </div>
     </div>
     <div class="card" style="border-left:4px solid #E03050">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
         <div style="font-family:Syne;font-size:48px;font-weight:800;color:#E03050;line-height:1">D</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade D — HTAP sévère + IC</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade D — Dysfonction VD sévère + FA + 3-Strata élevé</div>
         <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-D</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>Centre expert HTAP indispensable</li><li>Évaluation Treat-to-Close vs traitement médical seul</li></ul>
+      <ul><li>RCP multidisciplinaire ACHD + HTAP + IC avancée</li><li>Optimisation puis réévaluation</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -416,14 +416,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 02 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Cathétérisme</div>
+      <div class="slide-head-sub">ECG · Biologie · Cathétérisme · 3-Strata · Tests</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">FA 88/min</div></div><div class="dr"><div class="dr-lbl">HVD</div><div class="dr-val">Sévère · Sokolow-RV 14 mm</div></div><div class="dr"><div class="dr-lbl">Bloc droit</div><div class="dr-val">Présent</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>1850 pg/mL</strong> (très élevé)</div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">ECG</div><div class="dr-val"><strong>FA 96 bpm irrégulier</strong> · TA 118/72</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>2850 pg/mL</strong> (très élevé · 3-Strata haut)</div></div><div class="dr"><div class="dr-lbl">Cathétérisme — PAPM</div><div class="dr-val">Élevée</div></div><div class="dr"><div class="dr-lbl"><strong>PVR</strong></div><div class="dr-val"><strong>4.1 WU</strong> (zone 2-5 → COR 2a)</div></div><div class="dr"><div class="dr-lbl">3-Strata risque</div><div class="dr-val"><strong>ÉLEVÉ</strong> (TAPSE 10 + épanchement + BNP 2850)</div></div><div class="dr"><div class="dr-lbl">Bilan hépatique</div><div class="dr-val">Congestion · ASAT/ALAT élevées</div></div><div class="dr"><div class="dr-lbl">Traitements</div><div class="dr-val">Rivaroxaban + Bisoprolol + Furosémide 40 + Spironolactone 25 + Amlodipine 5</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -431,18 +431,18 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 02 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
-      <div class="slide-head-sub">ACC 2025 · Section 4.1.1</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.1.1 + 4.4.6</div>
     </div>
     
-    <div class="dec" style="border-color:#22D3EE;background:rgba(255,255,255,.03)">
-      <div class="dec-t" style="color:#22D3EE">
-        <span class="cor c2a">COR 2a</span>Rec. 5 NEW 2025 — Treat-to-Close possible
+    <div class="dec" style="border-color:#F0A030;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#F0A030">
+        <span class="cor c2a">COR 2a</span>Rec. #8 COR 2a — Optimisation médicale + réévaluation 3-6 mois
       </div>
-      <div class="dec-b"><strong>Rec. 5 NEW 2025 (COR 2a B-NR)</strong> : CIA + shunt G→D significatif + dilatation VD + HTAP avec PVR <strong>5-8 WU</strong> et pas de maladie VG significative → fermeture peut être bénéfique <strong>SI PVR < 5 WU peut être atteinte avec PAH therapy ciblée</strong>, pour améliorer le statut fonctionnel à moyen terme.<br><br>Notre patient : PVR 6.5 WU dans la fenêtre 5-8 WU + réactivité partielle au NO.</div>
-      <div class="dec-action">➜ <strong>PAH therapy d'abord</strong> : Bosentan 125 mg ×2/j + Tadalafil 40 mg/j. Réévaluation hémodynamique à 6 mois. Si PVR < 5 WU obtenu → fermeture percutanée fenestrée à discuter. Centre expert HTAP indispensable.</div>
+      <div class="dec-b"><strong>Recommandation #8 ACC 2025 COR 2a :</strong> CIA + PVR 2-5 WU = fermeture <strong>raisonnable</strong> mais après <strong>optimisation médicale et discussion multidisciplinaire</strong>. Faisabilité anatomique seule ne suffit pas.<br><br><strong>Risques fermeture immédiate :</strong> VD fragile (FEVD 25% · Strain –8%) peut décompenser à court terme si PVR reste élevée post-fermeture. La surcharge volumique disparaît mais surcharge barométrique persiste.<br><br><strong>Cercle vicieux à briser :</strong> CIA → surcharge VD → dilatation OD → FA → aggravation VD → HTAP. CIA diagnostiquée trop tard à 57 ans.</div>
+      <div class="dec-action">➜ <strong>Phase 1 — Optimisation (3 mois) :</strong><br>• Diurétiques IV + GDMT IC droite<br>• <strong>Cardioversion électrique</strong> (CV avant geste)<br>• PAH therapy si PVR confirmée (Bosentan/Tadalafil)<br>• Anticoagulation efficace<br><br>➜ <strong>Phase 2 — Réévaluation M3 :</strong><br>• Cathétérisme PVR sous traitement<br>• IRM cardiaque (LGE, FEVD)<br>• <strong>RCP collégiale</strong> ACHD + HTAP<br>• Si PVR < 2 + amélioration VD → fermeture<br>• Si PVR persiste ≥ 5 → fenestration COR 2b<br>• Si annuloplastie TV envisageable (anneau 44 mm)</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -450,25 +450,25 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 02 · SLIDE 6/6</div>
       <div class="slide-head-title">🎓 QCM & Take-home</div>
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — CIA + HTAP sévère PVR 6.5 WU + réactivité NO partielle. Conduite ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Fermeture immédiate</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>PAH therapy puis réévaluation (Rec. 5 NEW 2025 Treat-to-Close)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Eisenmenger : pas de fermeture jamais</div><div class="qcm-opt"><span class="qcm-letter">D</span>Transplantation cœur-poumons immédiate</div>
-      <div class="qcm-explain">✓ Rec. 5 NEW 2025 COR 2a : avec PVR 5-8 WU et réactivité au NO, la stratégie « treat-to-close » peut être bénéfique. PAH therapy ciblée pour réduire PVR < 5 WU avant fermeture (souvent fenestrée).</div>
+      <div class="qcm-q">QCM — CIA + FEVD 25% + FA + PVR 4.1 WU + 3-Strata élevé. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Fermeture immédiate (anatomie favorable)</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Optimisation + cardioversion + PAH puis réévaluation 3-6 mois (COR 2a)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Pas de fermeture (Eisenmenger)</div><div class="qcm-opt"><span class="qcm-letter">D</span>Transplantation immédiate</div>
+      <div class="qcm-explain">✓ PVR 4.1 WU = zone grise COR 2a. FEVD 25% + FA + 3-Strata élevé = haut risque décisionnel. Optimisation médicale OBLIGATOIRE avant décision. Faisabilité anatomique seule ne suffit pas. RCP multidisciplinaire ACHD + HTAP.</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 02</span>
-      <ul><li>Rec. 5 NEW 2025 : PVR 5-8 WU + dilatation VD = fenêtre Treat-to-Close</li><li>PAH therapy première (Bosentan + Tadalafil/Sildénafil)</li><li>Cible PVR < 5 WU avant fermeture</li><li>Centre expert HTAP indispensable</li></ul>
+      <ul><li>PVR 2-5 WU = COR 2a (Rec. #8) après optimisation</li><li>Faisabilité anatomique ≠ indication fermeture</li><li>FA permanente aggrave le pronostic VD (-20-30% remplissage)</li><li>3-Strata élevé même si PVR 'modérée' = Stade D</li><li>Cercle vicieux CIA → VD → OD → FA → HTAP</li></ul>
     </div>
   </div>
 </div>
-
+ 
 <div class="cas" data-cas="3" style="--cas-color:#A78BFA;--cas-color2:#22D3EE">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -476,29 +476,29 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
       <div class="slide-head-num">CAS 03 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mme R.K., 62 ans · G3P3</div>
-      <div class="slide-head-sub">CIA Secundum + Insuffisance Tricuspide sévère</div>
+      <div class="slide-head-title">Mme B. Houria · 62 ans</div>
+      <div class="slide-head-sub">CIA OS 30 mm + IT Sévère Fonctionnelle — Chirurgie + annuloplastie TV</div>
     </div>
     <div class="cas-intro">
-      <div class="cas-intro-title" style="color:#A78BFA">📕 Présentation clinique</div>
-      <div class="cas-intro-sub">Patiente présentant une CIA secundum avec IT sévère secondaire à la dilatation chronique du VD. La fermeture associée à un geste tricuspide est discutée.</div>
+      <div class="cas-intro-title" style="color:#A78BFA">🔮 Présentation clinique</div>
+      <div class="cas-intro-sub">Femme 62 ans avec CIA OS connue depuis 8 ans (refus initial), hospitalisation pour décompensation IC droite. CIA + IT sévère fonctionnelle (anneau 48 mm) + FA + hépatopathie cardiaque. Stade D malgré HTAP modérée. Question chirurgicale centrale : annuloplastie TV concomitante.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme R.K., 62 ans · G3P3</strong></div></div>
-      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">70 kg · 162 cm · BSA 1.76 m²</div></div>
-      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Retraitée</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Dyspnée NYHA II-III + œdèmes</div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme B. Houria · 62 ans</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">74 kg · 162 cm · IMC 28.2</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">—</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Hospitalisation décompensation IC droite · 1er épisode · CIA connue 8 ans jamais traitée</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">CIA secundum connue · refus historique de fermeture</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>CIA OS diagnostiquée à 54 ans</strong> · refus fermeture · suivi irrégulier · FA permanente 2 ans (CV ×1 échec) · IC droite hospitalisation 6 mois · HTA 12 ans · hypothyroïdie</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II-III</span> Dyspnée + œdèmes périphériques</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">360 m · SpO₂ 96 %</div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 124/76 · FC 76 · Souffle systolique + souffle holosystolique d'IT · B2 dédoublé</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">III</span> Dyspnée limitante + œdèmes importants</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">SpO₂ repos 93% · effort 88% (arrêt 185 m)</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val"><strong>Souffle holosystolique 4/6 foyer tricuspide</strong> · hépatomégalie douloureuse · OMI · TA basse 112/68</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -523,7 +523,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT principales</div>
-      <div class="dr"><div class="dr-lbl">Type CIA</div><div class="dr-val"><strong>Ostium secundum 20 mm</strong></div></div><div class="dr"><div class="dr-lbl">Qp/Qs</div><div class="dr-val"><strong>2.2</strong> (significatif)</div></div><div class="dr"><div class="dr-lbl">OD/VD</div><div class="dr-val"><strong>Dilatation sévère</strong></div></div><div class="dr"><div class="dr-lbl">Anneau tricuspide</div><div class="dr-val"><strong>46 mm</strong> (très dilaté)</div></div><div class="dr"><div class="dr-lbl">IT</div><div class="dr-val"><strong>Sévère</strong> jet central</div></div><div class="dr"><div class="dr-lbl">PAPS</div><div class="dr-val">48 mmHg (modérée)</div></div><div class="dr"><div class="dr-lbl">PVR cathétérisme</div><div class="dr-val">2.8 WU</div></div><div class="dr"><div class="dr-lbl">FEVG</div><div class="dr-val">60% conservée</div></div>
+      <div class="dr"><div class="dr-lbl">CIA</div><div class="dr-val"><strong>OS 30 mm</strong></div></div><div class="dr"><div class="dr-lbl">Qp/Qs</div><div class="dr-val">Significatif</div></div><div class="dr"><div class="dr-lbl"><strong>IT</strong></div><div class="dr-val"><strong>Sévère fonctionnelle</strong> · EROA <strong>0.48 cm²</strong></div></div><div class="dr"><div class="dr-lbl"><strong>Anneau tricuspide</strong></div><div class="dr-val"><strong>48 mm</strong> très dilaté</div></div><div class="dr"><div class="dr-lbl">FEVD</div><div class="dr-val"><strong>36%</strong> altérée</div></div><div class="dr"><div class="dr-lbl">PAPM</div><div class="dr-val">28 mmHg</div></div><div class="dr"><div class="dr-lbl">Vmax IT</div><div class="dr-val">3 m/s (sous-estime PVD car IT massive)</div></div><div class="dr"><div class="dr-lbl">OD/VD</div><div class="dr-val">Très dilatés</div></div><div class="dr"><div class="dr-lbl">FA</div><div class="dr-val">Permanente</div></div><div class="dr"><div class="dr-lbl">Hépatopathie cardiaque</div><div class="dr-val"><strong>TP 72% · Albumine 32 g/L</strong></div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -534,30 +534,30 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
       <div class="slide-head-num">CAS 03 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.1.1</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.1.1 + 3-Strata HTAP</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong> · Critères Stade selon Tableau 4. Algorithme : Qp/Qs + PVR + dilatation VD + fonction VG.</div>
+      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong>. Critères Stade selon Tableau 4. Algorithme : PVR + Qp/Qs + dilatation VD + fonction VG + 3-Strata HTAP.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
-        <span class="ib-title">Stade C retenu :</span>
-        <ul><li>✓ NYHA II-III symptomatique</li><li>✓ Qp/Qs 2.2 significatif</li><li>✓ Dilatation VD/OD sévère</li><li>✓ <strong>IT sévère</strong> + anneau dilaté</li><li>✓ HTAP modérée (PVR 2.8)</li></ul>
+        <span class="ib-title">Stade D retenu :</span>
+        <ul><li>✓ NYHA III + hospitalisation IC droite < 12 mois</li><li>✓ <strong>IT sévère fonctionnelle</strong> (EROA 0.48, anneau 48)</li><li>✓ FA permanente</li><li>✓ FEVD 36% altérée</li><li>✓ <strong>Hépatopathie cardiaque</strong> (TP 72)</li><li><strong>⚖️ Paradoxe : 3-Strata FAIBLE mais Stade D</strong></li></ul>
       </div>
     </div>
-    <div class="card" style="border-left:4px solid #A78BFA">
+    <div class="card" style="border-left:4px solid #E03050">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
-        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#A78BFA;line-height:1">C</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — CIA + IT sévère</div>
-        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-C</strong></div>
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#E03050;line-height:1">D</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade D — IT sévère + IC droite (indépendamment HTAP)</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-D</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>Discussion chirurgie (CIA + tricuspide) vs fermeture percutanée + traitement médical IT</li></ul>
+      <ul><li>RCP multidisciplinaire</li><li>Optimisation hépatique avant chirurgie</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -568,11 +568,11 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
       <div class="slide-head-num">CAS 03 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Cathétérisme</div>
+      <div class="slide-head-sub">ECG · Biologie · Cathétérisme · 3-Strata · Tests</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 76/min</div></div><div class="dr"><div class="dr-lbl">HVD</div><div class="dr-val">Modérée · BBD complet</div></div><div class="dr"><div class="dr-lbl">OAD</div><div class="dr-val">Présente</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>720 pg/mL</strong></div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">ECG</div><div class="dr-val">FA 88 bpm · TA basse 112/68</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>Massif</strong></div></div><div class="dr"><div class="dr-lbl">Cathétérisme — PVR</div><div class="dr-val"><strong>3.1 WU</strong> (zone COR 2a)</div></div><div class="dr"><div class="dr-lbl">3-Strata risque</div><div class="dr-val"><strong>FAIBLE</strong> (paradoxe pédagogique !)</div></div><div class="dr"><div class="dr-lbl">Bilan hépatique</div><div class="dr-val"><strong>Hépatopathie cardiaque</strong> (TP 72, Albumine 32)</div></div><div class="dr"><div class="dr-lbl">Traitements</div><div class="dr-val">Rivaroxaban + Furosémide 80 + Spironolactone 50 + Bisoprolol 2.5 + Ramipril 2.5</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -583,15 +583,15 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#22D3EE)">
       <div class="slide-head-num">CAS 03 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
-      <div class="slide-head-sub">ACC 2025 · Section 4.1.1</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.1.1 + 4.4.6</div>
     </div>
     
-    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
-      <div class="dec-t" style="color:#34D399">
-        <span class="cor c1">COR 1</span>Indication fermeture CIA + geste tricuspide
+    <div class="dec" style="border-color:#F0A030;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#F0A030">
+        <span class="cor c2a">COR 2a</span>Chirurgie combinée : fermeture CIA + annuloplastie TV + Cox-Maze
       </div>
-      <div class="dec-b"><strong>Rec. 4 COR 1 B-NR</strong> : CIA + Qp/Qs ≥ 1.5 + dilatation VD + PVR < 2 WU → fermeture recommandée. Ici PVR 2.8 WU mais dans la fenêtre Rec. 6 (PVR 2-5 WU) → COR 2a.<br><br>L'IT sévère sur anneau dilaté nécessite un geste tricuspide simultané (annuloplastie) — la chirurgie est privilégiée vs fermeture percutanée seule.</div>
-      <div class="dec-action">➜ <strong>Chirurgie combinée :</strong> fermeture CIA par patch + annuloplastie tricuspide. Centre expert ACHD.</div>
+      <div class="dec-b"><strong>Paradoxe central :</strong> 3-Strata FAIBLE (PVR 3.1 WU) mais Stade D. Le stade dépend de l'état GLOBAL — IC droite + IT sévère + FA = Stade D indépendamment du niveau d'HTAP.<br><br><strong>Anneau 48 mm ≥ 40 mm = critère d'annuloplastie TV concomitante</strong> (peu probable de régresser spontanément après fermeture CIA seule).<br><br><strong>Piège diagnostique :</strong> Vmax IT 3 m/s sous-estime la PVD réelle (IT massive égalise les pressions VD-OD). Cathétérisme = gold standard.<br><br><strong>Opportunité :</strong> Si chirurgie → ablation FA simultanée (Cox-Maze ou cryoablation) + restauration RS = bénéfice VD long terme.</div>
+      <div class="dec-action">➜ <strong>Phase 1 — Optimisation pré-op (M0-M3) :</strong><br>• Décongestionnement (Furosémide IV)<br>• <strong>Optimisation hépatique</strong> : objectif TP > 80%, Albumine > 35<br>• Anticoagulation efficace<br><br>➜ <strong>Phase 2 — Chirurgie combinée :</strong><br>• <strong>Fermeture CIA par patch</strong> (chirurgicale)<br>• <strong>Annuloplastie TV</strong> concomitante (anneau 48)<br>• <strong>Ablation FA</strong> (Cox-Maze IV ou cryoablation)<br><br>➜ Suivi Table 12 Stade D : consultation tous les 3-6 mois</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -605,49 +605,49 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — CIA + IT sévère sur anneau dilaté + Qp/Qs 2.2 + PVR 2.8 WU. Conduite ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Fermeture percutanée seule</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Chirurgie combinée : fermeture CIA + annuloplastie tricuspide</div><div class="qcm-opt"><span class="qcm-letter">C</span>Traitement médical IT seul</div><div class="qcm-opt"><span class="qcm-letter">D</span>Surveillance simple</div>
-      <div class="qcm-explain">✓ L'IT sévère sur anneau dilaté ne se corrige pas spontanément après fermeture CIA isolée. La chirurgie combinée (fermeture par patch + annuloplastie) est privilégiée pour traiter les deux lésions simultanément.</div>
+      <div class="qcm-q">QCM — CIA OS 30 mm + IT sévère (EROA 0.48, anneau 48 mm) + FA + hépatopathie. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Fermeture percutanée seule</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Chirurgie : fermeture CIA + annuloplastie TV + ablation FA</div><div class="qcm-opt"><span class="qcm-letter">C</span>Traitement médical IT seul</div><div class="qcm-opt"><span class="qcm-letter">D</span>Treat-to-Close PAH</div>
+      <div class="qcm-explain">✓ Anneau 48 mm ≥ 40 mm = annuloplastie TV concomitante indispensable. La fermeture percutanée seule = persistance IT sévère. Chirurgie combinée + ablation FA simultanée = approche optimale. Optimisation hépatique avant.</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 03</span>
-      <ul><li>IT sévère + CIA = chirurgie combinée privilégiée</li><li>Annuloplastie tricuspide simultanée</li><li>Fermeture percutanée seule = persistance IT possible</li><li>Centre ACHD expert</li></ul>
+      <ul><li><strong>Stade D ≠ HTAP sévère obligatoirement</strong></li><li>IT sévère + anneau ≥ 40 mm = annuloplastie concomitante</li><li>Vmax IT massive sous-estime la PVD (cathé gold standard)</li><li>Hépatopathie cardiaque = optimisation pré-op (TP, albumine)</li><li>Chirurgie FA = opportunité d'ablation simultanée</li></ul>
     </div>
   </div>
 </div>
-
-<div class="cas" data-cas="4" style="--cas-color:#22D3EE;--cas-color2:#A78BFA">
-
+ 
+<div class="cas" data-cas="4" style="--cas-color:#E03050;--cas-color2:#A78BFA">
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#A78BFA)">
       <div class="slide-head-num">CAS 04 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mr K.A., 57 ans</div>
-      <div class="slide-head-sub">Treat-to-Close — HTAP réactive</div>
+      <div class="slide-head-title">Mr M. Sofiane Larabi · 57 ans</div>
+      <div class="slide-head-sub">CIA OS 29 mm + HTAP Élevée PVR 6.2 WU — Treat-to-Close M0</div>
     </div>
     <div class="cas-intro">
-      <div class="cas-intro-title" style="color:#22D3EE">📙 Présentation clinique</div>
-      <div class="cas-intro-sub">Patient avec CIA secundum et HTAP sévère initialement non opérable, traité avec succès par PAH therapy ciblée pendant 12 mois, permettant maintenant une fermeture sécurisée.</div>
+      <div class="cas-intro-title" style="color:#E03050">🔥 Présentation clinique</div>
+      <div class="cas-intro-sub">Homme 57 ans, CIA OS 29 mm connue depuis 9 ans (refus fermeture), HTAP élevée découverte (PVR 6.2 WU, zone 5-8 WU = COR 2a), 3-Strata ÉLEVÉ. Stade C (pas D : pas d'IC hospitalisée). Stratégie Treat-to-Close : bithérapie PAH d'abord puis réévaluation à M6.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr K.A., 57 ans</strong></div></div>
-      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">78 kg · 178 cm · BSA 1.96 m²</div></div>
-      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre retraité</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Suivi 12 mois sous Bosentan + Tadalafil · réévaluation</div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr M. Sofiane Larabi · 57 ans</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">79 kg · 174 cm · IMC 26.1</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">—</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Aggravation dyspnée 2 ans · adressé pour décision thérapeutique HTAP significative</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">CIA secundum + HTAP sévère initiale (PVR 7.8 WU) · réactivité NO positive · PAH therapy depuis 12 mois</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>CIA OS diagnostiquée à 48 ans</strong> · refus fermeture · suivi irrégulier · RS maintenu · pas d'IC hospitalisée · HTA 10 ans · ex-fumeur sevré 15 ans</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-mint">II</span> Amélioration NYHA III → II</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">440 m · SpO₂ 96 % (vs 86% initial)</div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 124/74 · FC 72 · Souffle systolique + B2 dédoublé · pas d'œdèmes</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">III</span> Gêne effort courant · marche ralentie 200 m</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">SpO₂ repos 91% · effort 84% (arrêt 240 m)</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">Souffle éjectionnel 3/6 · <strong>B2 très accentué</strong> · TJE 3 cm · OMI minimes</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -655,7 +655,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#A78BFA)">
       <div class="slide-head-num">CAS 04 · SLIDE 2/6</div>
       <div class="slide-head-title">📊 Iconographie & Échographie</div>
       <div class="slide-head-sub">Présentation Canva unifiée · ancre #30</div>
@@ -665,14 +665,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="canva-caption">
       <div>
-        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#22D3EE">🎨 Cas 04</div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#E03050">🎨 Cas 04</div>
         <div class="canva-caption-id">DAHINkfWji8 · ancre #30</div>
       </div>
       <a class="canva-caption-link" href="https://www.canva.com/design/DAHINkfWji8/view#30" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT principales</div>
-      <div class="dr"><div class="dr-lbl">Type CIA</div><div class="dr-val"><strong>Ostium secundum 16 mm</strong></div></div><div class="dr"><div class="dr-lbl">Qp/Qs</div><div class="dr-val"><strong>1.8</strong> (réapparition shunt G→D)</div></div><div class="dr"><div class="dr-lbl">OD/VD</div><div class="dr-val">Dilatation VD modérée (vs sévère initial)</div></div><div class="dr"><div class="dr-lbl">PAPS estimée</div><div class="dr-val"><strong>42 mmHg</strong> (vs 78 mmHg initial)</div></div><div class="dr"><div class="dr-lbl">Cathétérisme</div><div class="dr-val"><strong>PVR 3.8 WU</strong> (vs 7.8 WU initial) ✓</div></div><div class="dr"><div class="dr-lbl">Test NO</div><div class="dr-val">Réactivité maintenue</div></div>
+      <div class="dr"><div class="dr-lbl">CIA</div><div class="dr-val"><strong>OS 29 mm</strong></div></div><div class="dr"><div class="dr-lbl">Qp/Qs</div><div class="dr-val">Modeste (shunt diminuant avec PVR)</div></div><div class="dr"><div class="dr-lbl">PAPS estimée</div><div class="dr-val"><strong>75 mmHg</strong></div></div><div class="dr"><div class="dr-lbl">Vmax IT</div><div class="dr-val">4.0 m/s</div></div><div class="dr"><div class="dr-lbl">FEVD</div><div class="dr-val">Altérée</div></div><div class="dr"><div class="dr-lbl">TAPSE</div><div class="dr-val"><strong>14 mm</strong> ↓</div></div><div class="dr"><div class="dr-lbl">Strain VD (GLS)</div><div class="dr-val"><strong>–15%</strong> (réduit)</div></div><div class="dr"><div class="dr-lbl">OD / OG</div><div class="dr-val"><strong>OD 58 cm² · OG 46 mL/m²</strong> (substrat FA)</div></div><div class="dr"><div class="dr-lbl">D-sign IVS</div><div class="dr-val">Présent (surcharge barométrique)</div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -680,33 +680,33 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#A78BFA)">
       <div class="slide-head-num">CAS 04 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.1.1</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.1.1 + 3-Strata HTAP</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong> · Critères Stade selon Tableau 4. Algorithme : Qp/Qs + PVR + dilatation VD + fonction VG.</div>
+      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong>. Critères Stade selon Tableau 4. Algorithme : PVR + Qp/Qs + dilatation VD + fonction VG + 3-Strata HTAP.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
         <span class="ib-title">Stade C retenu :</span>
-        <ul><li>✓ Amélioration NYHA III → II</li><li>✓ <strong>PVR réduite à 3.8 WU</strong> (cible < 5 atteinte)</li><li>✓ Réapparition shunt G→D</li><li>✓ BNP en chute</li><li>✓ Réactivité NO maintenue</li></ul>
+        <ul><li>✓ NYHA III + 3-Strata élevé</li><li>✓ <strong>PVR 6.2 WU (zone 5-8 = COR 2a TTC)</strong></li><li>✓ Réponse NO partielle (réversibilité)</li><li>✓ FEVD altérée + Strain –15%</li><li>✓ Pas d'IC hospitalisée → <strong>Stade C (pas D)</strong></li></ul>
       </div>
     </div>
-    <div class="card" style="border-left:4px solid #22D3EE">
+    <div class="card" style="border-left:4px solid #E03050">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
-        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#22D3EE;line-height:1">C</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — Post-Treat-to-Close réussi</div>
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#E03050;line-height:1">C</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — HTAP élevée + dysfonction VD modérée</div>
         <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-C</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>Fermeture maintenant possible et bénéfique</li></ul>
+      <ul><li>Centre expert HTAP + ACHD</li><li>Initiation bithérapie d'emblée</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -714,14 +714,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#A78BFA)">
       <div class="slide-head-num">CAS 04 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Cathétérisme</div>
+      <div class="slide-head-sub">ECG · Biologie · Cathétérisme · 3-Strata · Tests</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 72/min (vs FA initiale → conversion)</div></div><div class="dr"><div class="dr-lbl">HVD</div><div class="dr-val">Modérée</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>320 pg/mL</strong> (vs 1850 pg/mL initial)</div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">ECG</div><div class="dr-val">RS 86 bpm · TA 124/78</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>1980 pg/mL</strong></div></div><div class="dr"><div class="dr-lbl">BNP</div><div class="dr-val">528 pg/mL</div></div><div class="dr"><div class="dr-lbl">Cathétérisme — PAPM</div><div class="dr-val"><strong>50 mmHg</strong></div></div><div class="dr"><div class="dr-lbl"><strong>PVR</strong></div><div class="dr-val"><strong>6.2 WU</strong> (zone 5-8 = COR 2a TTC)</div></div><div class="dr"><div class="dr-lbl">Test NO</div><div class="dr-val">Réponse partielle (PVR 6.2 → 5.1 sous NO)</div></div><div class="dr"><div class="dr-lbl">3-Strata risque</div><div class="dr-val"><strong>ÉLEVÉ</strong></div></div><div class="dr"><div class="dr-lbl">Traitements</div><div class="dr-val">Furosémide 40 + Bisoprolol 2.5 + Amlodipine 5 + statine</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -729,18 +729,18 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#A78BFA)">
       <div class="slide-head-num">CAS 04 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
-      <div class="slide-head-sub">ACC 2025 · Section 4.1.1</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.1.1 + 4.4.6</div>
     </div>
     
     <div class="dec" style="border-color:#A78BFA;background:rgba(255,255,255,.03)">
       <div class="dec-t" style="color:#A78BFA">
-        <span class="cor c2a">COR 2a</span>Rec. 5 NEW 2025 — Fermeture après Treat-to-Close
+        <span class="cor c2a">COR 2a</span>Rec. #9 COR 2a — Treat-to-Close (bithérapie d'emblée)
       </div>
-      <div class="dec-b"><strong>Rec. 5 NEW 2025 COR 2a</strong> : Patient initialement PVR 7.8 WU (fenêtre 5-8) + réactivité NO + PAH therapy 12 mois → <strong>PVR réduite à 3.8 WU (< 5 WU cible atteinte)</strong> → fermeture maintenant bénéfique pour améliorer statut fonctionnel à moyen terme.</div>
-      <div class="dec-action">➜ <strong>Fermeture percutanée fenestrée</strong> (sécurité hémodynamique vs occluder plein) en centre expert HTAP. Maintien PAH therapy post-fermeture. Réévaluation hémodynamique à 3 et 6 mois post-fermeture.</div>
+      <div class="dec-b"><strong>Recommandation #9 ACC 2025 COR 2a :</strong> CIA + PVR 5-8 WU = <strong>Treat-to-Close</strong>. PAH therapy ciblée d'abord → objectif PVR < 5 WU → réévaluation à 3-6 mois → fermeture si critère atteint.<br><br><strong>3-Strata ÉLEVÉ = bithérapie d'emblée</strong> (Macitentan + Tadalafil) — pas de monothérapie en risque élevé. Standard of care 2025.<br><br><strong>Réponse NO partielle</strong> (PVR 6.2 → 5.1) confirme partial réversibilité = bon pronostic Treat-to-Close. Réponse nulle = mauvais pronostic.</div>
+      <div class="dec-action">➜ <strong>Initiation bithérapie PAH :</strong><br>• <strong>Macitentan 10 mg/j</strong> (ERA)<br>• <strong>Tadalafil 40 mg/j</strong> (iPDE5)<br>• Furosémide poursuivi<br>• Anticoagulation discutée<br><br>➜ <strong>Suivi rapproché :</strong><br>• J15 : tolérance + ASAT/ALAT<br>• M1 : NFS + bilan hépatique + NT-proBNP<br>• M2 : ETT + TM6M + SpO₂<br>• <strong>M3-6 : cathé contrôle → décision fermeture si PVR < 5</strong><br>• ETO pré-fermeture si critère atteint</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -748,55 +748,55 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#A78BFA)">
       <div class="slide-head-num">CAS 04 · SLIDE 6/6</div>
       <div class="slide-head-title">🎓 QCM & Take-home</div>
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — Patient post-PAH therapy 12 mois : PVR réduite de 7.8 à 3.8 WU. Conduite ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Continuer PAH therapy seule, pas de fermeture</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Fermeture percutanée fenestrée (Treat-to-Close achevé)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Fermeture chirurgicale en urgence</div><div class="qcm-opt"><span class="qcm-letter">D</span>Transplantation</div>
-      <div class="qcm-explain">✓ La stratégie Treat-to-Close a réussi : PVR initialement 7.8 WU → 3.8 WU sous PAH therapy. La fermeture (souvent fenestrée pour sécurité) est maintenant indiquée. Maintien PAH therapy post-fermeture obligatoire.</div>
+      <div class="qcm-q">QCM — CIA + PVR 6.2 WU + 3-Strata élevé + réponse NO partielle. Stratégie ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Fermeture immédiate</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Treat-to-Close : bithérapie d'emblée + réévaluation 3-6 mois (Rec. #9)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Pas de traitement (Eisenmenger)</div><div class="qcm-opt"><span class="qcm-letter">D</span>Monothérapie iPDE5 seule</div>
+      <div class="qcm-explain">✓ PVR 5-8 WU = COR 2a Treat-to-Close (Rec. #9). 3-Strata élevé = bithérapie d'emblée (Macitentan + Tadalafil). Réponse NO partielle = bon pronostic. Réévaluation cathé à M3-6 obligatoire.</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 04</span>
-      <ul><li>Treat-to-Close réussi : cible PVR < 5 WU atteinte</li><li>Fermeture fenestrée = sécurité hémodynamique</li><li>Maintien PAH therapy post-fermeture obligatoire</li><li>Suivi hémodynamique 3 et 6 mois</li></ul>
+      <ul><li>PVR 5-8 WU = COR 2a Treat-to-Close (Rec. #9)</li><li>3-Strata élevé = bithérapie d'emblée (pas mono)</li><li>Stade C ≠ Stade D malgré HTAP élevée (pas IC hospit.)</li><li>Test NO oriente le pronostic TTC</li><li>ETO obligatoire dès le bilan initial</li></ul>
     </div>
   </div>
 </div>
-
-<div class="cas" data-cas="5" style="--cas-color:#FB923C;--cas-color2:#F0A030">
-
+ 
+<div class="cas" data-cas="5" style="--cas-color:#34D399;--cas-color2:#22D3EE">
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
       <div class="slide-head-num">CAS 05 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mme L.R., 38 ans · G1P1</div>
-      <div class="slide-head-sub">FOP + AVC paradoxal — Fermeture pour prévention</div>
+      <div class="slide-head-title">Mr M. Sofiane Larabi · 58 ans (Suite Cas 04 · M6)</div>
+      <div class="slide-head-sub">Suite Cas 04 — Succès Treat-to-Close M6 → Fermeture percutanée</div>
     </div>
     <div class="cas-intro">
-      <div class="cas-intro-title" style="color:#FB923C">📔 Présentation clinique</div>
-      <div class="cas-intro-sub">Patiente jeune ayant présenté un AVC ischémique cryptogénique avec découverte d'un FOP avec shunt droit-gauche au repos. La fermeture est recommandée pour prévention secondaire.</div>
+      <div class="cas-intro-title" style="color:#34D399">🎉 Présentation clinique</div>
+      <div class="cas-intro-sub">Même patient que le Cas 04 (Mr Sofiane Larabi, maintenant 58 ans), 6 mois après initiation Macitentan + Tadalafil. PVR 6.2 → 4.8 WU (objectif < 5 ATTEINT), 3-Strata élevé → intermédiaire, Stade C → B, NYHA III → II. Fermeture CIA percutanée Amplatzer 33 mm.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme L.R., 38 ans · G1P1</strong></div></div>
-      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">62 kg · 165 cm · BSA 1.69 m²</div></div>
-      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Enseignante</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">AVC ischémique cryptogénique territoire sylvien gauche</div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr M. Sofiane Larabi · 58 ans (Suite Cas 04 · M6)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">79 kg · 174 cm</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">—</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Cathétérisme de contrôle post-Treat-to-Close</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">Pas d'ATCD CV · pas de FRCV majeurs · pas de FA documentée</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>Cas 04 → 6 mois Macitentan + Tadalafil</strong> · NYHA III → II · NT-proBNP ↓58% · TM6M ↑55% · TAPSE ↑ · Strain VD ↑</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-mint">I</span> Récupération neurologique complète post-AVC</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">520 m · SpO₂ 99 %</div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 118/72 · FC 72 · Souffle systolique modeste · pas de signes de défaillance</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II</span> Amélioration franche · NYHA III → II</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val"><strong>TM6M 240 → 380 m</strong> · SpO₂ 91 → 95%</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">Souffle systolique modeste · pas d'OMI · TJE 1 cm</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -804,7 +804,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
       <div class="slide-head-num">CAS 05 · SLIDE 2/6</div>
       <div class="slide-head-title">📊 Iconographie & Échographie</div>
       <div class="slide-head-sub">Présentation Canva unifiée · ancre #42</div>
@@ -814,14 +814,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="canva-caption">
       <div>
-        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#FB923C">🎨 Cas 05</div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#34D399">🎨 Cas 05</div>
         <div class="canva-caption-id">DAHINkfWji8 · ancre #42</div>
       </div>
       <a class="canva-caption-link" href="https://www.canva.com/design/DAHINkfWji8/view#42" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT principales</div>
-      <div class="dr"><div class="dr-lbl">Type</div><div class="dr-val"><strong>FOP large avec shunt D→G au repos</strong></div></div><div class="dr"><div class="dr-lbl">Manœuvre Valsalva</div><div class="dr-val">Shunt augmentant</div></div><div class="dr"><div class="dr-lbl">Test bulles</div><div class="dr-val">Microbulles cavités gauches < 3 cycles cardiaques</div></div><div class="dr"><div class="dr-lbl">Anévrisme septum</div><div class="dr-val">Présent (5 mm)</div></div><div class="dr"><div class="dr-lbl">OD/VD</div><div class="dr-val">Taille normale</div></div><div class="dr"><div class="dr-lbl">RoPE score</div><div class="dr-val"><strong>7</strong> (FOP probablement causal)</div></div>
+      <div class="dr"><div class="dr-lbl">CIA</div><div class="dr-val"><strong>OS 29 mm</strong> (inchangée)</div></div><div class="dr"><div class="dr-lbl">Vmax IT</div><div class="dr-val"><strong>4.0 → 3.6 → 3.4 m/s</strong></div></div><div class="dr"><div class="dr-lbl">PAPS estimée</div><div class="dr-val"><strong>75 → 62 → 55 mmHg</strong></div></div><div class="dr"><div class="dr-lbl">TAPSE</div><div class="dr-val"><strong>14 → 16 → 17 mm</strong></div></div><div class="dr"><div class="dr-lbl">Strain VD (GLS)</div><div class="dr-val"><strong>–15 → –17 → –18%</strong></div></div><div class="dr"><div class="dr-lbl">D-sign</div><div class="dr-val">Régression (PVR ↓)</div></div><div class="dr"><div class="dr-lbl">Dilatation biatriale</div><div class="dr-val">Stable</div></div><div class="dr"><div class="dr-lbl">Berges ETO</div><div class="dr-val">Confirmées belles ≥ 5 mm tous côtés</div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -829,33 +829,33 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
       <div class="slide-head-num">CAS 05 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.1.1</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.1.1 + 3-Strata HTAP</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong> · Critères Stade selon Tableau 4. Algorithme : Qp/Qs + PVR + dilatation VD + fonction VG.</div>
+      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong>. Critères Stade selon Tableau 4. Algorithme : PVR + Qp/Qs + dilatation VD + fonction VG + 3-Strata HTAP.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
         <span class="ib-title">Stade B retenu :</span>
-        <ul><li>✓ AVC cryptogénique documenté</li><li>✓ FOP avec shunt D→G au repos</li><li>✓ Anévrisme septum associé</li><li>✓ <strong>RoPE score 7</strong></li><li>✓ Pas d'autre cause d'AVC</li></ul>
+        <ul><li>✓ <strong>PVR 4.8 WU < 5</strong> (objectif TTC ATTEINT)</li><li>✓ <strong>NYHA III → II</strong></li><li>✓ <strong>3-Strata élevé → intermédiaire</strong></li><li>✓ TAPSE 14 → 17 mm</li><li>✓ NT-proBNP ↓ 76%</li><li>✓ <strong>Stade C → B</strong></li></ul>
       </div>
     </div>
-    <div class="card" style="border-left:4px solid #FB923C">
+    <div class="card" style="border-left:4px solid #34D399">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
-        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#FB923C;line-height:1">B</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade B — FOP + AVC paradoxal</div>
-        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>I-B</strong></div>
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#34D399;line-height:1">B</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade B — Post-TTC réussi · Fermeture indiquée</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-B</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>Indication fermeture pour prévention secondaire</li></ul>
+      <ul><li>Fermeture maintenant possible</li><li>Maintien PAH post-fermeture</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -863,14 +863,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
       <div class="slide-head-num">CAS 05 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Cathétérisme</div>
+      <div class="slide-head-sub">ECG · Biologie · Cathétérisme · 3-Strata · Tests</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 72/min</div></div><div class="dr"><div class="dr-lbl">Pas de FA</div><div class="dr-val">Holter 48h normal</div></div><div class="dr"><div class="dr-lbl">Bilan thrombophilie</div><div class="dr-val">Négatif</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">55 pg/mL (normal)</div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">ECG</div><div class="dr-val">RS 78 bpm</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>1980 → 480 pg/mL</strong> (↓76%)</div></div><div class="dr"><div class="dr-lbl">BNP</div><div class="dr-val"><strong>528 → 180 pg/mL</strong></div></div><div class="dr"><div class="dr-lbl">Cathétérisme M6</div><div class="dr-val"><strong>PAPM 50 → 45 mmHg</strong></div></div><div class="dr"><div class="dr-lbl"><strong>PVR</strong></div><div class="dr-val"><strong>6.2 → 4.8 WU ✅</strong> (objectif < 5 ATTEINT)</div></div><div class="dr"><div class="dr-lbl">3-Strata risque</div><div class="dr-val"><strong>ÉLEVÉ → INTERMÉDIAIRE</strong></div></div><div class="dr"><div class="dr-lbl">Maintien PAH</div><div class="dr-val">Macitentan 10 + Tadalafil 40 poursuivis</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -878,18 +878,18 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
       <div class="slide-head-num">CAS 05 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
-      <div class="slide-head-sub">ACC 2025 · Section 4.1.1</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.1.1 + 4.4.6</div>
     </div>
     
     <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
       <div class="dec-t" style="color:#34D399">
-        <span class="cor c1">COR 1</span>Rec. 6 NEW 2025 — Fermeture pour embolie paradoxale
+        <span class="cor c2a">COR 2a</span>Fermeture percutanée Amplatzer 33 mm — TTC réussi
       </div>
-      <div class="dec-b"><strong>Rec. 6 NEW 2025 COR 1 B-R</strong> : Adultes avec CIA/FOP non réparée et évidence (ou suspicion forte) d'<strong>embolie paradoxale</strong> → fermeture <strong>RECOMMANDÉE</strong> pour prévenir récurrence embolique.<br><br>Notre patiente : AVC cryptogénique + FOP avec shunt D→G + anévrisme septum + RoPE score 7 + pas d'autre cause = profil typique embolie paradoxale.</div>
-      <div class="dec-action">➜ <strong>Fermeture percutanée FOP</strong> (Amplatzer ou équivalent). Maintien antiplaquettaire post-fermeture (clopidogrel + aspirine 6 mois puis aspirine seule). Suivi cardiologique + neurologique.</div>
+      <div class="dec-b"><strong>Recommandation #9 ACC 2025 COR 2a :</strong> PVR 4.8 WU < 5 WU sous bithérapie PAH = critère de fermeture rempli après TTC. Décision validée.<br><br><strong>Preuve concrète d'efficacité TTC :</strong> PVR 6.2 → 4.8 WU (↓ 23%) en 6 mois sous Macitentan + Tadalafil. NYHA III → II. NT-proBNP ↓ 76%. Stratégie ACC 2025 validée.<br><br><strong>ETO pré-procédure obligatoire</strong> même si réalisée à M0 : 6 mois peuvent modifier l'anatomie (septum plus flaccide).<br><br><strong>Swan-Ganz periprocédural obligatoire</strong> (PVR > 3 WU) : monitoring temps réel pour détecter décompensation VD post-fermeture.</div>
+      <div class="dec-action">➜ <strong>Procédure :</strong><br>• ETO 3D pré-procédure<br>• <strong>Salle hybride</strong> ou USIC cardio<br>• <strong>Swan-Ganz</strong> avant + pendant + après<br>• <strong>Amplatzer ASD Occluder 33 mm</strong> · ETO guidance<br>• Aspirine 100 + Clopidogrel 75 × 1 mois<br><br>➜ <strong>Maintien PAH post-fermeture</strong> : Macitentan + Tadalafil POURSUIVIS (ne jamais arrêter). PVR résiduelle 4.8 WU = HTAP persistante.<br>➜ Cathé contrôle M6 post-fermeture → arrêt PAH si PVR < 3 WU.</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -897,25 +897,25 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#FB923C,#F0A030)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
       <div class="slide-head-num">CAS 05 · SLIDE 6/6</div>
       <div class="slide-head-title">🎓 QCM & Take-home</div>
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — Femme 38 ans, AVC cryptogénique + FOP avec shunt D→G + RoPE 7. Conduite ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Anticoagulation à vie</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Fermeture percutanée FOP (Rec. 6 NEW 2025 COR 1)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Antiplaquettaire seul à vie</div><div class="qcm-opt"><span class="qcm-letter">D</span>Surveillance simple</div>
-      <div class="qcm-explain">✓ Rec. 6 NEW 2025 COR 1 B-R : devant un AVC cryptogénique avec FOP probablement causal (RoPE élevé, shunt important, anévrisme septum), la fermeture percutanée est désormais clairement recommandée pour prévenir la récurrence (essais CLOSE, REDUCE, RESPECT).</div>
+      <div class="qcm-q">QCM — Patient post-TTC à M6 : PVR 6.2 → 4.8 WU sous PAH. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Continuer PAH seul, pas de fermeture</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Fermeture percutanée + maintien PAH (objectif < 5 atteint)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Fenestration COR 2b</div><div class="qcm-opt"><span class="qcm-letter">D</span>Transplantation</div>
+      <div class="qcm-explain">✓ TTC réussi : PVR 4.8 < 5 WU = critère fermeture rempli (Rec. #9). Fermeture Amplatzer 33 mm + Swan-Ganz periprocédural. <strong>Maintien PAH obligatoire post-fermeture</strong> (PVR résiduelle = HTAP persistante).</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 05</span>
-      <ul><li>Rec. 6 NEW 2025 COR 1 : AVC paradoxal = fermeture FOP</li><li>RoPE score : aide à attribuer la causalité</li><li>Bilan : exclure autres causes (Holter, thrombophilie)</li><li>Antiplaquettaire post-fermeture 6 mois</li></ul>
+      <ul><li>Le Treat-to-Close FONCTIONNE (PVR ↓ 23% en 6 mois)</li><li><strong>Maintien PAH post-fermeture</strong> jusqu'à cathé M6</li><li>Swan-Ganz periprocédural obligatoire (PVR > 3)</li><li>ETO pré-procédure même si M0 fait</li><li>FA surveillance long terme (dilatation biatriale persistante)</li></ul>
     </div>
   </div>
 </div>
-
+ 
 <div class="cas" data-cas="6" style="--cas-color:#F0A030;--cas-color2:#FB923C">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -923,29 +923,29 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
       <div class="slide-head-num">CAS 06 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mme F.K., 52 ans</div>
-      <div class="slide-head-sub">CIA Secundum femme de 52 ans — Fenestration physiologique</div>
+      <div class="slide-head-title">Mme K. Nadia · 52 ans</div>
+      <div class="slide-head-sub">Fermeture Fenêtrée COR 2b — Échec TTC + bonne fonction VD</div>
     </div>
     <div class="cas-intro">
-      <div class="cas-intro-title" style="color:#F0A030">📓 Présentation clinique</div>
-      <div class="cas-intro-sub">Patiente avec CIA secundum + dysfonction VG diastolique nécessitant une fermeture fenestrée pour éviter une décompensation gauche aiguë post-fermeture.</div>
+      <div class="cas-intro-title" style="color:#F0A030">🕳️ Présentation clinique</div>
+      <div class="cas-intro-sub">Femme 52 ans, CIA OS 22 mm connue depuis 3 ans, FA paroxystique, HTAP élevée (PVR 7 WU). Treat-to-Close a échoué (8.2 → 7.0 WU, objectif < 5 NON atteint). Mais Strain VD –20% normal ! Stade B paradoxal. Fermeture fenêtrée COR 2b = valve de sécurité.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme F.K., 52 ans</strong></div></div>
-      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">72 kg · 168 cm · BSA 1.83 m²</div></div>
-      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Enseignante</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Dyspnée NYHA II-III progressive + bilan préopératoire fermeture</div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme K. Nadia · 52 ans</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">65 kg · 163 cm · IMC 24.4</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">—</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">CIA connue 3 ans · HTAP progressive · décision urgente</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">CIA secundum connue · HTA · obésité grade I</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>CIA OS diagnostiquée à 49 ans</strong> · refus initial · suivi annuel · HTAP diagnostiquée à 51 ans · FA paroxystique 18 mois (1-2 crises/mois · CV médicale Flécaïne)</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II-III</span> Dyspnée d'effort + orthopnée modérée</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">380 m · SpO₂ 97 %</div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 142/88 · FC 78 · Souffle systolique + B2 dédoublé · OMI minimes</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II-III</span> Dyspnée effort modéré · palpitations fréquentes</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">SpO₂ repos 94% · effort 90% (arrêt 320 m)</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">FA 102 bpm · TA 128/80</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -970,7 +970,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT principales</div>
-      <div class="dr"><div class="dr-lbl">Type CIA</div><div class="dr-val"><strong>Ostium secundum 14 mm</strong></div></div><div class="dr"><div class="dr-lbl">Qp/Qs</div><div class="dr-val"><strong>1.9</strong> (significatif)</div></div><div class="dr"><div class="dr-lbl">OD/VD</div><div class="dr-val">Dilatation VD modérée</div></div><div class="dr"><div class="dr-lbl">PAPS estimée</div><div class="dr-val">38 mmHg (légère)</div></div><div class="dr"><div class="dr-lbl">PVR cathétérisme</div><div class="dr-val">2.2 WU</div></div><div class="dr"><div class="dr-lbl">Fonction VG</div><div class="dr-val"><strong>Dysfonction diastolique grade II</strong></div></div><div class="dr"><div class="dr-lbl">E/e' septal</div><div class="dr-val"><strong>15</strong> (élevé)</div></div><div class="dr"><div class="dr-lbl">OG dilatée</div><div class="dr-val">44 mm</div></div>
+      <div class="dr"><div class="dr-lbl">CIA</div><div class="dr-val"><strong>OS 22 mm</strong></div></div><div class="dr"><div class="dr-lbl">Qp/Qs</div><div class="dr-val">Significatif</div></div><div class="dr"><div class="dr-lbl">FEVD</div><div class="dr-val"><strong>50%</strong> conservée ✅</div></div><div class="dr"><div class="dr-lbl"><strong>Strain VD (GLS)</strong></div><div class="dr-val"><strong>–20% NORMAL</strong> ✅✅</div></div><div class="dr"><div class="dr-lbl">TAPSE</div><div class="dr-val">Conservée</div></div><div class="dr"><div class="dr-lbl">OD / OG</div><div class="dr-val"><strong>OD 42 cm² · OG 38 mL/m²</strong> (substrat FA)</div></div><div class="dr"><div class="dr-lbl">D-sign</div><div class="dr-val">Présent</div></div><div class="dr"><div class="dr-lbl">Vmax IT</div><div class="dr-val">4.2 m/s</div></div><div class="dr"><div class="dr-lbl">PAPS estimée</div><div class="dr-val">Élevée</div></div><div class="dr"><div class="dr-lbl">Test ballon ETO</div><div class="dr-val"><strong>PCWP sous occlusion = 14 mmHg ≤ 15</strong> ✅ tolérance OK</div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -981,30 +981,30 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
       <div class="slide-head-num">CAS 06 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.1.1</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.1.1 + 3-Strata HTAP</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong> · Critères Stade selon Tableau 4. Algorithme : Qp/Qs + PVR + dilatation VD + fonction VG.</div>
+      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong>. Critères Stade selon Tableau 4. Algorithme : PVR + Qp/Qs + dilatation VD + fonction VG + 3-Strata HTAP.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
-        <span class="ib-title">Stade C retenu :</span>
-        <ul><li>✓ NYHA II-III symptomatique</li><li>✓ Qp/Qs 1.9 significatif</li><li>✓ Dilatation VD modérée</li><li>✓ <strong>Dysfonction diastolique VG</strong></li><li>✓ <strong>PCWP élevée 18 mmHg</strong></li></ul>
+        <span class="ib-title">Stade B retenu :</span>
+        <ul><li>✓ NYHA II-III · FA paroxystique</li><li>✓ <strong>PVR 7.0 WU (zone 5-8) MALGRÉ TTC</strong></li><li>✓ <strong>Strain VD –20% NORMAL</strong> ⚠️</li><li>✓ FEVD 50% conservée</li><li>✓ Pas d'IC décompensée</li><li>✓ Test ballon : PCWP 14 (toléré)</li><li><strong>⚖️ Paradoxe : HTAP élevée + Stade B</strong></li></ul>
       </div>
     </div>
     <div class="card" style="border-left:4px solid #F0A030">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
-        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#F0A030;line-height:1">C</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — CIA + dysfonction diastolique VG</div>
-        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-C</strong></div>
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#F0A030;line-height:1">B</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade B — Fonction VD préservée (paradoxe)</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-B</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>Risque décompensation gauche post-fermeture</li><li>Approche fenestrée</li></ul>
+      <ul><li>Fermeture fenêtrée pour 'valve de sécurité'</li><li>Maintien PAH long terme</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -1015,11 +1015,11 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
       <div class="slide-head-num">CAS 06 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Cathétérisme</div>
+      <div class="slide-head-sub">ECG · Biologie · Cathétérisme · 3-Strata · Tests</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 78/min</div></div><div class="dr"><div class="dr-lbl">HVG</div><div class="dr-val">Légère + HVD modérée</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>440 pg/mL</strong></div></div><div class="dr"><div class="dr-lbl">Cathétérisme PCWP</div><div class="dr-val"><strong>18 mmHg</strong> (élevée)</div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">ECG</div><div class="dr-val">FA 102 bpm irrégulier</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">Modéré</div></div><div class="dr"><div class="dr-lbl">Cathétérisme initial</div><div class="dr-val"><strong>PVR 8.2 WU</strong></div></div><div class="dr"><div class="dr-lbl"><strong>Cathé post-PAH 4 mois</strong></div><div class="dr-val"><strong>PVR 7.0 WU</strong> (réduction insuffisante)</div></div><div class="dr"><div class="dr-lbl">3-Strata risque</div><div class="dr-val"><strong>ÉLEVÉ</strong></div></div><div class="dr"><div class="dr-lbl">TTC tenté (Ambrisentan + Tadalafil)</div><div class="dr-val"><strong>Échec : 8.2 → 7.0 WU</strong> seulement</div></div><div class="dr"><div class="dr-lbl">Traitements</div><div class="dr-val">Ambrisentan 5 + Tadalafil 20 + Rivaroxaban</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -1030,15 +1030,15 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
       <div class="slide-head-num">CAS 06 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
-      <div class="slide-head-sub">ACC 2025 · Section 4.1.1</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.1.1 + 4.4.6</div>
     </div>
     
     <div class="dec" style="border-color:#F0A030;background:rgba(255,255,255,.03)">
       <div class="dec-t" style="color:#F0A030">
-        <span class="cor c2a">COR 2a</span>Fermeture fenestrée — Stratégie de protection VG
+        <span class="cor c2b">COR 2b</span>Rec. #10 COR 2b — Fermeture fenêtrée 'valve de sécurité'
       </div>
-      <div class="dec-b">Patient avec critères Rec. 4 COR 1 (Qp/Qs ≥ 1.5 + dilatation VD + PVR < 2.5 WU) MAIS <strong>dysfonction diastolique VG préexistante</strong> (PCWP 18, E/e' 15, BNP 440).<br><br>La fermeture en plein occluder pourrait précipiter un OAP par perte du shunt 'soupape G→D' qui décompresse l'OG.<br><br><strong>Solution :</strong> fermeture <strong>fenestrée</strong> pour préserver une décompression G→D limitée durant la phase d'adaptation VG.</div>
-      <div class="dec-action">➜ <strong>Fermeture percutanée fenestrée.</strong> Pré-traitement : optimisation HTA + diurétiques pour réduire PCWP. Post-fermeture : surveillance précoce signes congestifs. La fenêtre se ferme spontanément en 6-12 mois.</div>
+      <div class="dec-b"><strong>Recommandation #10 ACC 2025 COR 2b :</strong> PVR 5-8 WU après échec TTC + bonne fonction VD = <strong>fermeture fenêtrée</strong>. Le device avec fenestration 5-8 mm décomprime le VD tout en maintenant un shunt résiduel de sécurité si HTAP progresse post-fermeture.<br><br><strong>Double paradoxe pédagogique :</strong><br>1. Stade B malgré HTAP élevée → préservation fonction VD (Strain –20% normal)<br>2. Fermeture fenêtrée = compromis 'efficacité + sécurité'<br><br><strong>Test ballon ETO préalable</strong> : PCWP 14 ≤ 15 → tolérance fermeture confirmée (pas de risque OAP).<br><br><strong>Strain –20% = fenêtre d'action à ne pas manquer</strong> : si on attend, dégradation = fibrose VD irréversible.</div>
+      <div class="dec-action">➜ <strong>Phase 1 — Fermeture fenêtrée :</strong><br>• Device F-ASO ou Amplatzer modifié avec fenestration 5-8 mm<br>• ETO 3D guidance<br>• Maintien PAH peri-procédural<br><br>➜ <strong>Phase 2 — Suivi :</strong><br>• ETT M3 + cathé contrôle M6<br>• <strong>Si PVR < 5 → fermeture fenestration (2e procédure)</strong><br>• Si PVR ≥ 5 → garder fenestration en place<br><br>➜ <strong>Maintien PAH long terme</strong> : Ambrisentan + Tadalafil + Rivaroxaban (FA + risque embolique)</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -1052,19 +1052,19 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — CIA secundum + dysfonction diastolique VG (PCWP 18). Conduite ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Fermeture occluder plein standard</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Fermeture fenestrée pour éviter OAP post-fermeture</div><div class="qcm-opt"><span class="qcm-letter">C</span>Pas de fermeture (risque OAP)</div><div class="qcm-opt"><span class="qcm-letter">D</span>Anticoagulation seule</div>
-      <div class="qcm-explain">✓ Chez les patients âgés avec dysfonction diastolique VG, la fermeture en plein occluder peut décompenser le VG par suppression du shunt G→D 'soupape'. La fermeture fenestrée préserve une décompression limitée durant l'adaptation.</div>
+      <div class="qcm-q">QCM — PVR 7 WU après TTC échoué + Strain VD –20% normal + bonne fonction VD. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Fermeture occluder plein</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Fermeture fenêtrée COR 2b (Rec. #10)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Continuer TTC seul</div><div class="qcm-opt"><span class="qcm-letter">D</span>Pas de fermeture (Eisenmenger)</div>
+      <div class="qcm-explain">✓ TTC échoué (PVR > 5) + Strain VD normal + test ballon toléré = fermeture fenêtrée COR 2b (Rec. #10). 'Valve de sécurité' : décompresse le VD + maintient shunt résiduel si progression HTAP. Maintien PAH long terme.</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 06</span>
-      <ul><li>Dysfonction diastolique VG = risque OAP post-fermeture</li><li>Fenestration = décompression G→D limitée</li><li>Fenêtre se ferme en 6-12 mois</li><li>Optimisation pré-fermeture (HTA, diurétiques)</li></ul>
+      <ul><li><strong>Fermeture fenêtrée = 'valve de sécurité'</strong></li><li>Indication : PVR 5-8 WU + bonne fonction VD + TTC échoué</li><li>Strain VD –20% normal = fenêtre d'action préservée</li><li>Test ballon ETO préalable obligatoire (PCWP)</li><li>Maintien PAH post-fenêtrée jusqu'à cathé M6</li></ul>
     </div>
   </div>
 </div>
-
+ 
 <div class="cas" data-cas="7" style="--cas-color:#FB7185;--cas-color2:#E03050">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -1072,29 +1072,29 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
       <div class="slide-head-num">CAS 07 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mr T.B., 70 ans</div>
-      <div class="slide-head-sub">Dysfonction VG sévère — Contre-indication relative</div>
+      <div class="slide-head-title">Mr M. Abdelkader Bouafia · 70 ans</div>
+      <div class="slide-head-sub">Dysfonction VG sévère — COR 3 CI fermeture (test ballon positif)</div>
     </div>
     <div class="cas-intro">
-      <div class="cas-intro-title" style="color:#FB7185">📒 Présentation clinique</div>
-      <div class="cas-intro-sub">Patient âgé avec CIA secundum et dysfonction VG sévère post-ischémique. La fermeture est contre-indiquée car elle aggraverait la dysfonction VG par suppression du shunt G→D décompresseur.</div>
+      <div class="cas-intro-title" style="color:#FB7185">🚫 Présentation clinique</div>
+      <div class="cas-intro-sub">Homme 70 ans, CIA OS connue depuis 10 ans, NYHA III + 2 épisodes OAP. RVP normale 1.5 WU MAIS dysfonction VG (FEVG 44% + PTDVG 20 mmHg) sur cardiopathie hypertensive chronique. Test ballon positif (PCWP 22 → 28, OAP) → COR 3 contre-indication formelle.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr T.B., 70 ans</strong></div></div>
-      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">75 kg · 173 cm · BSA 1.88 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr M. Abdelkader Bouafia · 70 ans</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">83 kg · 170 cm · IMC 28.7</div></div>
       <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Retraité</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Dyspnée NYHA III + bilan CIA + ischémie</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Aggravation dyspnée · décision fermeture · dysfonction VG découverte au bilan</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>Cardiopathie ischémique</strong> · IDM antérieur 2018 · stent IVA · FEVG 32%</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>CIA OS diagnostiquée à 60 ans</strong> · 'pas d'indication à l'époque' (PAPS 25, RVP normale) · <strong>HTA 20 ans traitée insuffisamment 10 ans</strong> · <strong>cardiopathie hypertensive</strong> · <strong>2 épisodes OAP en 18 mois</strong> · diabète T2 (HbA1c 7.8%)</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">III</span> Dyspnée + œdèmes</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">240 m · SpO₂ 95 %</div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 118/72 · FC 82 · Souffle systolique + galop + crépitants bases</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">III</span> Dyspnée effort modéré + orthopnée nocturne</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">SpO₂ repos 93% · effort 87% (arrêt 160 m)</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">RS 78 · TA 138/86 (HTA persistante)</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -1119,7 +1119,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT principales</div>
-      <div class="dr"><div class="dr-lbl">Type CIA</div><div class="dr-val"><strong>Ostium secundum 12 mm</strong></div></div><div class="dr"><div class="dr-lbl">Qp/Qs</div><div class="dr-val"><strong>1.6</strong> (significatif)</div></div><div class="dr"><div class="dr-lbl">OD/VD</div><div class="dr-val">Dilatation VD modérée</div></div><div class="dr"><div class="dr-lbl">Fonction VG</div><div class="dr-val"><strong>FEVG 32% sévèrement altérée</strong></div></div><div class="dr"><div class="dr-lbl">Cinétique segmentaire</div><div class="dr-val">Akinésie antérieure</div></div><div class="dr"><div class="dr-lbl">PCWP</div><div class="dr-val"><strong>24 mmHg</strong> (très élevée)</div></div><div class="dr"><div class="dr-lbl">PVR</div><div class="dr-val">2.4 WU</div></div><div class="dr"><div class="dr-lbl">Mitral</div><div class="dr-val">IM modérée (fonctionnelle)</div></div>
+      <div class="dr"><div class="dr-lbl">CIA</div><div class="dr-val"><strong>OS 22 mm</strong></div></div><div class="dr"><div class="dr-lbl">Qp/Qs</div><div class="dr-val">Modeste</div></div><div class="dr"><div class="dr-lbl"><strong>FEVG</strong></div><div class="dr-val"><strong>44%</strong> altération débutante systolique</div></div><div class="dr"><div class="dr-lbl"><strong>E/e' septal</strong></div><div class="dr-val"><strong>18</strong> ↑↑ (dysfonction diastolique)</div></div><div class="dr"><div class="dr-lbl"><strong>LAVI</strong></div><div class="dr-val"><strong>52 mL/m²</strong> ↑↑</div></div><div class="dr"><div class="dr-lbl">HVG</div><div class="dr-val"><strong>Concentrique</strong> (épaisseur 13 mm)</div></div><div class="dr"><div class="dr-lbl">FEVD</div><div class="dr-val">Conservée</div></div><div class="dr"><div class="dr-lbl">Strain VG</div><div class="dr-val">Réduit (–14%)</div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -1130,30 +1130,30 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
       <div class="slide-head-num">CAS 07 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.1.1</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.1.1 + 3-Strata HTAP</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong> · Critères Stade selon Tableau 4. Algorithme : Qp/Qs + PVR + dilatation VD + fonction VG.</div>
+      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong>. Critères Stade selon Tableau 4. Algorithme : PVR + Qp/Qs + dilatation VD + fonction VG + 3-Strata HTAP.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
         <span class="ib-title">Stade D retenu :</span>
-        <ul><li>✓ NYHA III + signes congestifs</li><li>✓ <strong>FEVG 32%</strong> sévèrement altérée</li><li>✓ Cardiopathie ischémique active</li><li>✓ PCWP 24 mmHg très élevée</li><li>✓ Le shunt G→D 'soupape' décompresse le VG</li></ul>
+        <ul><li>✓ NYHA III + <strong>2 OAP en 18 mois</strong></li><li>✓ <strong>Dysfonction VG systolo-diastolique</strong> (FEVG 44 + PTDVG 20)</li><li>✓ E/e' 18 + LAVI 52 mL/m²</li><li>✓ <strong>HTAP postcapillaire</strong> (PVR 1.5 + PCWP 22)</li><li>✓ <strong>Test ballon POSITIF</strong> (PCWP +6 + OAP induit)</li><li><strong>🚫 La CIA = SOUPAPE de décompression OG</strong></li></ul>
       </div>
     </div>
     <div class="card" style="border-left:4px solid #E03050">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
         <div style="font-family:Syne;font-size:48px;font-weight:800;color:#E03050;line-height:1">D</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade D — Dysfonction VG sévère + IC</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade D — IC gauche · CIA bénéfique</div>
         <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-D</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>Fermeture CONTRE-INDIQUÉE actuellement</li><li>GDMT IC + revascularisation</li></ul>
+      <ul><li>GDMT IC gauche optimal</li><li>Réévaluation 12-18 mois si amélioration FEVG</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -1164,11 +1164,11 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
       <div class="slide-head-num">CAS 07 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Cathétérisme</div>
+      <div class="slide-head-sub">ECG · Biologie · Cathétérisme · 3-Strata · Tests</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 82/min</div></div><div class="dr"><div class="dr-lbl">Onde Q</div><div class="dr-val">Antérieure (séquelle IDM)</div></div><div class="dr"><div class="dr-lbl">BBG</div><div class="dr-val">Présent · QRS 142 ms</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>2400 pg/mL</strong> (très élevé)</div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">ECG</div><div class="dr-val">RS 78 · HVG ECG · QTc 460</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">Élevé (IC gauche)</div></div><div class="dr"><div class="dr-lbl">Cathétérisme — PVR</div><div class="dr-val"><strong>1.5 WU</strong> (faible · zone COR I habituelle)</div></div><div class="dr"><div class="dr-lbl">PAPM</div><div class="dr-val">32 mmHg</div></div><div class="dr"><div class="dr-lbl"><strong>PCWP repos</strong></div><div class="dr-val"><strong>22 mmHg</strong> ↑↑</div></div><div class="dr"><div class="dr-lbl"><strong>PTDVG</strong></div><div class="dr-val"><strong>20 mmHg</strong> ↑↑ (dysfonction diastolique)</div></div><div class="dr"><div class="dr-lbl">HTAP</div><div class="dr-val"><strong>POSTCAPILLAIRE</strong> (IC gauche)</div></div><div class="dr"><div class="dr-lbl"><strong>Test ballon occlusif</strong></div><div class="dr-val"><strong>PCWP 22 → 28 + PTDVG 20 → 32 + OAP</strong></div></div><div class="dr"><div class="dr-lbl">Traitements</div><div class="dr-val">Ramipril + Bisoprolol + Furosémide 80 + Spironolactone</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -1179,15 +1179,15 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
       <div class="slide-head-num">CAS 07 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
-      <div class="slide-head-sub">ACC 2025 · Section 4.1.1</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.1.1 + 4.4.6</div>
     </div>
     
     <div class="dec" style="border-color:#E03050;background:rgba(255,255,255,.03)">
       <div class="dec-t" style="color:#E03050">
-        <span class="cor c3">COR 3 Harm/No Benefit</span>Fermeture CONTRE-INDIQUÉE — Préservation VG
+        <span class="cor c3">COR 3 Harm/No Benefit</span>COR 3 — Contre-indication à la fermeture (test ballon positif)
       </div>
-      <div class="dec-b"><strong>Contre-indication relative à la fermeture</strong> en présence de :<br>• Dysfonction VG sévère (FEVG 32%)<br>• PCWP très élevée (24 mmHg)<br>• Le shunt G→D fonctionne comme une <strong>« soupape » décompressive</strong> du VG ischémique<br><br>Fermer la CIA → suppression du shunt → augmentation aiguë PCWP → OAP.</div>
-      <div class="dec-action">➜ <strong>PAS DE FERMETURE.</strong><br>1. <strong>GDMT IC</strong> optimal : IEC/ARNI + bétabloquant + aldostérone + SGLT2i<br>2. <strong>Revascularisation</strong> : coronarographie + revascularisation si indiquée<br>3. <strong>Resynchronisation</strong> : QRS 142 ms BBG → CRT-D si FEVG < 35% sous GDMT<br>4. Réévaluation hémodynamique post-optimisation à 6 mois<br>5. Fermeture fenestrée envisageable si remodelage VG positif</div>
+      <div class="dec-b"><strong>Paradoxe majeur :</strong> RVP 1.5 WU = zone COR I habituelle. MAIS PTDVG 20 + dysfonction VG = la CIA joue le rôle de <strong>SOUPAPE de décompression OG</strong>. Fermer la CIA = OG ne peut plus se décharger = OAP aigu.<br><br><strong>Test ballon positif</strong> (PCWP 22 → 28 + PTDVG 20 → 32 + OAP induit) = <strong>contre-indication formelle confirmée</strong>.<br><br>Distinction critique :<br>• <strong>HTAP postcapillaire</strong> (IC gauche) ≠ <strong>HTAP précapillaire</strong> (vasculaire)<br>• Ici : PAPS 45 mmHg + RVP 1.5 + PCWP 22 = postcapillaire pure<br>• 3-Strata <strong>NON applicable</strong> (HTAP postcapillaire)<br>• <strong>Traiter l'IC gauche = traiter l'HTAP</strong></div>
+      <div class="dec-action">➜ <strong>PAS DE FERMETURE</strong><br><br>➜ <strong>GDMT IC optimisé :</strong><br>• <strong>Sacubitril/Valsartan</strong> (ARNI) — bénéfice IC + HTA<br>• <strong>Dapagliflozine</strong> (SGLT2i) — IC + diabète T2 (DAPA-HF)<br>• Bisoprolol bétabloquant<br>• Spironolactone (anti-aldostérone)<br>• Furosémide selon congestion<br>• <strong>Contrôle HTA strict</strong> (objectif < 130/80)<br><br>➜ <strong>Réévaluation 12-18 mois :</strong><br>• Si FEVG > 50% + PTDVG < 15 + test ballon négatif → <strong>CI levée → fermeture reconsidérée</strong><br>• Si pas amélioration → CI maintenue à vie</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -1201,19 +1201,19 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — Homme 70 ans, CIA + cardiopathie ischémique + FEVG 32% + PCWP 24. Conduite ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Fermeture en urgence</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>PAS de fermeture — GDMT IC + revascularisation + CRT-D</div><div class="qcm-opt"><span class="qcm-letter">C</span>Fermeture fenestrée immédiate</div><div class="qcm-opt"><span class="qcm-letter">D</span>Transplantation cardiaque</div>
-      <div class="qcm-explain">✓ La CIA fonctionne comme 'soupape' décompressive du VG dysfonctionnel. La fermeture précipiterait un OAP. Priorité : GDMT IC + revascularisation + resynchronisation. La fermeture (fenestrée) ne sera reconsidérée que si remodelage VG positif.</div>
+      <div class="qcm-q">QCM — CIA OS 22 mm + RVP 1.5 WU + FEVG 44% + PTDVG 20 + 2 OAP + test ballon positif. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Fermeture COR I (RVP normale)</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>PAS DE FERMETURE — GDMT IC + réévaluation 12-18 mois (COR 3)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Treat-to-Close PAH</div><div class="qcm-opt"><span class="qcm-letter">D</span>Transplantation immédiate</div>
+      <div class="qcm-explain">✓ RVP normale ≠ fermeture toujours indiquée. Dysfonction VG → CIA = soupape OG. Test ballon positif (PCWP +6 + OAP) = COR 3. GDMT IC (Sacubitril + Dapagliflozine) prioritaire. CI potentiellement réversible si FEVG s'améliore.</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 07</span>
-      <ul><li>Dysfonction VG sévère = CIA est 'soupape' décompressive</li><li>Fermeture = risque OAP par perte décompression</li><li>Priorité : GDMT IC + revascularisation + CRT</li><li>Fermeture fenestrée envisageable si FEVG s'améliore</li></ul>
+      <ul><li><strong>RVP faible ≠ fermeture toujours indiquée</strong></li><li>CIA peut être BÉNÉFIQUE en dysfonction VG (soupape)</li><li>HTAP postcapillaire (IC gauche) ≠ précapillaire (vasculaire)</li><li><strong>Test ballon obligatoire si âge > 60 + comorbidités VG</strong></li><li>CI <strong>non définitive</strong> si IC s'améliore</li></ul>
     </div>
   </div>
 </div>
-
+ 
 <div class="cas" data-cas="8" style="--cas-color:#E03050;--cas-color2:#FB7185">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -1221,29 +1221,29 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 08 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mr H.B., 42 ans</div>
-      <div class="slide-head-sub">CIA + Eisenmenger — Fermeture COR 3 Harm</div>
+      <div class="slide-head-title">Mr M. Yacine Khaldi · 42 ans</div>
+      <div class="slide-head-sub">Syndrome d'Eisenmenger — COR 3 HARM contre-indication absolue</div>
     </div>
     <div class="cas-intro">
-      <div class="cas-intro-title" style="color:#E03050">📚 Présentation clinique</div>
-      <div class="cas-intro-sub">Patient avec CIA secundum jamais fermée ayant développé un syndrome d'Eisenmenger avec HTAP fixe sévère et shunt droit-gauche dominant. La fermeture est strictement contre-indiquée.</div>
+      <div class="cas-intro-title" style="color:#E03050">🔴 Présentation clinique</div>
+      <div class="cas-intro-sub">Homme 42 ans, CIA OS 18 mm négligée 42 ans (refus familial, accès soins limité). Vasculopathie pulmonaire irréversible : PVR 8.8 WU + shunt D→G + cyanose centrale (SpO₂ 82%) + polyglobulie. Fermeture STRICTEMENT contre-indiquée à vie. PAH therapy COR I.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr H.B., 42 ans</strong></div></div>
-      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">65 kg · 175 cm · BSA 1.78 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr M. Yacine Khaldi · 42 ans</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">72 kg · 176 cm · IMC 23.2 (perte 6 kg/an)</div></div>
       <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Adapté · activité protégée</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Cyanose + dyspnée NYHA III progressive</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Aggravation 6 mois · CIA connue dès l'enfance jamais traitée</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">CIA secundum connue · jamais opérée · cyanose progressive depuis 5 ans · hippocratisme</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>CIA OS 18 mm diagnostiquée à 6 mois</strong> · <strong>jamais réparée</strong> (refus familial, accès soins limité, zone rurale) · 2000 (18 ans) : dyspnée d'effort · 2010 (28 ans) : cyanose · cyanose progressive depuis</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">III</span> Cyanose + dyspnée + hippocratisme digital</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">260 m · <strong>SpO₂ 84 % au repos</strong></div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 116/76 · FC 88 · Souffle quasi absent · <strong>P2 unique majeur</strong> · cyanose centrale</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">III-IV</span> Limitation sévère · incapacité effort minimal · cyanose centrale ++ · hippocratisme</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val"><strong>SpO₂ repos 82% · effort 68%</strong> (arrêt 50 m)</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">RS 92 · TA 108/68 (bas débit) · cyanose centrale + hippocratisme + perte poids</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -1268,7 +1268,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT principales</div>
-      <div class="dr"><div class="dr-lbl">Type CIA</div><div class="dr-val"><strong>Ostium secundum 22 mm</strong></div></div><div class="dr"><div class="dr-lbl">Doppler</div><div class="dr-val"><strong>Shunt bidirectionnel D→G dominant</strong></div></div><div class="dr"><div class="dr-lbl">OD/VD</div><div class="dr-val">Hypertrophiés + dilatés</div></div><div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">Taille normale</div></div><div class="dr"><div class="dr-lbl">PAPS estimée</div><div class="dr-val"><strong>92 mmHg</strong> (sévère)</div></div><div class="dr"><div class="dr-lbl">Cathétérisme</div><div class="dr-val"><strong>PVR 12 WU</strong> (très sévère)</div></div><div class="dr"><div class="dr-lbl">Test NO</div><div class="dr-val"><strong>Négatif</strong> (HTAP fixe)</div></div>
+      <div class="dr"><div class="dr-lbl">CIA</div><div class="dr-val"><strong>OS 18 mm</strong></div></div><div class="dr"><div class="dr-lbl"><strong>Shunt</strong></div><div class="dr-val"><strong>D→G prédominant</strong> (Eisenmenger physiologie)</div></div><div class="dr"><div class="dr-lbl">FEVD</div><div class="dr-val">Hypertrophié + dilaté</div></div><div class="dr"><div class="dr-lbl">D-sign IVS</div><div class="dr-val">Présent · septum bombé G</div></div><div class="dr"><div class="dr-lbl">VG</div><div class="dr-val">Petit (sous-utilisé)</div></div><div class="dr"><div class="dr-lbl">Vmax IT</div><div class="dr-val">5.2 m/s ↑↑↑</div></div><div class="dr"><div class="dr-lbl">PAPS estimée</div><div class="dr-val"><strong>110 mmHg</strong></div></div><div class="dr"><div class="dr-lbl">Strain VD</div><div class="dr-val">Réduit</div></div><div class="dr"><div class="dr-lbl">Acc. RVOT</div><div class="dr-val">< 80 ms (HTAP sévère vasculaire)</div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -1279,30 +1279,30 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 08 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.1.1</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.1.1 + 3-Strata HTAP</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong> · Critères Stade selon Tableau 4. Algorithme : Qp/Qs + PVR + dilatation VD + fonction VG.</div>
+      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong>. Critères Stade selon Tableau 4. Algorithme : PVR + Qp/Qs + dilatation VD + fonction VG + 3-Strata HTAP.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
         <span class="ib-title">Stade D retenu :</span>
-        <ul><li>✓ NYHA III + cyanose centrale</li><li>✓ <strong>SpO₂ 84% au repos</strong></li><li>✓ Shunt D→G dominant</li><li>✓ <strong>PVR 12 WU</strong> (très sévère, fixe)</li><li>✓ Test NO négatif</li></ul>
+        <ul><li>✓ NYHA III-IV + cyanose centrale</li><li>✓ <strong>SpO₂ 82% repos · 68% effort</strong></li><li>✓ <strong>Shunt D→G prédominant</strong> = Eisenmenger</li><li>✓ <strong>PVR 8.8 WU (> 8) FIXE</strong> (NO négatif)</li><li>✓ Polyglobulie réactionnelle Ht 62%</li><li>✓ Carence martiale (ferritine 15)</li><li><strong>🔴 STADE D TERMINAL</strong></li></ul>
       </div>
     </div>
     <div class="card" style="border-left:4px solid #E03050">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
         <div style="font-family:Syne;font-size:48px;font-weight:800;color:#E03050;line-height:1">D</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade D — Eisenmenger confirmé</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade D Terminal — Eisenmenger confirmé</div>
         <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>III-D</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>Centre expert Eisenmenger</li><li>PAH therapy à vie</li></ul>
+      <ul><li>PAH therapy à vie</li><li>Évaluation greffe cœur-poumon</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -1313,11 +1313,11 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 08 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Cathétérisme</div>
+      <div class="slide-head-sub">ECG · Biologie · Cathétérisme · 3-Strata · Tests</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 88/min</div></div><div class="dr"><div class="dr-lbl">HVD</div><div class="dr-val">Sévère</div></div><div class="dr"><div class="dr-lbl">Axe droit</div><div class="dr-val">Majeur</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>1240 pg/mL</strong></div></div><div class="dr"><div class="dr-lbl">Hématocrite</div><div class="dr-val"><strong>58%</strong> (polyglobulie)</div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">ECG</div><div class="dr-val">RS 92 · HVD majeure · axe droit majeur</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">Très élevé</div></div><div class="dr"><div class="dr-lbl">Cathétérisme — PAPM</div><div class="dr-val"><strong>70 mmHg</strong></div></div><div class="dr"><div class="dr-lbl"><strong>PVR</strong></div><div class="dr-val"><strong>8.8 WU</strong> (> 8 = Eisenmenger fixe)</div></div><div class="dr"><div class="dr-lbl">Test NO</div><div class="dr-val"><strong>NÉGATIF</strong> (irréversibilité)</div></div><div class="dr"><div class="dr-lbl">Hématocrite</div><div class="dr-val"><strong>62%</strong> (polyglobulie réactionnelle)</div></div><div class="dr"><div class="dr-lbl">Ferritine</div><div class="dr-val"><strong>15 ng/mL</strong> ↓↓ (carence martiale)</div></div><div class="dr"><div class="dr-lbl">Bilan</div><div class="dr-val">Hyperuricémie · ↑ bilirubine</div></div><div class="dr"><div class="dr-lbl">Pas d'AVC paradoxal documenté</div><div class="dr-val">Surveillance neuro</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -1328,15 +1328,15 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
       <div class="slide-head-num">CAS 08 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
-      <div class="slide-head-sub">ACC 2025 · Section 4.1.1</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.1.1 + 4.4.6</div>
     </div>
     
     <div class="dec" style="border-color:#E03050;background:rgba(255,255,255,.03)">
       <div class="dec-t" style="color:#E03050">
-        <span class="cor c3">COR 3 Harm/No Benefit</span>COR 3 Harm — Fermeture CONTRE-INDIQUÉE
+        <span class="cor c3">COR 3 Harm/No Benefit</span>Rec. #13 COR 3 HARM — CI ABSOLUE et DÉFINITIVE
       </div>
-      <div class="dec-b"><strong>Section 4.4.6 ACC 2025 (NEW) COR 3 Harm</strong> : Adultes avec syndrome d'Eisenmenger → fermeture de tout shunt intracardiaque ou vasculaire <strong>NE DOIT PAS</strong> être effectuée vu les risques périopératoires accrus et la morbidité/mortalité à court et long terme.<br><br>La fermeture supprimerait la 'soupape' qui permet au VD d'éjecter contre une résistance pulmonaire fixe → défaillance VD aiguë catastrophique → mort.</div>
-      <div class="dec-action">➜ <strong>Section 4.4.6 — Eisenmenger management :</strong><br>• <strong>PAH therapy</strong> : Bosentan 125 mg ×2/j (PDE-5: Tadalafil 40 mg/j ou Sildénafil 20 mg ×3/j) — disponibles en Algérie<br>• Surveillance polyglobulie (saignées si Ht > 65% + symptômes)<br>• Anticoagulation discutée selon FA/embolie<br>• Activité physique adaptée<br>• <strong>Contraception efficace</strong> (grossesse WHO IV — contre-indiquée)<br>• Discussion transplantation cœur-poumons centre expert</div>
+      <div class="dec-b"><strong>Recommandation #13 Section 4.1.1 ACC 2025 COR 3 HARM :</strong><br><em>"In adults with an unrepaired ASD and Eisenmenger physiology, ASD closure should not be performed to avoid increasing morbidity and mortality."</em><br><br><strong>Vasculopathie pulmonaire IRRÉVERSIBLE.</strong> Fermer la CIA = supprime le shunt qui décharge le VD = décompensation VD aiguë = mort.<br><br><strong>Eisenmenger = catastrophe évitable :</strong> 30 ans de CIA négligée = vasculopathie irréversible. À 18 ans (2000), la fermeture aurait évité l'Eisenmenger. <strong>Fenêtre thérapeutique 15-35 ans</strong> : fermer AVANT que PVR > 5 WU.<br><br><strong>Grossesse = COR 3 HARM absolu</strong> (mortalité maternelle 30-50%) si patiente féminine.</div>
+      <div class="dec-action">➜ <strong>Section 4.4.6 ACC 2025 — Eisenmenger management :</strong><br>• <strong>PAH therapy COR I :</strong><br> – Bosentan 125 mg ×2/j (ERA · BREATHE-5)<br> – Tadalafil 40 mg/j ou Sildénafil 20 mg ×3/j (iPDE5)<br> – Bithérapie en risque élevé<br>• <strong>Carence martiale URGENTE :</strong> Fer IV (ferritine cible > 50)<br>• <strong>Polyglobulie :</strong> phlébotomie SI Ht ≥ 65% + symptômes viscosité<br>• <strong>Anticoagulation :</strong> COR 3 No Benefit en l'absence de FA/embolie (risque hémorragique > bénéfice)<br>• <strong>Greffe cœur-poumon</strong> si NYHA IV + traitement maximal<br>• Suivi Table 44 · centre expert ACHD + HTAP</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -1350,49 +1350,49 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — CIA + Eisenmenger (PVR 12 WU, SpO₂ 84%, NO négatif). Conduite ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Fermeture chirurgicale en centre expert</div><div class="qcm-opt"><span class="qcm-letter">B</span>Fermeture percutanée fenestrée</div><div class="qcm-opt correct"><span class="qcm-letter">C</span>PAS de fermeture — PAH therapy à vie (COR 3 Harm)</div><div class="qcm-opt"><span class="qcm-letter">D</span>Transplantation immédiate</div>
-      <div class="qcm-explain">✓ Section 4.4.6 ACC 2025 NEW COR 3 Harm : la fermeture en cas d'Eisenmenger = catastrophe hémodynamique aiguë (défaillance VD contre HTAP fixe). PAH therapy à vie (Bosentan + Tadalafil/Sildénafil disponibles en Algérie). Transplantation cœur-poumons réservée aux cas réfractaires.</div>
+      <div class="qcm-q">QCM — CIA OS 18 mm + PVR 8.8 WU + SpO₂ 82% + cyanose + polyglobulie. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Fermeture chirurgicale en centre expert</div><div class="qcm-opt"><span class="qcm-letter">B</span>Fermeture fenêtrée</div><div class="qcm-opt correct"><span class="qcm-letter">C</span>PAS de fermeture — PAH therapy à vie + fer IV (Rec. #13 COR 3 HARM)</div><div class="qcm-opt"><span class="qcm-letter">D</span>Transplantation immédiate</div>
+      <div class="qcm-explain">✓ Rec. #13 ACC 2025 COR 3 HARM : Eisenmenger = CI absolue à vie. PAH therapy COR I (Bosentan + Tadalafil). Fer IV urgent (ferritine 15). Pas d'anticoagulation systématique (risque hémorragique). Greffe en option ultime.</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 08</span>
-      <ul><li>Eisenmenger = COR 3 Harm fermeture (Section 4.4.6 NEW 2025)</li><li>PVR > 10 WU + shunt R-L = HTAP fixe</li><li>PAH therapy à vie (Bosentan/Tadalafil/Sildénafil)</li><li>Grossesse WHO IV contre-indiquée</li></ul>
+      <ul><li><strong>Eisenmenger = CI ABSOLUE à vie (Rec. #13 COR 3 HARM)</strong></li><li>Fenêtre thérapeutique : fermer AVANT PVR > 5 WU</li><li>PAH therapy COR I (Bosentan/Tadalafil/Sildénafil disponibles Algérie)</li><li>Carence martiale = traitement urgent sous-estimé (Fer IV)</li><li>Phlébotomie SI Ht ≥ 65% + symptômes (pas systématique)</li><li>Grossesse = COR 3 HARM absolu (mortalité 30-50%)</li></ul>
     </div>
   </div>
 </div>
-
-<div class="cas" data-cas="9" style="--cas-color:#A78BFA;--cas-color2:#FB7185">
-
+ 
+<div class="cas" data-cas="9" style="--cas-color:#22D3EE;--cas-color2:#A78BFA">
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
       <div class="slide-head-num">CAS 09 · SLIDE 1/6</div>
-      <div class="slide-head-title">Mr A.M., 56 ans</div>
-      <div class="slide-head-sub">Sinus veineux supérieur + RVPA partiel — Chirurgie</div>
+      <div class="slide-head-title">Mr B. Hocine Meziane · 56 ans</div>
+      <div class="slide-head-sub">CIA Sinus Veineux Supérieur + RVPPA — Warden ou stent couvert</div>
     </div>
     <div class="cas-intro">
-      <div class="cas-intro-title" style="color:#A78BFA">📖 Présentation clinique</div>
-      <div class="cas-intro-sub">Patient avec CIA sinus veineux supérieur associée à un retour veineux pulmonaire anormal partiel droit. Cette anatomie ne permet pas la fermeture percutanée — chirurgie indispensable.</div>
+      <div class="cas-intro-title" style="color:#22D3EE">🔬 Présentation clinique</div>
+      <div class="cas-intro-sub">Homme 56 ans, dyspnée d'effort 2 ans. ETT débrouillage : VD dilaté + anomalie jonction VCS-OD. Anatomie complexe : CIA sinus veineux supérieur 22×18 mm + RVPPA (VPDS → VCS). Amplatzer OS impossible. Décision : Warden chirurgical ou stent couvert percutané.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr A.M., 56 ans</strong></div></div>
-      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">78 kg · 178 cm · BSA 1.96 m²</div></div>
-      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Dyspnée d'effort progressive 18 mois</div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr B. Hocine Meziane · 56 ans</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">78 kg · 175 cm · IMC 25.5</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">—</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Bilan dyspnée effort progressive 2 ans · ETT évoque sinus veineux · adressé centre ACHD</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">Pas d'antécédent CV · découverte à l'IRM réalisée pour bilan dyspnée</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>Sinus veineux NON connu antérieurement</strong> · souffle discret signalé à 30 ans non investigué · HTA légère (Amlodipine) · dyslipidémie (Rosuvastatine) · pas de chirurgie cardiaque</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II</span> Dyspnée NYHA II + asthénie</div></div>
-      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">420 m · SpO₂ 97 %</div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 128/78 · FC 76 · Souffle systolique + B2 dédoublé</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II</span> Dyspnée effort soutenu · tolérance activité quotidienne conservée</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">SpO₂ repos 97% · effort 93% (arrêt 420 m)</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">RS 72 · TA 128/78 sous traitement</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -1400,7 +1400,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
       <div class="slide-head-num">CAS 09 · SLIDE 2/6</div>
       <div class="slide-head-title">📊 Iconographie & Échographie</div>
       <div class="slide-head-sub">Présentation Canva unifiée · ancre #103</div>
@@ -1410,14 +1410,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="canva-caption">
       <div>
-        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#A78BFA">🎨 Cas 09</div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#22D3EE">🎨 Cas 09</div>
         <div class="canva-caption-id">DAHINkfWji8 · ancre #103</div>
       </div>
       <a class="canva-caption-link" href="https://www.canva.com/design/DAHINkfWji8/view#103" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT principales</div>
-      <div class="dr"><div class="dr-lbl">Type CIA</div><div class="dr-val"><strong>Sinus veineux supérieur 14 mm</strong></div></div><div class="dr"><div class="dr-lbl">RVPA partiel</div><div class="dr-val"><strong>Veine pulmonaire supérieure droite anormale</strong> dans VCS</div></div><div class="dr"><div class="dr-lbl">Qp/Qs</div><div class="dr-val"><strong>2.4</strong> (très significatif)</div></div><div class="dr"><div class="dr-lbl">OD/VD</div><div class="dr-val">Dilatation modérée à sévère</div></div><div class="dr"><div class="dr-lbl">PAPS estimée</div><div class="dr-val">42 mmHg (légère)</div></div><div class="dr"><div class="dr-lbl">PVR cathétérisme</div><div class="dr-val">1.8 WU</div></div><div class="dr"><div class="dr-lbl">IRM cardiaque</div><div class="dr-val">Confirmation anatomique RVPA + CIA SV</div></div>
+      <div class="dr"><div class="dr-lbl">Type CIA</div><div class="dr-val"><strong>Sinus veineux supérieur 22×18 mm</strong></div></div><div class="dr"><div class="dr-lbl">Localisation</div><div class="dr-val"><strong>Jonction VCS-OD</strong> (pas FO)</div></div><div class="dr"><div class="dr-lbl">Berge supérieure</div><div class="dr-val"><strong>ABSENTE</strong> (caractéristique)</div></div><div class="dr"><div class="dr-lbl"><strong>RVPPA</strong></div><div class="dr-val"><strong>VPDS → VCS</strong> (anomalie associée)</div></div><div class="dr"><div class="dr-lbl">Qp/Qs</div><div class="dr-val"><strong>2.1</strong> (CIA + RVPPA additionnés)</div></div><div class="dr"><div class="dr-lbl">FEVD</div><div class="dr-val">54% conservée</div></div><div class="dr"><div class="dr-lbl">VD</div><div class="dr-val">Dilaté</div></div><div class="dr"><div class="dr-lbl">Strain VD</div><div class="dr-val"><strong>–20%</strong> normal</div></div><div class="dr"><div class="dr-lbl">Diagnostic ETT seule</div><div class="dr-val"><strong>INSUFFISANT</strong> · ETO + scanner obligatoires</div></div><div class="dr"><div class="dr-lbl">Scanner cardiaque</div><div class="dr-val">Confirme anatomie + drainage VPDS</div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -1425,33 +1425,33 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
       <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
       <div class="slide-head-num">CAS 09 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.1.1</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.1.1 + 3-Strata HTAP</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong> · Critères Stade selon Tableau 4. Algorithme : Qp/Qs + PVR + dilatation VD + fonction VG.</div>
+      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong>. Critères Stade selon Tableau 4. Algorithme : PVR + Qp/Qs + dilatation VD + fonction VG + 3-Strata HTAP.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
-        <span class="ib-title">Stade C retenu :</span>
-        <ul><li>✓ NYHA II symptomatique</li><li>✓ <strong>CIA Sinus veineux supérieur</strong></li><li>✓ <strong>RVPA partiel droit</strong> associé</li><li>✓ Qp/Qs 2.4 très significatif</li><li>✓ PVR < 2 WU</li></ul>
+        <span class="ib-title">Stade B retenu :</span>
+        <ul><li>✓ NYHA II · Stade B</li><li>✓ <strong>CIA Sinus Veineux Supérieur</strong></li><li>✓ <strong>RVPPA VPDS → VCS</strong> (80-90% des cas)</li><li>✓ <strong>Step-up satimétrie</strong> (signe diagnostic)</li><li>✓ Strain VD –20% normal</li><li>✓ PVR 2.2 WU (faible)</li><li><strong>⚠️ Amplatzer OS IMPOSSIBLE</strong></li></ul>
       </div>
     </div>
-    <div class="card" style="border-left:4px solid #A78BFA">
+    <div class="card" style="border-left:4px solid #22D3EE">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
-        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#A78BFA;line-height:1">C</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — Sinus veineux + RVPA</div>
-        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-C</strong></div>
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#22D3EE;line-height:1">B</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade B — Anatomie complexe · hémodynamique favorable</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>I-B</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>Chirurgie indispensable (anatomie non favorable percutané)</li></ul>
+      <ul><li>Centre ACHD + chirurgie cardiaque expert</li><li>Décision Warden vs stent</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -1459,14 +1459,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
       <div class="slide-head-num">CAS 09 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Cathétérisme</div>
+      <div class="slide-head-sub">ECG · Biologie · Cathétérisme · 3-Strata · Tests</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 76/min · onde P inversée DII (rythme bas-OD)</div></div><div class="dr"><div class="dr-lbl">HVD</div><div class="dr-val">Modérée · BBD incomplet</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>520 pg/mL</strong></div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">ECG</div><div class="dr-val">RS 72 · BBD incomplet</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">Modéré</div></div><div class="dr"><div class="dr-lbl">Cathétérisme — PAPM</div><div class="dr-val">Modérée</div></div><div class="dr"><div class="dr-lbl"><strong>PVR</strong></div><div class="dr-val"><strong>2.2 WU</strong> (faible)</div></div><div class="dr"><div class="dr-lbl"><strong>Step-up satimétrie</strong></div><div class="dr-val"><strong>OD 68% → VCS 76% → AP 82%</strong> (signe diagnostic RVPPA)</div></div><div class="dr"><div class="dr-lbl">3-Strata risque</div><div class="dr-val"><strong>FAIBLE</strong></div></div><div class="dr"><div class="dr-lbl">Test ballon ETO</div><div class="dr-val">Faisabilité stent couvert à évaluer</div></div><div class="dr"><div class="dr-lbl">Distance VPDS-CIA</div><div class="dr-val">À mesurer (> 15 mm requis pour stent)</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -1474,18 +1474,18 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
       <div class="slide-head-num">CAS 09 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
-      <div class="slide-head-sub">ACC 2025 · Section 4.1.1</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.1.1 + 4.4.6</div>
     </div>
     
     <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
       <div class="dec-t" style="color:#34D399">
-        <span class="cor c1">COR 1</span>Rec. 4 COR 1 — Chirurgie obligatoire
+        <span class="cor c1">COR 1</span>Warden chirurgical (gold standard) ou stent couvert (alternative)
       </div>
-      <div class="dec-b"><strong>Rec. 4 COR 1 B-NR</strong> : CIA + Qp/Qs ≥ 1.5 + dilatation VD + PVR < 2 WU → fermeture recommandée.<br><br><strong>Particularité anatomique :</strong> CIA <strong>sinus veineux supérieur</strong> + RVPA partiel = <strong>fermeture percutanée NON FAISABLE</strong> (anatomie complexe avec rebord déficient et drainage anormal des veines pulmonaires).<br><br><strong>Chirurgie obligatoire</strong> avec correction des deux lésions simultanément (technique de Warden ou patch double).</div>
-      <div class="dec-action">➜ <strong>Chirurgie programmée :</strong> fermeture CIA SV par patch + redirection RVPA droit vers OG (technique de Warden ou réimplantation). Centre ACHD expert avec expérience en RVPA. Surveillance rythme sinusal post-op (risque dysfonction nœud sinusal).</div>
+      <div class="dec-b"><strong>CIA sinus veineux ≠ CIA OS — anatomie fondamentalement différente :</strong><br>• Localisation jonction VCS-OD (pas centre FO)<br>• <strong>Berge supérieure ABSENTE</strong> → Amplatzer OS tomberait dans la VCS<br>• <strong>RVPPA quasi-constante</strong> (80-90%) : VPDS → VCS<br>• Représente 5-10% des CIA adultes<br><br><strong>Option 1 — Warden (COR I gold standard) :</strong><br>• Réimplantation VPDS dans OG + fermeture CIA SV<br>• Correction bidirectionnelle en un temps<br>• Succès > 95%<br>• Risque : dysfonction nœud sinusal 5-10% (préserver nerfs autonomes péri-VCS)<br><br><strong>Option 2 — Stent couvert VCS-OD (COR 2b alternative) :</strong><br>• Distance VPDS-CIA > 15 mm obligatoire<br>• Test ballon ETO préalable confirme redirection flux VPDS vers OG<br>• Centre expert ACHD requis<br>• Avantage : évite la CEC</div>
+      <div class="dec-action">➜ <strong>Bilan préop :</strong><br>• Scanner cardiaque (anatomie complète)<br>• Test ballon ETO (faisabilité stent)<br>• Mesure distance VPDS-CIA<br><br>➜ <strong>RCP multidisciplinaire :</strong><br>• Si distance > 15 mm + test ballon favorable → <strong>Stent couvert percutané</strong><br>• Sinon → <strong>Chirurgie de Warden</strong> (gold standard)<br>• Préservation impérative nœud sinusal<br><br>➜ Suivi Table 12 Stade B post-correction · annuel</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -1493,25 +1493,25 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
       <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
     </div>
-    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
       <div class="slide-head-num">CAS 09 · SLIDE 6/6</div>
       <div class="slide-head-title">🎓 QCM & Take-home</div>
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — CIA Sinus veineux supérieur + RVPA partiel. Type d'intervention ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Fermeture percutanée Amplatzer</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Chirurgie : fermeture CIA SV + redirection RVPA (Warden)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Surveillance simple</div><div class="qcm-opt"><span class="qcm-letter">D</span>Anticoagulation</div>
-      <div class="qcm-explain">✓ La CIA sinus veineux + RVPA partiel n'est PAS éligible à la fermeture percutanée (rebord déficient + drainage veineux anormal). La chirurgie avec technique de Warden (ou patch double) corrige les deux lésions. Centre expert.</div>
+      <div class="qcm-q">QCM — CIA sinus veineux supérieur 22 mm + RVPPA + PVR 2.2 WU. Technique de fermeture ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Amplatzer ASD Occluder percutané</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Warden chirurgical (gold standard) ou stent couvert si anatomie favorable</div><div class="qcm-opt"><span class="qcm-letter">C</span>Surveillance simple</div><div class="qcm-opt"><span class="qcm-letter">D</span>Treat-to-Close PAH</div>
+      <div class="qcm-explain">✓ CIA sinus veineux + RVPPA = Amplatzer OS IMPOSSIBLE (berge supérieure absente). Warden (COR I gold standard) corrige les deux lésions. Alternative : stent couvert VCS-OD (COR 2b) si anatomie favorable. Préservation nœud sinusal essentielle.</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 09</span>
-      <ul><li>CIA Sinus veineux ≠ fermeture percutanée possible</li><li>RVPA partiel quasi systématiquement associé (95%)</li><li>Chirurgie obligatoire (Warden ou patch double)</li><li>Surveillance post-op : nœud sinusal (risque BSA)</li></ul>
+      <ul><li><strong>CIA sinus veineux ≠ OS</strong> (anatomie + technique)</li><li>Amplatzer OS IMPOSSIBLE (berge supérieure absente)</li><li><strong>RVPPA VPDS→VCS quasi constante (80-90%)</strong></li><li><strong>Warden = gold standard</strong> (CIA + RVPPA en un temps)</li><li>Stent couvert VCS-OD = alternative COR 2b</li><li>Step-up satimétrie = signe diagnostic RVPPA</li></ul>
     </div>
   </div>
 </div>
-
+ 
 <div class="cas" data-cas="10" style="--cas-color:#34D399;--cas-color2:#22D3EE">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -1519,29 +1519,29 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
       <div class="slide-head-num">CAS 10 · SLIDE 1/6</div>
-      <div class="slide-head-title">🎓 Synthèse pédagogique</div>
-      <div class="slide-head-sub">Récapitulatif — Algorithme décisionnel CIA</div>
+      <div class="slide-head-title">🎓 Synthèse pédagogique des 9 cas</div>
+      <div class="slide-head-sub">Récapitulatif — Algorithme décisionnel CIA 9 cas</div>
     </div>
     <div class="cas-intro">
       <div class="cas-intro-title" style="color:#34D399">🎯 Présentation clinique</div>
-      <div class="cas-intro-sub">Synthèse intégrative des 9 cas précédents avec l'algorithme décisionnel ACC 2025 Section 4.1.1 pour la prise en charge des CIA chez l'adulte.</div>
+      <div class="cas-intro-sub">Synthèse intégrative des 9 cas précédents avec l'algorithme décisionnel ACC 2025 Section 4.1.1 + 4.4.6 pour la prise en charge des CIA chez l'adulte. Tableau comparatif et messages-clés.</div>
     </div>
     <div class="card">
       <div class="card-title">🧑 Identification</div>
-      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>🎓 Synthèse pédagogique</strong></div></div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>🎓 Synthèse pédagogique des 9 cas</strong></div></div>
       <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">Algorithme décisionnel CIA</div></div>
-      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Section 4.1.1 ACC/AHA 2025</div></div>
-      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Intégration des 9 cas + 9 recommandations CIA</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Section 4.1.1 + 4.4.6 ACC/AHA 2025</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Intégration des 9 cas + 13 recommandations CIA</div></div>
     </div>
     <div class="card">
       <div class="card-title">📋 Antécédents</div>
-      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">Cas 01-09 explorés sur tout le spectre clinique</div></div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val">Cas 01-09 explorés sur tout le spectre clinique de COR I à COR 3</div></div>
     </div>
     <div class="card">
       <div class="card-title">🩺 Symptomatologie</div>
-      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-cyan">Synthèse</span> Intégration pédagogique</div></div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-cyan">Synthèse</span> Intégration pédagogique CORE-Team CSC Algeria</div></div>
       <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">—</div></div>
-      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">Application des 9 recommandations CIA selon profil patient</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">Application des 13 recommandations CIA selon profil patient</div></div>
     </div>
   </div>
   <div class="slide" data-slide="1">
@@ -1566,7 +1566,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT principales</div>
-      <div class="dr"><div class="dr-lbl">Cas 01</div><div class="dr-val">Secundum modeste asympto → Surveillance</div></div><div class="dr"><div class="dr-lbl">Cas 02</div><div class="dr-val">Stade D HTAP sévère → Treat-to-Close (Rec. 5 NEW)</div></div><div class="dr"><div class="dr-lbl">Cas 03</div><div class="dr-val">+ IT sévère → Chirurgie combinée</div></div><div class="dr"><div class="dr-lbl">Cas 04</div><div class="dr-val">Treat-to-Close réussi → Fermeture fenestrée</div></div><div class="dr"><div class="dr-lbl">Cas 05</div><div class="dr-val">FOP + AVC paradoxal → Fermeture (Rec. 6 NEW)</div></div><div class="dr"><div class="dr-lbl">Cas 06</div><div class="dr-val">+ Dysfonction diastolique VG → Fenestration</div></div><div class="dr"><div class="dr-lbl">Cas 07</div><div class="dr-val">+ Dysfonction VG sévère → PAS fermeture</div></div><div class="dr"><div class="dr-lbl">Cas 08</div><div class="dr-val">Eisenmenger → COR 3 Harm (Section 4.4.6)</div></div><div class="dr"><div class="dr-lbl">Cas 09</div><div class="dr-val">Sinus veineux + RVPA → Chirurgie Warden</div></div>
+      <div class="dr"><div class="dr-lbl"><strong>Cas 01</strong> F42 OS 26 mm</div><div class="dr-val">PVR 1.6 → <strong>COR I</strong> percutanée</div></div><div class="dr"><div class="dr-lbl"><strong>Cas 02</strong> H57 OS 28 mm + FEVD 25%</div><div class="dr-val">PVR 4.1 → <strong>COR 2a</strong> optim+rééval</div></div><div class="dr"><div class="dr-lbl"><strong>Cas 03</strong> F62 OS 30 mm + IT sévère</div><div class="dr-val">PVR 3.1 → <strong>Chir + annulo TV</strong></div></div><div class="dr"><div class="dr-lbl"><strong>Cas 04</strong> H57 OS 29 mm + HTAP</div><div class="dr-val">PVR 6.2 → <strong>COR 2a TTC M0</strong></div></div><div class="dr"><div class="dr-lbl"><strong>Cas 05</strong> Suite Cas 04 M6</div><div class="dr-val">PVR 4.8 → <strong>Fermeture post-TTC</strong></div></div><div class="dr"><div class="dr-lbl"><strong>Cas 06</strong> F52 OS 22 mm + FA</div><div class="dr-val">PVR 7.0 → <strong>COR 2b fenêtrée</strong></div></div><div class="dr"><div class="dr-lbl"><strong>Cas 07</strong> H70 OS 22 mm + Dysf VG</div><div class="dr-val">PVR 1.5 → <strong>COR 3 CI</strong></div></div><div class="dr"><div class="dr-lbl"><strong>Cas 08</strong> H42 OS 18 mm Eisenmenger</div><div class="dr-val">PVR 8.8 → <strong>COR 3 HARM</strong></div></div><div class="dr"><div class="dr-lbl"><strong>Cas 09</strong> H56 Sinus Veineux + RVPPA</div><div class="dr-val">PVR 2.2 → <strong>Warden / stent</strong></div></div>
     </div>
   </div>
   <div class="slide" data-slide="2">
@@ -1577,30 +1577,30 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
       <div class="slide-head-num">CAS 10 · SLIDE 3/6</div>
       <div class="slide-head-title">⚡ Classification & Stade</div>
-      <div class="slide-head-sub">Tableau 4 + Section 4.1.1</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.1.1 + 3-Strata HTAP</div>
     </div>
     <div class="app-use">
       <div class="app-use-title">→ Application Évaluateur Global</div>
-      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong> · Critères Stade selon Tableau 4. Algorithme : Qp/Qs + PVR + dilatation VD + fonction VG.</div>
+      <div class="app-use-body">Saisir <strong>CIA (Section 4.1.1)</strong>. Critères Stade selon Tableau 4. Algorithme : PVR + Qp/Qs + dilatation VD + fonction VG + 3-Strata HTAP.</div>
     </div>
     <div class="card">
       <div class="card-title">📊 Critères Stade — Cochés</div>
       <div class="ib ib-cyan" style="margin:0">
         <span class="ib-title">Stade ★ retenu :</span>
-        <ul><li>✓ 9 cas explorent tout le spectre</li><li>✓ 9 recommandations ACC 2025 appliquées</li><li>✓ Sections 4.1.1 + 4.4.6 (Eisenmenger)</li><li>✓ Algorithme : Qp/Qs + PVR + dilatation VD</li><li>✓ Recommandations NEW 2025 intégrées</li></ul>
+        <ul><li>✓ 9 cas explorent tout le spectre COR I → COR 3</li><li>✓ 13 recommandations ACC 2025 appliquées</li><li>✓ Sections 4.1.1 + 4.4.6 (Eisenmenger)</li><li>✓ Algorithme : PVR + Qp/Qs + fonction VG + IT + anatomie</li><li>✓ Stratification 3-Strata + Stade Table 4</li><li>✓ Treat-to-Close validé (Cas 04→05)</li><li>✓ Test ballon obligatoire si dysfonction VG suspectée</li></ul>
       </div>
     </div>
     <div class="card" style="border-left:4px solid #34D399">
       <div class="card-title">🎯 Verdict Stade Physiologique</div>
       <div style="text-align:center;padding:9px 0">
         <div style="font-family:Syne;font-size:48px;font-weight:800;color:#34D399;line-height:1">★</div>
-        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Récapitulatif pédagogique</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Récapitulatif pédagogique CORE-Team CSC</div>
         <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>Section 4.1.1</strong></div>
       </div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">📌 Conséquences classification</span>
-      <ul><li>Maîtrise de l'algorithme décisionnel CIA</li><li>Préparation diplôme/évaluation</li></ul>
+      <ul><li>Maîtrise algorithme CIA</li><li>Préparation diplôme/évaluation</li></ul>
     </div>
   </div>
   <div class="slide" data-slide="3">
@@ -1611,11 +1611,11 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
       <div class="slide-head-num">CAS 10 · SLIDE 4/6</div>
       <div class="slide-head-title">🔬 Bilan complémentaire</div>
-      <div class="slide-head-sub">ECG · Biologie · Cathétérisme</div>
+      <div class="slide-head-sub">ECG · Biologie · Cathétérisme · 3-Strata · Tests</div>
     </div>
     <div class="card">
-      <div class="card-title">📈 ECG & Biologie</div>
-      <div class="dr"><div class="dr-lbl">Rec. 1</div><div class="dr-val">ASD + PAH → spécialiste HTAP (COR 1)</div></div><div class="dr"><div class="dr-lbl">Rec. 2</div><div class="dr-val">Secundum isolée → percutané préféré (COR 1 NEW)</div></div><div class="dr"><div class="dr-lbl">Rec. 3</div><div class="dr-val">Embolie paradoxale → fermeture (COR 1 NEW)</div></div><div class="dr"><div class="dr-lbl">Rec. 4</div><div class="dr-val">Qp/Qs ≥ 1.5 + dilat VD + PVR < 2 → fermeture (COR 1)</div></div><div class="dr"><div class="dr-lbl">Rec. 5</div><div class="dr-val">PVR 5-8 WU + réactivité → Treat-to-Close (COR 2a NEW)</div></div><div class="dr"><div class="dr-lbl">Rec. 6</div><div class="dr-val">Embolie paradoxale + FOP → fermeture (COR 1 NEW)</div></div>
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">Rec. #1 COR I</div><div class="dr-val">ETO obligatoire avant fermeture</div></div><div class="dr"><div class="dr-lbl">Rec. #5 COR I</div><div class="dr-val">Qp/Qs ≥ 1.5 + dilat VD + PVR ≤ 2 → fermeture</div></div><div class="dr"><div class="dr-lbl">Rec. #6 COR I B-NR</div><div class="dr-val">Percutané préféré (CIA OS isolée)</div></div><div class="dr"><div class="dr-lbl">Rec. #8 COR 2a</div><div class="dr-val">PVR 2-5 WU = optimisation + RCP</div></div><div class="dr"><div class="dr-lbl">Rec. #9 COR 2a</div><div class="dr-val">PVR 5-8 WU = Treat-to-Close</div></div><div class="dr"><div class="dr-lbl">Rec. #10 COR 2b</div><div class="dr-val">Échec TTC + bonne fonction VD = fenêtrée</div></div><div class="dr"><div class="dr-lbl">Rec. #4 supportive</div><div class="dr-val">Test ballon si âge > 60 + comorbidités VG</div></div><div class="dr"><div class="dr-lbl">Rec. #13 COR 3 HARM</div><div class="dr-val">Eisenmenger = CI absolue à vie</div></div><div class="dr"><div class="dr-lbl">3-Strata</div><div class="dr-val">Évaluation HTAP par TAPSE, BNP, épanchement, TM6M</div></div>
     </div>
   </div>
   <div class="slide" data-slide="4">
@@ -1626,15 +1626,15 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
       <div class="slide-head-num">CAS 10 · SLIDE 5/6</div>
       <div class="slide-head-title">⚕️ Décision thérapeutique</div>
-      <div class="slide-head-sub">ACC 2025 · Section 4.1.1</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.1.1 + 4.4.6</div>
     </div>
     
     <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
       <div class="dec-t" style="color:#34D399">
         <span class="cor c1">COR 1</span>Algorithme décisionnel CIA — Synthèse
       </div>
-      <div class="dec-b"><strong>Étape 1 — Diagnostic anatomique :</strong> ETT + IRM/ETO si CIA sinus veineux ou complexe<br><br><strong>Étape 2 — Évaluation hémodynamique :</strong> Qp/Qs + PVR cathétérisme + réactivité NO<br><br><strong>Étape 3 — Décision :</strong><br>• Embolie paradoxale → Fermeture (Rec. 3, 6 NEW)<br>• Qp/Qs ≥ 1.5 + dilat VD + PVR < 2 → Fermeture (Rec. 4)<br>• PVR 2-5 → Fermeture COR 2a + PAH si nécessaire<br>• PVR 5-8 + réactivité → Treat-to-Close (Rec. 5 NEW)<br>• PVR > 10 (Eisenmenger) → COR 3 Harm pas fermeture<br>• Dysfonction VG sévère → fenêtre ou pas fermeture</div>
-      <div class="dec-action">➜ <strong>Centre ACHD expert</strong> pour décision multidisciplinaire dans tous les cas complexes.</div>
+      <div class="dec-b"><strong>Étape 1 — Diagnostic anatomique :</strong> ETT + ETO + IRM/scanner (CIA OS vs Sinus Veineux vs OS+RVPPA)<br><br><strong>Étape 2 — Évaluation hémodynamique :</strong> Qp/Qs + PVR cathétérisme + test NO + 3-Strata<br><br><strong>Étape 3 — Évaluation fonction VG :</strong> FEVG + E/e' + LAVI · si > 60 ans ou comorbidités → test ballon (PCWP)<br><br><strong>Étape 4 — Décision :</strong><br>• PVR ≤ 2 + VD dilaté + Qp/Qs ≥ 1.5 → Fermeture COR I<br>• PVR 2-5 → COR 2a optimisation + RCP<br>• PVR 5-8 → COR 2a Treat-to-Close<br>• Échec TTC + bonne fonction VD → COR 2b fenêtrée<br>• PVR > 8 + shunt D→G → COR 3 HARM (Eisenmenger)<br>• Dysfonction VG + test ballon positif → COR 3 (CI réversible)<br>• CIA + IT sévère → chirurgie + annuloplastie<br>• Sinus veineux + RVPPA → Warden ou stent couvert</div>
+      <div class="dec-action">➜ <strong>Centre ACHD expert</strong> + RCP multidisciplinaire (ACHD + HTAP + chirurgie + IC) pour tous les cas complexes.</div>
     </div>
   </div>
   <div class="slide" data-slide="5">
@@ -1648,26 +1648,26 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">Validation pédagogique</div>
     </div>
     <div class="qcm">
-      <div class="qcm-q">QCM — Quel facteur principal détermine la stratégie thérapeutique en CIA ?</div>
-      <div class="qcm-opt"><span class="qcm-letter">A</span>Âge du patient seul</div><div class="qcm-opt"><span class="qcm-letter">B</span>Taille de la CIA isolément</div><div class="qcm-opt correct"><span class="qcm-letter">C</span>PVR + Qp/Qs + dilatation VD + fonction VG (algorithme intégré)</div><div class="qcm-opt"><span class="qcm-letter">D</span>BNP exclusivement</div>
-      <div class="qcm-explain">✓ La décision en CIA est multifactorielle : type anatomique (secundum/primum/sinus veineux), Qp/Qs, PVR, dilatation VD, fonction VG, embolie paradoxale, comorbidités. L'algorithme ACC 2025 intègre ces paramètres pour guider la décision.</div>
+      <div class="qcm-q">QCM — Quel est le facteur principal qui détermine la stratégie thérapeutique en CIA ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Taille de la CIA isolément</div><div class="qcm-opt"><span class="qcm-letter">B</span>Âge du patient seul</div><div class="qcm-opt correct"><span class="qcm-letter">C</span>Algorithme intégré : anatomie + PVR + fonction VG + IT + comorbidités</div><div class="qcm-opt"><span class="qcm-letter">D</span>BNP exclusivement</div>
+      <div class="qcm-explain">✓ La décision CIA est multifactorielle : type anatomique (OS vs sinus veineux), Qp/Qs, PVR, dilatation VD, fonction VG (test ballon), IT associée, embolie paradoxale, comorbidités. L'algorithme ACC 2025 + 3-Strata intègre ces paramètres.</div>
     </div>
     <div class="ib ib-cyan">
       <span class="ib-title">🎯 Take-home messages — Cas 10</span>
-      <ul><li>Algorithme = anatomie + hémodynamique + fonction VG</li><li>9 recommandations CIA dans Section 4.1.1</li><li>Section 4.4.6 dédiée Eisenmenger (NEW 2025)</li><li>Centre ACHD expert pour cas complexes</li><li>Treat-to-Close = nouveau paradigme HTAP modérée</li></ul>
+      <ul><li>Algorithme = anatomie + hémodynamique + fonction VG + IT</li><li>13 recommandations CIA dans Section 4.1.1</li><li>Section 4.4.6 dédiée Eisenmenger (NEW 2025)</li><li><strong>Treat-to-Close</strong> validé (Cas 04→05)</li><li>Test ballon = standard si dysfonction VG suspectée</li><li>Centre ACHD + RCP multidisciplinaire pour tous les complexes</li></ul>
     </div>
   </div>
 </div>
-
+ 
 </div>
-
+ 
 <div id="botnav">
   <div class="bn-wrap">
     <button class="bn-btn bn-prev" id="btn-prev" onclick="navSlide(-1)">← Précédent</button>
     <button class="bn-btn bn-next" id="btn-next" onclick="navSlide(1)">Suivant →</button>
   </div>
 </div>
-
+ 
 <script>
 var STATE = { curCas: 1, curSlide: 0 };
 var CAS_COLORS = {
@@ -1682,7 +1682,7 @@ var CAS_COLORS = {
   9: { color: '#A78BFA', color2: '#FB7185' },
   10:{ color: '#34D399', color2: '#22D3EE' }
 };
-
+ 
 function showCas(n) {
   STATE.curCas = n;
   STATE.curSlide = 0;
@@ -1700,7 +1700,7 @@ function showCas(n) {
   document.getElementById('cas-badge').textContent = 'CAS '+n+'/10';
   showSlide(0);
 }
-
+ 
 function showSlide(s) {
   STATE.curSlide = s;
   var cas = document.querySelector('.cas[data-cas="'+STATE.curCas+'"]');
@@ -1717,7 +1717,7 @@ function showSlide(s) {
   if (STATE.curCas===10 && s===5) document.getElementById('btn-next').textContent = 'Fin ✓';
   window.scrollTo({top:0, behavior:'smooth'});
 }
-
+ 
 function navSlide(dir) {
   var newSlide = STATE.curSlide + dir;
   if (newSlide < 0) {
@@ -1736,7 +1736,7 @@ function navSlide(dir) {
   }
   showSlide(newSlide);
 }
-
+ 
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.cn').forEach(function(b){
     b.addEventListener('click', function(){
