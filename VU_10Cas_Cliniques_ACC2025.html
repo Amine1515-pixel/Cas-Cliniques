@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>10 Cas Cliniques · Ventricule Unique · ACC 2025 · CSC Algeria</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#06101E;--bg2:#0B1928;--bg3:#0F2035;--card:#0E1D33;
+  --sky:#38BDF8;--mint:#34D399;--gold:#F0A030;--red:#E03050;
+  --pur:#A78BFA;--orange:#FB923C;--teal:#00C4AE;--cyan:#22D3EE;--rose:#FB7185;
+  --w1:#EEF5FF;--w2:rgba(238,245,255,.65);--w3:rgba(238,245,255,.32);--w4:rgba(238,245,255,.14);
+  --brd:rgba(255,255,255,.08);--brd2:rgba(255,255,255,.16);
+  --accent:var(--cyan);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM Sans",sans-serif;font-size:14px;overflow-x:hidden}
+
+#topbar{background:rgba(6,16,30,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--brd2);padding:10px 14px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:200}
+.tb-logo{width:38px;height:38px;border-radius:9px;background:#fff;padding:2px;flex-shrink:0;overflow:hidden}
+.tb-logo img{width:100%;height:100%;object-fit:contain}
+.tb-info{flex:1;min-width:0}
+.tb-title{font-family:"Syne",sans-serif;font-size:14px;font-weight:700;color:var(--accent);line-height:1.2}
+.tb-sub{font-size:9px;color:var(--w3);margin-top:1px}
+.tb-cas-badge{background:rgba(34,211,238,.2);border:1px solid rgba(34,211,238,.4);border-radius:7px;padding:4px 9px;font-size:10px;font-weight:700;color:var(--cyan);flex-shrink:0;font-family:"JetBrains Mono",monospace}
+
+#cas-nav{background:rgba(6,16,30,.95);border-bottom:1px solid var(--brd);padding:9px 12px;display:flex;gap:6px;overflow-x:auto;position:sticky;top:60px;z-index:190}
+#cas-nav::-webkit-scrollbar{display:none}
+.cn{padding:7px 14px;border-radius:18px;font-family:"Syne",sans-serif;font-size:10px;font-weight:700;cursor:pointer;border:1.5px solid var(--brd2);background:transparent;color:var(--w3);white-space:nowrap;flex-shrink:0;transition:all .15s}
+.cn.on{background:var(--cas-color,var(--cyan));color:#06101E;border-color:var(--cas-color,var(--cyan))}
+.cn:active{transform:scale(.95)}
+
+#slides-nav{background:rgba(6,16,30,.95);border-bottom:1px solid var(--brd);padding:8px 12px;display:flex;gap:5px;overflow-x:auto;position:sticky;top:107px;z-index:185}
+#slides-nav::-webkit-scrollbar{display:none}
+.sn{padding:5px 10px;border-radius:14px;font-family:"DM Sans",sans-serif;font-size:10px;font-weight:600;cursor:pointer;border:1.5px solid var(--brd2);background:transparent;color:var(--w3);white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:5px}
+.sn .sn-num{font-family:"JetBrains Mono",monospace;font-size:9px;font-weight:700;background:rgba(255,255,255,.06);padding:1px 5px;border-radius:3px}
+.sn.on{background:var(--cas-color,var(--cyan));color:#06101E;border-color:var(--cas-color,var(--cyan))}
+.sn.on .sn-num{background:rgba(0,0,0,.2);color:#06101E}
+
+#content{padding:14px 13px 100px;max-width:520px;margin:0 auto}
+.cas{display:none}
+.cas.on{display:block}
+.slide{display:none;animation:fadeIn 0.3s}
+.slide.on{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+.card{background:var(--card);border-radius:13px;border:1px solid var(--brd);padding:14px;margin-bottom:11px}
+.card-title{font-family:"Syne",sans-serif;font-size:12px;font-weight:700;color:var(--cas-color,var(--accent));margin-bottom:11px;display:flex;align-items:center;gap:7px;padding-bottom:8px;border-bottom:1px solid var(--brd)}
+
+.slide-head{background:linear-gradient(135deg,var(--cas-color,var(--cyan)),var(--cas-color2,var(--mint)));padding:14px 16px;border-radius:14px;margin-bottom:13px;color:#fff;position:relative;overflow:hidden}
+.slide-head::after{content:'';position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:rgba(255,255,255,.1);border-radius:50%}
+.slide-head-num{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;opacity:.85;letter-spacing:1px;margin-bottom:3px}
+.slide-head-title{font-family:"Syne",sans-serif;font-size:17px;font-weight:800;line-height:1.2}
+.slide-head-sub{font-size:11px;opacity:.85;margin-top:3px}
+
+.cas-intro{background:linear-gradient(135deg,rgba(34,211,238,.15),rgba(52,211,153,.1));border:1px solid var(--cas-color,var(--cyan));border-radius:12px;padding:13px 14px;margin-bottom:12px}
+.cas-intro-title{font-family:"Syne",sans-serif;font-size:14px;font-weight:800;color:var(--cas-color,var(--cyan));margin-bottom:5px}
+.cas-intro-sub{font-size:11px;color:var(--w2);line-height:1.5}
+
+.dr{display:flex;padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.06);font-size:12.5px;align-items:flex-start;gap:10px}
+.dr:last-child{border-bottom:none}
+.dr-lbl{flex:0 0 110px;color:var(--w3);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.3px;padding-top:1px}
+.dr-val{flex:1;color:var(--w1);font-weight:500;line-height:1.5}
+.dr-val strong{color:var(--cas-color,var(--accent))}
+
+.chip{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:5px;font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;margin:2px 3px 2px 0}
+.chip-mint{background:rgba(52,211,153,.18);color:var(--mint)}
+.chip-sky{background:rgba(56,189,248,.18);color:var(--sky)}
+.chip-gold{background:rgba(240,160,48,.18);color:var(--gold)}
+.chip-red{background:rgba(224,48,80,.18);color:var(--red)}
+.chip-pur{background:rgba(167,139,250,.18);color:var(--pur)}
+.chip-cyan{background:rgba(34,211,238,.18);color:var(--cyan)}
+.chip-orange{background:rgba(251,146,60,.18);color:var(--orange)}
+.chip-rose{background:rgba(251,113,133,.18);color:var(--rose)}
+
+.ib{border-radius:10px;padding:11px 13px;font-size:12px;line-height:1.65;border-left:3px solid;margin-bottom:10px}
+.ib strong{color:var(--w1)}
+.ib-sky{background:rgba(56,189,248,.08);border-color:var(--sky);color:var(--w2)}
+.ib-mint{background:rgba(52,211,153,.08);border-color:var(--mint);color:var(--w2)}
+.ib-gold{background:rgba(240,160,48,.08);border-color:var(--gold);color:var(--w2)}
+.ib-red{background:rgba(224,48,80,.1);border-color:var(--red);color:var(--w2)}
+.ib-pur{background:rgba(167,139,250,.08);border-color:var(--pur);color:var(--w2)}
+.ib-orange{background:rgba(251,146,60,.08);border-color:var(--orange);color:var(--w2)}
+.ib-cyan{background:rgba(34,211,238,.08);border-color:var(--cyan);color:var(--w2)}
+.ib-rose{background:rgba(251,113,133,.08);border-color:var(--rose);color:var(--w2)}
+.ib-title{font-family:"Syne",sans-serif;font-size:11.5px;font-weight:700;color:var(--w1);display:block;margin-bottom:5px}
+.ib ul{margin:5px 0 0 17px;padding:0}
+.ib li{margin-bottom:4px;line-height:1.55}
+
+.app-use{background:linear-gradient(135deg,rgba(34,211,238,.12),rgba(167,139,250,.06));border:1.5px solid rgba(34,211,238,.3);border-radius:12px;padding:13px 14px;margin-bottom:11px;position:relative}
+.app-use::before{content:'📱';position:absolute;top:-12px;left:13px;background:var(--bg);padding:2px 9px;border-radius:14px;font-size:14px;border:1.5px solid rgba(34,211,238,.3)}
+.app-use-title{font-family:"Syne",sans-serif;font-size:11px;font-weight:800;color:var(--cyan);text-transform:uppercase;letter-spacing:.5px;margin-top:3px;margin-bottom:7px}
+.app-use-body{font-size:12px;color:var(--w2);line-height:1.65}
+.app-use-body strong{color:var(--w1)}
+
+.cor{display:inline-flex;align-items:center;padding:2px 7px;border-radius:5px;font-family:"JetBrains Mono",monospace;font-size:9px;font-weight:700;margin-right:5px}
+.c1{background:rgba(52,211,153,.2);color:var(--mint)}
+.c2a{background:rgba(56,189,248,.2);color:var(--sky)}
+.c2b{background:rgba(240,160,48,.2);color:var(--gold)}
+.c3{background:rgba(224,48,80,.18);color:var(--red);border:1px solid rgba(224,48,80,.4)}
+
+.dec{border-radius:12px;border:2px solid;padding:13px;margin-bottom:10px}
+.dec-t{font-family:"Syne",sans-serif;font-size:13px;font-weight:800;margin-bottom:7px;line-height:1.3}
+.dec-b{font-size:12px;color:var(--w2);line-height:1.65}
+.dec-action{margin-top:8px;padding:8px 11px;background:rgba(255,255,255,.04);border-radius:7px;font-size:11.5px;color:var(--w2);font-style:italic;line-height:1.55}
+
+.canva-embed-wrap{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:14px;overflow:hidden;margin-bottom:8px;box-shadow:0 4px 20px rgba(0,0,0,.4);border:1px solid var(--brd2)}
+.canva-embed-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block}
+.canva-caption{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,rgba(125,60,224,.15),rgba(58,163,243,.1));border:1px solid rgba(125,60,224,.3);border-radius:10px;padding:9px 12px;font-size:11px;color:var(--w2);margin-bottom:11px}
+.canva-caption-id{font-family:"JetBrains Mono",monospace;font-size:9px;color:var(--w3);letter-spacing:.5px}
+.canva-caption-link{color:#fff;background:linear-gradient(135deg,#7d3ce0,#3aa3f3);padding:5px 10px;border-radius:6px;text-decoration:none;font-size:10px;font-weight:600;white-space:nowrap}
+
+.tbl{width:100%;border-collapse:collapse;font-size:11.5px;margin:9px 0;border-radius:8px;overflow:hidden}
+.tbl th{background:rgba(34,211,238,.18);color:var(--cyan);text-align:left;padding:7px 10px;font-family:"Syne",sans-serif;font-weight:700;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;border:1px solid var(--brd)}
+.tbl td{padding:7px 10px;border:1px solid var(--brd);color:var(--w2);line-height:1.5}
+.tbl tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+
+.slide-progress{display:flex;gap:4px;justify-content:center;margin-bottom:14px}
+.sp-dot{width:24px;height:3px;background:var(--brd2);border-radius:2px;transition:all .25s}
+.sp-dot.on{background:var(--cas-color,var(--cyan));width:32px}
+.sp-dot.done{background:var(--mint)}
+
+#botnav{position:fixed;bottom:0;left:0;right:0;background:rgba(6,16,30,.97);backdrop-filter:blur(14px);border-top:1px solid var(--brd2);padding:10px 13px;z-index:300}
+.bn-wrap{max-width:520px;margin:0 auto;display:flex;gap:8px}
+.bn-btn{flex:1;padding:11px;border-radius:11px;border:none;font-family:"Syne",sans-serif;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
+.bn-prev{background:transparent;border:1.5px solid var(--brd2);color:var(--w2)}
+.bn-next{background:var(--cas-color,var(--cyan));color:#06101E}
+.bn-btn:disabled{opacity:.3;cursor:not-allowed}
+.bn-btn:active{transform:scale(.97)}
+
+.qcm{background:rgba(34,211,238,.08);border:1.5px solid rgba(34,211,238,.3);border-radius:11px;padding:13px;margin-bottom:11px}
+.qcm-q{font-family:"Syne",sans-serif;font-size:13px;font-weight:700;color:var(--cyan);margin-bottom:9px;line-height:1.4}
+.qcm-opt{display:flex;align-items:flex-start;gap:8px;padding:9px 11px;background:var(--bg3);border-radius:8px;border:1.5px solid var(--brd);margin-bottom:5px;font-size:12px;color:var(--w2);line-height:1.5;cursor:pointer}
+.qcm-opt.correct{border-color:var(--mint);background:rgba(52,211,153,.1);color:var(--w1)}
+.qcm-letter{font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:700;color:var(--cyan);flex-shrink:0;width:18px;height:18px;border-radius:4px;background:rgba(34,211,238,.15);display:flex;align-items:center;justify-content:center}
+.qcm-opt.correct .qcm-letter{background:var(--mint);color:#06101E}
+.qcm-explain{margin-top:9px;padding:8px 11px;background:rgba(52,211,153,.07);border-left:3px solid var(--mint);border-radius:6px;font-size:11px;color:var(--w2);line-height:1.5;font-style:italic}
+</style>
+</head>
+<body>
+<div id="topbar">
+  <div class="tb-logo"><img id="top-logo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/wAARCAH4AfgDACIAAREBAhEB/9sAQwAIBgYHBgUIBwcHCQkICgwUDQwLCwwZEhMPFB0aHx4dGhwcICQuJyAiLCMcHCg3KSwwMTQ0NB8nOT04MjwuMzQy/9sAQwEJCQkMCwwYDQ0YMiEcITIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMAAAERAhEAPwD5/ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA9//Zl/5mn/ALdP/a1fQFfP/wCzL/zNP/bp/wC1q+gKAPgCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKK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" alt="CSC"></div>
+  <div class="tb-info">
+    <div class="tb-title">10 Cas Cliniques · Ventricule Unique</div>
+    <div class="tb-sub">CSC Algeria · ACHD CORE-Team · ACC/AHA 2025 (Section 4.5)</div>
+  </div>
+  <div class="tb-cas-badge" id="cas-badge">CAS 1/10</div>
+</div>
+<div id="cas-nav">
+  <button class="cn on" data-cas="1">📘 Cas 1</button>
+  <button class="cn" data-cas="2">📗 Cas 2</button>
+  <button class="cn" data-cas="3">📕 Cas 3</button>
+  <button class="cn" data-cas="4">📙 Cas 4</button>
+  <button class="cn" data-cas="5">📔 Cas 5</button>
+  <button class="cn" data-cas="6">📓 Cas 6</button>
+  <button class="cn" data-cas="7">📒 Cas 7</button>
+  <button class="cn" data-cas="8">📚 Cas 8</button>
+  <button class="cn" data-cas="9">📖 Cas 9</button>
+  <button class="cn" data-cas="10">🎯 Cas 10</button>
+</div>
+<div id="slides-nav">
+  <button class="sn on" data-slide="0"><span class="sn-num">01</span>Présentation</button>
+  <button class="sn" data-slide="1"><span class="sn-num">02</span>Iconographie</button>
+  <button class="sn" data-slide="2"><span class="sn-num">03</span>Stade</button>
+  <button class="sn" data-slide="3"><span class="sn-num">04</span>Bilan</button>
+  <button class="sn" data-slide="4"><span class="sn-num">05</span>Décision</button>
+  <button class="sn" data-slide="5"><span class="sn-num">06</span>Take-home</button>
+</div>
+<div id="content">
+
+<div class="cas on" data-cas="1" style="--cas-color:#34D399;--cas-color2:#22D3EE">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+      <div class="slide-head-num">CAS 01 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mr K.A., 25 ans (Atrésie tricuspide)</div>
+      <div class="slide-head-sub">Fontan extracardiaque — Suivi optimal Stade A</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#34D399">🌟 Présentation clinique</div>
+      <div class="cas-intro-sub">Patient avec atrésie tricuspide ayant bénéficié d'une circulation de Fontan extracardiaque dans l'enfance, fonctionnant de manière optimale à 25 ans. Représente le 'Fontan idéal' : asymptomatique, bonne fonction VU, hémodynamique préservée.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr K.A., 25 ans (Atrésie tricuspide)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">72 kg · 178 cm · BSA 1.89 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre actif</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Suivi annuel ACHD systématique</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>Atrésie tricuspide</strong> · Glenn bidirectionnel à 8 mois · <strong>Fontan extracardiaque tube Goretex 18 mm à 4 ans</strong> · pas de complications · suivi régulier centre ACHD</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-mint">I</span> Asymptomatique · activité sportive modérée (course 5 km · vélo)</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">TM6M 540 m · SpO₂ repos 95% · effort 92%</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 116/72 · FC 68 · Souffle systolique 1/6 modeste · pas d'OMI · pas d'hépatomégalie · pas d'IC</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+      <div class="slide-head-num">CAS 01 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Échographie</div>
+      <div class="slide-head-sub">Présentation Canva unifiée · ancre #3</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHIQm31Wus/view?embed#3" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#34D399">🎨 Cas 01</div>
+        <div class="canva-caption-id">DAHIQm31Wus · ancre #3</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHIQm31Wus/view#3" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/IRM principales</div>
+      <div class="dr"><div class="dr-lbl">Anatomie post-op</div><div class="dr-val"><strong>Fontan extracardiaque tube Goretex 18 mm</strong> · pas de fenestration</div></div><div class="dr"><div class="dr-lbl">Ventricule unique</div><div class="dr-val"><strong>VG morphologique</strong> · FE 58% conservée</div></div><div class="dr"><div class="dr-lbl">Fonction systolique VU</div><div class="dr-val">TAPSE équivalent normale · Strain GLS –18%</div></div><div class="dr"><div class="dr-lbl">Valve AV unique</div><div class="dr-val">Mitrale (anatomique) · pas de fuite</div></div><div class="dr"><div class="dr-lbl">Tube Fontan</div><div class="dr-val">Pas de gradient · pas de thrombose</div></div><div class="dr"><div class="dr-lbl">Veines hépatiques</div><div class="dr-val">Drainage préservé</div></div><div class="dr"><div class="dr-lbl">Foie cardiaque</div><div class="dr-val"><strong>Pas de fibrose stade ≥ 3</strong> (Fibroscan 7.2 kPa)</div></div><div class="dr"><div class="dr-lbl">Branches AP</div><div class="dr-val">Confluentes · symétriques · pas de sténose</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+      <div class="slide-head-num">CAS 01 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.5 (VU/Fontan) + 4.4.6 (Eisenmenger)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Ventricule Unique (Section 4.5)</strong>. Critères Stade : pression Fontan, FE VU, fuite AV, PLE, FALD, MELD-XI, CPET.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade A retenu :</span>
+        <ul><li>✓ Asymptomatique NYHA I</li><li>✓ <strong>Pression Fontan 12 mmHg</strong> ≤ 15 (idéale)</li><li>✓ Fonction VU conservée (FE 58%)</li><li>✓ <strong>Pas de fuite valve AV</strong></li><li>✓ Pas d'arythmies · pas de PLE</li><li>✓ Foie : pas de fibrose avancée</li><li>✓ MELD-XI 9 · CPET 72%</li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #34D399">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#34D399;line-height:1">A</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade A — Fontan idéal · suivi optimal</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>I-A</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>Suivi ACHD : annuel</li><li>ETT + Holter + CPET annuel · IRM tous les 3 ans</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+      <div class="slide-head-num">CAS 01 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Holter · CPET · Cathétérisme · FALD</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 68/min stable</div></div><div class="dr"><div class="dr-lbl">Holter 24h</div><div class="dr-val">Pas d'arythmie · ESV < 50/24h</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>120 pg/mL</strong> (normal pour Fontan)</div></div><div class="dr"><div class="dr-lbl">CPET — VO₂ peak</div><div class="dr-val"><strong>72% prédit</strong> (typique post-Fontan)</div></div><div class="dr"><div class="dr-lbl">Cathétérisme — PVR</div><div class="dr-val"><strong>1.6 WU</strong> normale</div></div><div class="dr"><div class="dr-lbl">PAPM (= Fontan pressure)</div><div class="dr-val"><strong>12 mmHg</strong> ✅</div></div><div class="dr"><div class="dr-lbl">PTDVG (LVEDP)</div><div class="dr-val">8 mmHg normale</div></div><div class="dr"><div class="dr-lbl">Saturations Hémo</div><div class="dr-val">Air ambiant 95% · effort 92%</div></div><div class="dr"><div class="dr-lbl">MELD-XI</div><div class="dr-val">Score 9 (faible risque)</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+      <div class="slide-head-num">CAS 01 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.5 + 4.4.6 + 4.6 (Grossesse)</div>
+    </div>
+    
+    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#34D399">
+        <span class="cor c1">COR 1</span>Suivi ACHD à vie — Pas d'intervention
+      </div>
+      <div class="dec-b"><strong>Section 4.5.5 ACC 2025 — Fontan circulation :</strong> patient avec Fontan optimal nécessite un suivi <strong>spécialisé ACHD à vie</strong> même asymptomatique. Tous les patients Fontan développent à terme des complications (FALD, arythmies, PLE, dysfonction VU).<br><br><strong>Critères d'un Fontan 'optimal' (Stade A) :</strong><br>• Asymptomatique NYHA I-II<br>• Pression Fontan ≤ 15 mmHg<br>• Fonction VU préservée (FE > 50%)<br>• Pas de fuite AV significative<br>• Pas d'obstruction · pas de fenestration significative<br>• Foie : pas de fibrose avancée<br>• Pas d'arythmies</div>
+      <div class="dec-action">➜ <strong>Suivi annuel multimodal :</strong><br>• ETT + Doppler<br>• Holter ECG 24h<br>• CPET (VO₂ peak · pente VE/VCO₂)<br>• NT-proBNP<br>• <strong>IRM cardiaque + Fibroscan tous les 3 ans</strong> (FALD)<br>• Bilan hépatique annuel + α-foetoprotéine<br>• Counseling activité physique · contraception · vie sociale<br>• <strong>Anticoagulation/antiplaquettaire</strong> à vie selon protocole local</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#34D399,#22D3EE)">
+      <div class="slide-head-num">CAS 01 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — Patient Fontan extracardiaque optimal · NYHA I · pression Fontan 12 mmHg. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Aucun suivi nécessaire (asymptomatique)</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Suivi ACHD à vie multimodal (ETT + IRM + CPET + Fibroscan)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Anticoagulation curative immédiate</div><div class="qcm-opt"><span class="qcm-letter">D</span>Inscription liste transplantation préventive</div>
+      <div class="qcm-explain">✓ Tous les patients Fontan, même optimaux, nécessitent un suivi ACHD à vie. Les complications (FALD, arythmies, PLE) se développent silencieusement. ETT + Holter + CPET annuels · IRM + Fibroscan tous les 3 ans.</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 01</span>
+      <ul><li>Fontan = suivi spécialisé ACHD à VIE même si asymptomatique</li><li>Pression Fontan ≤ 15 mmHg = critère hémodynamique central</li><li>FALD (Fontan-Associated Liver Disease) = surveillance Fibroscan</li><li>CPET = outil pronostique (VO₂ peak < 50% = mauvais pronostic)</li><li>MELD-XI = score pronostique sans INR (anticoagulation)</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="2" style="--cas-color:#22D3EE;--cas-color2:#38BDF8">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+      <div class="slide-head-num">CAS 02 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mme F.M., 28 ans (HLHS · VU droit)</div>
+      <div class="slide-head-sub">Fontan + Fuite valve AV modérée — Indication geste valvulaire</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#22D3EE">🩺 Présentation clinique</div>
+      <div class="cas-intro-sub">Patient avec VU droit (HLHS · hypoplasie cœur gauche) post-Fontan ayant développé une fuite AV (tricuspide systémique) modérée à sévère avec dilatation VU et symptômes. Indication discutée de plastie ou remplacement valvulaire.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme F.M., 28 ans (HLHS · VU droit)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">62 kg · 168 cm · BSA 1.71 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Enseignante</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Dyspnée progressive 12 mois · NYHA II→III</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>HLHS · Norwood à J7 · Glenn 6 mois · Fontan latéral à 3 ans</strong> · valve AV systémique = tricuspide · suivi ACHD régulier</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II-III</span> Dyspnée d'effort progressive · fatigue · pas d'OMI · pas de PLE</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">TM6M 380 m · SpO₂ repos 92% · effort 87%</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 108/68 · <strong>Souffle holosystolique 3/6 endapexien</strong> · galop ventriculaire · pas d'hépatomégalie majeure</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+      <div class="slide-head-num">CAS 02 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Échographie</div>
+      <div class="slide-head-sub">Présentation Canva unifiée · ancre #4</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHIQm31Wus/view?embed#4" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#22D3EE">🎨 Cas 02</div>
+        <div class="canva-caption-id">DAHIQm31Wus · ancre #4</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHIQm31Wus/view#4" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/IRM principales</div>
+      <div class="dr"><div class="dr-lbl">Anatomie post-op</div><div class="dr-val">Fontan latéral · valve AV systémique = <strong>tricuspide morphologique</strong></div></div><div class="dr"><div class="dr-lbl">Ventricule unique</div><div class="dr-val"><strong>VD morphologique</strong> · FE 48% (limite altérée)</div></div><div class="dr"><div class="dr-lbl">Strain VU GLS</div><div class="dr-val">–14% réduit</div></div><div class="dr"><div class="dr-lbl"><strong>Fuite valve AV</strong></div><div class="dr-val"><strong>Modérée à sévère</strong> · jet central</div></div><div class="dr"><div class="dr-lbl">EROA</div><div class="dr-val"><strong>0.32 cm²</strong></div></div><div class="dr"><div class="dr-lbl">Vena contracta</div><div class="dr-val"><strong>0.7 cm</strong></div></div><div class="dr"><div class="dr-lbl">Anneau AV</div><div class="dr-val"><strong>42 mm dilaté</strong></div></div><div class="dr"><div class="dr-lbl">VU dilatation</div><div class="dr-val">Volume télédiastolique <strong>indexé 142 mL/m²</strong></div></div><div class="dr"><div class="dr-lbl">Pression Fontan estimée</div><div class="dr-val">16 mmHg (limite ↑)</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+      <div class="slide-head-num">CAS 02 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.5 (VU/Fontan) + 4.4.6 (Eisenmenger)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Ventricule Unique (Section 4.5)</strong>. Critères Stade : pression Fontan, FE VU, fuite AV, PLE, FALD, MELD-XI, CPET.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade C retenu :</span>
+        <ul><li>✓ NYHA II-III · symptômes attribuables</li><li>✓ <strong>Fuite AV modérée-sévère</strong> (EROA 0.32, VC 0.7)</li><li>✓ <strong>Anneau AV 42 mm dilaté</strong></li><li>✓ <strong>FE VU 48%</strong> limite altérée</li><li>✓ VolTD VU 142 mL/m² (dilatation)</li><li>✓ NT-proBNP 620 + CPET 54%</li><li>✓ Pression Fontan 17 mmHg ↑</li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #22D3EE">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#22D3EE;line-height:1">C</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — Fontan + IT systémique sévère</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-C</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>Centre Fontan expert</li><li>Discussion plastie vs remplacement</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+      <div class="slide-head-num">CAS 02 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Holter · CPET · Cathétérisme · FALD</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 78/min</div></div><div class="dr"><div class="dr-lbl">Holter 24h</div><div class="dr-val">ESV monomorphes occasionnelles · pas de TVNS</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>620 pg/mL</strong> ↑</div></div><div class="dr"><div class="dr-lbl">CPET — VO₂ peak</div><div class="dr-val"><strong>54% prédit</strong> ↓ (limite haute pour intervention)</div></div><div class="dr"><div class="dr-lbl">Cathétérisme — PVR</div><div class="dr-val">1.8 WU</div></div><div class="dr"><div class="dr-lbl">Pression Fontan</div><div class="dr-val"><strong>17 mmHg</strong> ↑</div></div><div class="dr"><div class="dr-lbl">Saturations</div><div class="dr-val">AO 92% · OG/auriculette commune 95%</div></div><div class="dr"><div class="dr-lbl">MELD-XI</div><div class="dr-val">12 (intermédiaire)</div></div><div class="dr"><div class="dr-lbl">IRM cardiaque</div><div class="dr-val">FE 48% · VolTD VU 145 mL/m² · FR AV 38%</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+      <div class="slide-head-num">CAS 02 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.5 + 4.4.6 + 4.6 (Grossesse)</div>
+    </div>
+    
+    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#34D399">
+        <span class="cor c1">COR 1</span>Section 4.5.5 — Plastie/remplacement valve AV systémique
+      </div>
+      <div class="dec-b"><strong>Section 4.5.5 ACC 2025 — Fontan circulation :</strong> chez les patients Fontan, la fuite de la valve AV systémique <strong>modérée-sévère avec symptômes</strong> et/ou dégradation hémodynamique → indication de geste valvulaire (plastie ou remplacement) pour préserver la fonction VU.<br><br><strong>Mécanisme :</strong> la fuite AV crée une surcharge volumique du VU déjà fragile + augmente la pression OG = ↑ pression Fontan = perte du gradient hémodynamique antérograde Fontan.<br><br><strong>Plastie vs remplacement :</strong><br>• <strong>Plastie</strong> privilégiée si anatomie favorable (anneau dilatable, feuillets préservés)<br>• <strong>Remplacement</strong> si destruction valvulaire ou échec plastie · bioprothèse vs mécanique<br>• Décision en équipe ACHD + chirurgie cardiaque expert Fontan</div>
+      <div class="dec-action">➜ <strong>Bilan préopératoire complet :</strong><br>• ETT + ETO 3D (mécanisme fuite, anatomie)<br>• IRM cardiaque (FE VU, fuite quantifiée)<br>• Cathétérisme complet (Fontan pressure, PVR, PCWP)<br>• <strong>Bilan FALD</strong> (Fibroscan, MELD-XI)<br>• CPET de référence<br><br>➜ <strong>Chirurgie :</strong> annuloplastie tricuspide systémique privilégiée. Si remplacement : bioprothèse souvent préférée (anticoagulation déjà nécessaire)<br>➜ Prévention complications post-op : arythmie, baisse fonction VU<br>➜ <strong>GDMT IC adaptée Fontan</strong> avant et après : ARNI prudent · diurétiques · pas de bétabloquant fort</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#38BDF8)">
+      <div class="slide-head-num">CAS 02 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — Fontan + fuite AV systémique sévère + FE VU 48% + NYHA III. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Surveillance simple</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Plastie/remplacement valve AV systémique en centre Fontan expert</div><div class="qcm-opt"><span class="qcm-letter">C</span>Inscription transplantation immédiate</div><div class="qcm-opt"><span class="qcm-letter">D</span>Anticoagulation seule</div>
+      <div class="qcm-explain">✓ Fuite AV systémique modérée-sévère + symptômes + dégradation FE VU = indication formelle geste valvulaire (Section 4.5.5). Plastie privilégiée. Préservation fonction VU = clé du pronostic Fontan long terme. Centre expert obligatoire.</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 02</span>
+      <ul><li>Fuite AV systémique = surcharge volumique VU + ↑ pression Fontan</li><li>Indication plastie/remplacement si fuite modérée-sévère + symptômes</li><li>Plastie privilégiée si anatomie favorable</li><li><strong>Préserver fonction VU = clé du pronostic Fontan</strong></li><li>GDMT IC adaptée Fontan (pas de bétabloquant fort)</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="3" style="--cas-color:#A78BFA;--cas-color2:#FB7185">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+      <div class="slide-head-num">CAS 03 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mme N.B., 27 ans (Atrésie pulmonaire à septum intact · G0P0)</div>
+      <div class="slide-head-sub">Fontan + Désir de grossesse — WHO IV · counseling</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#A78BFA">🤱 Présentation clinique</div>
+      <div class="cas-intro-sub">Jeune femme avec Fontan extracardiaque optimal exprimant un désir de maternité. La grossesse en Fontan est WHO Classe IV (très haut risque) — counseling préconceptionnel rigoureux + suivi cardio-obstétrical centralisé indispensable.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme N.B., 27 ans (Atrésie pulmonaire à septum intact · G0P0)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">60 kg · 165 cm · BSA 1.66 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Pharmacienne · mariage récent</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Évaluation préconceptionnelle · désir maternité</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>Atrésie pulmonaire à septum intact</strong> · Blalock-Taussig à 1 mois · Glenn à 7 mois · <strong>Fontan extracardiaque tube 16 mm à 3 ans</strong> · pas de complications · NYHA I</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-mint">I</span> Asymptomatique · activité normale</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">TM6M 510 m · SpO₂ 94% repos / 90% effort</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 110/68 · FC 72 · Souffle systolique modeste · pas d'OMI</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+      <div class="slide-head-num">CAS 03 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Échographie</div>
+      <div class="slide-head-sub">Présentation Canva unifiée · ancre #5</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHIQm31Wus/view?embed#5" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#A78BFA">🎨 Cas 03</div>
+        <div class="canva-caption-id">DAHIQm31Wus · ancre #5</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHIQm31Wus/view#5" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/IRM principales</div>
+      <div class="dr"><div class="dr-lbl">Anatomie post-op</div><div class="dr-val">Fontan extracardiaque tube 16 mm · pas de fenestration</div></div><div class="dr"><div class="dr-lbl">Ventricule unique</div><div class="dr-val"><strong>VG morphologique</strong> · FE 56%</div></div><div class="dr"><div class="dr-lbl">Strain VU GLS</div><div class="dr-val">–17% conservé</div></div><div class="dr"><div class="dr-lbl">Valve AV</div><div class="dr-val"><strong>Pas de fuite</strong> ✅</div></div><div class="dr"><div class="dr-lbl">Tube Fontan</div><div class="dr-val">Pas d'obstruction · pas de thrombose</div></div><div class="dr"><div class="dr-lbl">Branches AP</div><div class="dr-val">Symétriques</div></div><div class="dr"><div class="dr-lbl">OG</div><div class="dr-val">Taille normale</div></div><div class="dr"><div class="dr-lbl">Foie</div><div class="dr-val">Fibroscan 6.8 kPa (F1)</div></div><div class="dr"><div class="dr-lbl">MELD-XI</div><div class="dr-val">10 (faible)</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+      <div class="slide-head-num">CAS 03 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.5 (VU/Fontan) + 4.4.6 (Eisenmenger)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Ventricule Unique (Section 4.5)</strong>. Critères Stade : pression Fontan, FE VU, fuite AV, PLE, FALD, MELD-XI, CPET.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade B retenu :</span>
+        <ul><li>✓ Fontan asymptomatique NYHA I</li><li>✓ FE VU 56% préservée · Strain –17%</li><li>✓ Pas de fuite valvulaire AV</li><li>✓ <strong>Pression Fontan 13 mmHg</strong></li><li>✓ Foie : F1 (pas de fibrose avancée)</li><li>✓ CPET 68% (favorable)</li><li>✓ <strong>Profil le plus favorable possible pour Fontan + grossesse</strong></li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #A78BFA">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#A78BFA;line-height:1">B</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade B — Fontan favorable pour counseling</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>I-B</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>WHO Classe IV maintenue malgré profil favorable</li><li>Counseling rigoureux</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+      <div class="slide-head-num">CAS 03 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Holter · CPET · Cathétérisme · FALD</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 72/min</div></div><div class="dr"><div class="dr-lbl">Holter</div><div class="dr-val">Pas d'arythmie</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>180 pg/mL</strong> (acceptable Fontan)</div></div><div class="dr"><div class="dr-lbl">CPET — VO₂ peak</div><div class="dr-val"><strong>68% prédit</strong> (favorable)</div></div><div class="dr"><div class="dr-lbl">Pression Fontan estimée</div><div class="dr-val"><strong>13 mmHg</strong> ✅</div></div><div class="dr"><div class="dr-lbl">Pas de cyanose pathologique</div><div class="dr-val">SpO₂ 94% acceptable</div></div><div class="dr"><div class="dr-lbl">Bilan hépatique</div><div class="dr-val">Normal (ASAT/ALAT/INR)</div></div><div class="dr"><div class="dr-lbl">Bilan thrombophilie</div><div class="dr-val">Négatif</div></div><div class="dr"><div class="dr-lbl">Conseil génétique</div><div class="dr-val">Pas de syndrome connu · risque transmission CHD ≈ 5-10%</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+      <div class="slide-head-num">CAS 03 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.5 + 4.4.6 + 4.6 (Grossesse)</div>
+    </div>
+    
+    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#34D399">
+        <span class="cor c1">COR 1</span>Section 4.5.5 + Section 4.6 — WHO IV · counseling rigoureux
+      </div>
+      <div class="dec-b"><strong>WHO modifiée Classe IV (très haut risque) :</strong> grossesse en Fontan reste <strong>WHO IV même chez patients optimaux</strong>. Mortalité maternelle 2-5%. Risques spécifiques :<br>• Insuffisance cardiaque grossesse (↑ volémie de 30-50%)<br>• Arythmies (↑ x10)<br>• Thromboembolisme (état pro-thrombotique)<br>• <strong>Fausse couche/perte fœtale 30-40%</strong><br>• Prématurité 50%<br>• RCIU 50%<br>• Hémorragie post-partum<br><br><strong>Patient n'est PAS contre-indiquée formellement</strong> mais la grossesse n'est <strong>pas recommandée</strong>. Décision partagée avec counseling complet.</div>
+      <div class="dec-action">➜ <strong>Counseling préconceptionnel multidisciplinaire :</strong><br>• ACHD + cardio-obstétricien + hématologue + génétique<br>• <strong>Information écrite</strong> des risques détaillés<br>• Évaluation du désir et compréhension du couple<br>• Conseil génétique : risque CHD enfant ≈ 5-10%<br><br>➜ <strong>Si grossesse acceptée :</strong><br>• Suivi cardio-obstétrical centralisé centre expert<br>• <strong>ETT mensuel</strong> · NT-proBNP régulier · Holter trimestriel<br>• Anticoagulation prophylactique adaptée (HBPM)<br>• Voie basse possible avec péridurale précoce<br>• Surveillance post-partum 6 semaines (zone à risque)<br><br>➜ <strong>Alternative :</strong> adoption · GPA · contraception efficace (DIU progestatif · pas œstroprogestatifs)</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#A78BFA,#FB7185)">
+      <div class="slide-head-num">CAS 03 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — Femme 27 ans avec Fontan optimal exprimant désir maternité. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Grossesse autorisée sans restriction (Fontan optimal)</div><div class="qcm-opt"><span class="qcm-letter">B</span>Contre-indication absolue à la grossesse</div><div class="qcm-opt correct"><span class="qcm-letter">C</span>Counseling WHO IV + suivi multidisciplinaire centralisé si acceptation</div><div class="qcm-opt"><span class="qcm-letter">D</span>FIV obligatoire</div>
+      <div class="qcm-explain">✓ Grossesse en Fontan = WHO IV (très haut risque) même si patient optimal. Mortalité maternelle 2-5% · pertes fœtales 30-40%. Counseling rigoureux multidisciplinaire indispensable. Décision partagée. Si acceptation : suivi centralisé + anticoagulation.</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 03</span>
+      <ul><li>Grossesse en Fontan = WHO IV (mortalité maternelle 2-5%)</li><li>Pertes fœtales 30-40% · prématurité/RCIU 50%</li><li>Patient pas formellement CI mais grossesse non recommandée</li><li>Counseling multidisciplinaire écrit obligatoire</li><li>Si grossesse : suivi centralisé + HBPM + voie basse + péridurale</li><li>Risque transmission CHD ≈ 5-10%</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="4" style="--cas-color:#E03050;--cas-color2:#FB7185">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 04 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mr H.D., 38 ans (Atrésie tricuspide)</div>
+      <div class="slide-head-sub">Failing Fontan — PLE + cyanose · Indication transplantation</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#E03050">💔 Présentation clinique</div>
+      <div class="cas-intro-sub">Patient avec Fontan classique vieux (auriculo-pulmonaire des années 1980) ayant développé un syndrome 'Failing Fontan' avec entéropathie exsudative (PLE) + cyanose progressive + dysfonction VU + FALD avancée. Inscription liste de transplantation cardiaque indispensable.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr H.D., 38 ans (Atrésie tricuspide)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">58 kg · 172 cm · BSA 1.69 m² (perte 12 kg en 18 mois)</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Adapté · activité limitée</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Hospitalisation décompensation · diarrhées chroniques · cyanose progressive</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>Atrésie tricuspide</strong> · Glenn 14 mois · <strong>Fontan auriculo-pulmonaire (1988, 4 ans)</strong> · 35 ans Fontan · 'conversion' Fontan refusée · arythmies traitées · suivi irrégulier 6 ans</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">III-IV</span> Dyspnée NYHA III-IV · diarrhées graisseuses · OMI massifs · ascite · hypoalbuminémie</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">TM6M 180 m · SpO₂ repos 86% · effort 78%</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 92/64 · FC 88 · cyanose centrale · hippocratisme · <strong>OMI massifs · ascite · OG dilatée</strong></div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 04 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Échographie</div>
+      <div class="slide-head-sub">Présentation Canva unifiée · ancre #6</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHIQm31Wus/view?embed#6" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#E03050">🎨 Cas 04</div>
+        <div class="canva-caption-id">DAHIQm31Wus · ancre #6</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHIQm31Wus/view#6" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/IRM principales</div>
+      <div class="dr"><div class="dr-lbl">Fontan classique</div><div class="dr-val"><strong>Auriculo-pulmonaire 1988</strong> · OD anévrismale 8 cm</div></div><div class="dr"><div class="dr-lbl">Ventricule unique</div><div class="dr-val"><strong>VG morphologique</strong> · FE <strong>32% sévère</strong></div></div><div class="dr"><div class="dr-lbl">Strain VU GLS</div><div class="dr-val"><strong>–9%</strong> dysfonction sévère</div></div><div class="dr"><div class="dr-lbl">Valve AV</div><div class="dr-val">Mitrale · fuite modérée</div></div><div class="dr"><div class="dr-lbl">Stagnation OD</div><div class="dr-val">Contraste spontané ++ · risque thrombus</div></div><div class="dr"><div class="dr-lbl">Branches AP</div><div class="dr-val">Distorsion · sténose AP gauche modérée</div></div><div class="dr"><div class="dr-lbl">Foie</div><div class="dr-val"><strong>FALD F4 cirrhose</strong> · Fibroscan 24 kPa</div></div><div class="dr"><div class="dr-lbl">Splénomégalie</div><div class="dr-val">Présente</div></div><div class="dr"><div class="dr-lbl">Ascite</div><div class="dr-val">Modérée à sévère</div></div><div class="dr"><div class="dr-lbl">MELD-XI</div><div class="dr-val"><strong>22 (très élevé · risque post-transplant ↑↑)</strong></div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 04 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.5 (VU/Fontan) + 4.4.6 (Eisenmenger)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Ventricule Unique (Section 4.5)</strong>. Critères Stade : pression Fontan, FE VU, fuite AV, PLE, FALD, MELD-XI, CPET.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade D retenu :</span>
+        <ul><li>✓ NYHA III-IV + cyanose 86%</li><li>✓ <strong>FE VU 32% + Strain –9%</strong></li><li>✓ <strong>Pression Fontan 22 mmHg</strong></li><li>✓ <strong>PLE confirmée</strong> (albumine 22, α1-AT 8x)</li><li>✓ <strong>FALD F4 cirrhose</strong> (Fibroscan 24)</li><li>✓ Flutter atrial permanent</li><li>✓ <strong>VO₂ peak 32%</strong> (critère greffe)</li><li>✓ <strong>MELD-XI 22</strong></li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #E03050">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#E03050;line-height:1">D</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade D — Failing Fontan multimodal</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>III-D</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>Centre Fontan expert + équipe greffe</li><li>Évaluation transplantation cardiaque ± hépatique</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 04 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Holter · CPET · Cathétérisme · FALD</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val"><strong>Flutter atrial 100/min</strong></div></div><div class="dr"><div class="dr-lbl">Holter 48h</div><div class="dr-val">Flutter permanent · ESV nombreuses</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>2840 pg/mL</strong> ↑↑↑</div></div><div class="dr"><div class="dr-lbl">CPET — VO₂ peak</div><div class="dr-val"><strong>32% prédit</strong> ↓↓ (critère greffe)</div></div><div class="dr"><div class="dr-lbl">Cathétérisme — PVR</div><div class="dr-val"><strong>3.4 WU</strong></div></div><div class="dr"><div class="dr-lbl"><strong>Pression Fontan</strong></div><div class="dr-val"><strong>22 mmHg</strong> ↑↑↑ (anormale)</div></div><div class="dr"><div class="dr-lbl">PTDVG</div><div class="dr-val">16 mmHg ↑</div></div><div class="dr"><div class="dr-lbl"><strong>Albumine</strong></div><div class="dr-val"><strong>22 g/L</strong> ↓↓ (PLE)</div></div><div class="dr"><div class="dr-lbl">α1-antitrypsine selles</div><div class="dr-val"><strong>Élevée 8x</strong> (PLE confirmée)</div></div><div class="dr"><div class="dr-lbl">Bilan hépatique</div><div class="dr-val">INR 1.6 · Bilirubine 35 µmol/L · plaquettes 78 G/L</div></div><div class="dr"><div class="dr-lbl">Score FOR-T (Fontan-failing)</div><div class="dr-val">8/10 (très haut risque)</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 04 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.5 + 4.4.6 + 4.6 (Grossesse)</div>
+    </div>
+    
+    <div class="dec" style="border-color:#E03050;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#E03050">
+        <span class="cor c1">COR 1</span>Failing Fontan — Inscription transplantation + management
+      </div>
+      <div class="dec-b"><strong>Failing Fontan = syndrome multifactoriel</strong> regroupant : dysfonction VU + ↑ pression Fontan + PLE + FALD + arythmies + cyanose + dysfonction multi-organes.<br><br><strong>Critères ACC 2025 inscription transplantation cardiaque :</strong><br>• <strong>VO₂ peak < 14 mL/kg/min</strong> ou < 50% prédit ✓ (32%)<br>• PLE réfractaire ✓<br>• FALD avec fibrose F3-F4 (transplantation cœur-foie à discuter) ✓<br>• Arythmies non contrôlables ✓<br>• Cyanose progressive ✓<br>• NYHA III-IV malgré GDMT ✓<br><br><strong>Score MELD-XI 22 = haut risque</strong> mais pas contre-indication. Discussion transplantation combinée cœur-foie selon expertise.</div>
+      <div class="dec-action">➜ <strong>Phase 1 — Stabilisation hospitalière :</strong><br>• Optimisation diurétiques (Furosémide IV + Spironolactone)<br>• Albumine IV pour PLE<br>• Régime hyperprotidique + restriction sel<br>• Anticoagulation efficace (Flutter + Fontan)<br>• Tentative cardioversion ± ablation<br>• <strong>Discussion 'conversion Fontan'</strong> (auriculo→extracardiaque) si profil le permet<br><br>➜ <strong>Phase 2 — Évaluation greffe :</strong><br>• Centre transplantation ACHD expert<br>• Bilan hépatique complet (biopsie ?)<br>• <strong>Discussion transplantation isolée vs cœur-foie</strong><br>• Optimisation MELD-XI · nutrition<br>• <strong>Inscription liste rapidement</strong><br><br>➜ <strong>Phase 3 — Si pas candidat greffe :</strong><br>• Soins palliatifs adaptés<br>• Pulmonary vasodilator therapy (Sildenafil 20 mg ×3/j) à discuter pour ↓ pression Fontan</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 04 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — Failing Fontan : VO₂ peak 32% + PLE + FALD F4 + Flutter + cyanose. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Conversion Fontan extracardiaque seule</div><div class="qcm-opt"><span class="qcm-letter">B</span>Anticoagulation + diurétiques exclusifs</div><div class="qcm-opt correct"><span class="qcm-letter">C</span>Stabilisation + inscription transplantation cœur ± cœur-foie</div><div class="qcm-opt"><span class="qcm-letter">D</span>Soins palliatifs uniquement</div>
+      <div class="qcm-explain">✓ Failing Fontan multifactoriel = inscription transplantation indispensable. VO₂ peak < 14 mL/kg/min ou < 50% prédit + PLE + FALD F4 = critères transplantation. Discussion transplantation cœur-foie selon FALD. Centre expert ACHD greffe.</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 04</span>
+      <ul><li><strong>Failing Fontan = syndrome multifactoriel</strong> (dysfunction VU, pression Fontan, PLE, FALD, arythmies)</li><li>VO₂ peak < 14 mL/kg/min ou < 50% = critère greffe</li><li>PLE réfractaire = critère greffe</li><li>FALD F3-F4 = discussion transplantation cœur-foie</li><li>MELD-XI = score pronostique pré-greffe</li><li>Sildénafil pulmonary vasodilator pour ↓ pression Fontan</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="5" style="--cas-color:#F0A030;--cas-color2:#FB923C">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+      <div class="slide-head-num">CAS 05 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mme R.L., 25 ans (Atrésie tricuspide)</div>
+      <div class="slide-head-sub">Fontan fenêtré persistant — Fermeture percutanée fenestration</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#F0A030">🕳️ Présentation clinique</div>
+      <div class="cas-intro-sub">Patiente avec Fontan extracardiaque fenêtré à 5 ans dont la fenestration ne s'est pas refermée spontanément (persiste à 25 ans). Cyanose résiduelle modérée + Qp/Qs déséquilibré. Indication de fermeture percutanée de la fenestration.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme R.L., 25 ans (Atrésie tricuspide)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">58 kg · 162 cm · BSA 1.62 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Étudiante</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Cyanose résiduelle persistante · désir d'amélioration fonctionnelle · planification grossesse future</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>Atrésie tricuspide</strong> · Glenn à 9 mois · <strong>Fontan extracardiaque tube 18 mm fenêtré 4 mm à 5 ans</strong> · fenestration jamais fermée spontanément</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">I-II</span> Tolérance acceptable · cyanose visible lèvres · capacité d'effort modeste</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">TM6M 460 m · <strong>SpO₂ repos 88%</strong> · effort 82%</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 108/65 · cyanose lèvres modérée · pas d'OMI</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+      <div class="slide-head-num">CAS 05 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Échographie</div>
+      <div class="slide-head-sub">Présentation Canva unifiée · ancre #7</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHIQm31Wus/view?embed#7" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#F0A030">🎨 Cas 05</div>
+        <div class="canva-caption-id">DAHIQm31Wus · ancre #7</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHIQm31Wus/view#7" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/IRM principales</div>
+      <div class="dr"><div class="dr-lbl">Anatomie post-op</div><div class="dr-val">Fontan extracardiaque fenêtré 4 mm patente</div></div><div class="dr"><div class="dr-lbl"><strong>Fenestration</strong></div><div class="dr-val"><strong>4 mm patente · shunt droite-gauche</strong></div></div><div class="dr"><div class="dr-lbl">Ventricule unique</div><div class="dr-val">VG · FE 60% conservée</div></div><div class="dr"><div class="dr-lbl">Strain VU GLS</div><div class="dr-val">–18% normal</div></div><div class="dr"><div class="dr-lbl">Valve AV</div><div class="dr-val">Pas de fuite</div></div><div class="dr"><div class="dr-lbl">Tube Fontan</div><div class="dr-val">Pas d'obstruction · gradient 0</div></div><div class="dr"><div class="dr-lbl">Branches AP</div><div class="dr-val">Symétriques</div></div><div class="dr"><div class="dr-lbl">Saturations</div><div class="dr-val">VCS 65% · OG 95% · AO <strong>88%</strong></div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+      <div class="slide-head-num">CAS 05 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.5 (VU/Fontan) + 4.4.6 (Eisenmenger)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Ventricule Unique (Section 4.5)</strong>. Critères Stade : pression Fontan, FE VU, fuite AV, PLE, FALD, MELD-XI, CPET.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade B retenu :</span>
+        <ul><li>✓ NYHA I-II · cyanose modérée</li><li>✓ <strong>Fenestration 4 mm patente</strong></li><li>✓ Shunt droite-gauche significatif (SpO₂ 88%)</li><li>✓ FE VU 60% conservée</li><li>✓ Pression Fontan 13 mmHg favorable</li><li>✓ <strong>Test occlusion ballon TOLÉRÉ</strong> (P Fontan 13→14)</li><li>✓ Bénéfice attendu : SpO₂ 88 → 96%</li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #F0A030">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#F0A030;line-height:1">B</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade B — Fontan fenêtré · indication fermeture</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>I-B</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>Fermeture percutanée · centre interventionnel ACHD</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+      <div class="slide-head-num">CAS 05 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Holter · CPET · Cathétérisme · FALD</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 76/min</div></div><div class="dr"><div class="dr-lbl">Holter</div><div class="dr-val">Pas d'arythmie</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>320 pg/mL</strong> (modérément élevé)</div></div><div class="dr"><div class="dr-lbl">CPET — VO₂ peak</div><div class="dr-val"><strong>62% prédit</strong> (limité par cyanose)</div></div><div class="dr"><div class="dr-lbl">Cathétérisme — PVR</div><div class="dr-val">1.6 WU normale</div></div><div class="dr"><div class="dr-lbl"><strong>Pression Fontan</strong></div><div class="dr-val"><strong>13 mmHg</strong> ✅</div></div><div class="dr"><div class="dr-lbl">Pression OG</div><div class="dr-val">8 mmHg</div></div><div class="dr"><div class="dr-lbl"><strong>Test occlusion fenestration au ballon</strong></div><div class="dr-val"><strong>Pression Fontan 13 → 14 mmHg</strong> · SpO₂ 88 → 96%</div></div><div class="dr"><div class="dr-lbl">Foie</div><div class="dr-val">F1-F2 (Fibroscan 9 kPa)</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+      <div class="slide-head-num">CAS 05 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.5 + 4.4.6 + 4.6 (Grossesse)</div>
+    </div>
+    
+    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#34D399">
+        <span class="cor c1">COR 1</span>Fermeture percutanée fenestration — Test ballon positif
+      </div>
+      <div class="dec-b"><strong>Section 4.5.5 ACC 2025 :</strong> chez patient Fontan fenêtré avec :<br>• Cyanose résiduelle (SpO₂ < 90% repos)<br>• Bonne fonction VU<br>• Pression Fontan favorable (≤ 15 mmHg)<br>• <strong>Test occlusion ballon positif</strong> (pas d'augmentation significative pression Fontan, amélioration SpO₂)<br>→ <strong>Fermeture percutanée fenestration recommandée</strong>.<br><br><strong>Bénéfices attendus :</strong><br>• <strong>Disparition cyanose</strong> (88 → 96%)<br>• Amélioration capacité d'effort (CPET)<br>• Réduction risque embolie paradoxale<br>• <strong>Préparation à grossesse</strong> (cyanose = facteur de risque grossesse)<br><br><strong>Risques :</strong> bas (1-2% complications majeures · Amplatzer dédié ASD ou occluder spécifique)</div>
+      <div class="dec-action">➜ <strong>Cathétérisme thérapeutique :</strong><br>• ETO 3D guidance<br>• Test occlusion ballon préalable confirmé<br>• <strong>Amplatzer ASD Occluder ou occluder dédié fenestration</strong><br>• Anticoagulation peri-procédurale<br>• Contrôle SpO₂ + pression Fontan post-procédure<br><br>➜ <strong>Suivi post-fermeture :</strong><br>• ETT J30 + M6 (régression VU si dilatation, normalisation pression OG)<br>• <strong>Anticoagulation à vie</strong> (Fontan + device)<br>• CPET de contrôle M6 (amélioration attendue VO₂ peak +10-15%)<br>• Réévaluation grossesse counseling après stabilisation</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB923C)">
+      <div class="slide-head-num">CAS 05 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — Fontan fenêtré 4 mm patent · SpO₂ 88% · pression Fontan 13 · test ballon positif. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Garder la fenestration ouverte (sécurité)</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Fermeture percutanée fenestration (test ballon positif)</div><div class="qcm-opt"><span class="qcm-letter">C</span>Conversion chirurgicale Fontan classique</div><div class="qcm-opt"><span class="qcm-letter">D</span>Anticoagulation seule à vie</div>
+      <div class="qcm-explain">✓ Fenestration patente persistante + cyanose (SpO₂ < 90%) + bonne fonction VU + pression Fontan favorable + test ballon positif = fermeture percutanée recommandée. Bénéfice : ↑ SpO₂, ↑ CPET, ↓ risque embolie paradoxale, préparation grossesse.</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 05</span>
+      <ul><li>Fenestration Fontan = parfois nécessaire en post-op immédiat</li><li>Persistance fenestration adulte = cyanose + risque embolie paradoxale</li><li><strong>Test occlusion ballon</strong> obligatoire avant fermeture</li><li>Critères : SpO₂ < 90% + fonction VU OK + P Fontan ≤ 15 + test ballon positif</li><li>Fermeture percutanée Amplatzer · anticoagulation à vie</li><li>Bénéfice : disparition cyanose + ↑ capacité d'effort</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="6" style="--cas-color:#FB7185;--cas-color2:#A78BFA">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#A78BFA)">
+      <div class="slide-head-num">CAS 06 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mr T.M., 32 ans (HLHS · VU droit)</div>
+      <div class="slide-head-sub">Fontan + Fistule veino-veineuse — Embolisation percutanée</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#FB7185">🩸 Présentation clinique</div>
+      <div class="cas-intro-sub">Patient avec Fontan extracardiaque ayant développé une fistule veino-veineuse systémique-pulmonaire (collatérale décompresse le système veineux systémique vers OG) → cyanose progressive sans dégradation VU. Indication d'embolisation percutanée des collatérales.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr T.M., 32 ans (HLHS · VU droit)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">70 kg · 175 cm · BSA 1.85 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Cadre</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Cyanose progressive 18 mois · désaturation à l'effort</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>HLHS</strong> · Norwood I-II-III · <strong>Fontan extracardiaque tube 20 mm à 4 ans</strong> · pas de fenestration · suivi régulier · récente baisse SpO₂</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II</span> Cyanose progressive · diminution capacité d'effort · pas d'IC</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">TM6M 380 m · <strong>SpO₂ repos 86% (vs 95% antérieur)</strong> · effort 78%</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 112/72 · cyanose modérée · pas d'OMI · pas de signes IC</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#A78BFA)">
+      <div class="slide-head-num">CAS 06 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Échographie</div>
+      <div class="slide-head-sub">Présentation Canva unifiée · ancre #8</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHIQm31Wus/view?embed#8" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#FB7185">🎨 Cas 06</div>
+        <div class="canva-caption-id">DAHIQm31Wus · ancre #8</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHIQm31Wus/view#8" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/IRM principales</div>
+      <div class="dr"><div class="dr-lbl">Anatomie post-op</div><div class="dr-val">Fontan extracardiaque non fenêtré</div></div><div class="dr"><div class="dr-lbl">Ventricule unique</div><div class="dr-val"><strong>VD morphologique systémique</strong> · FE 52% conservée</div></div><div class="dr"><div class="dr-lbl">Strain VU GLS</div><div class="dr-val">–14%</div></div><div class="dr"><div class="dr-lbl">Valve AV</div><div class="dr-val">Tricuspide systémique · fuite légère</div></div><div class="dr"><div class="dr-lbl">Tube Fontan</div><div class="dr-val">Patente · pas de gradient</div></div><div class="dr"><div class="dr-lbl">ETT contraste agité IV</div><div class="dr-val"><strong>Bulles dans OG très précoces</strong> ✓ (suspicion fistule)</div></div><div class="dr"><div class="dr-lbl">OG</div><div class="dr-val">Légère dilatation</div></div><div class="dr"><div class="dr-lbl">Hypothèse anatomique</div><div class="dr-val"><strong>Collatérale veineuse VCS/Innominée → veines pulmonaires/OG</strong></div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#A78BFA)">
+      <div class="slide-head-num">CAS 06 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.5 (VU/Fontan) + 4.4.6 (Eisenmenger)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Ventricule Unique (Section 4.5)</strong>. Critères Stade : pression Fontan, FE VU, fuite AV, PLE, FALD, MELD-XI, CPET.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade C retenu :</span>
+        <ul><li>✓ NYHA II · cyanose progressive 18 mois</li><li>✓ <strong>SpO₂ 86% (chute de 95%)</strong></li><li>✓ <strong>Fistule veino-veineuse documentée</strong> (angio)</li><li>✓ Pression Fontan normale 14 mmHg</li><li>✓ Fonction VU préservée (FE 52%)</li><li>✓ <strong>Bulles précoces OG</strong> au contraste ETT</li><li>✓ Foie F1 (pas de FALD avancée)</li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #FB7185">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#FB7185;line-height:1">C</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — Fontan + fistule veino-veineuse</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-C</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>Centre interventionnel ACHD expert</li><li>Embolisation percutanée</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#A78BFA)">
+      <div class="slide-head-num">CAS 06 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Holter · CPET · Cathétérisme · FALD</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 78/min</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">180 pg/mL acceptable</div></div><div class="dr"><div class="dr-lbl">CPET — VO₂ peak</div><div class="dr-val"><strong>48% prédit</strong> (limité par cyanose)</div></div><div class="dr"><div class="dr-lbl">Cathétérisme — PVR</div><div class="dr-val">1.4 WU</div></div><div class="dr"><div class="dr-lbl">Pression Fontan</div><div class="dr-val"><strong>14 mmHg</strong> (normale)</div></div><div class="dr"><div class="dr-lbl">Pression OG</div><div class="dr-val">9 mmHg</div></div><div class="dr"><div class="dr-lbl"><strong>Saturations cathé</strong></div><div class="dr-val">VCS 62% · OG 88% · AO 86% · <strong>step-down VCS→OG inversé</strong></div></div><div class="dr"><div class="dr-lbl"><strong>Angiographie sélective</strong></div><div class="dr-val"><strong>Fistules veino-veineuses multiples</strong> Innominée → veines pulmonaires</div></div><div class="dr"><div class="dr-lbl">Foie</div><div class="dr-val">F1 (Fibroscan 7.5 kPa)</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#A78BFA)">
+      <div class="slide-head-num">CAS 06 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.5 + 4.4.6 + 4.6 (Grossesse)</div>
+    </div>
+    
+    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#34D399">
+        <span class="cor c1">COR 1</span>Embolisation percutanée des fistules — COR I
+      </div>
+      <div class="dec-b"><strong>Section 4.5.5 ACC 2025 :</strong> les fistules veino-veineuses systémiques-pulmonaires sont une <strong>complication tardive du Fontan</strong> (10-30% des patients à long terme). Elles se développent en réponse à la pression veineuse systémique chroniquement élevée → décompression vers la circulation pulmonaire/OG → <strong>cyanose progressive</strong>.<br><br><strong>Mécanisme :</strong> les fistules réalisent un shunt droite-gauche → désaturation. La fonction VU et la pression Fontan peuvent rester préservées initialement.<br><br><strong>Indication d'embolisation :</strong><br>• Cyanose progressive symptomatique (SpO₂ ↓)<br>• Fistules identifiées et accessibles à l'angiographie<br>• Bonne fonction VU<br>• Pression Fontan acceptable<br><br><strong>Risque/bénéfice favorable :</strong> taux de succès 80-90% · amélioration SpO₂ +5-10%.</div>
+      <div class="dec-action">➜ <strong>Cathétérisme thérapeutique :</strong><br>• Angiographie sélective complète VCS + veine innominée + axillaires<br>• Identification de toutes les fistules<br>• <strong>Embolisation par coils ou Amplatzer Vascular Plug</strong><br>• Plusieurs séances peuvent être nécessaires<br>• Surveillance SpO₂ post-procédure<br><br>➜ <strong>Suivi post-embolisation :</strong><br>• ETT contraste de contrôle M3 (vérifier disparition shunt)<br>• <strong>Récidive 30-50% à long terme</strong> (nouvelles fistules)<br>• Surveillance SpO₂ annuelle<br>• Réintervention possible<br>• Pulmonary vasodilator (Sildénafil) à discuter (réduit pression Fontan, peut prévenir nouvelles fistules)</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#A78BFA)">
+      <div class="slide-head-num">CAS 06 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — Fontan · cyanose progressive 95→86% · fistules veino-veineuses documentées. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Surveillance simple</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Embolisation percutanée des fistules veino-veineuses</div><div class="qcm-opt"><span class="qcm-letter">C</span>Conversion Fontan chirurgicale</div><div class="qcm-opt"><span class="qcm-letter">D</span>Inscription transplantation immédiate</div>
+      <div class="qcm-explain">✓ Fistules veino-veineuses = complication tardive Fontan (10-30%). Cyanose progressive sans dégradation VU = embolisation percutanée par coils/Amplatzer Vascular Plug. Taux succès 80-90% mais récidive 30-50% (réintervention possible).</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 06</span>
+      <ul><li>Fistules veino-veineuses = complication tardive Fontan (10-30%)</li><li>Mécanisme : décompression pression veineuse systémique → OG</li><li>Cyanose progressive sans dégradation VU = signe évocateur</li><li>ETT contraste agité = test diagnostique simple</li><li>Embolisation coils/Amplatzer Vascular Plug = traitement de choix</li><li>Récidive 30-50% (surveillance + réintervention possible)</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="7" style="--cas-color:#22D3EE;--cas-color2:#A78BFA">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+      <div class="slide-head-num">CAS 07 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mr A.B., 22 ans (VU complexe Heterotaxy)</div>
+      <div class="slide-head-sub">Glenn bidirectionnel · Fontan impossible — Palliatif définitif</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#22D3EE">⚓ Présentation clinique</div>
+      <div class="cas-intro-sub">Patient avec VU complexe ayant bénéficié d'un Glenn bidirectionnel à 9 mois mais dont le Fontan a été contre-indiqué (PVR > 3 WU + branches AP hypoplasiques + dysfonction VU). Vit en circulation Glenn définitive avec cyanose modérée stabilisée.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr A.B., 22 ans (VU complexe Heterotaxy)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">58 kg · 168 cm · BSA 1.62 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Adapté</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Suivi annuel · stabilité fonctionnelle</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>Hétérotaxie · isomérisme atrial droit · VU à orientation indéterminée</strong> · Blalock-Taussig 1 mois · <strong>Glenn bidirectionnel à 9 mois</strong> · <strong>Fontan refusé à 4 ans</strong> (PVR 4.2 WU + AP hypoplasiques) · cyanose chronique stable</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-gold">II</span> Cyanose stable depuis 18 ans · capacité d'effort modeste · pas de dégradation</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">TM6M 360 m · <strong>SpO₂ repos 82% · effort 75%</strong></div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 108/62 · cyanose centrale modérée · hippocratisme · pas d'IC</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+      <div class="slide-head-num">CAS 07 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Échographie</div>
+      <div class="slide-head-sub">Présentation Canva unifiée · ancre #9</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHIQm31Wus/view?embed#9" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#22D3EE">🎨 Cas 07</div>
+        <div class="canva-caption-id">DAHIQm31Wus · ancre #9</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHIQm31Wus/view#9" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/IRM principales</div>
+      <div class="dr"><div class="dr-lbl">Anatomie post-op</div><div class="dr-val"><strong>Glenn bidirectionnel</strong> · pas de Fontan · circulation mixte</div></div><div class="dr"><div class="dr-lbl">Ventricule unique</div><div class="dr-val">VU mixte · FE 50%</div></div><div class="dr"><div class="dr-lbl">Strain VU GLS</div><div class="dr-val">–16%</div></div><div class="dr"><div class="dr-lbl">Valve AV unique</div><div class="dr-val">Régurgitation légère</div></div><div class="dr"><div class="dr-lbl">Branches AP</div><div class="dr-val"><strong>Hypoplasiques</strong> · gauche 11 mm · droite 13 mm (Z-score –3)</div></div><div class="dr"><div class="dr-lbl">Anastomose Glenn</div><div class="dr-val">Patente · pas de sténose</div></div><div class="dr"><div class="dr-lbl">VCI</div><div class="dr-val">Toujours connectée à OD/oreillette commune (mixte)</div></div><div class="dr"><div class="dr-lbl">OG/oreillette commune</div><div class="dr-val">Saturation 88% (mélange)</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+      <div class="slide-head-num">CAS 07 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.5 (VU/Fontan) + 4.4.6 (Eisenmenger)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Ventricule Unique (Section 4.5)</strong>. Critères Stade : pression Fontan, FE VU, fuite AV, PLE, FALD, MELD-XI, CPET.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade C retenu :</span>
+        <ul><li>✓ NYHA II · cyanose stable 22 ans</li><li>✓ <strong>Glenn seul</strong> (Fontan refusé)</li><li>✓ <strong>PVR 3.6 WU + AP hypoplasiques</strong></li><li>✓ Polyglobulie réactionnelle (Ht 54%)</li><li>✓ Fonction VU préservée</li><li>✓ Pas de dégradation 18 ans</li><li>✓ Pas de FALD (avantage vs Fontan)</li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #22D3EE">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#22D3EE;line-height:1">C</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade C — Palliatif Glenn définitif</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>II-C</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>Centre ACHD expert</li><li>Surveillance complications cyanose chronique</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+      <div class="slide-head-num">CAS 07 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Holter · CPET · Cathétérisme · FALD</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal lent · isomerisme droit</div></div><div class="dr"><div class="dr-lbl">Holter</div><div class="dr-val">Bradycardie sinusale 55-60/min</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val">240 pg/mL</div></div><div class="dr"><div class="dr-lbl">CPET — VO₂ peak</div><div class="dr-val"><strong>42% prédit</strong> (limité par cyanose)</div></div><div class="dr"><div class="dr-lbl">Cathétérisme — PVR</div><div class="dr-val"><strong>3.6 WU</strong> ↑</div></div><div class="dr"><div class="dr-lbl">Pression artérielle pulmonaire</div><div class="dr-val">20 mmHg</div></div><div class="dr"><div class="dr-lbl">Saturations</div><div class="dr-val">VCS Glenn 62% · OD/cmne 88% · AO 82%</div></div><div class="dr"><div class="dr-lbl">Hématocrite</div><div class="dr-val"><strong>54%</strong> (polyglobulie compensatrice)</div></div><div class="dr"><div class="dr-lbl">Foie</div><div class="dr-val">F0-F1 (pas de FALD pure car pas de Fontan)</div></div><div class="dr"><div class="dr-lbl">MELD-XI</div><div class="dr-val">11</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+      <div class="slide-head-num">CAS 07 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.5 + 4.4.6 + 4.6 (Grossesse)</div>
+    </div>
+    
+    <div class="dec" style="border-color:#34D399;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#34D399">
+        <span class="cor c1">COR 1</span>Maintenir Glenn · Discussion Fontan toujours impossible
+      </div>
+      <div class="dec-b"><strong>Section 4.5 ACC 2025 :</strong> patients en circulation Glenn définitive (Fontan impossible) gardent une cyanose stable mais une <strong>fonction myocardique souvent mieux préservée</strong> que les patients Fontan tardif (pas de FALD majeure, pas de pression veineuse systémique chronique).<br><br><strong>Réévaluation Fontan possible si :</strong><br>• PVR diminue sous PAH therapy (PDE-5)<br>• Croissance des branches AP (rare adulte)<br>• Restauration fonction VU<br><br><strong>Mais souvent palliatif définitif</strong> chez l'adulte avec PVR fixe.<br><br><strong>Avantages de la situation Glenn :</strong><br>• Pas de FALD (pas de pression Fontan)<br>• Préservation fonction VU long terme<br>• Stabilité hémodynamique<br><br><strong>Inconvénients :</strong> cyanose chronique · polyglobulie · risque thromboembolique.</div>
+      <div class="dec-action">➜ <strong>Stratégie palliative :</strong><br>• <strong>Pulmonary vasodilator</strong> : Sildénafil 20 mg ×3/j (réduit PVR · disponible Algérie)<br>• Tentative Bosentan si non amélioration<br>• Réévaluation cathétérisme M6-12 sous traitement<br>• Si PVR < 3 WU + AP > 12 mm → discuter Fontan tardif (rare succès)<br><br>➜ <strong>Surveillance complications cyanose chronique :</strong><br>• Polyglobulie : phlébotomie SI Ht ≥ 65% + symptômes viscosité<br>• Carence martiale ferritine cible > 50 (Fer IV si < 50)<br>• Anticoagulation/antiplaquettaire selon protocole<br>• Risque AVC paradoxal · embolie pulmonaire<br>• Pas de FALD à surveiller (avantage)</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#22D3EE,#A78BFA)">
+      <div class="slide-head-num">CAS 07 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — Patient Glenn seul · Fontan impossible · PVR 3.6 + AP hypoplasiques · stable. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Conversion Fontan immédiate</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>PAH therapy + maintien Glenn palliatif définitif + surveillance</div><div class="qcm-opt"><span class="qcm-letter">C</span>Inscription transplantation</div><div class="qcm-opt"><span class="qcm-letter">D</span>Glenn → Fontan extracardiaque obligatoire</div>
+      <div class="qcm-explain">✓ Glenn définitif = palliatif acceptable si Fontan impossible (PVR > 3 + AP hypoplasiques). Avantage : pas de FALD. PAH therapy (Sildénafil) peut réduire PVR. Surveillance complications cyanose chronique (polyglobulie, fer, thrombo-embolie).</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 07</span>
+      <ul><li>Glenn définitif = palliatif si Fontan impossible (PVR > 3 + AP hypo)</li><li><strong>Avantage : pas de FALD</strong> (pas de pression veineuse systémique élevée)</li><li>Inconvénient : cyanose chronique + polyglobulie</li><li>PAH therapy peut faire réduire PVR (Sildénafil disponible Algérie)</li><li>Réévaluation Fontan tardif possible si amélioration</li><li>Surveillance carence martiale + antiplaquettaire/anticoag</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="8" style="--cas-color:#F0A030;--cas-color2:#FB7185">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB7185)">
+      <div class="slide-head-num">CAS 08 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mr O.K., 32 ans (VU à double entrée)</div>
+      <div class="slide-head-sub">VU non opéré + Hypoplasie AP — Inopérable · PAH therapy</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#F0A030">🚫 Présentation clinique</div>
+      <div class="cas-intro-sub">Patient adulte avec VU connu depuis l'enfance jamais opéré (refus parental + accès soins limité). Cyanose chronique stable depuis 30 ans. Bilan révèle hypoplasie sévère des branches AP + PVR limite — Fontan définitivement impossible. PAH therapy palliative à vie.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr O.K., 32 ans (VU à double entrée)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">60 kg · 170 cm · BSA 1.68 m² (poids stable)</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Activité protégée</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Bilan ACHD initial · découverte tardive en consultation cardiologie générale</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>Ventricule unique à double entrée diagnostiqué à 6 mois</strong> · refus parental chirurgie · suivi familial négligé · zone rurale · accès soins limité 30 ans · cyanose progressive depuis adolescence</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">II-III</span> Cyanose centrale + hippocratisme · capacité d'effort réduite · pas d'IC</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">TM6M 280 m · <strong>SpO₂ repos 78% · effort 68%</strong></div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 108/68 · FC 84 · cyanose centrale + hippocratisme · pas d'OMI</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB7185)">
+      <div class="slide-head-num">CAS 08 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Échographie</div>
+      <div class="slide-head-sub">Présentation Canva unifiée · ancre #10</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHIQm31Wus/view?embed#10" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#F0A030">🎨 Cas 08</div>
+        <div class="canva-caption-id">DAHIQm31Wus · ancre #10</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHIQm31Wus/view#10" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/IRM principales</div>
+      <div class="dr"><div class="dr-lbl">Anatomie</div><div class="dr-val"><strong>VU à double entrée</strong> · 2 valves AV · 1 ventricule</div></div><div class="dr"><div class="dr-lbl">Ventricule unique</div><div class="dr-val">Type indéterminé · FE 52% conservée</div></div><div class="dr"><div class="dr-lbl">Strain VU GLS</div><div class="dr-val">–17% (préservé · adapté physiologie cyanogène)</div></div><div class="dr"><div class="dr-lbl">Valves AV</div><div class="dr-val">Mitrale + tricuspide · pas de fuite significative</div></div><div class="dr"><div class="dr-lbl">CIV bulboventriculaire</div><div class="dr-val">Patente · shunt mixte</div></div><div class="dr"><div class="dr-lbl"><strong>Branches AP</strong></div><div class="dr-val"><strong>Hypoplasie sévère</strong> · droite 10 mm · gauche 9 mm (Z-score –4.5)</div></div><div class="dr"><div class="dr-lbl">Sténose pulmonaire</div><div class="dr-val">Modérée à l'origine</div></div><div class="dr"><div class="dr-lbl">Aorte ascendante</div><div class="dr-val">Normale</div></div><div class="dr"><div class="dr-lbl">Pression VU</div><div class="dr-val">Égalisée VG/AO</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB7185)">
+      <div class="slide-head-num">CAS 08 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.5 (VU/Fontan) + 4.4.6 (Eisenmenger)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Ventricule Unique (Section 4.5)</strong>. Critères Stade : pression Fontan, FE VU, fuite AV, PLE, FALD, MELD-XI, CPET.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade D retenu :</span>
+        <ul><li>✓ NYHA II-III · SpO₂ 78%</li><li>✓ <strong>VU non opéré 32 ans</strong></li><li>✓ <strong>Hypoplasie AP sévère</strong> (Z –4.5)</li><li>✓ <strong>PVR 4.8 WU</strong> (réactivité partielle au NO)</li><li>✓ Polyglobulie + carence martiale</li><li>✓ Fonction VU préservée (50%)</li><li>✓ <strong>Fontan définitivement impossible</strong></li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #E03050">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#E03050;line-height:1">D</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade D — VU inopérable · stratégie palliative</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>III-D</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>Centre ACHD + HTAP expert</li><li>PAH therapy + correction carence martiale</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB7185)">
+      <div class="slide-head-num">CAS 08 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Holter · CPET · Cathétérisme · FALD</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 84/min</div></div><div class="dr"><div class="dr-lbl">Holter</div><div class="dr-val">ESV monomorphes · pas de TVNS</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>420 pg/mL</strong></div></div><div class="dr"><div class="dr-lbl">CPET — VO₂ peak</div><div class="dr-val"><strong>32% prédit</strong></div></div><div class="dr"><div class="dr-lbl">Cathétérisme — PVR</div><div class="dr-val"><strong>4.8 WU</strong> ↑</div></div><div class="dr"><div class="dr-lbl">Pression VU</div><div class="dr-val">108/12 mmHg</div></div><div class="dr"><div class="dr-lbl">PAP moyen post-sténose</div><div class="dr-val">12 mmHg (faible débit)</div></div><div class="dr"><div class="dr-lbl">Test NO</div><div class="dr-val"><strong>Réactivité partielle</strong> (PVR 4.8 → 3.6 WU)</div></div><div class="dr"><div class="dr-lbl">Hématocrite</div><div class="dr-val"><strong>62%</strong> (polyglobulie réactionnelle)</div></div><div class="dr"><div class="dr-lbl">Ferritine</div><div class="dr-val"><strong>22 ng/mL</strong> ↓ (carence martiale)</div></div><div class="dr"><div class="dr-lbl">Bilan</div><div class="dr-val">Bilirubine ↑ · acide urique ↑</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB7185)">
+      <div class="slide-head-num">CAS 08 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.5 + 4.4.6 + 4.6 (Grossesse)</div>
+    </div>
+    
+    <div class="dec" style="border-color:#A78BFA;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#A78BFA">
+        <span class="cor c2a">COR 2a</span>Inopérable Fontan — PAH therapy + correction martiale
+      </div>
+      <div class="dec-b"><strong>Section 4.5 + 4.4.6 ACC 2025 :</strong> patient avec VU non opéré + hypoplasie AP sévère + PVR 4.8 WU = <strong>Fontan techniquement impossible</strong> (anatomique + hémodynamique). Stratégie palliative à vie.<br><br><strong>Différence vs Eisenmenger :</strong> ici pas de shunt G→D massif initial qui aurait causé la vasculopathie pulmonaire. La cyanose résulte du <strong>flux pulmonaire réduit</strong> (sténose pulmonaire native + AP hypoplasiques) avec mélange physiologique au niveau ventriculaire.<br><br><strong>Réactivité NO partielle</strong> = bon signe → PAH therapy peut améliorer modestement la situation.</div>
+      <div class="dec-action">➜ <strong>PAH therapy palliative :</strong><br>• <strong>Sildénafil 20 mg ×3/j</strong> ou Tadalafil 40 mg/j (PDE-5 · disponibles Algérie)<br>• Bosentan 125 mg ×2/j si non réponse (ERA · disponible)<br>• Réévaluation cathétérisme M6 sous traitement<br>• Si PVR descend < 3 + AP > 12 mm → réévaluation chirurgie complexe (rarement faisable)<br><br>➜ <strong>Correction carence martiale URGENTE :</strong><br>• <strong>Fer IV</strong> · ferritine cible > 50 ng/mL<br>• Améliore TM6M de 20-30 m indépendamment PAH<br><br>➜ <strong>Gestion polyglobulie :</strong><br>• Phlébotomie SI Ht ≥ 65% + symptômes viscosité<br>• Hydratation · éviter déshydratation<br><br>➜ <strong>Anticoagulation :</strong> discussion individualisée (risque hémorragique vs thrombo-embolique)<br>➜ <strong>Counseling :</strong> grossesse contre-indiquée · activité adaptée · pas de transplantation possible (anatomie complexe)</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#F0A030,#FB7185)">
+      <div class="slide-head-num">CAS 08 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — VU non opéré 32 ans + hypoplasie AP sévère + PVR 4.8 WU + cyanose. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Tenter Fontan tardif</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>PAH therapy + correction carence martiale + surveillance palliative</div><div class="qcm-opt"><span class="qcm-letter">C</span>Transplantation cœur-poumons immédiate</div><div class="qcm-opt"><span class="qcm-letter">D</span>Surveillance simple sans traitement</div>
+      <div class="qcm-explain">✓ VU non opéré + hypoplasie AP sévère = Fontan impossible. PAH therapy (Sildénafil/Bosentan) peut améliorer modestement. Correction carence martiale = effet majeur sous-estimé. Surveillance polyglobulie. Pas de greffe (anatomie complexe).</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 08</span>
+      <ul><li>VU non opéré + hypoplasie AP = Fontan inopérable</li><li>Différence Eisenmenger : PVR ↑ par flux pulmonaire <strong>réduit</strong>, pas excessif</li><li>PAH therapy palliative (Sildénafil/Tadalafil/Bosentan disponibles Algérie)</li><li>Correction carence martiale = effet majeur (Fer IV)</li><li>Polyglobulie : phlébotomie SI Ht ≥ 65% + symptômes</li><li>Greffe rarement possible (anatomie complexe)</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="9" style="--cas-color:#E03050;--cas-color2:#FB7185">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 09 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mr B.M., 35 ans (DORV avec VU)</div>
+      <div class="slide-head-sub">VU non opéré + Eisenmenger — COR 3 Harm · PAH à vie</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#E03050">🔴 Présentation clinique</div>
+      <div class="cas-intro-sub">Patient adulte avec VU à double sortie (DOLV/DORV) + grosse CIV non restrictive jamais opérée → développement physiologie d'Eisenmenger avec PVR fixe sévère. Toute tentative chirurgicale (Fontan, banding tardif) catastrophique. PAH therapy à vie · greffe cœur-poumon ultime option.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mr B.M., 35 ans (DORV avec VU)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">58 kg · 170 cm · BSA 1.65 m² (perte 8 kg)</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Adapté · activité minimale</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Aggravation 12 mois · cyanose majorée · syncopes</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>DORV avec VU + grosse CIV non restrictive</strong> · diagnostiquée à 1 an · banding artère pulmonaire <strong>refusé</strong> · pas de chirurgie · cyanose progressive 20 ans</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">III-IV</span> Cyanose centrale ++ · hippocratisme · syncopes 3 épisodes · capacité d'effort minimale</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">TM6M 220 m · <strong>SpO₂ repos 76% · effort 62%</strong></div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 100/68 · FC 90 · cyanose centrale majeure · hippocratisme + + + · perte poids · OMI minimes</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 09 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Échographie</div>
+      <div class="slide-head-sub">Présentation Canva unifiée · ancre #11</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHIQm31Wus/view?embed#11" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#E03050">🎨 Cas 09</div>
+        <div class="canva-caption-id">DAHIQm31Wus · ancre #11</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHIQm31Wus/view#11" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/IRM principales</div>
+      <div class="dr"><div class="dr-lbl">Anatomie</div><div class="dr-val"><strong>DORV avec VU + CIV non restrictive 22 mm</strong></div></div><div class="dr"><div class="dr-lbl">Ventricule unique</div><div class="dr-val">VG morphologique · FE 48%</div></div><div class="dr"><div class="dr-lbl">Strain VU GLS</div><div class="dr-val">–10% réduit</div></div><div class="dr"><div class="dr-lbl">Valves AV</div><div class="dr-val">Mitrale + tricuspide · IT modérée</div></div><div class="dr"><div class="dr-lbl"><strong>Shunt CIV</strong></div><div class="dr-val"><strong>Bidirectionnel droite-gauche dominant</strong></div></div><div class="dr"><div class="dr-lbl">Branches AP</div><div class="dr-val">Dilatées (HTAP)</div></div><div class="dr"><div class="dr-lbl">PAPS estimée</div><div class="dr-val"><strong>110 mmHg</strong></div></div><div class="dr"><div class="dr-lbl">D-sign IVS</div><div class="dr-val">Présent · septum bombé G</div></div><div class="dr"><div class="dr-lbl">Pression égalisée</div><div class="dr-val">VU = AO = AP</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 09 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.5 (VU/Fontan) + 4.4.6 (Eisenmenger)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Ventricule Unique (Section 4.5)</strong>. Critères Stade : pression Fontan, FE VU, fuite AV, PLE, FALD, MELD-XI, CPET.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade D retenu :</span>
+        <ul><li>✓ NYHA III-IV + cyanose 76% + syncopes</li><li>✓ <strong>VU non opéré 35 ans + CIV non restrictive</strong></li><li>✓ <strong>PVR 10.5 WU FIXE</strong> (NO négatif)</li><li>✓ <strong>Shunt D→G dominant</strong> = Eisenmenger</li><li>✓ PAP = AO (égalisation)</li><li>✓ Polyglobulie sévère (Ht 64%)</li><li>✓ <strong>STADE D TERMINAL</strong></li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #E03050">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#E03050;line-height:1">D</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade D Terminal — Eisenmenger sur VU</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>III-D</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>PAH therapy à vie</li><li>Évaluation transplantation cœur-poumon</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 09 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Holter · CPET · Cathétérisme · FALD</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val">Sinusal 90/min</div></div><div class="dr"><div class="dr-lbl">Holter</div><div class="dr-val">TVNS · ESV nombreuses · syncopes multiples</div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>1480 pg/mL</strong> ↑↑</div></div><div class="dr"><div class="dr-lbl">CPET — VO₂ peak</div><div class="dr-val"><strong>22% prédit</strong></div></div><div class="dr"><div class="dr-lbl">Cathétérisme — PVR</div><div class="dr-val"><strong>10.5 WU</strong></div></div><div class="dr"><div class="dr-lbl">PAPM</div><div class="dr-val"><strong>78 mmHg</strong></div></div><div class="dr"><div class="dr-lbl">PAP/AO ratio</div><div class="dr-val"><strong>0.95 (quasi égalisé)</strong></div></div><div class="dr"><div class="dr-lbl">Test NO</div><div class="dr-val"><strong>NÉGATIF</strong> (irréversibilité)</div></div><div class="dr"><div class="dr-lbl">Hématocrite</div><div class="dr-val"><strong>64%</strong> ↑↑</div></div><div class="dr"><div class="dr-lbl">Ferritine</div><div class="dr-val">18 ng/mL ↓</div></div><div class="dr"><div class="dr-lbl">Bilan</div><div class="dr-val">Hyperuricémie · ↑ bilirubine · acidose métabolique légère</div></div><div class="dr"><div class="dr-lbl">Eisenmenger physiologie</div><div class="dr-val"><strong>CONFIRMÉE</strong></div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 09 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.5 + 4.4.6 + 4.6 (Grossesse)</div>
+    </div>
+    
+    <div class="dec" style="border-color:#E03050;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#E03050">
+        <span class="cor c3">COR 3 Harm/No Benefit</span>COR 3 HARM — Aucune chirurgie possible · PAH therapy à vie
+      </div>
+      <div class="dec-b"><strong>Section 4.4.6 ACC 2025 — Eisenmenger management :</strong> patient avec VU + Eisenmenger physiologie = <strong>aucune chirurgie de réparation possible</strong> :<br>• <strong>Fontan : COR 3 absolu</strong> (PVR 10.5 ≫ 3 WU)<br>• Fermeture CIV : <strong>COR 3 HARM</strong> (suppression du shunt = mort hémodynamique)<br>• Banding tardif : trop tard (vasculopathie irréversible)<br><br><strong>Vasculopathie pulmonaire IRRÉVERSIBLE.</strong> Fenêtre thérapeutique perdue.<br><br><strong>Différence vs CIA Eisenmenger :</strong> ici la situation est encore plus complexe car le VU avec CIV non restrictive ne peut <strong>jamais</strong> être réparé. Seule option ultime = greffe cœur-poumon.<br><br><strong>Évaluation greffe cœur-poumon :</strong> survie 50-60% à 5 ans (Eisenmenger) — meilleure que dans cardiomyopathie idiopathique. Inscription précoce recommandée.</div>
+      <div class="dec-action">➜ <strong>PAH therapy COR I :</strong><br>• <strong>Bosentan 125 mg ×2/j</strong> (ERA · BREATHE-5 · disponible Algérie)<br>• <strong>Tadalafil 40 mg/j</strong> ou Sildénafil 20 mg ×3/j (PDE-5)<br>• <strong>Bithérapie d'emblée</strong> (PVR > 8 WU + sévérité)<br>• Améliore TM6M, NYHA, survie<br><br>➜ <strong>Carence martiale URGENTE :</strong> Fer IV · ferritine > 50<br>➜ <strong>Polyglobulie :</strong> phlébotomie SI Ht ≥ 65% + symptômes (pas systématique)<br>➜ <strong>Anticoagulation :</strong> COR 3 No Benefit en l'absence de FA/embolie<br><br>➜ <strong>Évaluation transplantation cœur-poumon :</strong><br>• Centre expert · inscription précoce<br>• Pénurie greffons<br>• Survie 50% à 5 ans<br><br>➜ <strong>Counseling :</strong> grossesse COR 3 HARM absolu · contraception efficace · pas œstroprogestatifs · soins palliatifs adaptés</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#E03050,#FB7185)">
+      <div class="slide-head-num">CAS 09 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — VU + CIV non restrictive non opéré 35 ans + PVR 10.5 WU + cyanose 76%. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Fontan en centre expert</div><div class="qcm-opt"><span class="qcm-letter">B</span>Fermeture CIV chirurgicale</div><div class="qcm-opt correct"><span class="qcm-letter">C</span>PAH therapy à vie + évaluation transplantation cœur-poumon</div><div class="qcm-opt"><span class="qcm-letter">D</span>Banding artère pulmonaire tardif</div>
+      <div class="qcm-explain">✓ VU + Eisenmenger = AUCUNE chirurgie possible (Fontan COR 3 + fermeture CIV COR 3 HARM). Vasculopathie pulmonaire irréversible. PAH therapy bithérapie d'emblée (Bosentan + Tadalafil). Greffe cœur-poumon = seule option ultime.</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 09</span>
+      <ul><li><strong>VU + Eisenmenger = aucune chirurgie réparable</strong></li><li>Fenêtre thérapeutique perdue (banding aurait dû être < 6 mois)</li><li>PAH therapy bithérapie d'emblée si PVR > 8 WU</li><li>Bosentan + Tadalafil/Sildénafil disponibles Algérie</li><li>Fer IV + gestion polyglobulie (Ht ≥ 65% + symptômes)</li><li>Greffe cœur-poumon = option ultime (survie 50% à 5 ans)</li><li>Grossesse COR 3 HARM absolu (mortalité 30-50%)</li></ul>
+    </div>
+  </div>
+</div>
+
+<div class="cas" data-cas="10" style="--cas-color:#FB7185;--cas-color2:#E03050">
+
+  <div class="slide on" data-slide="0">
+    <div class="slide-progress">
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
+      <div class="slide-head-num">CAS 10 · SLIDE 1/6</div>
+      <div class="slide-head-title">Mme S.A., 30 ans (Atrésie mitrale + VU)</div>
+      <div class="slide-head-sub">VU non opéré + Fuite AV sévère — Geste valvulaire isolé</div>
+    </div>
+    <div class="cas-intro">
+      <div class="cas-intro-title" style="color:#FB7185">🩺 Présentation clinique</div>
+      <div class="cas-intro-sub">Patiente adulte avec VU à entrée mitrale (mitral atresia) jamais opérée, présentation tardive avec fuite massive de la valve AV systémique unique → IC progressive. Anatomie ne permet pas de Fontan. Stratégie : geste valvulaire isolé palliatif pour améliorer la qualité de vie.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🧑 Identification</div>
+      <div class="dr"><div class="dr-lbl">Identité</div><div class="dr-val"><strong>Mme S.A., 30 ans (Atrésie mitrale + VU)</strong></div></div>
+      <div class="dr"><div class="dr-lbl">BSA</div><div class="dr-val">55 kg · 162 cm · BSA 1.55 m²</div></div>
+      <div class="dr"><div class="dr-lbl">Profession</div><div class="dr-val">Adapté</div></div>
+      <div class="dr"><div class="dr-lbl">Motif</div><div class="dr-val">Aggravation IC 6 mois · NYHA III · OMI</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">📋 Antécédents</div>
+      <div class="dr"><div class="dr-lbl">ATCD</div><div class="dr-val"><strong>Atrésie mitrale + VU droit + CIA + CIV</strong> · diagnostic enfance · pas de chirurgie · refus parental · cyanose modérée stable jusqu'à 28 ans · récente détérioration fonctionnelle</div></div>
+    </div>
+    <div class="card">
+      <div class="card-title">🩺 Symptomatologie</div>
+      <div class="dr"><div class="dr-lbl">NYHA</div><div class="dr-val"><span class="chip chip-red">III</span> Dyspnée NYHA III · OMI · pas d'orthopnée majeure · pas de syncope</div></div>
+      <div class="dr"><div class="dr-lbl">TM6M / SpO₂</div><div class="dr-val">TM6M 240 m · SpO₂ repos 84% · effort 76%</div></div>
+      <div class="dr"><div class="dr-lbl">Examen</div><div class="dr-val">TA 110/72 · FC 88 · cyanose modérée · <strong>souffle holosystolique 4/6 + galop droit</strong> · hépatomégalie 3 cm · OMI</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="1">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
+      <div class="slide-head-num">CAS 10 · SLIDE 2/6</div>
+      <div class="slide-head-title">📊 Iconographie & Échographie</div>
+      <div class="slide-head-sub">Présentation Canva unifiée · ancre #12</div>
+    </div>
+    <div class="canva-embed-wrap">
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHIQm31Wus/view?embed#12" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="canva-caption">
+      <div>
+        <div style="font-family:Syne;font-weight:700;font-size:11px;color:#FB7185">🎨 Cas 10</div>
+        <div class="canva-caption-id">DAHIQm31Wus · ancre #12</div>
+      </div>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHIQm31Wus/view#12" target="_blank">↗ Plein écran</a>
+    </div>
+    <div class="card">
+      <div class="card-title">📡 Données ETT/IRM principales</div>
+      <div class="dr"><div class="dr-lbl">Anatomie</div><div class="dr-val"><strong>Atrésie mitrale + VU droit + CIA large + CIV</strong></div></div><div class="dr"><div class="dr-lbl">Ventricule unique</div><div class="dr-val"><strong>VD systémique morphologique</strong> · FE 42% altérée</div></div><div class="dr"><div class="dr-lbl">Strain VU GLS</div><div class="dr-val"><strong>–11%</strong> réduit</div></div><div class="dr"><div class="dr-lbl"><strong>Valve AV systémique = tricuspide</strong></div><div class="dr-val"><strong>Fuite massive holosystolique</strong></div></div><div class="dr"><div class="dr-lbl">EROA tricuspide</div><div class="dr-val"><strong>0.55 cm²</strong></div></div><div class="dr"><div class="dr-lbl">Vena contracta</div><div class="dr-val"><strong>0.9 cm</strong></div></div><div class="dr"><div class="dr-lbl"><strong>Anneau tricuspide</strong></div><div class="dr-val"><strong>52 mm dilaté</strong></div></div><div class="dr"><div class="dr-lbl">CIV/CIA</div><div class="dr-val">Patentes · shunt mixte</div></div><div class="dr"><div class="dr-lbl">VU dilaté</div><div class="dr-val">Volume télédiastolique majeur</div></div><div class="dr"><div class="dr-lbl">OD/OG (oreillette commune)</div><div class="dr-val">Très dilatées</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="2">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+      <div class="sp-dot"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
+      <div class="slide-head-num">CAS 10 · SLIDE 3/6</div>
+      <div class="slide-head-title">⚡ Classification & Stade</div>
+      <div class="slide-head-sub">Tableau 4 + Section 4.5 (VU/Fontan) + 4.4.6 (Eisenmenger)</div>
+    </div>
+    <div class="app-use">
+      <div class="app-use-title">→ Application Évaluateur Global</div>
+      <div class="app-use-body">Saisir <strong>Ventricule Unique (Section 4.5)</strong>. Critères Stade : pression Fontan, FE VU, fuite AV, PLE, FALD, MELD-XI, CPET.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Critères Stade — Cochés</div>
+      <div class="ib ib-cyan" style="margin:0">
+        <span class="ib-title">Stade D retenu :</span>
+        <ul><li>✓ NYHA III + IC droite + OMI</li><li>✓ <strong>VU non opéré + atrésie mitrale</strong></li><li>✓ <strong>Fuite tricuspide massive</strong> (EROA 0.55, VC 0.9)</li><li>✓ <strong>Anneau 52 mm dilaté</strong></li><li>✓ FE VU 42% altérée</li><li>✓ FA permanente</li><li>✓ Foie F2 + bilan hépatique perturbé</li><li>✓ <strong>PVR 2.4 WU</strong> (anatomie complexe → Fontan impossible)</li></ul>
+      </div>
+    </div>
+    <div class="card" style="border-left:4px solid #E03050">
+      <div class="card-title">🎯 Verdict Stade Physiologique</div>
+      <div style="text-align:center;padding:9px 0">
+        <div style="font-family:Syne;font-size:48px;font-weight:800;color:#E03050;line-height:1">D</div>
+        <div style="font-size:13px;color:var(--w1);margin-top:4px;font-weight:700">Stade D — VU + fuite AV massive</div>
+        <div style="font-size:11px;color:var(--w3);margin-top:4px">Classification ACHD AP : <strong>III-D</strong></div>
+      </div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">📌 Conséquences classification</span>
+      <ul><li>Centre ACHD chirurgical expert VU</li><li>Geste valvulaire palliatif</li></ul>
+    </div>
+  </div>
+  <div class="slide" data-slide="3">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
+      <div class="slide-head-num">CAS 10 · SLIDE 4/6</div>
+      <div class="slide-head-title">🔬 Bilan complémentaire</div>
+      <div class="slide-head-sub">ECG · Holter · CPET · Cathétérisme · FALD</div>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 Données complètes</div>
+      <div class="dr"><div class="dr-lbl">Rythme</div><div class="dr-val"><strong>FA permanente 88/min</strong></div></div><div class="dr"><div class="dr-lbl">NT-proBNP</div><div class="dr-val"><strong>1280 pg/mL</strong> ↑↑</div></div><div class="dr"><div class="dr-lbl">CPET — VO₂ peak</div><div class="dr-val"><strong>28% prédit</strong></div></div><div class="dr"><div class="dr-lbl">Cathétérisme — PVR</div><div class="dr-val">2.4 WU</div></div><div class="dr"><div class="dr-lbl">PAPM</div><div class="dr-val">32 mmHg</div></div><div class="dr"><div class="dr-lbl">PCWP</div><div class="dr-val">18 mmHg ↑</div></div><div class="dr"><div class="dr-lbl">Saturations</div><div class="dr-val">VCS 60% · OG/cmne 86% · AO 84%</div></div><div class="dr"><div class="dr-lbl">Hématocrite</div><div class="dr-val">48% (légère polyglobulie)</div></div><div class="dr"><div class="dr-lbl">Foie</div><div class="dr-val">F2 (Fibroscan 13 kPa)</div></div><div class="dr"><div class="dr-lbl">Bilan hépatique</div><div class="dr-val">Congestion · ASAT/ALAT ×2 · INR 1.4</div></div>
+    </div>
+  </div>
+  <div class="slide" data-slide="4">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot on"></div><div class="sp-dot"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
+      <div class="slide-head-num">CAS 10 · SLIDE 5/6</div>
+      <div class="slide-head-title">⚕️ Décision thérapeutique</div>
+      <div class="slide-head-sub">ACC 2025 · Section 4.5 + 4.4.6 + 4.6 (Grossesse)</div>
+    </div>
+    
+    <div class="dec" style="border-color:#FB7185;background:rgba(255,255,255,.03)">
+      <div class="dec-t" style="color:#FB7185">
+        <span class="cor c2a">COR 2a</span>Annuloplastie tricuspide isolée — Stratégie palliative
+      </div>
+      <div class="dec-b"><strong>Section 4.5 ACC 2025 :</strong> patient avec VU non opéré + fuite valve AV systémique sévère = <strong>aggravation hémodynamique majeure</strong> sur cœur déjà fragile. Intervention chirurgicale palliative à discuter en équipe ACHD experte.<br><br><strong>Pourquoi pas de Fontan ?</strong> Anatomie complexe (atrésie mitrale + VU droit) avec antécédents non opérés = <strong>Fontan impossible</strong>. Geste palliatif sur la fuite AV = stratégie réaliste.<br><br><strong>Mécanisme bénéfique :</strong> réduire la surcharge volumique du VU systémique → améliorer FE · réduire IC · améliorer qualité de vie. Ne corrige pas la cyanose (anatomie sous-jacente persistante).<br><br><strong>Risques :</strong> chirurgie haut risque sur cœur fragile (FE 42%, FALD débutante, FA) · mortalité 10-15% · centre expert VU obligatoire.</div>
+      <div class="dec-action">➜ <strong>Phase 1 — Stabilisation médicale (M0-M3) :</strong><br>• Diurétiques optimisés (Furosémide + Spironolactone)<br>• <strong>Anticoagulation efficace</strong> (FA + risque thromboembolique)<br>• Tentative cardioversion ± ablation<br>• GDMT IC adaptée (prudent : pas de bétabloquant fort initial)<br>• Optimisation hépatique (TP, albumine)<br>• Correction polyglobulie/carence martiale<br><br>➜ <strong>Phase 2 — Discussion chirurgicale RCP :</strong><br>• Centre ACHD chirurgical expert VU<br>• <strong>Annuloplastie tricuspide</strong> (anneau 52 mm dilaté = critère)<br>• ± fermeture chirurgicale CIV/CIA non systématique<br>• Cox-Maze concomitant pour FA<br>• Approche palliative (pas réparatrice)<br><br>➜ <strong>Phase 3 — Si refus chirurgie :</strong><br>• Soins palliatifs adaptés<br>• Pulmonary vasodilator (Sildénafil)<br>• Suivi rapproché</div>
+    </div>
+  </div>
+  <div class="slide" data-slide="5">
+    <div class="slide-progress">
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot done"></div>
+      <div class="sp-dot done"></div><div class="sp-dot done"></div><div class="sp-dot on"></div>
+    </div>
+    <div class="slide-head" style="background:linear-gradient(135deg,#FB7185,#E03050)">
+      <div class="slide-head-num">CAS 10 · SLIDE 6/6</div>
+      <div class="slide-head-title">🎓 QCM & Take-home</div>
+      <div class="slide-head-sub">Validation pédagogique</div>
+    </div>
+    <div class="qcm">
+      <div class="qcm-q">QCM — VU + atrésie mitrale + fuite AV massive (EROA 0.55) + FE 42% + FA. Conduite ?</div>
+      <div class="qcm-opt"><span class="qcm-letter">A</span>Fontan tardif</div><div class="qcm-opt correct"><span class="qcm-letter">B</span>Stabilisation + annuloplastie tricuspide isolée palliative + Cox-Maze</div><div class="qcm-opt"><span class="qcm-letter">C</span>Surveillance simple</div><div class="qcm-opt"><span class="qcm-letter">D</span>Transplantation cardiaque immédiate</div>
+      <div class="qcm-explain">✓ VU complexe non opéré + fuite AV massive = Fontan impossible. Geste palliatif (annuloplastie tricuspide) réduit surcharge VU → améliore IC. Centre ACHD chirurgical expert VU. Mortalité 10-15%. Cox-Maze concomitant pour FA. Approche palliative.</div>
+    </div>
+    <div class="ib ib-cyan">
+      <span class="ib-title">🎯 Take-home messages — Cas 10</span>
+      <ul><li>VU complexe non opéré + fuite AV sévère = situation rare</li><li>Fontan définitivement impossible (anatomie complexe)</li><li><strong>Geste palliatif</strong> : annuloplastie isolée pour ↓ surcharge VU</li><li>Anneau ≥ 40 mm = critère annuloplastie</li><li>Cox-Maze concomitant si FA permanente</li><li>Mortalité chirurgicale élevée (10-15%) · centre expert VU</li><li>Approche palliative pas réparatrice (cyanose persiste)</li></ul>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div id="botnav">
+  <div class="bn-wrap">
+    <button class="bn-btn bn-prev" id="btn-prev" onclick="navSlide(-1)">← Précédent</button>
+    <button class="bn-btn bn-next" id="btn-next" onclick="navSlide(1)">Suivant →</button>
+  </div>
+</div>
+
+<script>
+var STATE = { curCas: 1, curSlide: 0 };
+var CAS_COLORS = {
+  1: { color: '#34D399', color2: '#22D3EE' },
+  2: { color: '#22D3EE', color2: '#38BDF8' },
+  3: { color: '#A78BFA', color2: '#FB7185' },
+  4: { color: '#E03050', color2: '#FB7185' },
+  5: { color: '#F0A030', color2: '#FB923C' },
+  6: { color: '#FB7185', color2: '#A78BFA' },
+  7: { color: '#22D3EE', color2: '#A78BFA' },
+  8: { color: '#F0A030', color2: '#FB7185' },
+  9: { color: '#E03050', color2: '#FB7185' },
+  10:{ color: '#FB7185', color2: '#E03050' }
+};
+
+function showCas(n) {
+  STATE.curCas = n;
+  STATE.curSlide = 0;
+  document.querySelectorAll('.cas').forEach(function(c){c.classList.remove('on')});
+  document.querySelectorAll('.cn').forEach(function(b){b.classList.remove('on')});
+  var cas = document.querySelector('.cas[data-cas="'+n+'"]');
+  if (cas) cas.classList.add('on');
+  var btn = document.querySelector('.cn[data-cas="'+n+'"]');
+  if (btn) btn.classList.add('on');
+  var col = CAS_COLORS[n];
+  if (col) {
+    document.documentElement.style.setProperty('--cas-color', col.color);
+    document.documentElement.style.setProperty('--cas-color2', col.color2);
+  }
+  document.getElementById('cas-badge').textContent = 'CAS '+n+'/10';
+  showSlide(0);
+}
+
+function showSlide(s) {
+  STATE.curSlide = s;
+  var cas = document.querySelector('.cas[data-cas="'+STATE.curCas+'"]');
+  if (!cas) return;
+  cas.querySelectorAll('.slide').forEach(function(sl){sl.classList.remove('on')});
+  var sl = cas.querySelector('.slide[data-slide="'+s+'"]');
+  if (sl) sl.classList.add('on');
+  document.querySelectorAll('.sn').forEach(function(b){b.classList.remove('on')});
+  var snBtn = document.querySelector('.sn[data-slide="'+s+'"]');
+  if (snBtn) snBtn.classList.add('on');
+  document.getElementById('btn-prev').disabled = (STATE.curCas===1 && s===0);
+  document.getElementById('btn-next').disabled = (STATE.curCas===10 && s===5);
+  document.getElementById('btn-next').textContent = (s===5 && STATE.curCas<10 ? 'Cas suivant →' : 'Suivant →');
+  if (STATE.curCas===10 && s===5) document.getElementById('btn-next').textContent = 'Fin ✓';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function navSlide(dir) {
+  var newSlide = STATE.curSlide + dir;
+  if (newSlide < 0) {
+    if (STATE.curCas > 1) {
+      showCas(STATE.curCas - 1);
+      showSlide(5);
+    }
+    return;
+  }
+  if (newSlide > 5) {
+    if (STATE.curCas < 10) {
+      showCas(STATE.curCas + 1);
+      return;
+    }
+    return;
+  }
+  showSlide(newSlide);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.cn').forEach(function(b){
+    b.addEventListener('click', function(){
+      var n = parseInt(b.getAttribute('data-cas'));
+      showCas(n);
+    });
+  });
+  document.querySelectorAll('.sn').forEach(function(b){
+    b.addEventListener('click', function(){
+      var s = parseInt(b.getAttribute('data-slide'));
+      showSlide(s);
+    });
+  });
+  document.documentElement.style.setProperty('--cas-color', CAS_COLORS[1].color);
+  document.documentElement.style.setProperty('--cas-color2', CAS_COLORS[1].color2);
+});
+</script>
+</body>
+</html>
