@@ -16,7 +16,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM Sans",sans-serif;font-size:14px;overflow-x:hidden}
-
+ 
 #topbar{background:rgba(6,16,30,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--brd2);padding:10px 14px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:200}
 .tb-logo{width:38px;height:38px;border-radius:9px;background:#fff;padding:2px;flex-shrink:0;overflow:hidden}
 .tb-logo img{width:100%;height:100%;object-fit:contain}
@@ -24,46 +24,46 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .tb-title{font-family:"Syne",sans-serif;font-size:14px;font-weight:700;color:var(--accent);line-height:1.2}
 .tb-sub{font-size:9px;color:var(--w3);margin-top:1px}
 .tb-cas-badge{background:rgba(34,211,238,.2);border:1px solid rgba(34,211,238,.4);border-radius:7px;padding:4px 9px;font-size:10px;font-weight:700;color:var(--cyan);flex-shrink:0;font-family:"JetBrains Mono",monospace}
-
+ 
 #cas-nav{background:rgba(6,16,30,.95);border-bottom:1px solid var(--brd);padding:9px 12px;display:flex;gap:6px;overflow-x:auto;position:sticky;top:60px;z-index:190}
 #cas-nav::-webkit-scrollbar{display:none}
 .cn{padding:7px 14px;border-radius:18px;font-family:"Syne",sans-serif;font-size:10px;font-weight:700;cursor:pointer;border:1.5px solid var(--brd2);background:transparent;color:var(--w3);white-space:nowrap;flex-shrink:0;transition:all .15s}
 .cn.on{background:var(--cas-color,var(--cyan));color:#06101E;border-color:var(--cas-color,var(--cyan))}
 .cn:active{transform:scale(.95)}
-
+ 
 #slides-nav{background:rgba(6,16,30,.95);border-bottom:1px solid var(--brd);padding:8px 12px;display:flex;gap:5px;overflow-x:auto;position:sticky;top:107px;z-index:185}
 #slides-nav::-webkit-scrollbar{display:none}
 .sn{padding:5px 10px;border-radius:14px;font-family:"DM Sans",sans-serif;font-size:10px;font-weight:600;cursor:pointer;border:1.5px solid var(--brd2);background:transparent;color:var(--w3);white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:5px}
 .sn .sn-num{font-family:"JetBrains Mono",monospace;font-size:9px;font-weight:700;background:rgba(255,255,255,.06);padding:1px 5px;border-radius:3px}
 .sn.on{background:var(--cas-color,var(--cyan));color:#06101E;border-color:var(--cas-color,var(--cyan))}
 .sn.on .sn-num{background:rgba(0,0,0,.2);color:#06101E}
-
+ 
 #content{padding:14px 13px 100px;max-width:520px;margin:0 auto}
 .cas{display:none}
 .cas.on{display:block}
 .slide{display:none;animation:fadeIn 0.3s}
 .slide.on{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-
+ 
 .card{background:var(--card);border-radius:13px;border:1px solid var(--brd);padding:14px;margin-bottom:11px}
 .card-title{font-family:"Syne",sans-serif;font-size:12px;font-weight:700;color:var(--cas-color,var(--accent));margin-bottom:11px;display:flex;align-items:center;gap:7px;padding-bottom:8px;border-bottom:1px solid var(--brd)}
-
+ 
 .slide-head{background:linear-gradient(135deg,var(--cas-color,var(--cyan)),var(--cas-color2,var(--mint)));padding:14px 16px;border-radius:14px;margin-bottom:13px;color:#fff;position:relative;overflow:hidden}
 .slide-head::after{content:'';position:absolute;top:-30px;right:-30px;width:100px;height:100px;background:rgba(255,255,255,.1);border-radius:50%}
 .slide-head-num{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;opacity:.85;letter-spacing:1px;margin-bottom:3px}
 .slide-head-title{font-family:"Syne",sans-serif;font-size:17px;font-weight:800;line-height:1.2}
 .slide-head-sub{font-size:11px;opacity:.85;margin-top:3px}
-
+ 
 .cas-intro{background:linear-gradient(135deg,rgba(34,211,238,.15),rgba(52,211,153,.1));border:1px solid var(--cas-color,var(--cyan));border-radius:12px;padding:13px 14px;margin-bottom:12px}
 .cas-intro-title{font-family:"Syne",sans-serif;font-size:14px;font-weight:800;color:var(--cas-color,var(--cyan));margin-bottom:5px}
 .cas-intro-sub{font-size:11px;color:var(--w2);line-height:1.5}
-
+ 
 .dr{display:flex;padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.06);font-size:12.5px;align-items:flex-start;gap:10px}
 .dr:last-child{border-bottom:none}
 .dr-lbl{flex:0 0 110px;color:var(--w3);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.3px;padding-top:1px}
 .dr-val{flex:1;color:var(--w1);font-weight:500;line-height:1.5}
 .dr-val strong{color:var(--cas-color,var(--accent))}
-
+ 
 .chip{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border-radius:5px;font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;margin:2px 3px 2px 0}
 .chip-mint{background:rgba(52,211,153,.18);color:var(--mint)}
 .chip-sky{background:rgba(56,189,248,.18);color:var(--sky)}
@@ -73,7 +73,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .chip-cyan{background:rgba(34,211,238,.18);color:var(--cyan)}
 .chip-orange{background:rgba(251,146,60,.18);color:var(--orange)}
 .chip-rose{background:rgba(251,113,133,.18);color:var(--rose)}
-
+ 
 .ib{border-radius:10px;padding:11px 13px;font-size:12px;line-height:1.65;border-left:3px solid;margin-bottom:10px}
 .ib strong{color:var(--w1)}
 .ib-sky{background:rgba(56,189,248,.08);border-color:var(--sky);color:var(--w2)}
@@ -87,40 +87,40 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .ib-title{font-family:"Syne",sans-serif;font-size:11.5px;font-weight:700;color:var(--w1);display:block;margin-bottom:5px}
 .ib ul{margin:5px 0 0 17px;padding:0}
 .ib li{margin-bottom:4px;line-height:1.55}
-
+ 
 .app-use{background:linear-gradient(135deg,rgba(34,211,238,.12),rgba(167,139,250,.06));border:1.5px solid rgba(34,211,238,.3);border-radius:12px;padding:13px 14px;margin-bottom:11px;position:relative}
 .app-use::before{content:'📱';position:absolute;top:-12px;left:13px;background:var(--bg);padding:2px 9px;border-radius:14px;font-size:14px;border:1.5px solid rgba(34,211,238,.3)}
 .app-use-title{font-family:"Syne",sans-serif;font-size:11px;font-weight:800;color:var(--cyan);text-transform:uppercase;letter-spacing:.5px;margin-top:3px;margin-bottom:7px}
 .app-use-body{font-size:12px;color:var(--w2);line-height:1.65}
 .app-use-body strong{color:var(--w1)}
-
+ 
 .cor{display:inline-flex;align-items:center;padding:2px 7px;border-radius:5px;font-family:"JetBrains Mono",monospace;font-size:9px;font-weight:700;margin-right:5px}
 .c1{background:rgba(52,211,153,.2);color:var(--mint)}
 .c2a{background:rgba(56,189,248,.2);color:var(--sky)}
 .c2b{background:rgba(240,160,48,.2);color:var(--gold)}
 .c3{background:rgba(224,48,80,.18);color:var(--red);border:1px solid rgba(224,48,80,.4)}
-
+ 
 .dec{border-radius:12px;border:2px solid;padding:13px;margin-bottom:10px}
 .dec-t{font-family:"Syne",sans-serif;font-size:13px;font-weight:800;margin-bottom:7px;line-height:1.3}
 .dec-b{font-size:12px;color:var(--w2);line-height:1.65}
 .dec-action{margin-top:8px;padding:8px 11px;background:rgba(255,255,255,.04);border-radius:7px;font-size:11.5px;color:var(--w2);font-style:italic;line-height:1.55}
-
+ 
 .canva-embed-wrap{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:14px;overflow:hidden;margin-bottom:8px;box-shadow:0 4px 20px rgba(0,0,0,.4);border:1px solid var(--brd2)}
 .canva-embed-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block}
 .canva-caption{display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,rgba(125,60,224,.15),rgba(58,163,243,.1));border:1px solid rgba(125,60,224,.3);border-radius:10px;padding:9px 12px;font-size:11px;color:var(--w2);margin-bottom:11px}
 .canva-caption-id{font-family:"JetBrains Mono",monospace;font-size:9px;color:var(--w3);letter-spacing:.5px}
 .canva-caption-link{color:#fff;background:linear-gradient(135deg,#7d3ce0,#3aa3f3);padding:5px 10px;border-radius:6px;text-decoration:none;font-size:10px;font-weight:600;white-space:nowrap}
-
+ 
 .tbl{width:100%;border-collapse:collapse;font-size:11.5px;margin:9px 0;border-radius:8px;overflow:hidden}
 .tbl th{background:rgba(34,211,238,.18);color:var(--cyan);text-align:left;padding:7px 10px;font-family:"Syne",sans-serif;font-weight:700;font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;border:1px solid var(--brd)}
 .tbl td{padding:7px 10px;border:1px solid var(--brd);color:var(--w2);line-height:1.5}
 .tbl tr:nth-child(even) td{background:rgba(255,255,255,.02)}
-
+ 
 .slide-progress{display:flex;gap:4px;justify-content:center;margin-bottom:14px}
 .sp-dot{width:24px;height:3px;background:var(--brd2);border-radius:2px;transition:all .25s}
 .sp-dot.on{background:var(--cas-color,var(--cyan));width:32px}
 .sp-dot.done{background:var(--mint)}
-
+ 
 #botnav{position:fixed;bottom:0;left:0;right:0;background:rgba(6,16,30,.97);backdrop-filter:blur(14px);border-top:1px solid var(--brd2);padding:10px 13px;z-index:300}
 .bn-wrap{max-width:520px;margin:0 auto;display:flex;gap:8px}
 .bn-btn{flex:1;padding:11px;border-radius:11px;border:none;font-family:"Syne",sans-serif;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
@@ -128,7 +128,7 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
 .bn-next{background:var(--cas-color,var(--cyan));color:#06101E}
 .bn-btn:disabled{opacity:.3;cursor:not-allowed}
 .bn-btn:active{transform:scale(.97)}
-
+ 
 .qcm{background:rgba(34,211,238,.08);border:1.5px solid rgba(34,211,238,.3);border-radius:11px;padding:13px;margin-bottom:11px}
 .qcm-q{font-family:"Syne",sans-serif;font-size:13px;font-weight:700;color:var(--cyan);margin-bottom:9px;line-height:1.4}
 .qcm-opt{display:flex;align-items:flex-start;gap:8px;padding:9px 11px;background:var(--bg3);border-radius:8px;border:1.5px solid var(--brd);margin-bottom:5px;font-size:12px;color:var(--w2);line-height:1.5;cursor:pointer}
@@ -168,9 +168,9 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
   <button class="sn" data-slide="5"><span class="sn-num">06</span>Take-home</button>
 </div>
 <div id="content">
-
+ 
 <div class="cas on" data-cas="1" style="--cas-color:#E03050;--cas-color2:#FB7185">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -214,14 +214,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
     </div>
     <div class="canva-embed-wrap">
-      <iframe loading="lazy" src="https://www.canva.com/design/DAHILfOwhgg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHINnXLXS0/view?embed#1" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     </div>
     <div class="canva-caption">
       <div>
         <div style="font-family:Syne;font-weight:700;font-size:11px;color:#E03050">🎨 Présentation Canva · Cas 01</div>
-        <div class="canva-caption-id">DAHILfOwhgg · Cas 01 · HTA Réfractaire</div>
+        <div class="canva-caption-id">DAHINnXLXS0 · ancre #1 · Cas 01 · HTA Réfractaire</div>
       </div>
-      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILfOwhgg/view" target="_blank">↗ Plein écran</a>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHINnXLXS0/view#1" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/Imagerie principales</div>
@@ -331,9 +331,9 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
   </div>
 </div>
-
+ 
 <div class="cas" data-cas="2" style="--cas-color:#F0A030;--cas-color2:#FB923C">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -377,14 +377,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
     </div>
     <div class="canva-embed-wrap">
-      <iframe loading="lazy" src="https://www.canva.com/design/DAHILa6d_6c/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHINnXLXS0/view?embed#26" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     </div>
     <div class="canva-caption">
       <div>
         <div style="font-family:Syne;font-weight:700;font-size:11px;color:#F0A030">🎨 Présentation Canva · Cas 02</div>
-        <div class="canva-caption-id">DAHILa6d_6c · Cas 02 · COA Asympto</div>
+        <div class="canva-caption-id">DAHINnXLXS0 · ancre #26 · Cas 02 · COA Asympto</div>
       </div>
-      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILa6d_6c/view" target="_blank">↗ Plein écran</a>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHINnXLXS0/view#26" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/Imagerie principales</div>
@@ -487,9 +487,9 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
   </div>
 </div>
-
+ 
 <div class="cas" data-cas="3" style="--cas-color:#A78BFA;--cas-color2:#22D3EE">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -533,14 +533,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
     </div>
     <div class="canva-embed-wrap">
-      <iframe loading="lazy" src="https://www.canva.com/design/DAHILbWlSPE/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHINnXLXS0/view?embed#38" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     </div>
     <div class="canva-caption">
       <div>
         <div style="font-family:Syne;font-weight:700;font-size:11px;color:#A78BFA">🎨 Présentation Canva · Cas 03</div>
-        <div class="canva-caption-id">DAHILbWlSPE · Cas 03 · Choix</div>
+        <div class="canva-caption-id">DAHINnXLXS0 · ancre #38 · Cas 03 · Choix</div>
       </div>
-      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILbWlSPE/view" target="_blank">↗ Plein écran</a>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHINnXLXS0/view#38" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/Imagerie principales</div>
@@ -636,9 +636,9 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
   </div>
 </div>
-
+ 
 <div class="cas" data-cas="4" style="--cas-color:#22D3EE;--cas-color2:#38BDF8">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -682,14 +682,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
     </div>
     <div class="canva-embed-wrap">
-      <iframe loading="lazy" src="https://www.canva.com/design/DAHILQr1TrQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHINnXLXS0/view?embed#48" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     </div>
     <div class="canva-caption">
       <div>
         <div style="font-family:Syne;font-weight:700;font-size:11px;color:#22D3EE">🎨 Présentation Canva · Cas 04</div>
-        <div class="canva-caption-id">DAHILQr1TrQ · Cas 04 · GDMT</div>
+        <div class="canva-caption-id">DAHINnXLXS0 · ancre #48 · Cas 04 · GDMT</div>
       </div>
-      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILQr1TrQ/view" target="_blank">↗ Plein écran</a>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHINnXLXS0/view#48" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/Imagerie principales</div>
@@ -792,9 +792,9 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
   </div>
 </div>
-
+ 
 <div class="cas" data-cas="5" style="--cas-color:#FB923C;--cas-color2:#F0A030">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -838,14 +838,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
     </div>
     <div class="canva-embed-wrap">
-      <iframe loading="lazy" src="https://www.canva.com/design/DAHILcCQuyQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHINnXLXS0/view?embed#58" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     </div>
     <div class="canva-caption">
       <div>
         <div style="font-family:Syne;font-weight:700;font-size:11px;color:#FB923C">🎨 Présentation Canva · Cas 05</div>
-        <div class="canva-caption-id">DAHILcCQuyQ · Cas 05 · HTA Effort</div>
+        <div class="canva-caption-id">DAHINnXLXS0 · ancre #58 · Cas 05 · HTA Effort</div>
       </div>
-      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILcCQuyQ/view" target="_blank">↗ Plein écran</a>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHINnXLXS0/view#58" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/Imagerie principales</div>
@@ -948,9 +948,9 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
   </div>
 </div>
-
+ 
 <div class="cas" data-cas="6" style="--cas-color:#34D399;--cas-color2:#22D3EE">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -994,14 +994,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
     </div>
     <div class="canva-embed-wrap">
-      <iframe loading="lazy" src="https://www.canva.com/design/DAHILanaIWA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHINnXLXS0/view?embed#74" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     </div>
     <div class="canva-caption">
       <div>
         <div style="font-family:Syne;font-weight:700;font-size:11px;color:#34D399">🎨 Présentation Canva · Cas 06</div>
-        <div class="canva-caption-id">DAHILanaIWA · Cas 06 · ABPM</div>
+        <div class="canva-caption-id">DAHINnXLXS0 · ancre #74 · Cas 06 · ABPM</div>
       </div>
-      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILanaIWA/view" target="_blank">↗ Plein écran</a>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHINnXLXS0/view#74" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/Imagerie principales</div>
@@ -1104,9 +1104,9 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
   </div>
 </div>
-
+ 
 <div class="cas" data-cas="7" style="--cas-color:#A78BFA;--cas-color2:#FB7185">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -1150,14 +1150,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
     </div>
     <div class="canva-embed-wrap">
-      <iframe loading="lazy" src="https://www.canva.com/design/DAHILRLVp-c/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHINnXLXS0/view?embed#84" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     </div>
     <div class="canva-caption">
       <div>
         <div style="font-family:Syne;font-weight:700;font-size:11px;color:#A78BFA">🎨 Présentation Canva · Cas 07</div>
-        <div class="canva-caption-id">DAHILRLVp-c · Cas 07 · BAV</div>
+        <div class="canva-caption-id">DAHINnXLXS0 · ancre #84 · Cas 07 · BAV</div>
       </div>
-      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILRLVp-c/view" target="_blank">↗ Plein écran</a>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHINnXLXS0/view#84" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/Imagerie principales</div>
@@ -1260,9 +1260,9 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
   </div>
 </div>
-
+ 
 <div class="cas" data-cas="8" style="--cas-color:#FB7185;--cas-color2:#E03050">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -1306,14 +1306,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
     </div>
     <div class="canva-embed-wrap">
-      <iframe loading="lazy" src="https://www.canva.com/design/DAHILZxGi5Y/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHINnXLXS0/view?embed#94" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     </div>
     <div class="canva-caption">
       <div>
         <div style="font-family:Syne;font-weight:700;font-size:11px;color:#FB7185">🎨 Présentation Canva · Cas 08</div>
-        <div class="canva-caption-id">DAHILZxGi5Y · Cas 08 · Re-COA</div>
+        <div class="canva-caption-id">DAHINnXLXS0 · ancre #94 · Cas 08 · Re-COA</div>
       </div>
-      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILZxGi5Y/view" target="_blank">↗ Plein écran</a>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHINnXLXS0/view#94" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/Imagerie principales</div>
@@ -1416,9 +1416,9 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
   </div>
 </div>
-
+ 
 <div class="cas" data-cas="9" style="--cas-color:#E03050;--cas-color2:#FB923C">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -1462,14 +1462,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
     </div>
     <div class="canva-embed-wrap">
-      <iframe loading="lazy" src="https://www.canva.com/design/DAHILQls838/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHINnXLXS0/view?embed#114" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     </div>
     <div class="canva-caption">
       <div>
         <div style="font-family:Syne;font-weight:700;font-size:11px;color:#E03050">🎨 Présentation Canva · Cas 09</div>
-        <div class="canva-caption-id">DAHILQls838 · Cas 09 · CAD</div>
+        <div class="canva-caption-id">DAHINnXLXS0 · ancre #114 · Cas 09 · CAD</div>
       </div>
-      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILQls838/view" target="_blank">↗ Plein écran</a>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHINnXLXS0/view#114" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/Imagerie principales</div>
@@ -1572,9 +1572,9 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
   </div>
 </div>
-
+ 
 <div class="cas" data-cas="10" style="--cas-color:#22D3EE;--cas-color2:#34D399">
-
+ 
   <div class="slide on" data-slide="0">
     <div class="slide-progress">
       <div class="sp-dot on"></div><div class="sp-dot"></div><div class="sp-dot"></div>
@@ -1618,14 +1618,14 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
       <div class="slide-head-sub">Présentation Canva interactive intégrée</div>
     </div>
     <div class="canva-embed-wrap">
-      <iframe loading="lazy" src="https://www.canva.com/design/DAHILS6V6HA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+      <iframe loading="lazy" src="https://www.canva.com/design/DAHINnXLXS0/view?embed#124" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     </div>
     <div class="canva-caption">
       <div>
         <div style="font-family:Syne;font-weight:700;font-size:11px;color:#22D3EE">🎨 Présentation Canva · Cas 10</div>
-        <div class="canva-caption-id">DAHILS6V6HA · Cas 10 · Grossesse</div>
+        <div class="canva-caption-id">DAHINnXLXS0 · ancre #124 · Cas 10 · Grossesse</div>
       </div>
-      <a class="canva-caption-link" href="https://www.canva.com/design/DAHILS6V6HA/view" target="_blank">↗ Plein écran</a>
+      <a class="canva-caption-link" href="https://www.canva.com/design/DAHINnXLXS0/view#124" target="_blank">↗ Plein écran</a>
     </div>
     <div class="card">
       <div class="card-title">📡 Données ETT/Imagerie principales</div>
@@ -1735,16 +1735,16 @@ html,body{min-height:100%;background:var(--bg);color:var(--w1);font-family:"DM S
     </div>
   </div>
 </div>
-
+ 
 </div>
-
+ 
 <div id="botnav">
   <div class="bn-wrap">
     <button class="bn-btn bn-prev" id="btn-prev" onclick="navSlide(-1)">← Précédent</button>
     <button class="bn-btn bn-next" id="btn-next" onclick="navSlide(1)">Suivant →</button>
   </div>
 </div>
-
+ 
 <script>
 var STATE = { curCas: 1, curSlide: 0 };
 var CAS_COLORS = {
@@ -1759,7 +1759,7 @@ var CAS_COLORS = {
   9: { color: '#E03050', color2: '#FB923C' },
   10:{ color: '#22D3EE', color2: '#34D399' }
 };
-
+ 
 function showCas(n) {
   STATE.curCas = n;
   STATE.curSlide = 0;
@@ -1777,7 +1777,7 @@ function showCas(n) {
   document.getElementById('cas-badge').textContent = 'CAS '+n+'/10';
   showSlide(0);
 }
-
+ 
 function showSlide(s) {
   STATE.curSlide = s;
   var cas = document.querySelector('.cas[data-cas="'+STATE.curCas+'"]');
@@ -1794,7 +1794,7 @@ function showSlide(s) {
   if (STATE.curCas===10 && s===5) document.getElementById('btn-next').textContent = 'Fin ✓';
   window.scrollTo({top:0, behavior:'smooth'});
 }
-
+ 
 function navSlide(dir) {
   var newSlide = STATE.curSlide + dir;
   if (newSlide < 0) {
@@ -1813,7 +1813,7 @@ function navSlide(dir) {
   }
   showSlide(newSlide);
 }
-
+ 
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.cn').forEach(function(b){
     b.addEventListener('click', function(){
